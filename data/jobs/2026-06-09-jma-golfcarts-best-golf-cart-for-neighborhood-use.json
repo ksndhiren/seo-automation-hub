@@ -1,0 +1,49 @@
+{
+  "job_id": "2026-06-09-jma-golfcarts-best-golf-cart-for-neighborhood-use",
+  "site_id": "jma-golfcarts",
+  "topic": "Best golf cart for neighborhood use",
+  "primary_keyword": "best golf cart for neighborhood use",
+  "secondary_keywords": [
+    "neighborhood golf cart guide",
+    "best golf cart for personal use",
+    "residential golf cart buying guide",
+    "golf cart for community use"
+  ],
+  "target_url": "/blog/buying-guides/best-golf-cart-for-neighborhood-use",
+  "status": "new",
+  "priority": "high",
+  "assigned_reviewer": "seo-expert",
+  "created_at": "2026-05-19T18:00:00+04:00",
+  "updated_at": "2026-05-19T18:00:00+04:00",
+  "planned_publish_date": "2026-05-28",
+  "calendar_month": "2026-05-to-06",
+  "seo_strategy": {
+    "search_intent": "commercial informational",
+    "cluster": "buyer acquisition",
+    "lead_goal": "buyer leads",
+    "opportunity_score": 85,
+    "opportunity_rationale": "High-intent use-case content can convert buyers earlier than broad brand pages because it starts with the real ownership context.",
+    "category_slug": "buying-guides",
+    "category_name": "Buying Guides",
+    "suggested_tags": [
+      "neighborhood carts",
+      "personal use",
+      "buyer guide",
+      "residential carts"
+    ],
+    "recommended_internal_link_types": [
+      "inventory pages",
+      "street legal posts",
+      "contact sections"
+    ]
+  },
+  "metrics": {
+    "target_word_count": 1600,
+    "neuronwriter_score": null,
+    "manual_plagiarism_status": "Pending manual review"
+  },
+  "publish": {
+    "commit_sha": null,
+    "live_url": null
+  }
+}

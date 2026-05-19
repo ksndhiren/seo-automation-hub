@@ -1,0 +1,49 @@
+{
+  "job_id": "2026-06-23-jma-golfcarts-best-golf-cart-for-property-maintenance-crews",
+  "site_id": "jma-golfcarts",
+  "topic": "Best golf cart for property maintenance crews",
+  "primary_keyword": "best golf cart for property maintenance crews",
+  "secondary_keywords": [
+    "property maintenance golf cart",
+    "utility cart for crews",
+    "commercial golf cart work use",
+    "maintenance fleet golf cart"
+  ],
+  "target_url": "/blog/utility-work-carts/best-golf-cart-for-property-maintenance-crews",
+  "status": "new",
+  "priority": "medium",
+  "assigned_reviewer": "seo-expert",
+  "created_at": "2026-05-19T18:00:00+04:00",
+  "updated_at": "2026-05-19T18:00:00+04:00",
+  "planned_publish_date": "2026-06-11",
+  "calendar_month": "2026-05-to-06",
+  "seo_strategy": {
+    "search_intent": "commercial informational",
+    "cluster": "buyer acquisition",
+    "lead_goal": "buyer leads",
+    "opportunity_score": 81,
+    "opportunity_rationale": "Strong B2B use-case topic that supports higher-value commercial leads rather than purely recreational shoppers.",
+    "category_slug": "utility-work-carts",
+    "category_name": "Utility & Work Carts",
+    "suggested_tags": [
+      "property maintenance",
+      "utility carts",
+      "crew vehicles",
+      "commercial guide"
+    ],
+    "recommended_internal_link_types": [
+      "inventory pages",
+      "contact sections",
+      "maintenance posts"
+    ]
+  },
+  "metrics": {
+    "target_word_count": 1600,
+    "neuronwriter_score": null,
+    "manual_plagiarism_status": "Pending manual review"
+  },
+  "publish": {
+    "commit_sha": null,
+    "live_url": null
+  }
+}

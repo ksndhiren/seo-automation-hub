@@ -1,0 +1,49 @@
+{
+  "job_id": "2026-06-11-jma-golfcarts-used-golf-cart-inspection-checklist-before-buying",
+  "site_id": "jma-golfcarts",
+  "topic": "Used golf cart inspection checklist before buying",
+  "primary_keyword": "used golf cart inspection checklist",
+  "secondary_keywords": [
+    "inspect used golf cart",
+    "golf cart buyer checklist",
+    "used golf cart condition check",
+    "golf cart auction checklist"
+  ],
+  "target_url": "/blog/buying-guides/used-golf-cart-inspection-checklist-before-buying",
+  "status": "new",
+  "priority": "high",
+  "assigned_reviewer": "seo-expert",
+  "created_at": "2026-05-19T18:00:00+04:00",
+  "updated_at": "2026-05-19T18:00:00+04:00",
+  "planned_publish_date": "2026-06-01",
+  "calendar_month": "2026-05-to-06",
+  "seo_strategy": {
+    "search_intent": "commercial informational",
+    "cluster": "buyer acquisition",
+    "lead_goal": "buyer leads",
+    "opportunity_score": 87,
+    "opportunity_rationale": "Checklist-style buyer content is highly skimmable, trustworthy, and likely to produce qualified lead conversations.",
+    "category_slug": "buying-guides",
+    "category_name": "Buying Guides",
+    "suggested_tags": [
+      "inspection checklist",
+      "buyer guide",
+      "used golf cart condition",
+      "marketplace prep"
+    ],
+    "recommended_internal_link_types": [
+      "inventory pages",
+      "brand comparison posts",
+      "contact sections"
+    ]
+  },
+  "metrics": {
+    "target_word_count": 1700,
+    "neuronwriter_score": null,
+    "manual_plagiarism_status": "Pending manual review"
+  },
+  "publish": {
+    "commit_sha": null,
+    "live_url": null
+  }
+}

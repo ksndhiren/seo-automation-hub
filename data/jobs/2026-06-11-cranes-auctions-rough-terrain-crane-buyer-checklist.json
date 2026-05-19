@@ -1,0 +1,49 @@
+{
+  "job_id": "2026-06-11-cranes-auctions-rough-terrain-crane-buyer-checklist",
+  "site_id": "cranes-auctions",
+  "topic": "Rough terrain crane buyer checklist",
+  "primary_keyword": "rough terrain crane buyer checklist",
+  "secondary_keywords": [
+    "buy rough terrain crane",
+    "rough terrain crane inspection",
+    "used RT crane checklist",
+    "auction crane buyer tips"
+  ],
+  "target_url": "/blog/buying-guides/rough-terrain-crane-buyer-checklist",
+  "status": "new",
+  "priority": "medium",
+  "assigned_reviewer": "seo-expert",
+  "created_at": "2026-05-19T18:00:00+04:00",
+  "updated_at": "2026-05-19T18:00:00+04:00",
+  "planned_publish_date": "2026-06-01",
+  "calendar_month": "2026-05-to-06",
+  "seo_strategy": {
+    "search_intent": "commercial informational",
+    "cluster": "buyer acquisition",
+    "lead_goal": "buyer leads",
+    "opportunity_score": 81,
+    "opportunity_rationale": "Specific equipment-class checklist content can win earlier than broad head terms and attract serious buyer conversations.",
+    "category_slug": "buying-guides",
+    "category_name": "Buying Guides",
+    "suggested_tags": [
+      "rough terrain crane",
+      "buyer checklist",
+      "inspection prep",
+      "used crane buying"
+    ],
+    "recommended_internal_link_types": [
+      "equipment category pages",
+      "auction landing pages",
+      "contact pages"
+    ]
+  },
+  "metrics": {
+    "target_word_count": 1700,
+    "neuronwriter_score": null,
+    "manual_plagiarism_status": "Pending manual review"
+  },
+  "publish": {
+    "commit_sha": null,
+    "live_url": null
+  }
+}

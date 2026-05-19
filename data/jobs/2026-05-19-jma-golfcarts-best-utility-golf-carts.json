@@ -1,0 +1,49 @@
+{
+  "job_id": "2026-05-19-jma-golfcarts-best-utility-golf-carts",
+  "site_id": "jma-golfcarts",
+  "topic": "Best utility golf carts for work and property use",
+  "primary_keyword": "best utility golf carts",
+  "secondary_keywords": [
+    "utility golf carts for sale",
+    "golf carts for work use",
+    "commercial golf cart buying guide",
+    "property maintenance golf cart"
+  ],
+  "target_url": "/blog/utility-work-carts/best-utility-golf-carts-for-work-and-property-use",
+  "status": "new",
+  "priority": "medium",
+  "assigned_reviewer": "seo-expert",
+  "created_at": "2026-05-19T16:00:00+04:00",
+  "updated_at": "2026-05-19T18:00:00+04:00",
+  "seo_strategy": {
+    "search_intent": "commercial informational",
+    "cluster": "buyer acquisition",
+    "opportunity_score": 79,
+    "opportunity_rationale": "Commercially useful and category-building, but broader and potentially more competitive than the highest-priority long-tail buyer and seller topics.",
+    "category_slug": "utility-work-carts",
+    "category_name": "Utility & Work Carts",
+    "suggested_tags": [
+      "utility carts",
+      "work carts",
+      "commercial buying guide",
+      "property use"
+    ],
+    "recommended_internal_link_types": [
+      "inventory and auction listing pages",
+      "contact sections",
+      "maintenance posts"
+    ],
+    "lead_goal": "buyer leads"
+  },
+  "metrics": {
+    "target_word_count": 1600,
+    "neuronwriter_score": null,
+    "manual_plagiarism_status": "Pending manual review"
+  },
+  "publish": {
+    "commit_sha": null,
+    "live_url": null
+  },
+  "planned_publish_date": "2026-05-26",
+  "calendar_month": "2026-05-to-06"
+}

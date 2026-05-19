@@ -1,0 +1,49 @@
+{
+  "job_id": "2026-06-25-jma-golfcarts-when-to-replace-golf-cart-batteries-before-selling",
+  "site_id": "jma-golfcarts",
+  "topic": "When to replace golf cart batteries before selling",
+  "primary_keyword": "when to replace golf cart batteries before selling",
+  "secondary_keywords": [
+    "replace batteries before selling golf cart",
+    "sell electric golf cart with old batteries",
+    "golf cart resale battery decision",
+    "battery upgrade before sale"
+  ],
+  "target_url": "/blog/maintenance-ownership/when-to-replace-golf-cart-batteries-before-selling",
+  "status": "new",
+  "priority": "medium",
+  "assigned_reviewer": "seo-expert",
+  "created_at": "2026-05-19T18:00:00+04:00",
+  "updated_at": "2026-05-19T18:00:00+04:00",
+  "planned_publish_date": "2026-06-15",
+  "calendar_month": "2026-05-to-06",
+  "seo_strategy": {
+    "search_intent": "commercial informational",
+    "cluster": "seller acquisition",
+    "lead_goal": "seller leads",
+    "opportunity_score": 75,
+    "opportunity_rationale": "A useful seller-side ownership topic that helps convert hesitant owners who are deciding whether their cart is listing-ready.",
+    "category_slug": "maintenance-ownership",
+    "category_name": "Maintenance & Ownership",
+    "suggested_tags": [
+      "battery replacement",
+      "seller prep",
+      "electric cart resale",
+      "ownership guide"
+    ],
+    "recommended_internal_link_types": [
+      "selling guide posts",
+      "contact sections",
+      "inventory pages"
+    ]
+  },
+  "metrics": {
+    "target_word_count": 1500,
+    "neuronwriter_score": null,
+    "manual_plagiarism_status": "Pending manual review"
+  },
+  "publish": {
+    "commit_sha": null,
+    "live_url": null
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "job_id": "2026-06-08-jma-golfcarts-how-to-price-used-golf-cart-for-sale",
+  "site_id": "jma-golfcarts",
+  "topic": "How to price a used golf cart for sale",
+  "primary_keyword": "how to price a used golf cart for sale",
+  "secondary_keywords": [
+    "used golf cart pricing",
+    "golf cart resale value",
+    "how much is my golf cart worth",
+    "price golf cart to sell"
+  ],
+  "target_url": "/blog/selling-guides/how-to-price-a-used-golf-cart-for-sale",
+  "status": "new",
+  "priority": "high",
+  "assigned_reviewer": "seo-expert",
+  "created_at": "2026-05-19T18:00:00+04:00",
+  "updated_at": "2026-05-19T18:00:00+04:00",
+  "planned_publish_date": "2026-05-27",
+  "calendar_month": "2026-05-to-06",
+  "seo_strategy": {
+    "search_intent": "commercial informational",
+    "cluster": "seller acquisition",
+    "lead_goal": "seller leads",
+    "opportunity_score": 88,
+    "opportunity_rationale": "Seller-intent topic with strong commercial fit because pricing uncertainty often appears right before a listing inquiry.",
+    "category_slug": "selling-guides",
+    "category_name": "Selling Guides",
+    "suggested_tags": [
+      "used golf cart pricing",
+      "seller guide",
+      "resale value",
+      "listing prep"
+    ],
+    "recommended_internal_link_types": [
+      "contact sections",
+      "inventory pages",
+      "selling guide posts"
+    ]
+  },
+  "metrics": {
+    "target_word_count": 1700,
+    "neuronwriter_score": null,
+    "manual_plagiarism_status": "Pending manual review"
+  },
+  "publish": {
+    "commit_sha": null,
+    "live_url": null
+  }
+}

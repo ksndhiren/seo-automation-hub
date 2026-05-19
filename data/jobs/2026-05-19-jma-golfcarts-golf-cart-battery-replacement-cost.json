@@ -1,0 +1,49 @@
+{
+  "job_id": "2026-05-19-jma-golfcarts-golf-cart-battery-replacement-cost",
+  "site_id": "jma-golfcarts",
+  "topic": "Golf cart battery replacement cost",
+  "primary_keyword": "golf cart battery replacement cost",
+  "secondary_keywords": [
+    "replace golf cart batteries",
+    "electric golf cart battery cost",
+    "golf cart ownership cost",
+    "battery life golf cart"
+  ],
+  "target_url": "/blog/maintenance-ownership/golf-cart-battery-replacement-cost",
+  "status": "new",
+  "priority": "medium",
+  "assigned_reviewer": "seo-expert",
+  "created_at": "2026-05-19T16:01:00+04:00",
+  "updated_at": "2026-05-19T18:00:00+04:00",
+  "seo_strategy": {
+    "search_intent": "commercial informational",
+    "cluster": "ownership education",
+    "opportunity_score": 83,
+    "opportunity_rationale": "Strong practical demand signal and helpfulness potential, with good top-of-funnel reach that can support later buyer-conversion content.",
+    "category_slug": "maintenance-ownership",
+    "category_name": "Maintenance & Ownership",
+    "suggested_tags": [
+      "battery cost",
+      "ownership guide",
+      "electric golf cart maintenance",
+      "replacement timing"
+    ],
+    "recommended_internal_link_types": [
+      "buying guide posts",
+      "inventory pages",
+      "brand comparison posts"
+    ],
+    "lead_goal": "buyer leads"
+  },
+  "metrics": {
+    "target_word_count": 1600,
+    "neuronwriter_score": null,
+    "manual_plagiarism_status": "Pending manual review"
+  },
+  "publish": {
+    "commit_sha": null,
+    "live_url": null
+  },
+  "planned_publish_date": "2026-05-25",
+  "calendar_month": "2026-05-to-06"
+}

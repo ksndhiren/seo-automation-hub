@@ -1,0 +1,16 @@
+.DS_Store
+.env
+.env.*
+node_modules
+dist
+.next
+coverage
+*.log
+
+# runtime output
+tmp/
+
+# keep data folder structure, but ignore generated records if desired later
+data/jobs/*.generated.json
+data/reviews/*.generated.json
+data/runs/*.generated.json

@@ -1,0 +1,49 @@
+{
+  "job_id": "2026-06-12-jma-golfcarts-how-long-do-golf-cart-batteries-last",
+  "site_id": "jma-golfcarts",
+  "topic": "How long do golf cart batteries last?",
+  "primary_keyword": "how long do golf cart batteries last",
+  "secondary_keywords": [
+    "golf cart battery lifespan",
+    "battery age used golf cart",
+    "electric golf cart ownership",
+    "battery replacement timing"
+  ],
+  "target_url": "/blog/maintenance-ownership/how-long-do-golf-cart-batteries-last",
+  "status": "new",
+  "priority": "medium",
+  "assigned_reviewer": "seo-expert",
+  "created_at": "2026-05-19T18:00:00+04:00",
+  "updated_at": "2026-05-19T18:00:00+04:00",
+  "planned_publish_date": "2026-06-02",
+  "calendar_month": "2026-05-to-06",
+  "seo_strategy": {
+    "search_intent": "commercial informational",
+    "cluster": "ownership education",
+    "lead_goal": "buyer leads",
+    "opportunity_score": 80,
+    "opportunity_rationale": "Practical ownership questions generate broad interest and help buyers qualify whether a listing is worth pursuing.",
+    "category_slug": "maintenance-ownership",
+    "category_name": "Maintenance & Ownership",
+    "suggested_tags": [
+      "battery lifespan",
+      "ownership guide",
+      "electric carts",
+      "maintenance timing"
+    ],
+    "recommended_internal_link_types": [
+      "buying guide posts",
+      "inventory pages",
+      "contact sections"
+    ]
+  },
+  "metrics": {
+    "target_word_count": 1500,
+    "neuronwriter_score": null,
+    "manual_plagiarism_status": "Pending manual review"
+  },
+  "publish": {
+    "commit_sha": null,
+    "live_url": null
+  }
+}

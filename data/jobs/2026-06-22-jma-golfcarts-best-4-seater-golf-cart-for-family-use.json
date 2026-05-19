@@ -1,0 +1,49 @@
+{
+  "job_id": "2026-06-22-jma-golfcarts-best-4-seater-golf-cart-for-family-use",
+  "site_id": "jma-golfcarts",
+  "topic": "Best 4 seater golf cart for family use",
+  "primary_keyword": "best 4 seater golf cart for family use",
+  "secondary_keywords": [
+    "family golf cart buying guide",
+    "best 4 passenger golf cart",
+    "golf cart for neighborhood family use",
+    "used 4 seater golf cart"
+  ],
+  "target_url": "/blog/buying-guides/best-4-seater-golf-cart-for-family-use",
+  "status": "new",
+  "priority": "medium",
+  "assigned_reviewer": "seo-expert",
+  "created_at": "2026-05-19T18:00:00+04:00",
+  "updated_at": "2026-05-19T18:00:00+04:00",
+  "planned_publish_date": "2026-06-10",
+  "calendar_month": "2026-05-to-06",
+  "seo_strategy": {
+    "search_intent": "commercial informational",
+    "cluster": "buyer acquisition",
+    "lead_goal": "buyer leads",
+    "opportunity_score": 79,
+    "opportunity_rationale": "Family-use intent is commercially attractive and can create a strong bridge to inventory and comparison pages.",
+    "category_slug": "buying-guides",
+    "category_name": "Buying Guides",
+    "suggested_tags": [
+      "4 seater carts",
+      "family use",
+      "buyer guide",
+      "passenger carts"
+    ],
+    "recommended_internal_link_types": [
+      "inventory pages",
+      "brand comparison posts",
+      "contact sections"
+    ]
+  },
+  "metrics": {
+    "target_word_count": 1500,
+    "neuronwriter_score": null,
+    "manual_plagiarism_status": "Pending manual review"
+  },
+  "publish": {
+    "commit_sha": null,
+    "live_url": null
+  }
+}

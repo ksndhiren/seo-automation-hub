@@ -1,0 +1,49 @@
+{
+  "job_id": "2026-06-30-jma-golfcarts-golf-cart-charger-problems-buyers-should-check-first",
+  "site_id": "jma-golfcarts",
+  "topic": "Golf cart charger problems buyers should check first",
+  "primary_keyword": "golf cart charger problems buyers should check first",
+  "secondary_keywords": [
+    "used golf cart charger issues",
+    "buyer checklist charger",
+    "electric golf cart charger problems",
+    "golf cart ownership guide"
+  ],
+  "target_url": "/blog/maintenance-ownership/golf-cart-charger-problems-buyers-should-check-first",
+  "status": "new",
+  "priority": "medium",
+  "assigned_reviewer": "seo-expert",
+  "created_at": "2026-05-19T18:00:00+04:00",
+  "updated_at": "2026-05-19T18:00:00+04:00",
+  "planned_publish_date": "2026-06-18",
+  "calendar_month": "2026-05-to-06",
+  "seo_strategy": {
+    "search_intent": "commercial informational",
+    "cluster": "ownership education",
+    "lead_goal": "buyer leads",
+    "opportunity_score": 74,
+    "opportunity_rationale": "A practical quality-filter topic that helps buyers avoid problem listings and builds trust in the site\u2019s guidance.",
+    "category_slug": "maintenance-ownership",
+    "category_name": "Maintenance & Ownership",
+    "suggested_tags": [
+      "charger problems",
+      "buyer checklist",
+      "electric cart guide",
+      "ownership tips"
+    ],
+    "recommended_internal_link_types": [
+      "buying guide posts",
+      "inventory pages",
+      "contact sections"
+    ]
+  },
+  "metrics": {
+    "target_word_count": 1500,
+    "neuronwriter_score": null,
+    "manual_plagiarism_status": "Pending manual review"
+  },
+  "publish": {
+    "commit_sha": null,
+    "live_url": null
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "job_id": "2026-06-08-cranes-auctions-best-time-to-sell-used-crane",
+  "site_id": "cranes-auctions",
+  "topic": "Best time to sell a used crane",
+  "primary_keyword": "best time to sell a used crane",
+  "secondary_keywords": [
+    "when to sell used crane",
+    "crane market timing",
+    "heavy equipment resale season",
+    "sell crane at best price"
+  ],
+  "target_url": "/blog/market-updates/best-time-to-sell-a-used-crane",
+  "status": "new",
+  "priority": "high",
+  "assigned_reviewer": "seo-expert",
+  "created_at": "2026-05-19T18:00:00+04:00",
+  "updated_at": "2026-05-19T18:00:00+04:00",
+  "planned_publish_date": "2026-05-27",
+  "calendar_month": "2026-05-to-06",
+  "seo_strategy": {
+    "search_intent": "commercial informational",
+    "cluster": "seller acquisition",
+    "lead_goal": "seller leads",
+    "opportunity_score": 84,
+    "opportunity_rationale": "Strong seller-timing topic that can pull valuation and listing inquiries from owners who are already thinking about market readiness.",
+    "category_slug": "market-updates",
+    "category_name": "Market Updates",
+    "suggested_tags": [
+      "market timing",
+      "seller strategy",
+      "used crane market",
+      "resale timing"
+    ],
+    "recommended_internal_link_types": [
+      "selling guide posts",
+      "contact pages",
+      "auction landing pages"
+    ]
+  },
+  "metrics": {
+    "target_word_count": 1700,
+    "neuronwriter_score": null,
+    "manual_plagiarism_status": "Pending manual review"
+  },
+  "publish": {
+    "commit_sha": null,
+    "live_url": null
+  }
+}

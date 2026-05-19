@@ -1,0 +1,49 @@
+{
+  "job_id": "2026-06-10-jma-golfcarts-best-golf-cart-for-campground-or-resort-use",
+  "site_id": "jma-golfcarts",
+  "topic": "Best golf cart for campground or resort use",
+  "primary_keyword": "best golf cart for campground or resort use",
+  "secondary_keywords": [
+    "resort golf cart guide",
+    "campground golf cart options",
+    "fleet golf cart buyer guide",
+    "golf cart for hospitality use"
+  ],
+  "target_url": "/blog/utility-work-carts/best-golf-cart-for-campground-or-resort-use",
+  "status": "new",
+  "priority": "high",
+  "assigned_reviewer": "seo-expert",
+  "created_at": "2026-05-19T18:00:00+04:00",
+  "updated_at": "2026-05-19T18:00:00+04:00",
+  "planned_publish_date": "2026-05-29",
+  "calendar_month": "2026-05-to-06",
+  "seo_strategy": {
+    "search_intent": "commercial informational",
+    "cluster": "buyer acquisition",
+    "lead_goal": "buyer leads",
+    "opportunity_score": 82,
+    "opportunity_rationale": "Use-case led commercial content helps capture higher-value fleet and hospitality buyers who want consultative guidance.",
+    "category_slug": "utility-work-carts",
+    "category_name": "Utility & Work Carts",
+    "suggested_tags": [
+      "resort carts",
+      "campground use",
+      "fleet guide",
+      "hospitality carts"
+    ],
+    "recommended_internal_link_types": [
+      "inventory pages",
+      "contact sections",
+      "utility cart posts"
+    ]
+  },
+  "metrics": {
+    "target_word_count": 1600,
+    "neuronwriter_score": null,
+    "manual_plagiarism_status": "Pending manual review"
+  },
+  "publish": {
+    "commit_sha": null,
+    "live_url": null
+  }
+}

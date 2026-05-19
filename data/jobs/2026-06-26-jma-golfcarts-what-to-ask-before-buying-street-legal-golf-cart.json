@@ -1,0 +1,49 @@
+{
+  "job_id": "2026-06-26-jma-golfcarts-what-to-ask-before-buying-street-legal-golf-cart",
+  "site_id": "jma-golfcarts",
+  "topic": "What to ask before buying a street legal golf cart",
+  "primary_keyword": "what to ask before buying a street legal golf cart",
+  "secondary_keywords": [
+    "street legal golf cart buyer questions",
+    "buy road legal golf cart",
+    "street legal cart checklist",
+    "LSV buyer guide"
+  ],
+  "target_url": "/blog/street-legal-carts/what-to-ask-before-buying-a-street-legal-golf-cart",
+  "status": "new",
+  "priority": "medium",
+  "assigned_reviewer": "seo-expert",
+  "created_at": "2026-05-19T18:00:00+04:00",
+  "updated_at": "2026-05-19T18:00:00+04:00",
+  "planned_publish_date": "2026-06-16",
+  "calendar_month": "2026-05-to-06",
+  "seo_strategy": {
+    "search_intent": "commercial informational",
+    "cluster": "buyer acquisition",
+    "lead_goal": "buyer leads",
+    "opportunity_score": 80,
+    "opportunity_rationale": "Question-led legal/compliance content helps qualify serious buyers and supports consultative lead capture.",
+    "category_slug": "street-legal-carts",
+    "category_name": "Street Legal Carts",
+    "suggested_tags": [
+      "street legal questions",
+      "buyer checklist",
+      "LSV guide",
+      "road legal carts"
+    ],
+    "recommended_internal_link_types": [
+      "street legal posts",
+      "inventory pages",
+      "contact sections"
+    ]
+  },
+  "metrics": {
+    "target_word_count": 1600,
+    "neuronwriter_score": null,
+    "manual_plagiarism_status": "Pending manual review"
+  },
+  "publish": {
+    "commit_sha": null,
+    "live_url": null
+  }
+}

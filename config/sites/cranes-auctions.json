@@ -1,0 +1,83 @@
+{
+  "site_id": "cranes-auctions",
+  "site_name": "CranesAuctions",
+  "github_repo": "https://github.com/ksndhiren/Auctioncrane.git",
+  "local_repo_path": "/Users/abhishekutkarsha/Documents/Codex/Golfcarts/Auctioncrane",
+  "publish_branch": "main",
+  "site_url": "https://www.cranesauctions.com/",
+  "blog_url_prefix": "/blog",
+  "cloudflare_project": "auctioncrane",
+  "deployment_rule": "pushes to main deploy via Cloudflare Pages",
+  "content_path": "src/web/content/blog",
+  "content_format": "typescript-module",
+  "image_path": "public/blog",
+  "content_model_status": "proposed",
+  "lead_generation_brand": "Jeff Martin Auctioneers",
+  "brand_guidelines": {
+    "tone": "Experienced crane marketplace specialists who make buying, selling, and auctioning equipment feel credible, straightforward, and well-supported.",
+    "lead_generation_context": "This micro-site exists to generate qualified leads for Jeff Martin Auctioneers. Content should position Jeff Martin Auctioneers as the real auction and advisory brand behind the experience, especially in CTAs, contact language, and trust-building references.",
+    "audience": [
+      "Crane owners looking to sell underutilized equipment",
+      "Equipment dealers with inventory to move",
+      "Contractors sourcing cranes and heavy equipment",
+      "Fleet managers handling surplus or replacement cycles",
+      "Heavy transport and rigging businesses"
+    ],
+    "avoid": [
+      "keyword stuffing",
+      "thin affiliate-style content",
+      "overly generic AI phrasing",
+      "overpromising on equipment valuation or auction outcomes",
+      "using the microsite name as the speaking brand in CTAs when Jeff Martin Auctioneers should be named instead"
+    ]
+  },
+  "seo_defaults": {
+    "language": "en",
+    "region": "US",
+    "default_word_count_range": [
+      1600,
+      2400
+    ],
+    "target_content_type": "commercial informational blog posts",
+    "manual_plagiarism_check_required": true
+  },
+  "blog_categories": [
+    {
+      "slug": "selling-guides",
+      "name": "Selling Guides"
+    },
+    {
+      "slug": "buying-guides",
+      "name": "Buying Guides"
+    },
+    {
+      "slug": "auction-strategy",
+      "name": "Auction Strategy"
+    },
+    {
+      "slug": "equipment-insights",
+      "name": "Equipment Insights"
+    },
+    {
+      "slug": "transport-logistics",
+      "name": "Transport & Logistics"
+    },
+    {
+      "slug": "market-updates",
+      "name": "Market Updates"
+    }
+  ],
+  "internal_link_rules": {
+    "max_suggested_links": 5,
+    "preferred_destinations": [
+      "equipment category pages",
+      "contact and lead capture sections",
+      "auction-related landing pages"
+    ]
+  },
+  "notes": [
+    "This repo currently does not expose a blog content system yet.",
+    "The content path, content format, and image path above now match the implemented v1 blog structure.",
+    "Automation can create one TypeScript content module per post inside src/web/content/blog."
+  ]
+}

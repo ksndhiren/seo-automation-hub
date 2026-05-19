@@ -1,0 +1,49 @@
+{
+  "job_id": "2026-06-18-jma-golfcarts-electric-vs-gas-golf-cart-for-neighborhoods",
+  "site_id": "jma-golfcarts",
+  "topic": "Electric vs gas golf cart for neighborhoods",
+  "primary_keyword": "electric vs gas golf cart for neighborhoods",
+  "secondary_keywords": [
+    "electric vs gas golf cart",
+    "best golf cart for neighborhood streets",
+    "neighborhood cart comparison",
+    "golf cart fuel type guide"
+  ],
+  "target_url": "/blog/brand-comparisons/electric-vs-gas-golf-cart-for-neighborhoods",
+  "status": "new",
+  "priority": "medium",
+  "assigned_reviewer": "seo-expert",
+  "created_at": "2026-05-19T18:00:00+04:00",
+  "updated_at": "2026-05-19T18:00:00+04:00",
+  "planned_publish_date": "2026-06-08",
+  "calendar_month": "2026-05-to-06",
+  "seo_strategy": {
+    "search_intent": "commercial informational",
+    "cluster": "buyer acquisition",
+    "lead_goal": "buyer leads",
+    "opportunity_score": 81,
+    "opportunity_rationale": "Specific environment-based comparison content often converts better than broad electric-vs-gas articles because intent is clearer.",
+    "category_slug": "brand-comparisons",
+    "category_name": "Brand Comparisons",
+    "suggested_tags": [
+      "electric vs gas",
+      "neighborhood carts",
+      "comparison guide",
+      "buyer guide"
+    ],
+    "recommended_internal_link_types": [
+      "street legal posts",
+      "inventory pages",
+      "contact sections"
+    ]
+  },
+  "metrics": {
+    "target_word_count": 1600,
+    "neuronwriter_score": null,
+    "manual_plagiarism_status": "Pending manual review"
+  },
+  "publish": {
+    "commit_sha": null,
+    "live_url": null
+  }
+}

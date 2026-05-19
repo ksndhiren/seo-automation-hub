@@ -1,0 +1,49 @@
+{
+  "job_id": "2026-05-19-cranes-auctions-buy-used-crane-at-auction",
+  "site_id": "cranes-auctions",
+  "topic": "How to buy a used crane at auction",
+  "primary_keyword": "how to buy a used crane at auction",
+  "secondary_keywords": [
+    "used crane auction buyer checklist",
+    "buy used crane online",
+    "crane bidding tips",
+    "heavy equipment auction checklist"
+  ],
+  "target_url": "/blog/buying-guides/how-to-buy-a-used-crane-at-auction",
+  "status": "brief_pending",
+  "priority": "high",
+  "assigned_reviewer": "seo-expert",
+  "created_at": "2026-05-19T15:55:00+04:00",
+  "updated_at": "2026-05-19T22:20:00+04:00",
+  "seo_strategy": {
+    "search_intent": "commercial informational",
+    "cluster": "buyer acquisition",
+    "opportunity_score": 88,
+    "opportunity_rationale": "Strong buyer-intent query with clear auction relevance and good internal-linking value across inspection, bidding, and logistics topics.",
+    "category_slug": "buying-guides",
+    "category_name": "Buying Guides",
+    "suggested_tags": [
+      "used crane buying",
+      "auction buyer checklist",
+      "inspection prep",
+      "bidding strategy"
+    ],
+    "recommended_internal_link_types": [
+      "auction landing pages",
+      "equipment category pages",
+      "contact pages"
+    ],
+    "lead_goal": "buyer leads"
+  },
+  "metrics": {
+    "target_word_count": 1800,
+    "neuronwriter_score": null,
+    "manual_plagiarism_status": "Pending manual review"
+  },
+  "publish": {
+    "commit_sha": null,
+    "live_url": null
+  },
+  "planned_publish_date": "2026-05-20",
+  "calendar_month": "2026-05-to-06"
+}

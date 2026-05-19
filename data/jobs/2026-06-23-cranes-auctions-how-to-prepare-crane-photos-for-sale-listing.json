@@ -1,0 +1,49 @@
+{
+  "job_id": "2026-06-23-cranes-auctions-how-to-prepare-crane-photos-for-sale-listing",
+  "site_id": "cranes-auctions",
+  "topic": "How to prepare crane photos for a sale listing",
+  "primary_keyword": "how to prepare crane photos for a sale listing",
+  "secondary_keywords": [
+    "crane listing photos",
+    "heavy equipment photo checklist",
+    "auction photo prep crane",
+    "sell crane with better photos"
+  ],
+  "target_url": "/blog/selling-guides/how-to-prepare-crane-photos-for-a-sale-listing",
+  "status": "new",
+  "priority": "medium",
+  "assigned_reviewer": "seo-expert",
+  "created_at": "2026-05-19T18:00:00+04:00",
+  "updated_at": "2026-05-19T18:00:00+04:00",
+  "planned_publish_date": "2026-06-11",
+  "calendar_month": "2026-05-to-06",
+  "seo_strategy": {
+    "search_intent": "commercial informational",
+    "cluster": "seller acquisition",
+    "lead_goal": "seller leads",
+    "opportunity_score": 76,
+    "opportunity_rationale": "Visual-prep content supports sellers who are close to listing and can move them toward a guided intake conversation.",
+    "category_slug": "selling-guides",
+    "category_name": "Selling Guides",
+    "suggested_tags": [
+      "listing photos",
+      "seller prep",
+      "auction photography",
+      "conversion support"
+    ],
+    "recommended_internal_link_types": [
+      "selling guide posts",
+      "contact pages",
+      "auction landing pages"
+    ]
+  },
+  "metrics": {
+    "target_word_count": 1500,
+    "neuronwriter_score": null,
+    "manual_plagiarism_status": "Pending manual review"
+  },
+  "publish": {
+    "commit_sha": null,
+    "live_url": null
+  }
+}

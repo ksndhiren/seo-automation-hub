@@ -1,0 +1,49 @@
+{
+  "job_id": "2026-06-29-jma-golfcarts-how-dealers-can-move-used-golf-cart-inventory-faster",
+  "site_id": "jma-golfcarts",
+  "topic": "How dealers can move used golf cart inventory faster",
+  "primary_keyword": "how dealers can move used golf cart inventory faster",
+  "secondary_keywords": [
+    "dealer golf cart inventory strategy",
+    "move used golf carts faster",
+    "golf cart dealer resale tips",
+    "marketplace strategy for dealers"
+  ],
+  "target_url": "/blog/selling-guides/how-dealers-can-move-used-golf-cart-inventory-faster",
+  "status": "new",
+  "priority": "high",
+  "assigned_reviewer": "seo-expert",
+  "created_at": "2026-05-19T18:00:00+04:00",
+  "updated_at": "2026-05-19T18:00:00+04:00",
+  "planned_publish_date": "2026-06-17",
+  "calendar_month": "2026-05-to-06",
+  "seo_strategy": {
+    "search_intent": "commercial informational",
+    "cluster": "seller acquisition",
+    "lead_goal": "dealer leads",
+    "opportunity_score": 83,
+    "opportunity_rationale": "Dealer-facing content can create fewer but stronger lead opportunities and aligns closely with marketplace monetization goals.",
+    "category_slug": "selling-guides",
+    "category_name": "Selling Guides",
+    "suggested_tags": [
+      "dealer strategy",
+      "inventory turnover",
+      "seller guide",
+      "marketplace tips"
+    ],
+    "recommended_internal_link_types": [
+      "contact sections",
+      "inventory pages",
+      "selling guide posts"
+    ]
+  },
+  "metrics": {
+    "target_word_count": 1700,
+    "neuronwriter_score": null,
+    "manual_plagiarism_status": "Pending manual review"
+  },
+  "publish": {
+    "commit_sha": null,
+    "live_url": null
+  }
+}

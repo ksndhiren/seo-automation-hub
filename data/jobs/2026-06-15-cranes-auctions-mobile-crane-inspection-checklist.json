@@ -1,0 +1,49 @@
+{
+  "job_id": "2026-06-15-cranes-auctions-mobile-crane-inspection-checklist",
+  "site_id": "cranes-auctions",
+  "topic": "Mobile crane inspection checklist before buying",
+  "primary_keyword": "mobile crane inspection checklist",
+  "secondary_keywords": [
+    "inspect mobile crane before buying",
+    "mobile crane auction checklist",
+    "used mobile crane condition",
+    "buyer due diligence mobile crane"
+  ],
+  "target_url": "/blog/equipment-insights/mobile-crane-inspection-checklist-before-buying",
+  "status": "new",
+  "priority": "medium",
+  "assigned_reviewer": "seo-expert",
+  "created_at": "2026-05-19T18:00:00+04:00",
+  "updated_at": "2026-05-19T18:00:00+04:00",
+  "planned_publish_date": "2026-06-03",
+  "calendar_month": "2026-05-to-06",
+  "seo_strategy": {
+    "search_intent": "commercial informational",
+    "cluster": "buyer acquisition",
+    "lead_goal": "buyer leads",
+    "opportunity_score": 80,
+    "opportunity_rationale": "Inspection content is highly actionable and supports serious buyers who are closest to making a purchase decision.",
+    "category_slug": "equipment-insights",
+    "category_name": "Equipment Insights",
+    "suggested_tags": [
+      "mobile crane",
+      "inspection checklist",
+      "buyer due diligence",
+      "auction prep"
+    ],
+    "recommended_internal_link_types": [
+      "buying guide posts",
+      "equipment category pages",
+      "contact pages"
+    ]
+  },
+  "metrics": {
+    "target_word_count": 1700,
+    "neuronwriter_score": null,
+    "manual_plagiarism_status": "Pending manual review"
+  },
+  "publish": {
+    "commit_sha": null,
+    "live_url": null
+  }
+}

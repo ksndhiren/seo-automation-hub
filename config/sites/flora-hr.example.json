@@ -1,0 +1,26 @@
+{
+  "site_id": "flora-hr",
+  "site_name": "Flora HR",
+  "github_repo": "github.com/your-org/flora-hr",
+  "local_repo_path": "/Users/abhishekutkarsha/Documents/Codex/Flora-HR",
+  "publish_branch": "main",
+  "content_path": "src/content/blog",
+  "cloudflare_project": "flora-hr",
+  "content_format": "mdx",
+  "brand_guidelines": {
+    "tone": "clear, practical, expert",
+    "audience": "HR leaders and employers",
+    "avoid": [
+      "keyword stuffing",
+      "generic AI phrasing"
+    ]
+  },
+  "seo_defaults": {
+    "language": "en",
+    "region": "global",
+    "default_word_count_range": [1500, 2200]
+  },
+  "internal_link_rules": {
+    "max_suggested_links": 5
+  }
+}

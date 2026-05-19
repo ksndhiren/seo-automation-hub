@@ -1,0 +1,49 @@
+{
+  "job_id": "2026-06-10-cranes-auctions-what-affects-used-crane-resale-value",
+  "site_id": "cranes-auctions",
+  "topic": "What affects used crane resale value",
+  "primary_keyword": "what affects used crane resale value",
+  "secondary_keywords": [
+    "crane resale factors",
+    "used crane pricing factors",
+    "equipment depreciation crane",
+    "crane value checklist"
+  ],
+  "target_url": "/blog/equipment-insights/what-affects-used-crane-resale-value",
+  "status": "new",
+  "priority": "high",
+  "assigned_reviewer": "seo-expert",
+  "created_at": "2026-05-19T18:00:00+04:00",
+  "updated_at": "2026-05-19T18:00:00+04:00",
+  "planned_publish_date": "2026-05-29",
+  "calendar_month": "2026-05-to-06",
+  "seo_strategy": {
+    "search_intent": "commercial informational",
+    "cluster": "seller acquisition",
+    "lead_goal": "seller leads",
+    "opportunity_score": 83,
+    "opportunity_rationale": "Practical valuation content that supports lead capture from owners still deciding whether to sell now or improve the asset first.",
+    "category_slug": "equipment-insights",
+    "category_name": "Equipment Insights",
+    "suggested_tags": [
+      "resale value",
+      "pricing factors",
+      "equipment depreciation",
+      "seller prep"
+    ],
+    "recommended_internal_link_types": [
+      "selling guide posts",
+      "contact pages",
+      "market updates"
+    ]
+  },
+  "metrics": {
+    "target_word_count": 1700,
+    "neuronwriter_score": null,
+    "manual_plagiarism_status": "Pending manual review"
+  },
+  "publish": {
+    "commit_sha": null,
+    "live_url": null
+  }
+}

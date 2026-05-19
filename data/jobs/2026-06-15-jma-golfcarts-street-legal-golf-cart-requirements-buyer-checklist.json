@@ -1,0 +1,49 @@
+{
+  "job_id": "2026-06-15-jma-golfcarts-street-legal-golf-cart-requirements-buyer-checklist",
+  "site_id": "jma-golfcarts",
+  "topic": "Street legal golf cart requirements buyer checklist",
+  "primary_keyword": "street legal golf cart requirements buyer checklist",
+  "secondary_keywords": [
+    "street legal golf cart checklist",
+    "LSV golf cart requirements",
+    "buy street legal golf cart",
+    "road legal golf cart guide"
+  ],
+  "target_url": "/blog/street-legal-carts/street-legal-golf-cart-requirements-buyer-checklist",
+  "status": "new",
+  "priority": "high",
+  "assigned_reviewer": "seo-expert",
+  "created_at": "2026-05-19T18:00:00+04:00",
+  "updated_at": "2026-05-19T18:00:00+04:00",
+  "planned_publish_date": "2026-06-03",
+  "calendar_month": "2026-05-to-06",
+  "seo_strategy": {
+    "search_intent": "commercial informational",
+    "cluster": "buyer acquisition",
+    "lead_goal": "buyer leads",
+    "opportunity_score": 84,
+    "opportunity_rationale": "Compliance-oriented content attracts serious buyers with clear intent and supports high-value consultation opportunities.",
+    "category_slug": "street-legal-carts",
+    "category_name": "Street Legal Carts",
+    "suggested_tags": [
+      "street legal",
+      "buyer checklist",
+      "LSV guide",
+      "road-ready carts"
+    ],
+    "recommended_internal_link_types": [
+      "inventory pages",
+      "contact sections",
+      "buying guide posts"
+    ]
+  },
+  "metrics": {
+    "target_word_count": 1700,
+    "neuronwriter_score": null,
+    "manual_plagiarism_status": "Pending manual review"
+  },
+  "publish": {
+    "commit_sha": null,
+    "live_url": null
+  }
+}

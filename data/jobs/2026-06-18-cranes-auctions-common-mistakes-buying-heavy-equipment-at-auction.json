@@ -1,0 +1,49 @@
+{
+  "job_id": "2026-06-18-cranes-auctions-common-mistakes-buying-heavy-equipment-at-auction",
+  "site_id": "cranes-auctions",
+  "topic": "Common mistakes when buying heavy equipment at auction",
+  "primary_keyword": "common mistakes buying heavy equipment at auction",
+  "secondary_keywords": [
+    "auction buying mistakes",
+    "used equipment auction tips",
+    "avoid auction bidding mistakes",
+    "heavy equipment buyer guide"
+  ],
+  "target_url": "/blog/buying-guides/common-mistakes-when-buying-heavy-equipment-at-auction",
+  "status": "new",
+  "priority": "medium",
+  "assigned_reviewer": "seo-expert",
+  "created_at": "2026-05-19T18:00:00+04:00",
+  "updated_at": "2026-05-19T18:00:00+04:00",
+  "planned_publish_date": "2026-06-08",
+  "calendar_month": "2026-05-to-06",
+  "seo_strategy": {
+    "search_intent": "commercial informational",
+    "cluster": "buyer acquisition",
+    "lead_goal": "buyer leads",
+    "opportunity_score": 78,
+    "opportunity_rationale": "Pain-point content performs well for early trust building and gives buyers a reason to engage before bidding.",
+    "category_slug": "buying-guides",
+    "category_name": "Buying Guides",
+    "suggested_tags": [
+      "auction mistakes",
+      "buyer education",
+      "heavy equipment tips",
+      "bidding strategy"
+    ],
+    "recommended_internal_link_types": [
+      "buying guide posts",
+      "auction landing pages",
+      "contact pages"
+    ]
+  },
+  "metrics": {
+    "target_word_count": 1600,
+    "neuronwriter_score": null,
+    "manual_plagiarism_status": "Pending manual review"
+  },
+  "publish": {
+    "commit_sha": null,
+    "live_url": null
+  }
+}

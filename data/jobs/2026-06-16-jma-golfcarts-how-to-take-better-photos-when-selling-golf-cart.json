@@ -1,0 +1,49 @@
+{
+  "job_id": "2026-06-16-jma-golfcarts-how-to-take-better-photos-when-selling-golf-cart",
+  "site_id": "jma-golfcarts",
+  "topic": "How to take better photos when selling a golf cart",
+  "primary_keyword": "how to take better photos when selling a golf cart",
+  "secondary_keywords": [
+    "golf cart listing photos",
+    "sell golf cart with better photos",
+    "online listing photo checklist",
+    "golf cart resale pictures"
+  ],
+  "target_url": "/blog/selling-guides/how-to-take-better-photos-when-selling-a-golf-cart",
+  "status": "new",
+  "priority": "medium",
+  "assigned_reviewer": "seo-expert",
+  "created_at": "2026-05-19T18:00:00+04:00",
+  "updated_at": "2026-05-19T18:00:00+04:00",
+  "planned_publish_date": "2026-06-04",
+  "calendar_month": "2026-05-to-06",
+  "seo_strategy": {
+    "search_intent": "commercial informational",
+    "cluster": "seller acquisition",
+    "lead_goal": "seller leads",
+    "opportunity_score": 77,
+    "opportunity_rationale": "A practical conversion-assist topic that helps sellers feel supported and closer to listing, even if it is not the highest-volume term.",
+    "category_slug": "selling-guides",
+    "category_name": "Selling Guides",
+    "suggested_tags": [
+      "listing photos",
+      "seller prep",
+      "marketplace tips",
+      "photo checklist"
+    ],
+    "recommended_internal_link_types": [
+      "selling guide posts",
+      "contact sections",
+      "inventory pages"
+    ]
+  },
+  "metrics": {
+    "target_word_count": 1500,
+    "neuronwriter_score": null,
+    "manual_plagiarism_status": "Pending manual review"
+  },
+  "publish": {
+    "commit_sha": null,
+    "live_url": null
+  }
+}

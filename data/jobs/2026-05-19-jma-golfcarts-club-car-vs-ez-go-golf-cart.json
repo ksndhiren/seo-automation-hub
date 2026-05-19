@@ -1,0 +1,49 @@
+{
+  "job_id": "2026-05-19-jma-golfcarts-club-car-vs-ez-go-golf-cart",
+  "site_id": "jma-golfcarts",
+  "topic": "Club Car vs EZGO golf cart",
+  "primary_keyword": "club car vs ez go golf cart",
+  "secondary_keywords": [
+    "club car vs ezgo comparison",
+    "best golf cart brand",
+    "used club car vs ezgo",
+    "golf cart brand comparison"
+  ],
+  "target_url": "/blog/brand-comparisons/club-car-vs-ezgo-golf-cart",
+  "status": "new",
+  "priority": "medium",
+  "assigned_reviewer": "seo-expert",
+  "created_at": "2026-05-19T16:02:00+04:00",
+  "updated_at": "2026-05-19T18:00:00+04:00",
+  "seo_strategy": {
+    "search_intent": "commercial informational",
+    "cluster": "buyer acquisition",
+    "opportunity_score": 84,
+    "opportunity_rationale": "Brand comparison content can capture strong decision-stage traffic and support conversions, but requires clearer differentiation to outperform existing comparison pages.",
+    "category_slug": "brand-comparisons",
+    "category_name": "Brand Comparisons",
+    "suggested_tags": [
+      "brand comparison",
+      "club car",
+      "ezgo",
+      "buyer guide"
+    ],
+    "recommended_internal_link_types": [
+      "buying guide posts",
+      "inventory pages",
+      "contact sections"
+    ],
+    "lead_goal": "buyer leads"
+  },
+  "metrics": {
+    "target_word_count": 1600,
+    "neuronwriter_score": null,
+    "manual_plagiarism_status": "Pending manual review"
+  },
+  "publish": {
+    "commit_sha": null,
+    "live_url": null
+  },
+  "planned_publish_date": "2026-05-22",
+  "calendar_month": "2026-05-to-06"
+}

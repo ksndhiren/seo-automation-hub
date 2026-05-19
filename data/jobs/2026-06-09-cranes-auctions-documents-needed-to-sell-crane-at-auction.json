@@ -1,0 +1,49 @@
+{
+  "job_id": "2026-06-09-cranes-auctions-documents-needed-to-sell-crane-at-auction",
+  "site_id": "cranes-auctions",
+  "topic": "Documents needed to sell a crane at auction",
+  "primary_keyword": "documents needed to sell a crane at auction",
+  "secondary_keywords": [
+    "crane title paperwork",
+    "auction seller documents",
+    "equipment ownership records",
+    "paperwork for selling crane"
+  ],
+  "target_url": "/blog/selling-guides/documents-needed-to-sell-a-crane-at-auction",
+  "status": "new",
+  "priority": "high",
+  "assigned_reviewer": "seo-expert",
+  "created_at": "2026-05-19T18:00:00+04:00",
+  "updated_at": "2026-05-19T18:00:00+04:00",
+  "planned_publish_date": "2026-05-28",
+  "calendar_month": "2026-05-to-06",
+  "seo_strategy": {
+    "search_intent": "commercial informational",
+    "cluster": "seller acquisition",
+    "lead_goal": "seller leads",
+    "opportunity_score": 87,
+    "opportunity_rationale": "High-conversion seller topic because paperwork readiness is a real blocker that often surfaces right before a listing inquiry.",
+    "category_slug": "selling-guides",
+    "category_name": "Selling Guides",
+    "suggested_tags": [
+      "seller paperwork",
+      "auction documents",
+      "ownership records",
+      "listing prep"
+    ],
+    "recommended_internal_link_types": [
+      "contact pages",
+      "auction landing pages",
+      "selling guide posts"
+    ]
+  },
+  "metrics": {
+    "target_word_count": 1700,
+    "neuronwriter_score": null,
+    "manual_plagiarism_status": "Pending manual review"
+  },
+  "publish": {
+    "commit_sha": null,
+    "live_url": null
+  }
+}

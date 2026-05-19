@@ -1,0 +1,49 @@
+{
+  "job_id": "2026-05-19-jma-golfcarts-what-to-look-for-buying-used-golf-cart",
+  "site_id": "jma-golfcarts",
+  "topic": "What to look for when buying a used golf cart",
+  "primary_keyword": "what to look for when buying a used golf cart",
+  "secondary_keywords": [
+    "used golf cart buying checklist",
+    "inspect golf cart before buying",
+    "buy used golf cart online",
+    "used golf cart buyer guide"
+  ],
+  "target_url": "/blog/buying-guides/what-to-look-for-when-buying-a-used-golf-cart",
+  "status": "new",
+  "priority": "high",
+  "assigned_reviewer": "seo-expert",
+  "created_at": "2026-05-19T15:59:00+04:00",
+  "updated_at": "2026-05-19T18:00:00+04:00",
+  "seo_strategy": {
+    "search_intent": "commercial informational",
+    "cluster": "buyer acquisition",
+    "opportunity_score": 90,
+    "opportunity_rationale": "Excellent new-site target because it matches buyer research behavior, supports comparison content, and is easy to make genuinely helpful.",
+    "category_slug": "buying-guides",
+    "category_name": "Buying Guides",
+    "suggested_tags": [
+      "used golf cart buying",
+      "inspection checklist",
+      "buyer guide",
+      "marketplace tips"
+    ],
+    "recommended_internal_link_types": [
+      "inventory and auction listing pages",
+      "brand comparison posts",
+      "contact sections"
+    ],
+    "lead_goal": "buyer leads"
+  },
+  "metrics": {
+    "target_word_count": 1700,
+    "neuronwriter_score": null,
+    "manual_plagiarism_status": "Pending manual review"
+  },
+  "publish": {
+    "commit_sha": null,
+    "live_url": null
+  },
+  "planned_publish_date": "2026-05-21",
+  "calendar_month": "2026-05-to-06"
+}

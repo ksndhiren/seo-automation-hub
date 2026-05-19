@@ -1,0 +1,8 @@
+name = "seo-automation-dashboard"
+pages_build_output_dir = "."
+compatibility_date = "2026-05-18"
+
+[[d1_databases]]
+binding = "DASHBOARD_DB"
+database_name = "seo-automation-dashboard-db"
+database_id = "144264b9-6907-463a-ae9b-5b77437065f4"

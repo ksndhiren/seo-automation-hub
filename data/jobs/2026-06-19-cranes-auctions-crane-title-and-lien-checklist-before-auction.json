@@ -1,0 +1,49 @@
+{
+  "job_id": "2026-06-19-cranes-auctions-crane-title-and-lien-checklist-before-auction",
+  "site_id": "cranes-auctions",
+  "topic": "Crane title and lien checklist before auction",
+  "primary_keyword": "crane title and lien checklist before auction",
+  "secondary_keywords": [
+    "crane lien paperwork",
+    "title checklist before selling crane",
+    "auction title issues crane",
+    "ownership verification crane"
+  ],
+  "target_url": "/blog/selling-guides/crane-title-and-lien-checklist-before-auction",
+  "status": "new",
+  "priority": "high",
+  "assigned_reviewer": "seo-expert",
+  "created_at": "2026-05-19T18:00:00+04:00",
+  "updated_at": "2026-05-19T18:00:00+04:00",
+  "planned_publish_date": "2026-06-09",
+  "calendar_month": "2026-05-to-06",
+  "seo_strategy": {
+    "search_intent": "commercial informational",
+    "cluster": "seller acquisition",
+    "lead_goal": "seller leads",
+    "opportunity_score": 82,
+    "opportunity_rationale": "Title and lien issues often block listings, making this a high-intent problem-solution topic for motivated sellers.",
+    "category_slug": "selling-guides",
+    "category_name": "Selling Guides",
+    "suggested_tags": [
+      "title checklist",
+      "lien issues",
+      "seller paperwork",
+      "auction prep"
+    ],
+    "recommended_internal_link_types": [
+      "contact pages",
+      "selling guide posts",
+      "auction landing pages"
+    ]
+  },
+  "metrics": {
+    "target_word_count": 1600,
+    "neuronwriter_score": null,
+    "manual_plagiarism_status": "Pending manual review"
+  },
+  "publish": {
+    "commit_sha": null,
+    "live_url": null
+  }
+}

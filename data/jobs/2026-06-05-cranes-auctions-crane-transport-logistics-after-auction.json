@@ -1,0 +1,49 @@
+{
+  "job_id": "2026-06-05-cranes-auctions-crane-transport-logistics-after-auction",
+  "site_id": "cranes-auctions",
+  "topic": "Crane transport logistics after auction",
+  "primary_keyword": "crane transport logistics after auction",
+  "secondary_keywords": [
+    "move crane after auction",
+    "heavy equipment transport after sale",
+    "crane pickup logistics",
+    "auction removal planning"
+  ],
+  "target_url": "/blog/transport-logistics/crane-transport-logistics-after-auction",
+  "status": "new",
+  "priority": "medium",
+  "assigned_reviewer": "seo-expert",
+  "created_at": "2026-05-19T18:00:00+04:00",
+  "updated_at": "2026-05-19T18:00:00+04:00",
+  "planned_publish_date": "2026-05-26",
+  "calendar_month": "2026-05-to-06",
+  "seo_strategy": {
+    "search_intent": "commercial informational",
+    "cluster": "buyer fulfillment",
+    "lead_goal": "buyer leads",
+    "opportunity_score": 78,
+    "opportunity_rationale": "Operational topic with strong post-sale relevance that can convert cautious buyers who need clarity on removal and freight planning.",
+    "category_slug": "transport-logistics",
+    "category_name": "Transport & Logistics",
+    "suggested_tags": [
+      "transport logistics",
+      "auction removal",
+      "crane shipping",
+      "post-sale planning"
+    ],
+    "recommended_internal_link_types": [
+      "auction landing pages",
+      "contact pages",
+      "equipment category pages"
+    ]
+  },
+  "metrics": {
+    "target_word_count": 1600,
+    "neuronwriter_score": null,
+    "manual_plagiarism_status": "Pending manual review"
+  },
+  "publish": {
+    "commit_sha": null,
+    "live_url": null
+  }
+}

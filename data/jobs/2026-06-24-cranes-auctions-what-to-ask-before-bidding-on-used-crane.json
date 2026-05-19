@@ -1,0 +1,49 @@
+{
+  "job_id": "2026-06-24-cranes-auctions-what-to-ask-before-bidding-on-used-crane",
+  "site_id": "cranes-auctions",
+  "topic": "What to ask before bidding on a used crane",
+  "primary_keyword": "what to ask before bidding on a used crane",
+  "secondary_keywords": [
+    "questions before bidding on crane",
+    "used crane auction questions",
+    "crane bidding checklist",
+    "buyer diligence crane"
+  ],
+  "target_url": "/blog/buying-guides/what-to-ask-before-bidding-on-a-used-crane",
+  "status": "new",
+  "priority": "medium",
+  "assigned_reviewer": "seo-expert",
+  "created_at": "2026-05-19T18:00:00+04:00",
+  "updated_at": "2026-05-19T18:00:00+04:00",
+  "planned_publish_date": "2026-06-12",
+  "calendar_month": "2026-05-to-06",
+  "seo_strategy": {
+    "search_intent": "commercial informational",
+    "cluster": "buyer acquisition",
+    "lead_goal": "buyer leads",
+    "opportunity_score": 79,
+    "opportunity_rationale": "Question-driven content closely matches buyer behavior and gives the site a natural way to offer expert guidance.",
+    "category_slug": "buying-guides",
+    "category_name": "Buying Guides",
+    "suggested_tags": [
+      "buyer questions",
+      "bidding checklist",
+      "auction prep",
+      "crane due diligence"
+    ],
+    "recommended_internal_link_types": [
+      "auction landing pages",
+      "equipment category pages",
+      "contact pages"
+    ]
+  },
+  "metrics": {
+    "target_word_count": 1600,
+    "neuronwriter_score": null,
+    "manual_plagiarism_status": "Pending manual review"
+  },
+  "publish": {
+    "commit_sha": null,
+    "live_url": null
+  }
+}

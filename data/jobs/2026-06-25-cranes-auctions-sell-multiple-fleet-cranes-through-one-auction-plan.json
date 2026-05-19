@@ -1,0 +1,49 @@
+{
+  "job_id": "2026-06-25-cranes-auctions-sell-multiple-fleet-cranes-through-one-auction-plan",
+  "site_id": "cranes-auctions",
+  "topic": "How to sell multiple fleet cranes through one auction plan",
+  "primary_keyword": "sell multiple fleet cranes through one auction plan",
+  "secondary_keywords": [
+    "fleet crane liquidation",
+    "sell multiple cranes auction",
+    "fleet equipment auction plan",
+    "bulk crane sale strategy"
+  ],
+  "target_url": "/blog/selling-guides/how-to-sell-multiple-fleet-cranes-through-one-auction-plan",
+  "status": "new",
+  "priority": "medium",
+  "assigned_reviewer": "seo-expert",
+  "created_at": "2026-05-19T18:00:00+04:00",
+  "updated_at": "2026-05-19T18:00:00+04:00",
+  "planned_publish_date": "2026-06-15",
+  "calendar_month": "2026-05-to-06",
+  "seo_strategy": {
+    "search_intent": "commercial informational",
+    "cluster": "seller acquisition",
+    "lead_goal": "seller leads",
+    "opportunity_score": 81,
+    "opportunity_rationale": "Fleet-focused content aligns with high-value commercial sellers and can produce fewer but much stronger leads.",
+    "category_slug": "selling-guides",
+    "category_name": "Selling Guides",
+    "suggested_tags": [
+      "fleet sales",
+      "bulk auction",
+      "seller strategy",
+      "fleet disposal"
+    ],
+    "recommended_internal_link_types": [
+      "contact pages",
+      "auction landing pages",
+      "selling guide posts"
+    ]
+  },
+  "metrics": {
+    "target_word_count": 1700,
+    "neuronwriter_score": null,
+    "manual_plagiarism_status": "Pending manual review"
+  },
+  "publish": {
+    "commit_sha": null,
+    "live_url": null
+  }
+}

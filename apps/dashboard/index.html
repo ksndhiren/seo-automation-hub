@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SEO Automation Hub</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">SEO Operations</p>
+          <h1>Blog Approval Dashboard</h1>
+        </div>
+        <div class="topbar-meta">
+          <label class="topbar-filter">
+            <span>Site</span>
+            <select id="site-filter">
+              <option value="all">All sites</option>
+            </select>
+          </label>
+          <span class="meta-chip">2 review checkpoints</span>
+          <span id="last-updated" class="meta-chip meta-chip-soft"></span>
+        </div>
+      </header>
+
+      <section class="summary-strip" id="summary-grid"></section>
+
+      <section class="panel planning-panel">
+        <div class="panel-header">
+          <div>
+            <p class="section-kicker">Planning Board</p>
+            <h2>Site strategy at a glance</h2>
+          </div>
+          <div class="planning-toolbar">
+            <div class="planning-switch" role="tablist" aria-label="Planning views">
+              <button id="planning-view-overview" class="planning-switch-btn active" type="button">
+                Overview
+              </button>
+              <button id="planning-view-calendar" class="planning-switch-btn" type="button">
+                Calendar
+              </button>
+            </div>
+            <span id="planning-site-context" class="meta-chip meta-chip-soft"></span>
+          </div>
+        </div>
+        <div id="planning-overview-view" class="planning-view active">
+          <div class="planning-grid">
+            <article class="planning-card planning-card-wide">
+              <h3>Category pipeline</h3>
+              <div id="category-pipeline" class="category-pipeline"></div>
+            </article>
+            <article class="planning-card">
+              <h3>Cluster map</h3>
+              <div id="cluster-map" class="cluster-map"></div>
+            </article>
+            <article class="planning-card">
+              <h3>URL framework</h3>
+              <div id="url-framework" class="framework-box"></div>
+            </article>
+          </div>
+        </div>
+        <div id="planning-calendar-view" class="planning-view">
+          <article class="planning-card calendar-card">
+            <div class="planning-card-head planning-card-head-compact">
+              <h3>Working-day content calendar</h3>
+            </div>
+            <div id="content-calendar" class="content-calendar"></div>
+          </article>
+        </div>
+      </section>
+
+      <main class="workspace">
+        <aside class="panel queue-panel">
+          <div class="panel-header">
+            <div>
+              <p class="section-kicker">Queue</p>
+              <h2>Jobs</h2>
+            </div>
+            <div class="queue-filters">
+              <label class="select-wrap">
+                <span class="sr-only">Filter jobs</span>
+                <select id="status-filter">
+                  <option value="all">All statuses</option>
+                </select>
+              </label>
+            </div>
+          </div>
+          <div id="job-list" class="job-list"></div>
+          <div class="taxonomy-box">
+            <div class="taxonomy-head">
+              <p class="section-kicker">Taxonomy</p>
+              <h3>Blog categories</h3>
+            </div>
+            <div id="site-taxonomy" class="taxonomy-list"></div>
+          </div>
+        </aside>
+
+        <section class="panel detail-panel">
+          <div class="detail-head">
+            <div>
+              <p class="section-kicker">Selected job</p>
+              <h2 id="job-title">Choose a job</h2>
+            </div>
+            <span id="job-status-pill" class="status-pill">Waiting</span>
+          </div>
+
+          <div id="job-empty" class="empty-state">
+            Select a job from the queue to review the brief, outline, and approval requirements.
+          </div>
+
+          <div id="job-detail" class="job-detail hidden">
+            <div class="meta-grid" id="job-meta-grid"></div>
+
+            <div class="tabs" role="tablist" aria-label="Job detail tabs">
+              <button class="tab" data-tab="strategy">SEO Strategy</button>
+              <button class="tab active" data-tab="brief">Brief</button>
+              <button class="tab" data-tab="review">Review</button>
+              <button class="tab" data-tab="draft">Draft</button>
+              <button class="tab" data-tab="activity">Activity</button>
+            </div>
+
+            <div id="tab-strategy" class="tab-panel"></div>
+            <div id="tab-brief" class="tab-panel active"></div>
+            <div id="tab-review" class="tab-panel"></div>
+            <div id="tab-draft" class="tab-panel"></div>
+            <div id="tab-activity" class="tab-panel"></div>
+          </div>
+        </section>
+
+        <aside class="panel approval-panel">
+          <div class="panel-header">
+            <div>
+              <p class="section-kicker">Approval</p>
+              <h2>Reviewer Action</h2>
+            </div>
+          </div>
+
+          <div class="checkpoint-box">
+            <span class="checkpoint-label">Current checkpoint</span>
+            <strong id="checkpoint-title">Select a job</strong>
+            <p id="checkpoint-copy" class="muted">
+              Approval actions will appear here once you pick a job from the queue.
+            </p>
+          </div>
+
+          <div class="approval-box">
+            <label for="review-comment">Reviewer notes</label>
+            <textarea
+              id="review-comment"
+              placeholder="Add concise approval notes or revision requests."
+            ></textarea>
+          </div>
+
+          <div class="action-buttons">
+            <button class="action secondary" id="request-changes">
+              Send Back
+            </button>
+            <button class="action primary" id="approve-job">
+              Approve
+            </button>
+          </div>
+
+          <div id="review-preview" class="review-preview">
+            <h3>Awaiting action</h3>
+            <p class="muted">Approvals and revision requests will be logged here.</p>
+          </div>
+        </aside>
+      </main>
+    </div>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,84 @@
+{
+  "site_id": "jma-golfcarts",
+  "site_name": "JMA Golf Carts",
+  "github_repo": "https://github.com/ksndhiren/golfcarts.git",
+  "local_repo_path": "/Users/abhishekutkarsha/Documents/Codex/Golfcarts",
+  "publish_branch": "main",
+  "site_url": "https://www.jmagolfcarts.com/",
+  "blog_url_prefix": "/blog",
+  "cloudflare_project": "golfcarts",
+  "deployment_rule": "pushes to main deploy via Cloudflare Pages",
+  "content_path": "src/content/blog/generated",
+  "content_format": "typescript-module",
+  "image_path": "public/blog",
+  "content_model_status": "implemented",
+  "lead_generation_brand": "Jeff Martin Auctioneers",
+  "brand_guidelines": {
+    "tone": "Practical golf cart marketplace specialists who make buying, selling, and comparing carts feel simple, transparent, and trustworthy.",
+    "lead_generation_context": "This micro-site exists to generate qualified leads for Jeff Martin Auctioneers. Content should make Jeff Martin Auctioneers the trusted marketplace and contact brand behind the site, especially in CTAs and conversion language.",
+    "audience": [
+      "Golf cart buyers comparing personal, utility, and fleet carts",
+      "Dealers looking to move multiple carts through a marketplace",
+      "Property owners and communities sourcing utility or street-legal carts",
+      "Businesses evaluating fleet and maintenance cart options",
+      "Sellers listing used golf carts online"
+    ],
+    "avoid": [
+      "keyword stuffing",
+      "thin comparison content without useful buying guidance",
+      "generic AI phrasing",
+      "unverified claims about cart pricing, battery life, or availability",
+      "using the microsite name as the speaking brand in CTAs when Jeff Martin Auctioneers should be named instead"
+    ]
+  },
+  "seo_defaults": {
+    "language": "en",
+    "region": "US",
+    "default_word_count_range": [
+      1400,
+      2200
+    ],
+    "target_content_type": "commercial informational blog posts",
+    "manual_plagiarism_check_required": true
+  },
+  "blog_categories": [
+    {
+      "slug": "buying-guides",
+      "name": "Buying Guides"
+    },
+    {
+      "slug": "selling-guides",
+      "name": "Selling Guides"
+    },
+    {
+      "slug": "street-legal-carts",
+      "name": "Street Legal Carts"
+    },
+    {
+      "slug": "utility-work-carts",
+      "name": "Utility & Work Carts"
+    },
+    {
+      "slug": "brand-comparisons",
+      "name": "Brand Comparisons"
+    },
+    {
+      "slug": "maintenance-ownership",
+      "name": "Maintenance & Ownership"
+    }
+  ],
+  "internal_link_rules": {
+    "max_suggested_links": 5,
+    "preferred_destinations": [
+      "inventory and auction listing pages",
+      "contact and lead capture sections",
+      "brand and category landing pages"
+    ]
+  },
+  "notes": [
+    "This repo is the live www.jmagolfcarts.com site.",
+    "The site now exposes a v1 blog system with /blog and /blog/{category}/{slug} routes.",
+    "Content path, content format, and image path now match the implemented site structure.",
+    "Automation can create one TypeScript content module or extend the posts data file for initial publishing workflows."
+  ]
+}

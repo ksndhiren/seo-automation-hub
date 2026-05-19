@@ -1,0 +1,49 @@
+{
+  "job_id": "2026-06-29-cranes-auctions-how-buyers-evaluate-crane-condition-reports",
+  "site_id": "cranes-auctions",
+  "topic": "How heavy equipment buyers evaluate crane condition reports",
+  "primary_keyword": "how buyers evaluate crane condition reports",
+  "secondary_keywords": [
+    "crane condition report guide",
+    "used crane inspection report",
+    "buyer review condition report",
+    "heavy equipment report checklist"
+  ],
+  "target_url": "/blog/equipment-insights/how-heavy-equipment-buyers-evaluate-crane-condition-reports",
+  "status": "new",
+  "priority": "medium",
+  "assigned_reviewer": "seo-expert",
+  "created_at": "2026-05-19T18:00:00+04:00",
+  "updated_at": "2026-05-19T18:00:00+04:00",
+  "planned_publish_date": "2026-06-17",
+  "calendar_month": "2026-05-to-06",
+  "seo_strategy": {
+    "search_intent": "commercial informational",
+    "cluster": "buyer acquisition",
+    "lead_goal": "buyer leads",
+    "opportunity_score": 74,
+    "opportunity_rationale": "A strong trust-building topic that helps serious buyers interpret condition data and lean toward guided buying support.",
+    "category_slug": "equipment-insights",
+    "category_name": "Equipment Insights",
+    "suggested_tags": [
+      "condition reports",
+      "buyer review",
+      "inspection guide",
+      "equipment diligence"
+    ],
+    "recommended_internal_link_types": [
+      "buying guide posts",
+      "auction landing pages",
+      "contact pages"
+    ]
+  },
+  "metrics": {
+    "target_word_count": 1600,
+    "neuronwriter_score": null,
+    "manual_plagiarism_status": "Pending manual review"
+  },
+  "publish": {
+    "commit_sha": null,
+    "live_url": null
+  }
+}

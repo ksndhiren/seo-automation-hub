@@ -1,0 +1,49 @@
+{
+  "job_id": "2026-06-17-jma-golfcarts-common-mistakes-buying-used-golf-cart-online",
+  "site_id": "jma-golfcarts",
+  "topic": "Common mistakes when buying a used golf cart online",
+  "primary_keyword": "common mistakes buying used golf cart online",
+  "secondary_keywords": [
+    "avoid used golf cart buying mistakes",
+    "used golf cart marketplace tips",
+    "golf cart buying mistakes",
+    "online golf cart buyer guide"
+  ],
+  "target_url": "/blog/buying-guides/common-mistakes-when-buying-a-used-golf-cart-online",
+  "status": "new",
+  "priority": "high",
+  "assigned_reviewer": "seo-expert",
+  "created_at": "2026-05-19T18:00:00+04:00",
+  "updated_at": "2026-05-19T18:00:00+04:00",
+  "planned_publish_date": "2026-06-05",
+  "calendar_month": "2026-05-to-06",
+  "seo_strategy": {
+    "search_intent": "commercial informational",
+    "cluster": "buyer acquisition",
+    "lead_goal": "buyer leads",
+    "opportunity_score": 82,
+    "opportunity_rationale": "Problem-avoidance content performs well for buyers early in the journey and creates natural openings for expert guidance.",
+    "category_slug": "buying-guides",
+    "category_name": "Buying Guides",
+    "suggested_tags": [
+      "buyer mistakes",
+      "online buying",
+      "marketplace tips",
+      "used golf cart guide"
+    ],
+    "recommended_internal_link_types": [
+      "inventory pages",
+      "inspection posts",
+      "contact sections"
+    ]
+  },
+  "metrics": {
+    "target_word_count": 1600,
+    "neuronwriter_score": null,
+    "manual_plagiarism_status": "Pending manual review"
+  },
+  "publish": {
+    "commit_sha": null,
+    "live_url": null
+  }
+}

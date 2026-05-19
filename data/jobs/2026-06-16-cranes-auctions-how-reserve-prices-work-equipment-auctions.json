@@ -1,0 +1,49 @@
+{
+  "job_id": "2026-06-16-cranes-auctions-how-reserve-prices-work-equipment-auctions",
+  "site_id": "cranes-auctions",
+  "topic": "How reserve prices work at equipment auctions",
+  "primary_keyword": "how reserve prices work at equipment auctions",
+  "secondary_keywords": [
+    "auction reserve price equipment",
+    "seller reserve strategy",
+    "equipment auction minimum price",
+    "reserve price explained"
+  ],
+  "target_url": "/blog/auction-strategy/how-reserve-prices-work-at-equipment-auctions",
+  "status": "new",
+  "priority": "medium",
+  "assigned_reviewer": "seo-expert",
+  "created_at": "2026-05-19T18:00:00+04:00",
+  "updated_at": "2026-05-19T18:00:00+04:00",
+  "planned_publish_date": "2026-06-04",
+  "calendar_month": "2026-05-to-06",
+  "seo_strategy": {
+    "search_intent": "commercial informational",
+    "cluster": "seller acquisition",
+    "lead_goal": "seller leads",
+    "opportunity_score": 79,
+    "opportunity_rationale": "Seller education topic with strong consultative value that can lead directly into valuation and listing conversations.",
+    "category_slug": "auction-strategy",
+    "category_name": "Auction Strategy",
+    "suggested_tags": [
+      "reserve strategy",
+      "auction pricing",
+      "seller education",
+      "auction terms"
+    ],
+    "recommended_internal_link_types": [
+      "selling guide posts",
+      "contact pages",
+      "auction landing pages"
+    ]
+  },
+  "metrics": {
+    "target_word_count": 1600,
+    "neuronwriter_score": null,
+    "manual_plagiarism_status": "Pending manual review"
+  },
+  "publish": {
+    "commit_sha": null,
+    "live_url": null
+  }
+}

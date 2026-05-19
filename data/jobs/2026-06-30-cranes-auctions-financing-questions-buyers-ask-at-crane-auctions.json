@@ -1,0 +1,49 @@
+{
+  "job_id": "2026-06-30-cranes-auctions-financing-questions-buyers-ask-at-crane-auctions",
+  "site_id": "cranes-auctions",
+  "topic": "Financing questions buyers ask at crane auctions",
+  "primary_keyword": "financing questions buyers ask at crane auctions",
+  "secondary_keywords": [
+    "crane auction financing",
+    "used crane funding questions",
+    "buyer financing checklist auction",
+    "heavy equipment finance questions"
+  ],
+  "target_url": "/blog/buying-guides/financing-questions-buyers-ask-at-crane-auctions",
+  "status": "new",
+  "priority": "medium",
+  "assigned_reviewer": "seo-expert",
+  "created_at": "2026-05-19T18:00:00+04:00",
+  "updated_at": "2026-05-19T18:00:00+04:00",
+  "planned_publish_date": "2026-06-18",
+  "calendar_month": "2026-05-to-06",
+  "seo_strategy": {
+    "search_intent": "commercial informational",
+    "cluster": "buyer acquisition",
+    "lead_goal": "buyer leads",
+    "opportunity_score": 72,
+    "opportunity_rationale": "Lower-volume but high-friction topic that can surface buyer concerns early and move them toward direct contact.",
+    "category_slug": "buying-guides",
+    "category_name": "Buying Guides",
+    "suggested_tags": [
+      "auction financing",
+      "buyer questions",
+      "funding checklist",
+      "equipment finance"
+    ],
+    "recommended_internal_link_types": [
+      "auction landing pages",
+      "contact pages",
+      "buying guide posts"
+    ]
+  },
+  "metrics": {
+    "target_word_count": 1500,
+    "neuronwriter_score": null,
+    "manual_plagiarism_status": "Pending manual review"
+  },
+  "publish": {
+    "commit_sha": null,
+    "live_url": null
+  }
+}

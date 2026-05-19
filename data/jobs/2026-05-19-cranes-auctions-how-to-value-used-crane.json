@@ -1,0 +1,49 @@
+{
+  "job_id": "2026-05-19-cranes-auctions-how-to-value-used-crane",
+  "site_id": "cranes-auctions",
+  "topic": "How to value a used crane before selling",
+  "primary_keyword": "how to value a used crane",
+  "secondary_keywords": [
+    "used crane value",
+    "crane appraisal factors",
+    "equipment valuation checklist",
+    "what affects crane resale value"
+  ],
+  "target_url": "/blog/equipment-insights/how-to-value-a-used-crane-before-selling",
+  "status": "new",
+  "priority": "high",
+  "assigned_reviewer": "seo-expert",
+  "created_at": "2026-05-19T15:58:00+04:00",
+  "updated_at": "2026-05-19T18:00:00+04:00",
+  "seo_strategy": {
+    "search_intent": "commercial informational",
+    "cluster": "seller acquisition",
+    "opportunity_score": 82,
+    "opportunity_rationale": "High seller usefulness and good pre-listing fit, but slightly harder than more explicit transaction-adjacent auction topics.",
+    "category_slug": "equipment-insights",
+    "category_name": "Equipment Insights",
+    "suggested_tags": [
+      "equipment valuation",
+      "used crane pricing",
+      "resale factors",
+      "appraisal prep"
+    ],
+    "recommended_internal_link_types": [
+      "selling guide posts",
+      "contact pages",
+      "market updates"
+    ],
+    "lead_goal": "seller leads"
+  },
+  "metrics": {
+    "target_word_count": 1700,
+    "neuronwriter_score": null,
+    "manual_plagiarism_status": "Pending manual review"
+  },
+  "publish": {
+    "commit_sha": null,
+    "live_url": null
+  },
+  "planned_publish_date": "2026-05-22",
+  "calendar_month": "2026-05-to-06"
+}

@@ -1,0 +1,49 @@
+{
+  "job_id": "2026-06-24-jma-golfcarts-how-to-compare-golf-cart-listings-online",
+  "site_id": "jma-golfcarts",
+  "topic": "How to compare golf cart listings online",
+  "primary_keyword": "how to compare golf cart listings online",
+  "secondary_keywords": [
+    "compare golf cart listings",
+    "used golf cart marketplace comparison",
+    "golf cart listing checklist",
+    "evaluate golf cart listings"
+  ],
+  "target_url": "/blog/buying-guides/how-to-compare-golf-cart-listings-online",
+  "status": "new",
+  "priority": "medium",
+  "assigned_reviewer": "seo-expert",
+  "created_at": "2026-05-19T18:00:00+04:00",
+  "updated_at": "2026-05-19T18:00:00+04:00",
+  "planned_publish_date": "2026-06-12",
+  "calendar_month": "2026-05-to-06",
+  "seo_strategy": {
+    "search_intent": "commercial informational",
+    "cluster": "buyer acquisition",
+    "lead_goal": "buyer leads",
+    "opportunity_score": 76,
+    "opportunity_rationale": "Listing-comparison content supports marketplace trust and can move uncertain buyers toward direct help.",
+    "category_slug": "buying-guides",
+    "category_name": "Buying Guides",
+    "suggested_tags": [
+      "listing comparison",
+      "buyer guide",
+      "marketplace tips",
+      "shopping checklist"
+    ],
+    "recommended_internal_link_types": [
+      "inventory pages",
+      "inspection posts",
+      "contact sections"
+    ]
+  },
+  "metrics": {
+    "target_word_count": 1500,
+    "neuronwriter_score": null,
+    "manual_plagiarism_status": "Pending manual review"
+  },
+  "publish": {
+    "commit_sha": null,
+    "live_url": null
+  }
+}

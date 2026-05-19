@@ -1,0 +1,49 @@
+{
+  "job_id": "2026-06-12-cranes-auctions-crawler-crane-buyer-checklist",
+  "site_id": "cranes-auctions",
+  "topic": "Crawler crane buyer checklist",
+  "primary_keyword": "crawler crane buyer checklist",
+  "secondary_keywords": [
+    "buy crawler crane",
+    "crawler crane inspection",
+    "used crawler crane tips",
+    "crawler crane auction guide"
+  ],
+  "target_url": "/blog/buying-guides/crawler-crane-buyer-checklist",
+  "status": "new",
+  "priority": "medium",
+  "assigned_reviewer": "seo-expert",
+  "created_at": "2026-05-19T18:00:00+04:00",
+  "updated_at": "2026-05-19T18:00:00+04:00",
+  "planned_publish_date": "2026-06-02",
+  "calendar_month": "2026-05-to-06",
+  "seo_strategy": {
+    "search_intent": "commercial informational",
+    "cluster": "buyer acquisition",
+    "lead_goal": "buyer leads",
+    "opportunity_score": 81,
+    "opportunity_rationale": "Narrow buyer-intent content helps build authority in crane subcategories while staying commercially useful.",
+    "category_slug": "buying-guides",
+    "category_name": "Buying Guides",
+    "suggested_tags": [
+      "crawler crane",
+      "buyer checklist",
+      "auction guide",
+      "inspection prep"
+    ],
+    "recommended_internal_link_types": [
+      "equipment category pages",
+      "auction landing pages",
+      "contact pages"
+    ]
+  },
+  "metrics": {
+    "target_word_count": 1700,
+    "neuronwriter_score": null,
+    "manual_plagiarism_status": "Pending manual review"
+  },
+  "publish": {
+    "commit_sha": null,
+    "live_url": null
+  }
+}

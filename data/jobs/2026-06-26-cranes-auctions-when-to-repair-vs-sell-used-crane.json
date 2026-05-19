@@ -1,0 +1,49 @@
+{
+  "job_id": "2026-06-26-cranes-auctions-when-to-repair-vs-sell-used-crane",
+  "site_id": "cranes-auctions",
+  "topic": "When to repair vs sell a used crane",
+  "primary_keyword": "when to repair vs sell a used crane",
+  "secondary_keywords": [
+    "repair or sell crane",
+    "used crane resale decision",
+    "equipment repair vs auction",
+    "crane lifecycle decision"
+  ],
+  "target_url": "/blog/equipment-insights/when-to-repair-vs-sell-a-used-crane",
+  "status": "new",
+  "priority": "medium",
+  "assigned_reviewer": "seo-expert",
+  "created_at": "2026-05-19T18:00:00+04:00",
+  "updated_at": "2026-05-19T18:00:00+04:00",
+  "planned_publish_date": "2026-06-16",
+  "calendar_month": "2026-05-to-06",
+  "seo_strategy": {
+    "search_intent": "commercial informational",
+    "cluster": "seller acquisition",
+    "lead_goal": "seller leads",
+    "opportunity_score": 75,
+    "opportunity_rationale": "Decision-stage owner content can qualify sellers who need guidance before they commit to listing.",
+    "category_slug": "equipment-insights",
+    "category_name": "Equipment Insights",
+    "suggested_tags": [
+      "repair vs sell",
+      "resale decision",
+      "owner guide",
+      "equipment lifecycle"
+    ],
+    "recommended_internal_link_types": [
+      "selling guide posts",
+      "contact pages",
+      "market updates"
+    ]
+  },
+  "metrics": {
+    "target_word_count": 1600,
+    "neuronwriter_score": null,
+    "manual_plagiarism_status": "Pending manual review"
+  },
+  "publish": {
+    "commit_sha": null,
+    "live_url": null
+  }
+}

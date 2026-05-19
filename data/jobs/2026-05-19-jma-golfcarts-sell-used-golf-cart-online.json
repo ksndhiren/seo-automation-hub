@@ -1,0 +1,61 @@
+{
+  "job_id": "2026-05-19-jma-golfcarts-sell-used-golf-cart-online",
+  "site_id": "jma-golfcarts",
+  "topic": "How to sell a used golf cart online",
+  "primary_keyword": "sell used golf cart online",
+  "secondary_keywords": [
+    "used golf cart marketplace",
+    "sell golf cart fast",
+    "golf cart resale checklist",
+    "list golf cart for sale"
+  ],
+  "target_url": "/blog/selling-guides/how-to-sell-a-used-golf-cart-online",
+  "status": "brief_pending",
+  "priority": "high",
+  "assigned_reviewer": "seo-expert",
+  "created_at": "2026-05-19T15:25:00+04:00",
+  "updated_at": "2026-05-19T18:00:00+04:00",
+  "brief": {
+    "summary": "Create a commercial-informational article for golf cart owners, dealers, and operators who want a practical process for listing and selling a used golf cart online. The article should explain when a marketplace approach makes sense, what buyers expect in a listing, how to prepare the cart before photos and inspection, and which mistakes reduce buyer confidence.",
+    "outline": [
+      "H1: How to Sell a Used Golf Cart Online",
+      "H2: When a marketplace is the right sales channel",
+      "H2: What buyers expect to see in a used golf cart listing",
+      "H2: How to prepare the cart before photos and inquiries",
+      "H2: Common mistakes that reduce buyer confidence",
+      "H2: What to ask before choosing where to list",
+      "H2: Closing CTA for seller support"
+    ]
+  },
+  "seo_strategy": {
+    "search_intent": "commercial informational",
+    "cluster": "seller acquisition",
+    "opportunity_score": 92,
+    "opportunity_rationale": "Very strong marketplace fit with clear seller intent, practical content structure, and high value as an early trust-building entry point for a new site.",
+    "category_slug": "selling-guides",
+    "category_name": "Selling Guides",
+    "suggested_tags": [
+      "used golf cart sales",
+      "golf cart resale process",
+      "seller checklist",
+      "online marketplace tips"
+    ],
+    "recommended_internal_link_types": [
+      "inventory and auction listing pages",
+      "contact and lead capture sections",
+      "brand and category landing pages"
+    ],
+    "lead_goal": "seller leads"
+  },
+  "metrics": {
+    "target_word_count": 1700,
+    "neuronwriter_score": null,
+    "manual_plagiarism_status": "Pending manual review"
+  },
+  "publish": {
+    "commit_sha": null,
+    "live_url": null
+  },
+  "planned_publish_date": "2026-05-20",
+  "calendar_month": "2026-05-to-06"
+}
