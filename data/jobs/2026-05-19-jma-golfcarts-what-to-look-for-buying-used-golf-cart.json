@@ -10,40 +10,56 @@
     "used golf cart buyer guide"
   ],
   "target_url": "/blog/buying-guides/what-to-look-for-when-buying-a-used-golf-cart",
-  "status": "new",
+  "status": "brief_pending",
   "priority": "high",
   "assigned_reviewer": "seo-expert",
   "created_at": "2026-05-19T15:59:00+04:00",
-  "updated_at": "2026-05-19T18:00:00+04:00",
+  "updated_at": "2026-05-20T08:24:43.225947+00:00",
+  "brief": {
+    "summary": "Create a practical buyer-focused guide that explains what to look for when buying a used golf cart, with a strong emphasis on inspection, total ownership costs, and how to compare listings before making an offer. The article should help readers spot hidden wear, verify battery and drivetrain condition, assess frame/body/rust damage, and decide whether a cart is a good value for personal, utility, or fleet use. Position Jeff Martin Auctioneers through clear, trustworthy conversion language and CTAs that encourage readers to browse inventory, compare available carts, or contact the team for help finding the right used cart through JMA Golf Carts.",
+    "outline": [
+      "H1: What to Look for When Buying a Used Golf Cart",
+      "H2: Start with the Right Use Case: Personal, Utility, Fleet, or Street-Legal",
+      "H2: Used Golf Cart Buying Checklist: The Core Inspection Points",
+      "H2: What to Inspect on Batteries, Charger, Motor, and Drivetrain",
+      "H2: Frame, Suspension, Tires, Brakes, and Body Damage to Watch For",
+      "H2: Questions to Ask the Seller Before You Buy Used Golf Cart Online",
+      "H2: How to Compare Condition, Age, and Price Across Listings",
+      "H2: Where to Find Trusted Used Golf Carts and When to Contact Jeff Martin Auctioneers"
+    ]
+  },
   "seo_strategy": {
-    "search_intent": "commercial informational",
-    "cluster": "buyer acquisition",
-    "opportunity_score": 90,
-    "opportunity_rationale": "Excellent new-site target because it matches buyer research behavior, supports comparison content, and is easy to make genuinely helpful.",
+    "search_intent": "Commercial investigation: users want a buyer guide that helps them evaluate used golf carts, avoid costly mistakes, compare listings, and feel confident purchasing online or through a marketplace.",
+    "cluster": "used golf cart buying and inspection guidance",
     "category_slug": "buying-guides",
     "category_name": "Buying Guides",
     "suggested_tags": [
-      "used golf cart buying",
-      "inspection checklist",
-      "buyer guide",
-      "marketplace tips"
+      "used golf carts",
+      "buyer checklist",
+      "golf cart inspection",
+      "cart comparison",
+      "online marketplace",
+      "auction listings"
     ],
     "recommended_internal_link_types": [
       "inventory and auction listing pages",
-      "brand comparison posts",
-      "contact sections"
-    ],
-    "lead_goal": "buyer leads"
+      "contact and lead capture sections",
+      "brand and category landing pages"
+    ]
   },
   "metrics": {
-    "target_word_count": 1700,
+    "target_word_count": 1400,
     "neuronwriter_score": null,
-    "manual_plagiarism_status": "Pending manual review"
+    "manual_plagiarism_status": "Pending manual review",
+    "flagged_sections_note": ""
   },
   "publish": {
     "commit_sha": null,
     "live_url": null
   },
   "planned_publish_date": "2026-05-21",
-  "calendar_month": "2026-05-to-06"
+  "calendar_month": "2026-05-to-06",
+  "image_plan": {
+    "selected_images": []
+  }
 }

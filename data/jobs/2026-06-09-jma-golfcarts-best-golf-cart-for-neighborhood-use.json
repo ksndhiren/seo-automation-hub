@@ -14,7 +14,7 @@
   "priority": "high",
   "assigned_reviewer": "seo-expert",
   "created_at": "2026-05-19T18:00:00+04:00",
-  "updated_at": "2026-05-19T18:00:00+04:00",
+  "updated_at": "2026-05-19T18:46:44.405397+00:00",
   "planned_publish_date": "2026-05-28",
   "calendar_month": "2026-05-to-06",
   "seo_strategy": {
@@ -40,10 +40,14 @@
   "metrics": {
     "target_word_count": 1600,
     "neuronwriter_score": null,
-    "manual_plagiarism_status": "Pending manual review"
+    "manual_plagiarism_status": "Pending manual review",
+    "flagged_sections_note": ""
   },
   "publish": {
     "commit_sha": null,
     "live_url": null
+  },
+  "image_plan": {
+    "selected_images": []
   }
 }

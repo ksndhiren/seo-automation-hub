@@ -1,8 +1,9 @@
 {
   "summary": {
-    "generated_at": "2026-05-19T18:46:44.405397+00:00",
+    "generated_at": "2026-05-20T18:17:50.786575+00:00",
     "statuses": [
       "brief_pending",
+      "final_pending",
       "new",
       "published"
     ],
@@ -25,7 +26,7 @@
       },
       {
         "label": "Needs final review",
-        "value": 0
+        "value": 2
       }
     ]
   },
@@ -93,135 +94,58 @@
   ],
   "jobs": [
     {
-      "job_id": "2026-05-19-jma-golfcarts-sell-used-golf-cart-online",
-      "site_id": "jma-golfcarts",
-      "site_name": "JMA Golf Carts",
-      "topic": "How to sell a used golf cart online",
-      "primary_keyword": "sell used golf cart online",
-      "secondary_keywords": [
-        "used golf cart marketplace",
-        "sell golf cart fast",
-        "golf cart resale checklist",
-        "list golf cart for sale"
-      ],
-      "target_url": "/blog/selling-guides/how-to-sell-a-used-golf-cart-online",
-      "target_audience": "Golf cart buyers comparing personal, utility, and fleet carts \u2022 Dealers looking to move multiple carts through a marketplace \u2022 Property owners and communities sourcing utility or street-legal carts \u2022 Businesses evaluating fleet and maintenance cart options \u2022 Sellers listing used golf carts online",
-      "status": "brief_pending",
-      "priority": "high",
-      "planned_publish_date": "2026-05-20",
-      "calendar_month": "2026-05-to-06",
-      "word_count": "1700 words",
-      "brief": {
-        "summary": "Create a commercial-informational article for golf cart owners, dealers, and operators who want a practical process for listing and selling a used golf cart online. The article should explain when a marketplace approach makes sense, what buyers expect in a listing, how to prepare the cart before photos and inspection, and which mistakes reduce buyer confidence.",
-        "outline": [
-          "H1: How to Sell a Used Golf Cart Online",
-          "H2: When a marketplace is the right sales channel",
-          "H2: What buyers expect to see in a used golf cart listing",
-          "H2: How to prepare the cart before photos and inquiries",
-          "H2: Common mistakes that reduce buyer confidence",
-          "H2: What to ask before choosing where to list",
-          "H2: Closing CTA for seller support"
-        ]
-      },
-      "seo_strategy": {
-        "search_intent": "commercial informational",
-        "cluster": "seller acquisition",
-        "lead_goal": "seller leads",
-        "opportunity_score": 92,
-        "opportunity_rationale": "Very strong marketplace fit with clear seller intent, practical content structure, and high value as an early trust-building entry point for a new site.",
-        "category_slug": "selling-guides",
-        "category_name": "Selling Guides",
-        "suggested_tags": [
-          "used golf cart sales",
-          "golf cart resale process",
-          "seller checklist",
-          "online marketplace tips"
-        ],
-        "recommended_internal_link_types": [
-          "inventory and auction listing pages",
-          "contact and lead capture sections",
-          "brand and category landing pages"
-        ]
-      },
-      "image_plan": {
-        "status": "planned",
-        "items": [
-          {
-            "placement": "Featured image",
-            "asset_hint": "Not assigned yet",
-            "query": "used golf cart marketplace listing outdoor realistic",
-            "prompt": "Realistic editorial photo of a used golf cart prepared for sale outdoors, clean daylight, trustworthy marketplace mood, no text overlay, visually supports the topic 'How to sell a used golf cart online'."
-          }
-        ]
-      },
-      "draft": null,
-      "final_review": {
-        "checklist": [
-          "Review final article quality and conversion alignment.",
-          "Complete manual plagiarism check before approving publish.",
-          "Confirm metadata and internal links look correct."
-        ],
-        "manual_plagiarism_status": "Pending manual review",
-        "flagged_sections_note": "",
-        "meta_title": "Pending",
-        "meta_description": "Pending"
-      },
-      "activity": [
-        "Job status: brief_pending",
-        "Site target: JMA Golf Carts",
-        "Created: 2026-05-19T15:25:00+04:00",
-        "Last updated: 2026-05-19T18:00:00+04:00",
-        "Planned publish date: 2026-05-20",
-        "Snapshot generated from automation hub data"
-      ],
-      "publish": {
-        "branch": "main",
-        "path": "src/content/blog/generated"
-      }
-    },
-    {
-      "job_id": "2026-05-19-cranes-auctions-buy-used-crane-at-auction",
+      "job_id": "2026-05-19-cranes-auctions-used-crane-inspection-checklist",
       "site_id": "cranes-auctions",
       "site_name": "CranesAuctions",
-      "topic": "How to buy a used crane at auction",
-      "primary_keyword": "how to buy a used crane at auction",
+      "topic": "Used crane inspection checklist before you bid",
+      "primary_keyword": "used crane inspection checklist",
       "secondary_keywords": [
-        "used crane auction buyer checklist",
-        "buy used crane online",
-        "crane bidding tips",
-        "heavy equipment auction checklist"
+        "crane condition checklist",
+        "inspect crane before auction",
+        "used crane due diligence",
+        "heavy equipment inspection list"
       ],
-      "target_url": "/blog/buying-guides/how-to-buy-a-used-crane-at-auction",
+      "target_url": "/blog/equipment-insights/used-crane-inspection-checklist-before-you-bid",
       "target_audience": "Crane owners looking to sell underutilized equipment \u2022 Equipment dealers with inventory to move \u2022 Contractors sourcing cranes and heavy equipment \u2022 Fleet managers handling surplus or replacement cycles \u2022 Heavy transport and rigging businesses",
       "status": "brief_pending",
       "priority": "high",
-      "planned_publish_date": "2026-05-20",
+      "planned_publish_date": "2026-05-21",
       "calendar_month": "2026-05-to-06",
-      "word_count": "1800 words",
+      "word_count": "1400 words",
       "brief": {
-        "summary": "Brief content has not been generated yet.",
+        "summary": "Create a practical, expert-led guide for bidders evaluating a used crane before auction. The article should walk readers through a structured inspection process covering documentation, structural components, operating systems, maintenance history, safety items, transport considerations, and red flags that can affect bidding confidence. Position Jeff Martin Auctioneers as the trusted auction and advisory partner by referencing how buyers can get help evaluating equipment listings, request more details, and connect with the team for guidance before bidding.",
         "outline": [
-          "Outline will appear after the first briefing pass."
+          "H1: Used Crane Inspection Checklist Before You Bid",
+          "H2: Why a used crane inspection matters before auction day",
+          "H2: Start with paperwork and ownership history",
+          "H2: Exterior and structural checks: boom, frame, outriggers, and welds",
+          "H2: Mechanical and hydraulic systems to review on a crane condition checklist",
+          "H2: Safety equipment, controls, and operator station inspection",
+          "H2: How to spot red flags that should change your bid",
+          "H2: Final due diligence steps before you inspect crane before auction and place a bid"
         ]
       },
       "seo_strategy": {
-        "search_intent": "commercial informational",
-        "cluster": "buyer acquisition",
-        "lead_goal": "buyer leads",
-        "opportunity_score": 88,
-        "opportunity_rationale": "Strong buyer-intent query with clear auction relevance and good internal-linking value across inspection, bidding, and logistics topics.",
-        "category_slug": "buying-guides",
-        "category_name": "Buying Guides",
+        "search_intent": "Commercial investigation. Searchers want a practical used crane inspection checklist they can apply before bidding, including what to inspect, what issues matter most, and how to reduce risk when buying at auction.",
+        "cluster": "Used crane buying and auction due diligence",
+        "lead_goal": "Pending",
+        "opportunity_score": null,
+        "opportunity_rationale": "",
+        "category_slug": "equipment-insights",
+        "category_name": "Equipment Insights",
         "suggested_tags": [
-          "used crane buying",
-          "auction buyer checklist",
-          "inspection prep",
-          "bidding strategy"
+          "used crane inspection",
+          "auction buying guide",
+          "crane condition checklist",
+          "heavy equipment due diligence",
+          "crane auction tips"
         ],
         "recommended_internal_link_types": [
-          "auction landing pages",
           "equipment category pages",
-          "contact pages"
+          "contact and lead capture sections",
+          "auction-related landing pages",
+          "buying guides",
+          "transport and logistics resources"
         ]
       },
       "image_plan": {
@@ -231,9 +155,10 @@
             "placement": "Featured image",
             "asset_hint": "Not assigned yet",
             "query": "used crane industrial yard equipment auction",
-            "prompt": "Realistic editorial photo of a used crane prepared for auction in an industrial yard, clean daylight, documentary style, no text overlay, trustworthy heavy-equipment marketplace mood, supports the topic 'How to buy a used crane at auction'."
+            "prompt": "Realistic editorial photo of a used crane prepared for auction in an industrial yard, clean daylight, documentary style, no text overlay, trustworthy heavy-equipment marketplace mood, supports the topic 'Used crane inspection checklist before you bid'."
           }
-        ]
+        ],
+        "selected_images": []
       },
       "draft": null,
       "final_review": {
@@ -250,9 +175,9 @@
       "activity": [
         "Job status: brief_pending",
         "Site target: CranesAuctions",
-        "Created: 2026-05-19T15:55:00+04:00",
-        "Last updated: 2026-05-19T22:20:00+04:00",
-        "Planned publish date: 2026-05-20",
+        "Created: 2026-05-19T15:56:00+04:00",
+        "Last updated: 2026-05-20T08:24:21.043165+00:00",
+        "Planned publish date: 2026-05-21",
         "Snapshot generated from automation hub data"
       ],
       "publish": {
@@ -274,35 +199,44 @@
       ],
       "target_url": "/blog/buying-guides/what-to-look-for-when-buying-a-used-golf-cart",
       "target_audience": "Golf cart buyers comparing personal, utility, and fleet carts \u2022 Dealers looking to move multiple carts through a marketplace \u2022 Property owners and communities sourcing utility or street-legal carts \u2022 Businesses evaluating fleet and maintenance cart options \u2022 Sellers listing used golf carts online",
-      "status": "new",
+      "status": "brief_pending",
       "priority": "high",
       "planned_publish_date": "2026-05-21",
       "calendar_month": "2026-05-to-06",
-      "word_count": "1700 words",
+      "word_count": "1400 words",
       "brief": {
-        "summary": "Brief content has not been generated yet.",
+        "summary": "Create a practical buyer-focused guide that explains what to look for when buying a used golf cart, with a strong emphasis on inspection, total ownership costs, and how to compare listings before making an offer. The article should help readers spot hidden wear, verify battery and drivetrain condition, assess frame/body/rust damage, and decide whether a cart is a good value for personal, utility, or fleet use. Position Jeff Martin Auctioneers through clear, trustworthy conversion language and CTAs that encourage readers to browse inventory, compare available carts, or contact the team for help finding the right used cart through JMA Golf Carts.",
         "outline": [
-          "Outline will appear after the first briefing pass."
+          "H1: What to Look for When Buying a Used Golf Cart",
+          "H2: Start with the Right Use Case: Personal, Utility, Fleet, or Street-Legal",
+          "H2: Used Golf Cart Buying Checklist: The Core Inspection Points",
+          "H2: What to Inspect on Batteries, Charger, Motor, and Drivetrain",
+          "H2: Frame, Suspension, Tires, Brakes, and Body Damage to Watch For",
+          "H2: Questions to Ask the Seller Before You Buy Used Golf Cart Online",
+          "H2: How to Compare Condition, Age, and Price Across Listings",
+          "H2: Where to Find Trusted Used Golf Carts and When to Contact Jeff Martin Auctioneers"
         ]
       },
       "seo_strategy": {
-        "search_intent": "commercial informational",
-        "cluster": "buyer acquisition",
-        "lead_goal": "buyer leads",
-        "opportunity_score": 90,
-        "opportunity_rationale": "Excellent new-site target because it matches buyer research behavior, supports comparison content, and is easy to make genuinely helpful.",
+        "search_intent": "Commercial investigation: users want a buyer guide that helps them evaluate used golf carts, avoid costly mistakes, compare listings, and feel confident purchasing online or through a marketplace.",
+        "cluster": "used golf cart buying and inspection guidance",
+        "lead_goal": "Pending",
+        "opportunity_score": null,
+        "opportunity_rationale": "",
         "category_slug": "buying-guides",
         "category_name": "Buying Guides",
         "suggested_tags": [
-          "used golf cart buying",
-          "inspection checklist",
-          "buyer guide",
-          "marketplace tips"
+          "used golf carts",
+          "buyer checklist",
+          "golf cart inspection",
+          "cart comparison",
+          "online marketplace",
+          "auction listings"
         ],
         "recommended_internal_link_types": [
           "inventory and auction listing pages",
-          "brand comparison posts",
-          "contact sections"
+          "contact and lead capture sections",
+          "brand and category landing pages"
         ]
       },
       "image_plan": {
@@ -314,7 +248,8 @@
             "query": "used golf cart marketplace listing outdoor realistic",
             "prompt": "Realistic editorial photo of a used golf cart prepared for sale outdoors, clean daylight, trustworthy marketplace mood, no text overlay, visually supports the topic 'What to look for when buying a used golf cart'."
           }
-        ]
+        ],
+        "selected_images": []
       },
       "draft": null,
       "final_review": {
@@ -329,10 +264,10 @@
         "meta_description": "Pending"
       },
       "activity": [
-        "Job status: new",
+        "Job status: brief_pending",
         "Site target: JMA Golf Carts",
         "Created: 2026-05-19T15:59:00+04:00",
-        "Last updated: 2026-05-19T18:00:00+04:00",
+        "Last updated: 2026-05-20T08:24:43.225947+00:00",
         "Planned publish date: 2026-05-21",
         "Snapshot generated from automation hub data"
       ],
@@ -395,7 +330,8 @@
             "query": "used golf cart marketplace listing outdoor realistic",
             "prompt": "Realistic editorial photo of a used golf cart prepared for sale outdoors, clean daylight, trustworthy marketplace mood, no text overlay, visually supports the topic 'How to price a used golf cart for sale'."
           }
-        ]
+        ],
+        "selected_images": []
       },
       "draft": null,
       "final_review": {
@@ -413,7 +349,7 @@
         "Job status: new",
         "Site target: JMA Golf Carts",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-19T18:00:00+04:00",
+        "Last updated: 2026-05-19T18:46:44.405397+00:00",
         "Planned publish date: 2026-05-27",
         "Snapshot generated from automation hub data"
       ],
@@ -476,7 +412,8 @@
             "query": "used crane industrial yard equipment auction",
             "prompt": "Realistic editorial photo of a used crane prepared for auction in an industrial yard, clean daylight, documentary style, no text overlay, trustworthy heavy-equipment marketplace mood, supports the topic 'Documents needed to sell a crane at auction'."
           }
-        ]
+        ],
+        "selected_images": []
       },
       "draft": null,
       "final_review": {
@@ -494,7 +431,7 @@
         "Job status: new",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-19T18:00:00+04:00",
+        "Last updated: 2026-05-19T18:46:44.405397+00:00",
         "Planned publish date: 2026-05-28",
         "Snapshot generated from automation hub data"
       ],
@@ -557,7 +494,8 @@
             "query": "used golf cart marketplace listing outdoor realistic",
             "prompt": "Realistic editorial photo of a used golf cart prepared for sale outdoors, clean daylight, trustworthy marketplace mood, no text overlay, visually supports the topic 'Used golf cart inspection checklist before buying'."
           }
-        ]
+        ],
+        "selected_images": []
       },
       "draft": null,
       "final_review": {
@@ -575,94 +513,13 @@
         "Job status: new",
         "Site target: JMA Golf Carts",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-19T18:00:00+04:00",
+        "Last updated: 2026-05-19T18:46:44.405397+00:00",
         "Planned publish date: 2026-06-01",
         "Snapshot generated from automation hub data"
       ],
       "publish": {
         "branch": "main",
         "path": "src/content/blog/generated"
-      }
-    },
-    {
-      "job_id": "2026-05-19-cranes-auctions-used-crane-inspection-checklist",
-      "site_id": "cranes-auctions",
-      "site_name": "CranesAuctions",
-      "topic": "Used crane inspection checklist before you bid",
-      "primary_keyword": "used crane inspection checklist",
-      "secondary_keywords": [
-        "crane condition checklist",
-        "inspect crane before auction",
-        "used crane due diligence",
-        "heavy equipment inspection list"
-      ],
-      "target_url": "/blog/equipment-insights/used-crane-inspection-checklist-before-you-bid",
-      "target_audience": "Crane owners looking to sell underutilized equipment \u2022 Equipment dealers with inventory to move \u2022 Contractors sourcing cranes and heavy equipment \u2022 Fleet managers handling surplus or replacement cycles \u2022 Heavy transport and rigging businesses",
-      "status": "new",
-      "priority": "high",
-      "planned_publish_date": "2026-05-21",
-      "calendar_month": "2026-05-to-06",
-      "word_count": "1800 words",
-      "brief": {
-        "summary": "Brief content has not been generated yet.",
-        "outline": [
-          "Outline will appear after the first briefing pass."
-        ]
-      },
-      "seo_strategy": {
-        "search_intent": "commercial informational",
-        "cluster": "buyer acquisition",
-        "lead_goal": "buyer leads",
-        "opportunity_score": 86,
-        "opportunity_rationale": "Checklist format is easy to differentiate, supports buyer trust, and creates strong cluster leverage for crane buying and auction due diligence.",
-        "category_slug": "equipment-insights",
-        "category_name": "Equipment Insights",
-        "suggested_tags": [
-          "inspection checklist",
-          "used crane condition",
-          "auction prep",
-          "buyer diligence"
-        ],
-        "recommended_internal_link_types": [
-          "buying guide posts",
-          "auction landing pages",
-          "contact pages"
-        ]
-      },
-      "image_plan": {
-        "status": "planned",
-        "items": [
-          {
-            "placement": "Featured image",
-            "asset_hint": "Not assigned yet",
-            "query": "used crane industrial yard equipment auction",
-            "prompt": "Realistic editorial photo of a used crane prepared for auction in an industrial yard, clean daylight, documentary style, no text overlay, trustworthy heavy-equipment marketplace mood, supports the topic 'Used crane inspection checklist before you bid'."
-          }
-        ]
-      },
-      "draft": null,
-      "final_review": {
-        "checklist": [
-          "Review final article quality and conversion alignment.",
-          "Complete manual plagiarism check before approving publish.",
-          "Confirm metadata and internal links look correct."
-        ],
-        "manual_plagiarism_status": "Pending manual review",
-        "flagged_sections_note": "",
-        "meta_title": "Pending",
-        "meta_description": "Pending"
-      },
-      "activity": [
-        "Job status: new",
-        "Site target: CranesAuctions",
-        "Created: 2026-05-19T15:56:00+04:00",
-        "Last updated: 2026-05-19T18:00:00+04:00",
-        "Planned publish date: 2026-05-21",
-        "Snapshot generated from automation hub data"
-      ],
-      "publish": {
-        "branch": "main",
-        "path": "src/web/content/blog"
       }
     },
     {
@@ -719,7 +576,8 @@
             "query": "used golf cart marketplace listing outdoor realistic",
             "prompt": "Realistic editorial photo of a used golf cart prepared for sale outdoors, clean daylight, trustworthy marketplace mood, no text overlay, visually supports the topic 'Best golf cart for neighborhood use'."
           }
-        ]
+        ],
+        "selected_images": []
       },
       "draft": null,
       "final_review": {
@@ -737,7 +595,7 @@
         "Job status: new",
         "Site target: JMA Golf Carts",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-19T18:00:00+04:00",
+        "Last updated: 2026-05-19T18:46:44.405397+00:00",
         "Planned publish date: 2026-05-28",
         "Snapshot generated from automation hub data"
       ],
@@ -800,7 +658,8 @@
             "query": "used crane industrial yard equipment auction",
             "prompt": "Realistic editorial photo of a used crane prepared for auction in an industrial yard, clean daylight, documentary style, no text overlay, trustworthy heavy-equipment marketplace mood, supports the topic 'How to choose an auction partner for heavy equipment'."
           }
-        ]
+        ],
+        "selected_images": []
       },
       "draft": null,
       "final_review": {
@@ -818,7 +677,7 @@
         "Job status: new",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-19T18:00:00+04:00",
+        "Last updated: 2026-05-19T18:46:44.405397+00:00",
         "Planned publish date: 2026-06-10",
         "Snapshot generated from automation hub data"
       ],
@@ -881,7 +740,8 @@
             "query": "used crane industrial yard equipment auction",
             "prompt": "Realistic editorial photo of a used crane prepared for auction in an industrial yard, clean daylight, documentary style, no text overlay, trustworthy heavy-equipment marketplace mood, supports the topic 'Best time to sell a used crane'."
           }
-        ]
+        ],
+        "selected_images": []
       },
       "draft": null,
       "final_review": {
@@ -899,7 +759,7 @@
         "Job status: new",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-19T18:00:00+04:00",
+        "Last updated: 2026-05-19T18:46:44.405397+00:00",
         "Planned publish date: 2026-05-27",
         "Snapshot generated from automation hub data"
       ],
@@ -962,7 +822,8 @@
             "query": "used golf cart marketplace listing outdoor realistic",
             "prompt": "Realistic editorial photo of a used golf cart prepared for sale outdoors, clean daylight, trustworthy marketplace mood, no text overlay, visually supports the topic 'Street legal golf cart requirements buyer checklist'."
           }
-        ]
+        ],
+        "selected_images": []
       },
       "draft": null,
       "final_review": {
@@ -980,7 +841,7 @@
         "Job status: new",
         "Site target: JMA Golf Carts",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-19T18:00:00+04:00",
+        "Last updated: 2026-05-19T18:46:44.405397+00:00",
         "Planned publish date: 2026-06-03",
         "Snapshot generated from automation hub data"
       ],
@@ -1043,7 +904,8 @@
             "query": "used crane industrial yard equipment auction",
             "prompt": "Realistic editorial photo of a used crane prepared for auction in an industrial yard, clean daylight, documentary style, no text overlay, trustworthy heavy-equipment marketplace mood, supports the topic 'What affects used crane resale value'."
           }
-        ]
+        ],
+        "selected_images": []
       },
       "draft": null,
       "final_review": {
@@ -1061,7 +923,7 @@
         "Job status: new",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-19T18:00:00+04:00",
+        "Last updated: 2026-05-19T18:46:44.405397+00:00",
         "Planned publish date: 2026-05-29",
         "Snapshot generated from automation hub data"
       ],
@@ -1124,7 +986,8 @@
             "query": "used golf cart marketplace listing outdoor realistic",
             "prompt": "Realistic editorial photo of a used golf cart prepared for sale outdoors, clean daylight, trustworthy marketplace mood, no text overlay, visually supports the topic 'How dealers can move used golf cart inventory faster'."
           }
-        ]
+        ],
+        "selected_images": []
       },
       "draft": null,
       "final_review": {
@@ -1142,7 +1005,7 @@
         "Job status: new",
         "Site target: JMA Golf Carts",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-19T18:00:00+04:00",
+        "Last updated: 2026-05-19T18:46:44.405397+00:00",
         "Planned publish date: 2026-06-17",
         "Snapshot generated from automation hub data"
       ],
@@ -1205,7 +1068,8 @@
             "query": "used crane industrial yard equipment auction",
             "prompt": "Realistic editorial photo of a used crane prepared for auction in an industrial yard, clean daylight, documentary style, no text overlay, trustworthy heavy-equipment marketplace mood, supports the topic 'How to value a used crane before selling'."
           }
-        ]
+        ],
+        "selected_images": []
       },
       "draft": null,
       "final_review": {
@@ -1223,7 +1087,7 @@
         "Job status: new",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T15:58:00+04:00",
-        "Last updated: 2026-05-19T18:00:00+04:00",
+        "Last updated: 2026-05-19T18:46:44.405397+00:00",
         "Planned publish date: 2026-05-22",
         "Snapshot generated from automation hub data"
       ],
@@ -1286,7 +1150,8 @@
             "query": "used golf cart marketplace listing outdoor realistic",
             "prompt": "Realistic editorial photo of a used golf cart prepared for sale outdoors, clean daylight, trustworthy marketplace mood, no text overlay, visually supports the topic 'Best golf cart for campground or resort use'."
           }
-        ]
+        ],
+        "selected_images": []
       },
       "draft": null,
       "final_review": {
@@ -1304,7 +1169,7 @@
         "Job status: new",
         "Site target: JMA Golf Carts",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-19T18:00:00+04:00",
+        "Last updated: 2026-05-19T18:46:44.405397+00:00",
         "Planned publish date: 2026-05-29",
         "Snapshot generated from automation hub data"
       ],
@@ -1367,7 +1232,8 @@
             "query": "used golf cart marketplace listing outdoor realistic",
             "prompt": "Realistic editorial photo of a used golf cart prepared for sale outdoors, clean daylight, trustworthy marketplace mood, no text overlay, visually supports the topic 'Common mistakes when buying a used golf cart online'."
           }
-        ]
+        ],
+        "selected_images": []
       },
       "draft": null,
       "final_review": {
@@ -1385,7 +1251,7 @@
         "Job status: new",
         "Site target: JMA Golf Carts",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-19T18:00:00+04:00",
+        "Last updated: 2026-05-19T18:46:44.405397+00:00",
         "Planned publish date: 2026-06-05",
         "Snapshot generated from automation hub data"
       ],
@@ -1448,7 +1314,8 @@
             "query": "used crane industrial yard equipment auction",
             "prompt": "Realistic editorial photo of a used crane prepared for auction in an industrial yard, clean daylight, documentary style, no text overlay, trustworthy heavy-equipment marketplace mood, supports the topic 'Crane title and lien checklist before auction'."
           }
-        ]
+        ],
+        "selected_images": []
       },
       "draft": null,
       "final_review": {
@@ -1466,7 +1333,7 @@
         "Job status: new",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-19T18:00:00+04:00",
+        "Last updated: 2026-05-19T18:46:44.405397+00:00",
         "Planned publish date: 2026-06-09",
         "Snapshot generated from automation hub data"
       ],
@@ -1529,7 +1396,8 @@
             "query": "used golf cart marketplace listing outdoor realistic",
             "prompt": "Realistic editorial photo of a used golf cart prepared for sale outdoors, clean daylight, trustworthy marketplace mood, no text overlay, visually supports the topic 'Club Car vs EZGO golf cart'."
           }
-        ]
+        ],
+        "selected_images": []
       },
       "draft": null,
       "final_review": {
@@ -1547,7 +1415,7 @@
         "Job status: new",
         "Site target: JMA Golf Carts",
         "Created: 2026-05-19T16:02:00+04:00",
-        "Last updated: 2026-05-19T18:00:00+04:00",
+        "Last updated: 2026-05-19T18:46:44.405397+00:00",
         "Planned publish date: 2026-05-22",
         "Snapshot generated from automation hub data"
       ],
@@ -1610,7 +1478,8 @@
             "query": "used golf cart marketplace listing outdoor realistic",
             "prompt": "Realistic editorial photo of a used golf cart prepared for sale outdoors, clean daylight, trustworthy marketplace mood, no text overlay, visually supports the topic 'Golf cart battery replacement cost'."
           }
-        ]
+        ],
+        "selected_images": []
       },
       "draft": null,
       "final_review": {
@@ -1628,7 +1497,7 @@
         "Job status: new",
         "Site target: JMA Golf Carts",
         "Created: 2026-05-19T16:01:00+04:00",
-        "Last updated: 2026-05-19T18:00:00+04:00",
+        "Last updated: 2026-05-19T18:46:44.405397+00:00",
         "Planned publish date: 2026-05-25",
         "Snapshot generated from automation hub data"
       ],
@@ -1691,7 +1560,8 @@
             "query": "used crane industrial yard equipment auction",
             "prompt": "Realistic editorial photo of a used crane prepared for auction in an industrial yard, clean daylight, documentary style, no text overlay, trustworthy heavy-equipment marketplace mood, supports the topic 'Rough terrain crane buyer checklist'."
           }
-        ]
+        ],
+        "selected_images": []
       },
       "draft": null,
       "final_review": {
@@ -1709,7 +1579,7 @@
         "Job status: new",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-19T18:00:00+04:00",
+        "Last updated: 2026-05-19T18:46:44.405397+00:00",
         "Planned publish date: 2026-06-01",
         "Snapshot generated from automation hub data"
       ],
@@ -1772,7 +1642,8 @@
             "query": "used crane industrial yard equipment auction",
             "prompt": "Realistic editorial photo of a used crane prepared for auction in an industrial yard, clean daylight, documentary style, no text overlay, trustworthy heavy-equipment marketplace mood, supports the topic 'Crawler crane buyer checklist'."
           }
-        ]
+        ],
+        "selected_images": []
       },
       "draft": null,
       "final_review": {
@@ -1790,7 +1661,7 @@
         "Job status: new",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-19T18:00:00+04:00",
+        "Last updated: 2026-05-19T18:46:44.405397+00:00",
         "Planned publish date: 2026-06-02",
         "Snapshot generated from automation hub data"
       ],
@@ -1853,7 +1724,8 @@
             "query": "used golf cart marketplace listing outdoor realistic",
             "prompt": "Realistic editorial photo of a used golf cart prepared for sale outdoors, clean daylight, trustworthy marketplace mood, no text overlay, visually supports the topic 'Electric vs gas golf cart for neighborhoods'."
           }
-        ]
+        ],
+        "selected_images": []
       },
       "draft": null,
       "final_review": {
@@ -1871,7 +1743,7 @@
         "Job status: new",
         "Site target: JMA Golf Carts",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-19T18:00:00+04:00",
+        "Last updated: 2026-05-19T18:46:44.405397+00:00",
         "Planned publish date: 2026-06-08",
         "Snapshot generated from automation hub data"
       ],
@@ -1934,7 +1806,8 @@
             "query": "used golf cart marketplace listing outdoor realistic",
             "prompt": "Realistic editorial photo of a used golf cart prepared for sale outdoors, clean daylight, trustworthy marketplace mood, no text overlay, visually supports the topic 'Best golf cart for property maintenance crews'."
           }
-        ]
+        ],
+        "selected_images": []
       },
       "draft": null,
       "final_review": {
@@ -1952,7 +1825,7 @@
         "Job status: new",
         "Site target: JMA Golf Carts",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-19T18:00:00+04:00",
+        "Last updated: 2026-05-19T18:46:44.405397+00:00",
         "Planned publish date: 2026-06-11",
         "Snapshot generated from automation hub data"
       ],
@@ -2015,7 +1888,8 @@
             "query": "used crane industrial yard equipment auction",
             "prompt": "Realistic editorial photo of a used crane prepared for auction in an industrial yard, clean daylight, documentary style, no text overlay, trustworthy heavy-equipment marketplace mood, supports the topic 'How to sell multiple fleet cranes through one auction plan'."
           }
-        ]
+        ],
+        "selected_images": []
       },
       "draft": null,
       "final_review": {
@@ -2033,7 +1907,7 @@
         "Job status: new",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-19T18:00:00+04:00",
+        "Last updated: 2026-05-19T18:46:44.405397+00:00",
         "Planned publish date: 2026-06-15",
         "Snapshot generated from automation hub data"
       ],
@@ -2096,7 +1970,8 @@
             "query": "used crane industrial yard equipment auction",
             "prompt": "Realistic editorial photo of a used crane prepared for auction in an industrial yard, clean daylight, documentary style, no text overlay, trustworthy heavy-equipment marketplace mood, supports the topic 'Auction vs private sale for heavy equipment'."
           }
-        ]
+        ],
+        "selected_images": []
       },
       "draft": null,
       "final_review": {
@@ -2114,7 +1989,7 @@
         "Job status: new",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T15:57:00+04:00",
-        "Last updated: 2026-05-19T18:00:00+04:00",
+        "Last updated: 2026-05-19T18:46:44.405397+00:00",
         "Planned publish date: 2026-05-25",
         "Snapshot generated from automation hub data"
       ],
@@ -2177,7 +2052,8 @@
             "query": "used golf cart marketplace listing outdoor realistic",
             "prompt": "Realistic editorial photo of a used golf cart prepared for sale outdoors, clean daylight, trustworthy marketplace mood, no text overlay, visually supports the topic 'How long do golf cart batteries last?'."
           }
-        ]
+        ],
+        "selected_images": []
       },
       "draft": null,
       "final_review": {
@@ -2195,7 +2071,7 @@
         "Job status: new",
         "Site target: JMA Golf Carts",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-19T18:00:00+04:00",
+        "Last updated: 2026-05-19T18:46:44.405397+00:00",
         "Planned publish date: 2026-06-02",
         "Snapshot generated from automation hub data"
       ],
@@ -2258,7 +2134,8 @@
             "query": "used crane industrial yard equipment auction",
             "prompt": "Realistic editorial photo of a used crane prepared for auction in an industrial yard, clean daylight, documentary style, no text overlay, trustworthy heavy-equipment marketplace mood, supports the topic 'Mobile crane inspection checklist before buying'."
           }
-        ]
+        ],
+        "selected_images": []
       },
       "draft": null,
       "final_review": {
@@ -2276,7 +2153,7 @@
         "Job status: new",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-19T18:00:00+04:00",
+        "Last updated: 2026-05-19T18:46:44.405397+00:00",
         "Planned publish date: 2026-06-03",
         "Snapshot generated from automation hub data"
       ],
@@ -2339,7 +2216,8 @@
             "query": "used golf cart marketplace listing outdoor realistic",
             "prompt": "Realistic editorial photo of a used golf cart prepared for sale outdoors, clean daylight, trustworthy marketplace mood, no text overlay, visually supports the topic 'What to ask before buying a street legal golf cart'."
           }
-        ]
+        ],
+        "selected_images": []
       },
       "draft": null,
       "final_review": {
@@ -2357,7 +2235,7 @@
         "Job status: new",
         "Site target: JMA Golf Carts",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-19T18:00:00+04:00",
+        "Last updated: 2026-05-19T18:46:44.405397+00:00",
         "Planned publish date: 2026-06-16",
         "Snapshot generated from automation hub data"
       ],
@@ -2420,7 +2298,8 @@
             "query": "used golf cart marketplace listing outdoor realistic",
             "prompt": "Realistic editorial photo of a used golf cart prepared for sale outdoors, clean daylight, trustworthy marketplace mood, no text overlay, visually supports the topic 'Best utility golf carts for work and property use'."
           }
-        ]
+        ],
+        "selected_images": []
       },
       "draft": null,
       "final_review": {
@@ -2438,7 +2317,7 @@
         "Job status: new",
         "Site target: JMA Golf Carts",
         "Created: 2026-05-19T16:00:00+04:00",
-        "Last updated: 2026-05-19T18:00:00+04:00",
+        "Last updated: 2026-05-19T18:46:44.405397+00:00",
         "Planned publish date: 2026-05-26",
         "Snapshot generated from automation hub data"
       ],
@@ -2501,7 +2380,8 @@
             "query": "used crane industrial yard equipment auction",
             "prompt": "Realistic editorial photo of a used crane prepared for auction in an industrial yard, clean daylight, documentary style, no text overlay, trustworthy heavy-equipment marketplace mood, supports the topic 'How reserve prices work at equipment auctions'."
           }
-        ]
+        ],
+        "selected_images": []
       },
       "draft": null,
       "final_review": {
@@ -2519,7 +2399,7 @@
         "Job status: new",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-19T18:00:00+04:00",
+        "Last updated: 2026-05-19T18:46:44.405397+00:00",
         "Planned publish date: 2026-06-04",
         "Snapshot generated from automation hub data"
       ],
@@ -2582,7 +2462,8 @@
             "query": "used golf cart marketplace listing outdoor realistic",
             "prompt": "Realistic editorial photo of a used golf cart prepared for sale outdoors, clean daylight, trustworthy marketplace mood, no text overlay, visually supports the topic 'Best 4 seater golf cart for family use'."
           }
-        ]
+        ],
+        "selected_images": []
       },
       "draft": null,
       "final_review": {
@@ -2600,7 +2481,7 @@
         "Job status: new",
         "Site target: JMA Golf Carts",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-19T18:00:00+04:00",
+        "Last updated: 2026-05-19T18:46:44.405397+00:00",
         "Planned publish date: 2026-06-10",
         "Snapshot generated from automation hub data"
       ],
@@ -2663,7 +2544,8 @@
             "query": "used crane industrial yard equipment auction",
             "prompt": "Realistic editorial photo of a used crane prepared for auction in an industrial yard, clean daylight, documentary style, no text overlay, trustworthy heavy-equipment marketplace mood, supports the topic 'What to ask before bidding on a used crane'."
           }
-        ]
+        ],
+        "selected_images": []
       },
       "draft": null,
       "final_review": {
@@ -2681,7 +2563,7 @@
         "Job status: new",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-19T18:00:00+04:00",
+        "Last updated: 2026-05-19T18:46:44.405397+00:00",
         "Planned publish date: 2026-06-12",
         "Snapshot generated from automation hub data"
       ],
@@ -2744,7 +2626,8 @@
             "query": "used crane industrial yard equipment auction",
             "prompt": "Realistic editorial photo of a used crane prepared for auction in an industrial yard, clean daylight, documentary style, no text overlay, trustworthy heavy-equipment marketplace mood, supports the topic 'Crane transport logistics after auction'."
           }
-        ]
+        ],
+        "selected_images": []
       },
       "draft": null,
       "final_review": {
@@ -2762,7 +2645,7 @@
         "Job status: new",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-19T18:00:00+04:00",
+        "Last updated: 2026-05-19T18:46:44.405397+00:00",
         "Planned publish date: 2026-05-26",
         "Snapshot generated from automation hub data"
       ],
@@ -2825,7 +2708,8 @@
             "query": "used crane industrial yard equipment auction",
             "prompt": "Realistic editorial photo of a used crane prepared for auction in an industrial yard, clean daylight, documentary style, no text overlay, trustworthy heavy-equipment marketplace mood, supports the topic 'Common mistakes when buying heavy equipment at auction'."
           }
-        ]
+        ],
+        "selected_images": []
       },
       "draft": null,
       "final_review": {
@@ -2843,7 +2727,7 @@
         "Job status: new",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-19T18:00:00+04:00",
+        "Last updated: 2026-05-19T18:46:44.405397+00:00",
         "Planned publish date: 2026-06-08",
         "Snapshot generated from automation hub data"
       ],
@@ -2906,7 +2790,8 @@
             "query": "used golf cart marketplace listing outdoor realistic",
             "prompt": "Realistic editorial photo of a used golf cart prepared for sale outdoors, clean daylight, trustworthy marketplace mood, no text overlay, visually supports the topic 'What affects used golf cart resale value'."
           }
-        ]
+        ],
+        "selected_images": []
       },
       "draft": null,
       "final_review": {
@@ -2924,7 +2809,7 @@
         "Job status: new",
         "Site target: JMA Golf Carts",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-19T18:00:00+04:00",
+        "Last updated: 2026-05-19T18:46:44.405397+00:00",
         "Planned publish date: 2026-06-09",
         "Snapshot generated from automation hub data"
       ],
@@ -2987,7 +2872,8 @@
             "query": "used golf cart marketplace listing outdoor realistic",
             "prompt": "Realistic editorial photo of a used golf cart prepared for sale outdoors, clean daylight, trustworthy marketplace mood, no text overlay, visually supports the topic 'How to take better photos when selling a golf cart'."
           }
-        ]
+        ],
+        "selected_images": []
       },
       "draft": null,
       "final_review": {
@@ -3005,7 +2891,7 @@
         "Job status: new",
         "Site target: JMA Golf Carts",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-19T18:00:00+04:00",
+        "Last updated: 2026-05-19T18:46:44.405397+00:00",
         "Planned publish date: 2026-06-04",
         "Snapshot generated from automation hub data"
       ],
@@ -3068,7 +2954,8 @@
             "query": "used crane industrial yard equipment auction",
             "prompt": "Realistic editorial photo of a used crane prepared for auction in an industrial yard, clean daylight, documentary style, no text overlay, trustworthy heavy-equipment marketplace mood, supports the topic 'How to compare used crane auction listings'."
           }
-        ]
+        ],
+        "selected_images": []
       },
       "draft": null,
       "final_review": {
@@ -3086,7 +2973,7 @@
         "Job status: new",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-19T18:00:00+04:00",
+        "Last updated: 2026-05-19T18:46:44.405397+00:00",
         "Planned publish date: 2026-06-05",
         "Snapshot generated from automation hub data"
       ],
@@ -3149,7 +3036,8 @@
             "query": "used crane industrial yard equipment auction",
             "prompt": "Realistic editorial photo of a used crane prepared for auction in an industrial yard, clean daylight, documentary style, no text overlay, trustworthy heavy-equipment marketplace mood, supports the topic 'How to prepare crane photos for a sale listing'."
           }
-        ]
+        ],
+        "selected_images": []
       },
       "draft": null,
       "final_review": {
@@ -3167,7 +3055,7 @@
         "Job status: new",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-19T18:00:00+04:00",
+        "Last updated: 2026-05-19T18:46:44.405397+00:00",
         "Planned publish date: 2026-06-11",
         "Snapshot generated from automation hub data"
       ],
@@ -3230,7 +3118,8 @@
             "query": "used golf cart marketplace listing outdoor realistic",
             "prompt": "Realistic editorial photo of a used golf cart prepared for sale outdoors, clean daylight, trustworthy marketplace mood, no text overlay, visually supports the topic 'How to compare golf cart listings online'."
           }
-        ]
+        ],
+        "selected_images": []
       },
       "draft": null,
       "final_review": {
@@ -3248,7 +3137,7 @@
         "Job status: new",
         "Site target: JMA Golf Carts",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-19T18:00:00+04:00",
+        "Last updated: 2026-05-19T18:46:44.405397+00:00",
         "Planned publish date: 2026-06-12",
         "Snapshot generated from automation hub data"
       ],
@@ -3311,7 +3200,8 @@
             "query": "used golf cart marketplace listing outdoor realistic",
             "prompt": "Realistic editorial photo of a used golf cart prepared for sale outdoors, clean daylight, trustworthy marketplace mood, no text overlay, visually supports the topic 'When to replace golf cart batteries before selling'."
           }
-        ]
+        ],
+        "selected_images": []
       },
       "draft": null,
       "final_review": {
@@ -3329,7 +3219,7 @@
         "Job status: new",
         "Site target: JMA Golf Carts",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-19T18:00:00+04:00",
+        "Last updated: 2026-05-19T18:46:44.405397+00:00",
         "Planned publish date: 2026-06-15",
         "Snapshot generated from automation hub data"
       ],
@@ -3392,7 +3282,8 @@
             "query": "used crane industrial yard equipment auction",
             "prompt": "Realistic editorial photo of a used crane prepared for auction in an industrial yard, clean daylight, documentary style, no text overlay, trustworthy heavy-equipment marketplace mood, supports the topic 'When to repair vs sell a used crane'."
           }
-        ]
+        ],
+        "selected_images": []
       },
       "draft": null,
       "final_review": {
@@ -3410,7 +3301,7 @@
         "Job status: new",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-19T18:00:00+04:00",
+        "Last updated: 2026-05-19T18:46:44.405397+00:00",
         "Planned publish date: 2026-06-16",
         "Snapshot generated from automation hub data"
       ],
@@ -3473,7 +3364,8 @@
             "query": "used crane industrial yard equipment auction",
             "prompt": "Realistic editorial photo of a used crane prepared for auction in an industrial yard, clean daylight, documentary style, no text overlay, trustworthy heavy-equipment marketplace mood, supports the topic 'How heavy equipment buyers evaluate crane condition reports'."
           }
-        ]
+        ],
+        "selected_images": []
       },
       "draft": null,
       "final_review": {
@@ -3491,7 +3383,7 @@
         "Job status: new",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-19T18:00:00+04:00",
+        "Last updated: 2026-05-19T18:46:44.405397+00:00",
         "Planned publish date: 2026-06-17",
         "Snapshot generated from automation hub data"
       ],
@@ -3554,7 +3446,8 @@
             "query": "used golf cart marketplace listing outdoor realistic",
             "prompt": "Realistic editorial photo of a used golf cart prepared for sale outdoors, clean daylight, trustworthy marketplace mood, no text overlay, visually supports the topic 'Golf cart charger problems buyers should check first'."
           }
-        ]
+        ],
+        "selected_images": []
       },
       "draft": null,
       "final_review": {
@@ -3572,7 +3465,7 @@
         "Job status: new",
         "Site target: JMA Golf Carts",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-19T18:00:00+04:00",
+        "Last updated: 2026-05-19T18:46:44.405397+00:00",
         "Planned publish date: 2026-06-18",
         "Snapshot generated from automation hub data"
       ],
@@ -3635,7 +3528,8 @@
             "query": "used crane industrial yard equipment auction",
             "prompt": "Realistic editorial photo of a used crane prepared for auction in an industrial yard, clean daylight, documentary style, no text overlay, trustworthy heavy-equipment marketplace mood, supports the topic 'Financing questions buyers ask at crane auctions'."
           }
-        ]
+        ],
+        "selected_images": []
       },
       "draft": null,
       "final_review": {
@@ -3653,8 +3547,476 @@
         "Job status: new",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-19T18:00:00+04:00",
+        "Last updated: 2026-05-19T18:46:44.405397+00:00",
         "Planned publish date: 2026-06-18",
+        "Snapshot generated from automation hub data"
+      ],
+      "publish": {
+        "branch": "main",
+        "path": "src/web/content/blog"
+      }
+    },
+    {
+      "job_id": "2026-05-19-jma-golfcarts-sell-used-golf-cart-online",
+      "site_id": "jma-golfcarts",
+      "site_name": "JMA Golf Carts",
+      "topic": "How to sell a used golf cart online",
+      "primary_keyword": "sell used golf cart online",
+      "secondary_keywords": [
+        "used golf cart marketplace",
+        "sell golf cart fast",
+        "golf cart resale checklist",
+        "list golf cart for sale"
+      ],
+      "target_url": "/blog/selling-guides/how-to-sell-a-used-golf-cart-online",
+      "target_audience": "Golf cart buyers comparing personal, utility, and fleet carts \u2022 Dealers looking to move multiple carts through a marketplace \u2022 Property owners and communities sourcing utility or street-legal carts \u2022 Businesses evaluating fleet and maintenance cart options \u2022 Sellers listing used golf carts online",
+      "status": "final_pending",
+      "priority": "high",
+      "planned_publish_date": "2026-05-20",
+      "calendar_month": "2026-05-to-06",
+      "word_count": "1700 words",
+      "brief": {
+        "summary": "Create a commercial-informational article for golf cart owners, dealers, and operators who want a practical process for listing and selling a used golf cart online. The article should explain when a marketplace approach makes sense, what buyers expect in a listing, how to prepare the cart before photos and inspection, and which mistakes reduce buyer confidence.",
+        "outline": [
+          "H1: How to Sell a Used Golf Cart Online",
+          "H2: When a marketplace is the right sales channel",
+          "H2: What buyers expect to see in a used golf cart listing",
+          "H2: How to prepare the cart before photos and inquiries",
+          "H2: Common mistakes that reduce buyer confidence",
+          "H2: What to ask before choosing where to list",
+          "H2: Closing CTA for seller support"
+        ]
+      },
+      "seo_strategy": {
+        "search_intent": "commercial informational",
+        "cluster": "seller acquisition",
+        "lead_goal": "seller leads",
+        "opportunity_score": 92,
+        "opportunity_rationale": "Very strong marketplace fit with clear seller intent, practical content structure, and high value as an early trust-building entry point for a new site.",
+        "category_slug": "selling-guides",
+        "category_name": "Selling Guides",
+        "suggested_tags": [
+          "used golf cart sales",
+          "golf cart resale process",
+          "seller checklist",
+          "online marketplace tips"
+        ],
+        "recommended_internal_link_types": [
+          "inventory and auction listing pages",
+          "contact and lead capture sections",
+          "brand and category landing pages"
+        ]
+      },
+      "image_plan": {
+        "status": "planned",
+        "items": [
+          {
+            "placement": "Featured image",
+            "asset_hint": "/hero.webp",
+            "query": "used golf cart marketplace listing outdoor realistic",
+            "prompt": "Realistic editorial photo of a used golf cart prepared for sale outdoors, clean daylight, trustworthy marketplace mood, no text overlay, visually supports the topic 'How to sell a used golf cart online'."
+          },
+          {
+            "placement": "After section: What buyers expect to see in a used golf cart listing",
+            "asset_hint": "Prompt only",
+            "query": "golf cart inspection listing details realistic",
+            "prompt": "Detailed golf cart inspection scene with close-up listing details, service notes, and condition checks, natural light, realistic marketplace photography, no staged AI look, no text."
+          },
+          {
+            "placement": "After section: How to prepare the cart before photos and inquiries",
+            "asset_hint": "Prompt only",
+            "query": "cleaning golf cart for sale realistic",
+            "prompt": "Seller preparing a golf cart for online sale with cleaning, photo setup, and checklist steps visible, credible commercial style, realistic details, supports keyword 'sell used golf cart online'."
+          }
+        ],
+        "selected_images": []
+      },
+      "draft": {
+        "slug": "how-to-sell-a-used-golf-cart-online",
+        "title": "How to Sell a Used Golf Cart Online",
+        "description": "A practical guide for golf cart owners, dealers, and operators who want to list a used golf cart for sale online with more confidence. Learn when a marketplace works best, what buyers expect, how to prepare the cart, and which mistakes can slow the sale.",
+        "publishedAt": "2026-05-20",
+        "author": "Jeff Martin Auctioneers Editorial Team",
+        "readTime": "8 min read",
+        "category": "Selling Guides",
+        "tags": [
+          "used golf cart sales",
+          "golf cart resale process",
+          "seller checklist",
+          "online marketplace tips"
+        ],
+        "heroImage": "/hero.webp",
+        "featured": false,
+        "seoTitle": "How to Sell a Used Golf Cart Online | Seller Guide",
+        "seoDescription": "Learn how to sell a used golf cart online with a clear listing process, buyer-ready photos, preparation tips, and common mistakes to avoid. Practical guidance from Jeff Martin Auctioneers.",
+        "intro": [
+          "Selling a used golf cart online can be straightforward when you treat it like a buyer\u2019s decision, not just a post-and-wait listing. The strongest results usually come from a clear marketplace strategy, a cart that is easy to inspect, and details that help buyers compare condition with confidence.",
+          "Whether you are a private owner, a dealer moving multiple units, or a property manager replacing fleet carts, the goal is the same: make the cart easy to evaluate. A good listing helps buyers understand what they are getting, reduces back-and-forth, and makes it easier to sell golf cart fast through the right used golf cart marketplace."
+        ],
+        "sections": [
+          {
+            "heading": "When a marketplace is the right sales channel",
+            "paragraphs": [
+              "A marketplace approach makes sense when you want to reach buyers beyond your local area and give the cart a more visible, searchable listing. That is especially helpful if you are trying to sell a used golf cart online with limited time, or if the cart has features that different buyers may value in different ways, such as utility fitout, street-legal equipment, or fleet use.",
+              "For many sellers, online exposure is also a better fit than a simple local ad because it supports comparison shopping. Buyers can review photos, condition notes, and features in one place, which can create more serious inquiries than a vague classified post. If you are listing more than one cart, a marketplace can also help you manage multiple offers and match each unit to the right buyer type."
+            ],
+            "bullets": [
+              "Use a marketplace when you want broader reach than local word-of-mouth.",
+              "Choose it if your cart has clear condition and feature details buyers can compare.",
+              "It is useful for dealers, fleet operators, and sellers with more than one unit.",
+              "It works best when you can present the cart honestly and consistently with photos and notes."
+            ],
+            "callout": "A marketplace is strongest when your listing does the first round of selling for you: clear, complete, and easy to trust."
+          },
+          {
+            "heading": "What buyers expect to see in a used golf cart listing",
+            "paragraphs": [
+              "Most buyers start with the basics: year, make, model, power source, seating capacity, and whether the cart is personal, utility, or fleet oriented. They also want to know what has been added, replaced, or repaired. If you are trying to list golf cart for sale successfully, this is where specificity matters because broad descriptions create doubt and delay serious interest.",
+              "Buyers also expect proof of condition. That does not mean a perfect cart, but it does mean usable photos, a straightforward description of wear, and enough detail to estimate value. If the cart has batteries, tires, brakes, lights, upholstery, a windshield, a lift kit, or charger included, say so. If anything is missing or not working, disclose that clearly. Honest details are what make a used golf cart marketplace feel credible."
+            ],
+            "bullets": [
+              "Basic cart information: year, make, model, and power source.",
+              "Condition notes: body, seats, tires, batteries, charger, and mechanical function.",
+              "Included extras: lights, mirrors, windshield, canopy, cargo bed, or lift kit.",
+              "Clear photos from multiple angles, including close-ups of wear.",
+              "Any known issues, repairs, or parts that need attention."
+            ],
+            "callout": "If a buyer has to guess, they will usually move on to another listing."
+          },
+          {
+            "heading": "How to prepare the cart before photos and inquiries",
+            "paragraphs": [
+              "Before you photograph the cart, clean it inside and out. A washed body, vacuumed seats, and a tidy cargo area make a better first impression than a cart that looks neglected. Preparation does not mean hiding flaws; it means presenting the cart in a way that helps buyers see what they are evaluating. That is one of the simplest ways to support a stronger golf cart resale checklist.",
+              "Next, gather the facts a buyer may ask for. Test lights, horn, charger, and basic operation. Charge the batteries and note whether the cart starts and drives as expected. If you have maintenance records, service dates, or parts receipts, keep them ready. Buyers are more confident when they can connect the listing to a real ownership history, especially if they are comparing several carts online."
+            ],
+            "bullets": [
+              "Wash and detail the cart before taking photos.",
+              "Check battery charge, starting, driving, and charging function.",
+              "Gather service records, repair notes, and receipts if available.",
+              "Take photos in good lighting from all sides and from the driver\u2019s view.",
+              "Capture close-ups of tires, seats, controls, batteries, and any visible wear."
+            ],
+            "callout": "A few hours of preparation can save days of unnecessary questions later."
+          },
+          {
+            "heading": "Common mistakes that reduce buyer confidence",
+            "paragraphs": [
+              "One of the biggest mistakes is overselling condition. Phrases like \u201cruns great\u201d or \u201clike new\u201d without supporting detail often create skepticism. Buyers shopping online are used to comparing listings, so vague wording can work against you. A better approach is to describe what the cart does, what has been maintained, and what still needs attention.",
+              "Another common issue is incomplete pricing or contact information. If buyers cannot understand the asking price, location, or next step, they may assume the seller is difficult to work with. Poor photos, missing feature details, and hidden issues can also slow the sale. In a competitive online marketplace, trust is often what separates the fastest response from the listing that lingers."
+            ],
+            "bullets": [
+              "Avoid vague condition claims without evidence.",
+              "Do not hide defects, missing parts, or needed repairs.",
+              "Skip dark, blurry, or overly edited photos.",
+              "Do not leave out key details such as power source or included accessories.",
+              "Make the next step clear so buyers know how to inquire."
+            ],
+            "callout": "Clear, complete listings usually outperform flashy language with little substance."
+          },
+          {
+            "heading": "What to ask before choosing where to list",
+            "paragraphs": [
+              "Before you commit to a platform, ask how the marketplace supports qualified leads, visibility, and seller trust. Not every site is built for used golf cart sales, and the right choice depends on whether you want one-off exposure, dealer-level reach, or help moving multiple units. If you are evaluating where to sell golf cart fast, look for a place that understands the product and the buyer.",
+              "You should also ask how listings are presented, how inquiries are handled, and what seller support is available. Strong marketplace partners make it easier to present the cart accurately and connect with serious buyers. For many sellers, that is where Jeff Martin Auctioneers stands out as the trusted contact brand behind the process, especially when the goal is to convert interest into qualified leads rather than random clicks."
+            ],
+            "bullets": [
+              "Does the platform reach buyers who already want golf carts?",
+              "Can you present detailed photos, features, and condition notes clearly?",
+              "Are buyers encouraged to submit serious inquiries instead of casual messages?",
+              "Is there support for single carts, dealer inventory, or fleet units?",
+              "Will the platform help you build trust before the first call or email?"
+            ],
+            "callout": "The best place to list is the one that helps buyers understand the cart and helps you manage the sale with less friction."
+          },
+          {
+            "heading": "Closing CTA for seller support",
+            "paragraphs": [
+              "If you are ready to sell a used golf cart online, a marketplace built around transparency can make the process easier from the start. The right listing structure helps you present condition clearly, attract the right buyers, and avoid time lost to low-quality inquiries.",
+              "Jeff Martin Auctioneers can help sellers move forward with a more practical marketplace approach, whether you are listing one cart or several. If you want support preparing a listing, comparing selling options, or connecting with active buyers, reach out through the contact path on JMA Golf Carts and let Jeff Martin Auctioneers help guide the next step."
+            ],
+            "callout": "When you want a straightforward way to list golf cart for sale, start with a marketplace that puts clarity first."
+          }
+        ],
+        "faq": [
+          {
+            "question": "What is the best way to sell a used golf cart online?",
+            "answer": "The best approach is to use a marketplace that attracts active buyers, then build a listing with detailed photos, honest condition notes, and clear feature information. That combination makes it easier for buyers to compare the cart and contact you with confidence."
+          },
+          {
+            "question": "What should I include in a used golf cart listing?",
+            "answer": "Include the year, make, model, power source, seating capacity, included accessories, visible condition, and any known issues. Buyers also appreciate service records, charger details, and photos of key areas like tires, batteries, seats, and controls."
+          },
+          {
+            "question": "How can I sell golf cart fast without lowering trust?",
+            "answer": "Focus on presentation and accuracy. Clean the cart, take good photos, disclose defects, and make your listing easy to understand. A clear listing often attracts better inquiries faster than a vague one with a lower asking price."
+          },
+          {
+            "question": "Why use a marketplace instead of a local ad?",
+            "answer": "A marketplace can expand your reach, connect you with more serious buyers, and make it easier to compare carts by condition and features. That is especially useful for dealers, fleet sellers, and owners with specialized carts."
+          }
+        ],
+        "cta": {
+          "title": "Need help selling your used golf cart online?",
+          "body": "Jeff Martin Auctioneers can help you take a more confident marketplace approach, whether you are listing a single cart, comparing selling options, or trying to reach qualified buyers faster. Use the contact path on JMA Golf Carts to start the conversation and get support from a trusted golf cart marketplace team.",
+          "buttonLabel": "Contact Jeff Martin Auctioneers",
+          "buttonHref": "/contact"
+        }
+      },
+      "final_review": {
+        "checklist": [
+          "Review final article quality and conversion alignment.",
+          "Complete manual plagiarism check before approving publish.",
+          "Confirm metadata and internal links look correct."
+        ],
+        "manual_plagiarism_status": "Pending manual review",
+        "flagged_sections_note": "",
+        "meta_title": "Pending",
+        "meta_description": "Pending"
+      },
+      "activity": [
+        "Job status: final_pending",
+        "Site target: JMA Golf Carts",
+        "Created: 2026-05-19T15:25:00+04:00",
+        "Last updated: 2026-05-20T08:24:37.920197+00:00",
+        "Planned publish date: 2026-05-20",
+        "Snapshot generated from automation hub data"
+      ],
+      "publish": {
+        "branch": "main",
+        "path": "src/content/blog/generated"
+      }
+    },
+    {
+      "job_id": "2026-05-19-cranes-auctions-buy-used-crane-at-auction",
+      "site_id": "cranes-auctions",
+      "site_name": "CranesAuctions",
+      "topic": "How to buy a used crane at auction",
+      "primary_keyword": "how to buy a used crane at auction",
+      "secondary_keywords": [
+        "used crane auction buyer checklist",
+        "buy used crane online",
+        "crane bidding tips",
+        "heavy equipment auction checklist"
+      ],
+      "target_url": "/blog/buying-guides/how-to-buy-a-used-crane-at-auction",
+      "target_audience": "Crane owners looking to sell underutilized equipment \u2022 Equipment dealers with inventory to move \u2022 Contractors sourcing cranes and heavy equipment \u2022 Fleet managers handling surplus or replacement cycles \u2022 Heavy transport and rigging businesses",
+      "status": "final_pending",
+      "priority": "high",
+      "planned_publish_date": "2026-05-20",
+      "calendar_month": "2026-05-to-06",
+      "word_count": "1800 words",
+      "brief": {
+        "summary": "Brief content has not been generated yet.",
+        "outline": [
+          "Outline will appear after the first briefing pass."
+        ]
+      },
+      "seo_strategy": {
+        "search_intent": "commercial informational",
+        "cluster": "buyer acquisition",
+        "lead_goal": "buyer leads",
+        "opportunity_score": 88,
+        "opportunity_rationale": "Strong buyer-intent query with clear auction relevance and good internal-linking value across inspection, bidding, and logistics topics.",
+        "category_slug": "buying-guides",
+        "category_name": "Buying Guides",
+        "suggested_tags": [
+          "used crane buying",
+          "auction buyer checklist",
+          "inspection prep",
+          "bidding strategy"
+        ],
+        "recommended_internal_link_types": [
+          "auction landing pages",
+          "equipment category pages",
+          "contact pages"
+        ]
+      },
+      "image_plan": {
+        "status": "planned",
+        "items": [
+          {
+            "placement": "Featured image",
+            "asset_hint": "/hero.webp",
+            "query": "used crane industrial yard equipment auction",
+            "prompt": "Realistic editorial photo of a used crane prepared for auction in an industrial yard, clean daylight, documentary style, no text overlay, trustworthy heavy-equipment marketplace mood, supports the topic 'How to buy a used crane at auction'."
+          },
+          {
+            "placement": "After section: Review the auction listing like a buyer, not a spectator",
+            "asset_hint": "Prompt only",
+            "query": "crane inspection maintenance records industrial equipment",
+            "prompt": "Detailed crane inspection scene with paperwork, serial plate, and maintenance records visible, professional industrial photography, natural light, no staged AI look, no text."
+          },
+          {
+            "placement": "After section: Inspect the machine before you bid",
+            "asset_hint": "Prompt only",
+            "query": "preparing crane for sale inspection heavy equipment yard",
+            "prompt": "Heavy equipment seller preparing a crane for listing, showing cleaning, inspection, and photo capture steps, credible B2B industrial style, sharp realistic details, visually supports keyword 'how to buy a used crane at auction'."
+          }
+        ],
+        "selected_images": []
+      },
+      "draft": {
+        "slug": "how-to-buy-a-used-crane-at-auction",
+        "title": "How to Buy a Used Crane at Auction: A Practical Guide for First-Time and Experienced Buyers",
+        "description": "Learn how to buy a used crane at auction with a clear inspection, bidding, and logistics plan. Get practical crane bidding tips and a buyer checklist before you place a bid.",
+        "publishedAt": "2026-05-20",
+        "author": "Jeff Martin Auctioneers Editorial Team",
+        "readTime": "8 min read",
+        "category": "Buying Guides",
+        "tags": [
+          "used crane buying",
+          "auction buyer checklist",
+          "inspection prep",
+          "bidding strategy",
+          "heavy equipment auction checklist"
+        ],
+        "heroImage": "/hero.webp",
+        "featured": false,
+        "seoTitle": "How to Buy a Used Crane at Auction | Buyer Checklist & Bidding Tips",
+        "seoDescription": "Buying a used crane at auction takes more than finding the right machine. Use this guide for inspection prep, bidding tips, transport planning, and a practical buyer checklist.",
+        "intro": [
+          "Buying a used crane at auction can be a smart way to expand your fleet, replace aging equipment, or find a machine at a more competitive price than a traditional retail channel. The key is to treat the process like a project: inspect carefully, understand the auction terms, and know your maximum number before bidding starts.",
+          "This guide walks you through how to buy a used crane at auction with less guesswork. Whether you are a contractor, fleet manager, dealer, or rigging business, the goal is the same: find a crane that fits the job, the budget, and the transport plan without taking on avoidable risk."
+        ],
+        "sections": [
+          {
+            "heading": "Start with the right crane for the job",
+            "paragraphs": [
+              "Before you browse listings or register to bid, define exactly what you need the crane to do. A machine that looks like a bargain can become expensive if it is undersized, too heavy to transport easily, or not suited to your work environment. Focus first on lift capacity, reach, boom type, mobility, and site conditions.",
+              "It also helps to separate must-have features from nice-to-have features. For example, a rough-terrain crane may be ideal for certain job sites, while a truck crane may be a better fit for road travel and faster repositioning. The more specific your requirements, the easier it is to filter auction inventory and avoid chasing the wrong equipment."
+            ],
+            "bullets": [
+              "Confirm the minimum lift capacity you need",
+              "Check working radius and boom configuration",
+              "Consider roadability, transport permits, and axle weight limits",
+              "Match the crane type to your job site and operating conditions",
+              "Set a ceiling for total cost, not just the hammer price"
+            ]
+          },
+          {
+            "heading": "Review the auction listing like a buyer, not a spectator",
+            "paragraphs": [
+              "A listing should tell you more than model and year. Look for hours, service history, maintenance notes, serial numbers, and whether the seller provides inspection reports or condition details. If photos are limited, zoom in on structural areas, wire rope, tires or tracks, outriggers, undercarriage components, and the cab.",
+              "When possible, compare the listing against manufacturer specifications and common wear points for that crane model. That extra step can help you spot mismatched attachments, missing components, or signs of neglect. If the auction platform offers a preview day or equipment contact, use it."
+            ],
+            "callout": "Do not rely on photos alone. A used crane auction buyer checklist should always include model research, maintenance review, and a clear understanding of what is and is not being sold with the machine."
+          },
+          {
+            "heading": "Inspect the machine before you bid",
+            "paragraphs": [
+              "An in-person inspection is one of the most valuable parts of the process. If you cannot inspect yourself, send a qualified mechanic, operator, or crane specialist. The goal is to verify condition, identify obvious repair needs, and decide whether the machine still fits your risk tolerance.",
+              "Focus on the areas that affect safety and operating cost first. Structural cracks, hydraulic leaks, worn pins and bushings, boom wear, cable condition, and drivetrain issues can all change the economics of the deal. A crane that needs immediate work may still be worth buying, but only if you account for repair and downtime in your bid."
+            ],
+            "bullets": [
+              "Check structural members for cracks, bends, or visible repairs",
+              "Inspect boom sections, pins, cables, and sheaves",
+              "Look for hydraulic leaks and fluid condition",
+              "Review tires, tracks, brakes, and steering components",
+              "Confirm cab controls, gauges, and safety systems appear functional"
+            ]
+          },
+          {
+            "heading": "Know the auction terms before you place a bid",
+            "paragraphs": [
+              "Many buyers focus on the crane and overlook the fine print. That can be a costly mistake. Auction terms may affect buyer\u2019s premiums, payment deadlines, taxes, removal windows, title transfer, and whether the sale is absolute or subject to seller approval.",
+              "Read the terms carefully and make sure your team can meet the timeline. If the auction requires quick payment, same-week pickup, or special documentation, plan for that before the sale starts. Clear terms also help you bid with confidence because you know your true all-in number."
+            ],
+            "bullets": [
+              "Confirm the buyer\u2019s premium and any administrative fees",
+              "Check payment deadlines and accepted payment methods",
+              "Understand removal windows and storage penalties",
+              "Review title, registration, or export paperwork requirements",
+              "Verify whether sales are as-is, where-is"
+            ]
+          },
+          {
+            "heading": "Use disciplined crane bidding tips",
+            "paragraphs": [
+              "The best bidding strategy is simple: set your maximum before the auction begins and stick to it. Emotional bidding is where many buyers lose discipline. Decide your ceiling based on estimated repair costs, transport, taxes, and the value of the machine in your fleet.",
+              "If you are new to auction purchasing, keep your first few bids calm and deliberate. Watch how the sale moves, learn the bidding rhythm, and avoid trying to outsmart the market. In many cases, the right approach is to wait, then move decisively when the machine is still inside your budget."
+            ],
+            "bullets": [
+              "Set a true maximum bid that includes fees and freight",
+              "Leave room for repairs and commissioning costs",
+              "Do not bid against yourself in a fast-moving sale",
+              "Pay attention to lot order and auction timing",
+              "Know when to walk away"
+            ]
+          },
+          {
+            "heading": "Plan transport, loading, and commissioning early",
+            "paragraphs": [
+              "A used crane is not really bought until it is safely delivered and ready to work. Before auction day, confirm how the machine will be loaded, what equipment is needed for removal, and whether permits or escort vehicles are required. Some buyers save money on purchase price only to spend more than expected on logistics.",
+              "Work with a transport provider that understands heavy equipment and oversize moves. Also think ahead to commissioning: fluids, filters, inspections, operator familiarization, and any needed repairs before the crane enters service. That planning helps reduce downtime and keeps the machine productive after delivery."
+            ],
+            "callout": "A strong heavy equipment auction checklist should always include freight, loading access, permits, insurance, and startup costs. Those items often determine whether a deal is actually a good deal."
+          },
+          {
+            "heading": "When buying online, add an extra layer of verification",
+            "paragraphs": [
+              "Many buyers now choose to buy used crane online, which makes convenience a big advantage but also raises the importance of verification. If you are not on site, rely on detailed listing information, seller disclosures, third-party inspections, and direct questions before bidding.",
+              "Ask for clarification on the exact serial number, included attachments, maintenance records, and any known defects. If the auction team offers support, use it. A reputable auction partner should be able to help you understand the lot details, bidding process, and post-sale steps so there are fewer surprises."
+            ]
+          },
+          {
+            "heading": "Use a simple used crane auction buyer checklist",
+            "paragraphs": [
+              "The easiest way to stay organized is to use a repeatable checklist for every auction. That keeps your team aligned and makes it easier to compare machines across multiple sales. It also reduces the chance of overlooking fees or a critical inspection item in the rush of bidding.",
+              "The checklist does not need to be complicated. It just needs to cover the parts of the process that affect risk, cost, and usability. Once you build a routine, you can move faster and make better buying decisions over time."
+            ],
+            "bullets": [
+              "Define the crane type, capacity, and application",
+              "Review photos, specs, and auction terms",
+              "Inspect the machine or send a qualified representative",
+              "Estimate repair, freight, and setup costs",
+              "Set a maximum bid and payment plan",
+              "Confirm removal and transport logistics",
+              "Complete post-sale commissioning before putting the crane to work"
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "question": "What should I inspect first on a used crane at auction?",
+            "answer": "Start with the items that affect safety and repair cost: structural condition, boom sections, wire rope, hydraulics, tires or undercarriage, and drivetrain components. If those areas look questionable, factor that into your bid or walk away."
+          },
+          {
+            "question": "How do I avoid overpaying at a crane auction?",
+            "answer": "Set a maximum bid before the sale and include the buyer\u2019s premium, taxes, transport, and repair costs. The hammer price is only part of the total cost, so a disciplined ceiling is the best protection against overbidding."
+          },
+          {
+            "question": "Can I buy a used crane online without seeing it in person?",
+            "answer": "Yes, but you should add extra verification. Review the listing carefully, request detailed photos or reports, ask questions about maintenance and defects, and consider a third-party inspection if the crane is a significant purchase."
+          },
+          {
+            "question": "Who can help if I need guidance on auction buying?",
+            "answer": "Jeff Martin Auctioneers can help buyers evaluate opportunities, understand auction terms, and navigate the bidding and removal process. If you are planning a purchase, contact Jeff Martin Auctioneers for support before auction day."
+          }
+        ],
+        "cta": {
+          "title": "Need help evaluating a used crane before you bid?",
+          "body": "Talk with Jeff Martin Auctioneers for practical guidance on auction terms, inventory, and buyer strategy. Whether you are buying one crane or building a fleet, the team can help you approach the auction with more clarity and confidence.",
+          "buttonLabel": "Contact Jeff Martin Auctioneers",
+          "buttonHref": "https://www.cranesauctions.com/contact"
+        }
+      },
+      "final_review": {
+        "checklist": [
+          "Review final article quality and conversion alignment.",
+          "Complete manual plagiarism check before approving publish.",
+          "Confirm metadata and internal links look correct."
+        ],
+        "manual_plagiarism_status": "Pending manual review",
+        "flagged_sections_note": "",
+        "meta_title": "Pending",
+        "meta_description": "Pending"
+      },
+      "activity": [
+        "Job status: final_pending",
+        "Site target: CranesAuctions",
+        "Created: 2026-05-19T15:55:00+04:00",
+        "Last updated: 2026-05-20T08:24:15.937596+00:00",
+        "Planned publish date: 2026-05-20",
         "Snapshot generated from automation hub data"
       ],
       "publish": {
@@ -3718,7 +4080,7 @@
         "items": [
           {
             "placement": "Featured image",
-            "asset_hint": "/hero.webp",
+            "asset_hint": "https://images.pexels.com/photos/29502221/pexels-photo-29502221.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
             "query": "used crane industrial yard equipment auction",
             "prompt": "Realistic editorial photo of a used crane prepared for auction in an industrial yard, clean daylight, documentary style, no text overlay, trustworthy heavy-equipment marketplace mood, supports the topic 'How to sell a used crane at auction'."
           },
@@ -3733,6 +4095,41 @@
             "asset_hint": "Prompt only",
             "query": "preparing crane for sale inspection heavy equipment yard",
             "prompt": "Heavy equipment seller preparing a crane for listing, showing cleaning, inspection, and photo capture steps, credible B2B industrial style, sharp realistic details, visually supports keyword 'sell used crane at auction'."
+          }
+        ],
+        "selected_images": [
+          {
+            "id": 29502221,
+            "alt": "A 40 ton ACE rough terrain crane parked in an industrial yard in Faridabad, India.",
+            "photographer": "Action Construction  Equipment Ltd. - ACE",
+            "thumb": "https://images.pexels.com/photos/29502221/pexels-photo-29502221.jpeg?auto=compress&cs=tinysrgb&dpr=1&h=350&w=640",
+            "large": "https://images.pexels.com/photos/29502221/pexels-photo-29502221.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+            "original": "https://images.pexels.com/photos/29502221/pexels-photo-29502221.jpeg",
+            "width": 940,
+            "height": 650,
+            "pexels_url": "https://www.pexels.com/photo/40-ton-ace-rough-terrain-crane-in-faridabad-yard-29502221/"
+          },
+          {
+            "id": 19091513,
+            "alt": "Close-up of a yellow industrial crane with openwork design against a cloudy blue sky.",
+            "photographer": "\u041c\u0438\u0445\u0430\u0438\u043b \u041a\u0440\u0430\u043c\u043e\u0440",
+            "thumb": "https://images.pexels.com/photos/19091513/pexels-photo-19091513.jpeg?auto=compress&cs=tinysrgb&dpr=1&h=350&w=640",
+            "large": "https://images.pexels.com/photos/19091513/pexels-photo-19091513.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+            "original": "https://images.pexels.com/photos/19091513/pexels-photo-19091513.jpeg",
+            "width": 940,
+            "height": 650,
+            "pexels_url": "https://www.pexels.com/photo/rusty-yellow-crane-19091513/"
+          },
+          {
+            "id": 29502221,
+            "alt": "A 40 ton ACE rough terrain crane parked in an industrial yard in Faridabad, India.",
+            "photographer": "Action Construction  Equipment Ltd. - ACE",
+            "thumb": "https://images.pexels.com/photos/29502221/pexels-photo-29502221.jpeg?auto=compress&cs=tinysrgb&dpr=1&h=350&w=640",
+            "large": "https://images.pexels.com/photos/29502221/pexels-photo-29502221.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+            "original": "https://images.pexels.com/photos/29502221/pexels-photo-29502221.jpeg",
+            "width": 940,
+            "height": 650,
+            "pexels_url": "https://www.pexels.com/photo/40-ton-ace-rough-terrain-crane-in-faridabad-yard-29502221/"
           }
         ]
       },
@@ -3751,7 +4148,8 @@
           "equipment valuation",
           "used crane auction"
         ],
-        "heroImage": "/hero.webp",
+        "heroImage": "https://images.pexels.com/photos/29502221/pexels-photo-29502221.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "heroImageAlt": "A 40 ton ACE rough terrain crane parked in an industrial yard in Faridabad, India.",
         "featured": false,
         "seoTitle": "How to Sell a Used Crane at Auction | Seller Guide",
         "seoDescription": "Learn how to sell used crane at auction with practical tips on documents, photos, inspection prep, common mistakes, and what to ask an auction partner before listing.",
@@ -3784,7 +4182,13 @@
               "Ownership, title, or lien status",
               "Known defects, repairs, or missing components",
               "Included attachments, blocks, rigging, or transport items"
-            ]
+            ],
+            "image": {
+              "src": "https://images.pexels.com/photos/19091513/pexels-photo-19091513.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+              "alt": "Close-up of a yellow industrial crane with openwork design against a cloudy blue sky.",
+              "creditName": "\u041c\u0438\u0445\u0430\u0438\u043b \u041a\u0440\u0430\u043c\u043e\u0440",
+              "creditUrl": "https://www.pexels.com/photo/rusty-yellow-crane-19091513/"
+            }
           },
           {
             "heading": "How to prepare a crane for listing and inspection",
@@ -3802,7 +4206,13 @@
               "Note missing parts, leaks, damage, or non-operational systems",
               "Prepare the site for inspection and potential removal"
             ],
-            "callout": "A well-prepared listing does not guarantee a higher bid, but it usually helps serious buyers bid with more confidence."
+            "callout": "A well-prepared listing does not guarantee a higher bid, but it usually helps serious buyers bid with more confidence.",
+            "image": {
+              "src": "https://images.pexels.com/photos/29502221/pexels-photo-29502221.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+              "alt": "A 40 ton ACE rough terrain crane parked in an industrial yard in Faridabad, India.",
+              "creditName": "Action Construction  Equipment Ltd. - ACE",
+              "creditUrl": "https://www.pexels.com/photo/40-ton-ace-rough-terrain-crane-in-faridabad-yard-29502221/"
+            }
           },
           {
             "heading": "Common mistakes that reduce auction performance",
@@ -3884,7 +4294,7 @@
         "Job status: published",
         "Site target: CranesAuctions",
         "Created: 2026-05-18T22:10:00+04:00",
-        "Last updated: 2026-05-19T12:53:00+00:00",
+        "Last updated: 2026-05-19T18:46:44.405397+00:00",
         "Snapshot generated from automation hub data"
       ],
       "publish": {

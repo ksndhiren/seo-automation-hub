@@ -10,11 +10,11 @@
     "heavy equipment auction checklist"
   ],
   "target_url": "/blog/buying-guides/how-to-buy-a-used-crane-at-auction",
-  "status": "brief_pending",
+  "status": "final_pending",
   "priority": "high",
   "assigned_reviewer": "seo-expert",
   "created_at": "2026-05-19T15:55:00+04:00",
-  "updated_at": "2026-05-19T22:20:00+04:00",
+  "updated_at": "2026-05-20T08:24:15.937596+00:00",
   "seo_strategy": {
     "search_intent": "commercial informational",
     "cluster": "buyer acquisition",
@@ -38,12 +38,182 @@
   "metrics": {
     "target_word_count": 1800,
     "neuronwriter_score": null,
-    "manual_plagiarism_status": "Pending manual review"
+    "manual_plagiarism_status": "Pending manual review",
+    "flagged_sections_note": ""
   },
   "publish": {
     "commit_sha": null,
     "live_url": null
   },
   "planned_publish_date": "2026-05-20",
-  "calendar_month": "2026-05-to-06"
+  "calendar_month": "2026-05-to-06",
+  "image_plan": {
+    "status": "planned",
+    "items": [
+      {
+        "placement": "Featured image",
+        "asset_hint": "/hero.webp",
+        "query": "used crane industrial yard equipment auction",
+        "prompt": "Realistic editorial photo of a used crane prepared for auction in an industrial yard, clean daylight, documentary style, no text overlay, trustworthy heavy-equipment marketplace mood, supports the topic 'How to buy a used crane at auction'."
+      },
+      {
+        "placement": "After section: Review the auction listing like a buyer, not a spectator",
+        "asset_hint": "Prompt only",
+        "query": "crane inspection maintenance records industrial equipment",
+        "prompt": "Detailed crane inspection scene with paperwork, serial plate, and maintenance records visible, professional industrial photography, natural light, no staged AI look, no text."
+      },
+      {
+        "placement": "After section: Inspect the machine before you bid",
+        "asset_hint": "Prompt only",
+        "query": "preparing crane for sale inspection heavy equipment yard",
+        "prompt": "Heavy equipment seller preparing a crane for listing, showing cleaning, inspection, and photo capture steps, credible B2B industrial style, sharp realistic details, visually supports keyword 'how to buy a used crane at auction'."
+      }
+    ],
+    "selected_images": []
+  },
+  "draft": {
+    "slug": "how-to-buy-a-used-crane-at-auction",
+    "title": "How to Buy a Used Crane at Auction: A Practical Guide for First-Time and Experienced Buyers",
+    "description": "Learn how to buy a used crane at auction with a clear inspection, bidding, and logistics plan. Get practical crane bidding tips and a buyer checklist before you place a bid.",
+    "publishedAt": "2026-05-20",
+    "author": "Jeff Martin Auctioneers Editorial Team",
+    "readTime": "8 min read",
+    "category": "Buying Guides",
+    "tags": [
+      "used crane buying",
+      "auction buyer checklist",
+      "inspection prep",
+      "bidding strategy",
+      "heavy equipment auction checklist"
+    ],
+    "heroImage": "/hero.webp",
+    "featured": false,
+    "seoTitle": "How to Buy a Used Crane at Auction | Buyer Checklist & Bidding Tips",
+    "seoDescription": "Buying a used crane at auction takes more than finding the right machine. Use this guide for inspection prep, bidding tips, transport planning, and a practical buyer checklist.",
+    "intro": [
+      "Buying a used crane at auction can be a smart way to expand your fleet, replace aging equipment, or find a machine at a more competitive price than a traditional retail channel. The key is to treat the process like a project: inspect carefully, understand the auction terms, and know your maximum number before bidding starts.",
+      "This guide walks you through how to buy a used crane at auction with less guesswork. Whether you are a contractor, fleet manager, dealer, or rigging business, the goal is the same: find a crane that fits the job, the budget, and the transport plan without taking on avoidable risk."
+    ],
+    "sections": [
+      {
+        "heading": "Start with the right crane for the job",
+        "paragraphs": [
+          "Before you browse listings or register to bid, define exactly what you need the crane to do. A machine that looks like a bargain can become expensive if it is undersized, too heavy to transport easily, or not suited to your work environment. Focus first on lift capacity, reach, boom type, mobility, and site conditions.",
+          "It also helps to separate must-have features from nice-to-have features. For example, a rough-terrain crane may be ideal for certain job sites, while a truck crane may be a better fit for road travel and faster repositioning. The more specific your requirements, the easier it is to filter auction inventory and avoid chasing the wrong equipment."
+        ],
+        "bullets": [
+          "Confirm the minimum lift capacity you need",
+          "Check working radius and boom configuration",
+          "Consider roadability, transport permits, and axle weight limits",
+          "Match the crane type to your job site and operating conditions",
+          "Set a ceiling for total cost, not just the hammer price"
+        ]
+      },
+      {
+        "heading": "Review the auction listing like a buyer, not a spectator",
+        "paragraphs": [
+          "A listing should tell you more than model and year. Look for hours, service history, maintenance notes, serial numbers, and whether the seller provides inspection reports or condition details. If photos are limited, zoom in on structural areas, wire rope, tires or tracks, outriggers, undercarriage components, and the cab.",
+          "When possible, compare the listing against manufacturer specifications and common wear points for that crane model. That extra step can help you spot mismatched attachments, missing components, or signs of neglect. If the auction platform offers a preview day or equipment contact, use it."
+        ],
+        "callout": "Do not rely on photos alone. A used crane auction buyer checklist should always include model research, maintenance review, and a clear understanding of what is and is not being sold with the machine."
+      },
+      {
+        "heading": "Inspect the machine before you bid",
+        "paragraphs": [
+          "An in-person inspection is one of the most valuable parts of the process. If you cannot inspect yourself, send a qualified mechanic, operator, or crane specialist. The goal is to verify condition, identify obvious repair needs, and decide whether the machine still fits your risk tolerance.",
+          "Focus on the areas that affect safety and operating cost first. Structural cracks, hydraulic leaks, worn pins and bushings, boom wear, cable condition, and drivetrain issues can all change the economics of the deal. A crane that needs immediate work may still be worth buying, but only if you account for repair and downtime in your bid."
+        ],
+        "bullets": [
+          "Check structural members for cracks, bends, or visible repairs",
+          "Inspect boom sections, pins, cables, and sheaves",
+          "Look for hydraulic leaks and fluid condition",
+          "Review tires, tracks, brakes, and steering components",
+          "Confirm cab controls, gauges, and safety systems appear functional"
+        ]
+      },
+      {
+        "heading": "Know the auction terms before you place a bid",
+        "paragraphs": [
+          "Many buyers focus on the crane and overlook the fine print. That can be a costly mistake. Auction terms may affect buyer\u2019s premiums, payment deadlines, taxes, removal windows, title transfer, and whether the sale is absolute or subject to seller approval.",
+          "Read the terms carefully and make sure your team can meet the timeline. If the auction requires quick payment, same-week pickup, or special documentation, plan for that before the sale starts. Clear terms also help you bid with confidence because you know your true all-in number."
+        ],
+        "bullets": [
+          "Confirm the buyer\u2019s premium and any administrative fees",
+          "Check payment deadlines and accepted payment methods",
+          "Understand removal windows and storage penalties",
+          "Review title, registration, or export paperwork requirements",
+          "Verify whether sales are as-is, where-is"
+        ]
+      },
+      {
+        "heading": "Use disciplined crane bidding tips",
+        "paragraphs": [
+          "The best bidding strategy is simple: set your maximum before the auction begins and stick to it. Emotional bidding is where many buyers lose discipline. Decide your ceiling based on estimated repair costs, transport, taxes, and the value of the machine in your fleet.",
+          "If you are new to auction purchasing, keep your first few bids calm and deliberate. Watch how the sale moves, learn the bidding rhythm, and avoid trying to outsmart the market. In many cases, the right approach is to wait, then move decisively when the machine is still inside your budget."
+        ],
+        "bullets": [
+          "Set a true maximum bid that includes fees and freight",
+          "Leave room for repairs and commissioning costs",
+          "Do not bid against yourself in a fast-moving sale",
+          "Pay attention to lot order and auction timing",
+          "Know when to walk away"
+        ]
+      },
+      {
+        "heading": "Plan transport, loading, and commissioning early",
+        "paragraphs": [
+          "A used crane is not really bought until it is safely delivered and ready to work. Before auction day, confirm how the machine will be loaded, what equipment is needed for removal, and whether permits or escort vehicles are required. Some buyers save money on purchase price only to spend more than expected on logistics.",
+          "Work with a transport provider that understands heavy equipment and oversize moves. Also think ahead to commissioning: fluids, filters, inspections, operator familiarization, and any needed repairs before the crane enters service. That planning helps reduce downtime and keeps the machine productive after delivery."
+        ],
+        "callout": "A strong heavy equipment auction checklist should always include freight, loading access, permits, insurance, and startup costs. Those items often determine whether a deal is actually a good deal."
+      },
+      {
+        "heading": "When buying online, add an extra layer of verification",
+        "paragraphs": [
+          "Many buyers now choose to buy used crane online, which makes convenience a big advantage but also raises the importance of verification. If you are not on site, rely on detailed listing information, seller disclosures, third-party inspections, and direct questions before bidding.",
+          "Ask for clarification on the exact serial number, included attachments, maintenance records, and any known defects. If the auction team offers support, use it. A reputable auction partner should be able to help you understand the lot details, bidding process, and post-sale steps so there are fewer surprises."
+        ]
+      },
+      {
+        "heading": "Use a simple used crane auction buyer checklist",
+        "paragraphs": [
+          "The easiest way to stay organized is to use a repeatable checklist for every auction. That keeps your team aligned and makes it easier to compare machines across multiple sales. It also reduces the chance of overlooking fees or a critical inspection item in the rush of bidding.",
+          "The checklist does not need to be complicated. It just needs to cover the parts of the process that affect risk, cost, and usability. Once you build a routine, you can move faster and make better buying decisions over time."
+        ],
+        "bullets": [
+          "Define the crane type, capacity, and application",
+          "Review photos, specs, and auction terms",
+          "Inspect the machine or send a qualified representative",
+          "Estimate repair, freight, and setup costs",
+          "Set a maximum bid and payment plan",
+          "Confirm removal and transport logistics",
+          "Complete post-sale commissioning before putting the crane to work"
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "What should I inspect first on a used crane at auction?",
+        "answer": "Start with the items that affect safety and repair cost: structural condition, boom sections, wire rope, hydraulics, tires or undercarriage, and drivetrain components. If those areas look questionable, factor that into your bid or walk away."
+      },
+      {
+        "question": "How do I avoid overpaying at a crane auction?",
+        "answer": "Set a maximum bid before the sale and include the buyer\u2019s premium, taxes, transport, and repair costs. The hammer price is only part of the total cost, so a disciplined ceiling is the best protection against overbidding."
+      },
+      {
+        "question": "Can I buy a used crane online without seeing it in person?",
+        "answer": "Yes, but you should add extra verification. Review the listing carefully, request detailed photos or reports, ask questions about maintenance and defects, and consider a third-party inspection if the crane is a significant purchase."
+      },
+      {
+        "question": "Who can help if I need guidance on auction buying?",
+        "answer": "Jeff Martin Auctioneers can help buyers evaluate opportunities, understand auction terms, and navigate the bidding and removal process. If you are planning a purchase, contact Jeff Martin Auctioneers for support before auction day."
+      }
+    ],
+    "cta": {
+      "title": "Need help evaluating a used crane before you bid?",
+      "body": "Talk with Jeff Martin Auctioneers for practical guidance on auction terms, inventory, and buyer strategy. Whether you are buying one crane or building a fleet, the team can help you approach the auction with more clarity and confidence.",
+      "buttonLabel": "Contact Jeff Martin Auctioneers",
+      "buttonHref": "https://www.cranesauctions.com/contact"
+    }
+  }
 }

@@ -7,14 +7,27 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from _env import load_dotenv
+from _images import auto_pick_images_for_job
 from _openai import call_openai_json
-from sync_calendar_checkpoints import sync_calendar_checkpoints
+from sync_dashboard_jobs_to_d1 import sync_dashboard_jobs_to_d1
+from sync_jobs_from_d1 import sync_jobs_from_d1
 
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 JOBS_DIR = REPO_ROOT / "data" / "jobs"
 SITES_DIR = REPO_ROOT / "config" / "sites"
 RUNS_DIR = REPO_ROOT / "data" / "runs"
+ACTIVE_BRIEF_STATUSES = {"brief_pending", "brief_approved"}
+ELIGIBLE_STATUS_RANK = {
+    "brief_approved": 0,
+    "needs_revision": 1,
+    "new": 2,
+}
+PRIORITY_RANK = {
+    "high": 0,
+    "medium": 1,
+    "low": 2,
+}
 
 
 def main() -> None:
@@ -25,49 +38,50 @@ def main() -> None:
     args = parser.parse_args()
 
     load_dotenv()
-    sync_calendar_checkpoints()
+    synced_job_ids = sync_jobs_from_d1()
     sites = load_sites()
     job_paths = sorted(JOBS_DIR.glob("*.json"))
+    job_records = [
+        (path, json.loads(path.read_text()))
+        for path in job_paths
+    ]
     processed: list[dict] = []
 
-    for path in job_paths:
-        job = json.loads(path.read_text())
-        if args.job_id and job.get("job_id") != args.job_id:
-            continue
+    if synced_job_ids:
+        processed.append(
+            {
+                "job_id": ", ".join(synced_job_ids[:5])
+                + ("…" if len(synced_job_ids) > 5 else ""),
+                "status": "synced",
+                "reason": f"Pulled {len(synced_job_ids)} job states from D1 before processing",
+            }
+        )
 
-        site = sites.get(job.get("site_id"))
-        if not site:
+    if args.job_id:
+        target = next(
+            ((path, job) for path, job in job_records if job.get("job_id") == args.job_id),
+            None,
+        )
+        if target:
+            process_and_record(target[0], target[1], sites, processed)
+            ensure_site_has_active_brief(target[1].get("site_id"), job_records, sites, processed)
+        else:
             processed.append(
                 {
-                    "job_id": job.get("job_id"),
+                    "job_id": args.job_id,
                     "status": "skipped",
-                    "reason": f"Unknown site_id: {job.get('site_id')}",
+                    "reason": "Specified job_id was not found.",
                 }
             )
-            continue
-
-        outcome = process_job(job, site)
-        if outcome["changed"]:
-            path.write_text(json.dumps(job, indent=2) + "\n")
-        processed.append(
-            {
-                "job_id": job.get("job_id"),
-                "status": outcome["status"],
-                "reason": outcome["reason"],
-            }
-        )
-
-    promoted = sync_calendar_checkpoints()
-    for site_id, job_id in promoted:
-        processed.append(
-            {
-                "job_id": job_id,
-                "status": "updated",
-                "reason": f"Promoted next calendar job to brief_pending for {site_id}",
-            }
-        )
+    else:
+        for site_id in sorted(sites.keys()):
+            candidate = select_site_candidate(site_id, job_records)
+            if candidate:
+                process_and_record(candidate[0], candidate[1], sites, processed)
+            ensure_site_has_active_brief(site_id, job_records, sites, processed)
 
     rebuild_dashboard_state()
+    sync_dashboard_jobs_to_d1()
     write_run_log(processed)
 
     for item in processed:
@@ -87,6 +101,30 @@ def load_sites() -> dict[str, dict]:
     return sites
 
 
+def process_and_record(path: Path, job: dict, sites: dict[str, dict], processed: list[dict]) -> None:
+    site = sites.get(job.get("site_id"))
+    if not site:
+        processed.append(
+            {
+                "job_id": job.get("job_id"),
+                "status": "skipped",
+                "reason": f"Unknown site_id: {job.get('site_id')}",
+            }
+        )
+        return
+
+    outcome = process_job(job, site)
+    if outcome["changed"]:
+        path.write_text(json.dumps(job, indent=2) + "\n")
+    processed.append(
+        {
+            "job_id": job.get("job_id"),
+            "status": outcome["status"],
+            "reason": outcome["reason"],
+        }
+    )
+
+
 def process_job(job: dict, site: dict) -> dict:
     status = job.get("status")
     if status == "new":
@@ -94,6 +132,70 @@ def process_job(job: dict, site: dict) -> dict:
     if status == "brief_approved":
         return generate_draft(job, site)
     return {"changed": False, "status": "skipped", "reason": f"No automation for status {status}"}
+
+
+def select_site_candidate(site_id: str, job_records: list[tuple[Path, dict]]) -> tuple[Path, dict] | None:
+    site_jobs = [
+        (path, job)
+        for path, job in job_records
+        if job.get("site_id") == site_id and job.get("status") in ELIGIBLE_STATUS_RANK
+    ]
+    if not site_jobs:
+        return None
+
+    site_jobs.sort(
+        key=lambda item: (
+            ELIGIBLE_STATUS_RANK.get(item[1].get("status"), 99),
+            PRIORITY_RANK.get(item[1].get("priority", "medium"), 99),
+            -((item[1].get("seo_strategy") or {}).get("opportunity_score") or 0),
+            item[1].get("planned_publish_date") or "9999-99-99",
+            item[1].get("created_at", ""),
+            item[1].get("job_id", ""),
+        )
+    )
+    return site_jobs[0]
+
+
+def ensure_site_has_active_brief(
+    site_id: str,
+    job_records: list[tuple[Path, dict]],
+    sites: dict[str, dict],
+    processed: list[dict],
+) -> None:
+    site_jobs = [
+        (path, job)
+        for path, job in job_records
+        if job.get("site_id") == site_id
+    ]
+    if any(job.get("status") in ACTIVE_BRIEF_STATUSES for _, job in site_jobs):
+        return
+
+    candidates = [
+        (path, job)
+        for path, job in site_jobs
+        if job.get("status") == "new" and job.get("planned_publish_date")
+    ]
+    candidates.sort(
+        key=lambda item: (
+            item[1].get("planned_publish_date", "9999-99-99"),
+            -((item[1].get("seo_strategy") or {}).get("opportunity_score") or 0),
+            item[1].get("job_id", ""),
+        )
+    )
+    if not candidates:
+        return
+
+    path, job = candidates[0]
+    outcome = generate_brief(job, sites[site_id])
+    if outcome["changed"]:
+        path.write_text(json.dumps(job, indent=2) + "\n")
+        processed.append(
+            {
+                "job_id": job.get("job_id"),
+                "status": outcome["status"],
+                "reason": f"{outcome['reason']} and moved job to brief_pending as the next active site brief",
+            }
+        )
 
 
 def generate_brief(job: dict, site: dict) -> dict:
@@ -225,9 +327,19 @@ Rules:
         "faq": result["faq"],
         "cta": result["cta"],
     }
+    selected_count = auto_pick_images_for_job(job)
     job["status"] = "final_pending"
     job["updated_at"] = now_iso()
-    return {"changed": True, "status": "updated", "reason": "Generated draft"}
+    image_reason = (
+        f" and auto-selected {selected_count} images"
+        if selected_count
+        else " and left image prompts ready for selection"
+    )
+    return {
+        "changed": True,
+        "status": "updated",
+        "reason": f"Generated draft{image_reason}",
+    }
 
 
 def rebuild_dashboard_state() -> None:

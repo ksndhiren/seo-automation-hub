@@ -1,4 +1,5 @@
 import { json } from "../_shared.js";
+import { searchPexels } from "../_images.js";
 
 export async function onRequestGet(context) {
   const apiKey = context.env.PEXELS_API_KEY;
@@ -25,41 +26,7 @@ export async function onRequestGet(context) {
     return json({ ok: false, message: "query is required." }, { status: 400 });
   }
 
-  const apiUrl = new URL("https://api.pexels.com/v1/search");
-  apiUrl.searchParams.set("query", query);
-  apiUrl.searchParams.set("per_page", String(perPage));
-  apiUrl.searchParams.set("orientation", "landscape");
-
-  const response = await fetch(apiUrl.toString(), {
-    headers: {
-      Authorization: apiKey,
-    },
-  });
-
-  if (!response.ok) {
-    const body = await response.text();
-    return json(
-      {
-        ok: false,
-        message: `Pexels search failed with status ${response.status}.`,
-        detail: body.slice(0, 300),
-      },
-      { status: 502 },
-    );
-  }
-
-  const payload = await response.json();
-  const photos = (payload.photos || []).map((photo) => ({
-    id: photo.id,
-    alt: photo.alt || "",
-    photographer: photo.photographer || "",
-    thumb: photo.src?.medium || photo.src?.small || "",
-    large: photo.src?.large2x || photo.src?.large || photo.src?.medium || "",
-    original: photo.src?.original || photo.src?.large2x || "",
-    width: photo.width || null,
-    height: photo.height || null,
-    pexels_url: photo.url || "",
-  }));
+  const photos = await searchPexels(apiKey, query, perPage);
 
   return json({
     ok: true,

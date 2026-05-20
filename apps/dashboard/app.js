@@ -44,6 +44,7 @@ let activePlanningView = "overview";
 let previewStatus = {};
 let persistenceMode = "static";
 let imageSearchState = {};
+let autoImageFillState = {};
 
 init().catch((error) => {
   console.error(error);
@@ -572,6 +573,35 @@ function renderSelectedJob() {
   el.draftTab.innerHTML = renderDraftTab(job);
   el.activityTab.innerHTML = renderActivityTab(job);
   updateTabs();
+  maybeAutoFillImages(job);
+}
+
+function maybeAutoFillImages(job) {
+  if (previewStatus[job?.job_id] === "published") {
+    return;
+  }
+
+  const hasDraft = Boolean(job?.draft);
+  const items = job?.image_plan?.items || [];
+  const selectedImages = (job?.image_plan?.selected_images || []).filter(Boolean);
+  if (!hasDraft || !items.length || selectedImages.length) {
+    return;
+  }
+
+  const state = autoImageFillState[job.job_id];
+  if (state === "running" || state === "done") {
+    return;
+  }
+
+  autoImageFillState[job.job_id] = "running";
+  queueMicrotask(async () => {
+    try {
+      await handleAutoPickImages();
+      autoImageFillState[job.job_id] = "done";
+    } catch (error) {
+      autoImageFillState[job.job_id] = "failed";
+    }
+  });
 }
 
 function renderStrategyTab(job) {
@@ -1124,42 +1154,31 @@ async function handleAutoPickImages() {
     <p class="muted">Searching Pexels and selecting the best first-pass images for this draft.</p>
   `;
 
-  const selections = [];
-
   try {
-    for (let index = 0; index < job.image_plan.items.length; index += 1) {
-      const item = job.image_plan.items[index];
-      const query = buildImageSearchQuery(job, item);
-      const response = await fetch(
-        `./api/pexels-search?query=${encodeURIComponent(query)}&per_page=6`,
-      );
-      const result = await response.json();
-      if (!response.ok || !result.ok) {
-        throw new Error(result.message || `Pexels search failed for placement ${index + 1}.`);
-      }
-
-      const photos = result.photos || [];
-      imageSearchState[job.job_id] = imageSearchState[job.job_id] || {};
-      imageSearchState[job.job_id][index] = {
-        query,
-        results: photos,
-        message: photos.length ? "" : "No matching images found.",
-      };
-
-      const bestPhoto = chooseBestPexelsPhoto(job, item, photos);
-      selections[index] = bestPhoto || null;
+    const response = await fetch("./api/auto-images", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({
+        job_id: job.job_id,
+      }),
+    });
+    const payload = await response.json();
+    if (!response.ok || !payload.ok) {
+      throw new Error(payload.message || "Auto-pick failed.");
     }
 
-    const cleanedSelections = selections.filter(Boolean);
-    if (!cleanedSelections.length) {
-      throw new Error("No suitable Pexels images were found for this article.");
-    }
+    job.image_plan = {
+      ...(job.image_plan || {}),
+      selected_images: payload.selected_images || [],
+    };
+    renderSelectedJob();
 
-    await saveSelectedImages(job, selections, "Auto-picked first-pass images.");
     el.reviewPreview.innerHTML = `
       <h3>Images auto-selected</h3>
       <p><strong>Job:</strong> ${escapeHtml(job.topic)}</p>
-      <p><strong>Selections:</strong> ${escapeHtml(String(cleanedSelections.length))} placements updated</p>
+      <p><strong>Selections:</strong> ${escapeHtml(String(payload.selected_count || 0))} placements updated</p>
     `;
   } catch (error) {
     el.reviewPreview.innerHTML = `
@@ -1229,47 +1248,6 @@ async function saveSelectedImages(job, selections, comment) {
     selected_images: selections,
   };
   renderSelectedJob();
-}
-
-function chooseBestPexelsPhoto(job, item, photos) {
-  if (!photos?.length) return null;
-
-  const keywordTerms = [
-    job.primary_keyword,
-    item.placement,
-    job.seo_strategy?.category_name,
-    "crane",
-    "equipment",
-    "industrial",
-  ]
-    .filter(Boolean)
-    .join(" ")
-    .toLowerCase()
-    .split(/[^a-z0-9]+/)
-    .filter(Boolean);
-
-  return [...photos]
-    .map((photo) => ({
-      photo,
-      score: scorePexelsPhoto(photo, keywordTerms),
-    }))
-    .sort((a, b) => b.score - a.score)[0]?.photo || photos[0];
-}
-
-function scorePexelsPhoto(photo, keywordTerms) {
-  const text = `${photo.alt || ""} ${photo.photographer || ""}`.toLowerCase();
-  let score = 0;
-
-  keywordTerms.forEach((term) => {
-    if (text.includes(term)) score += 2;
-  });
-
-  if (text.includes("crane")) score += 6;
-  if (text.includes("construction")) score += 2;
-  if (text.includes("industrial")) score += 2;
-  if (photo.width && photo.height && photo.width > photo.height) score += 1;
-
-  return score;
 }
 
 async function handleReviewAction(action) {

@@ -1,38 +1,27 @@
 # Master Cron Prompt
 
-Run the SEO automation hub workflow.
+Run the SEO automation hub workflow from `/Users/abhishekutkarsha/Documents/Codex/seo-automation-hub`.
 
-Process only one highest-priority eligible job per run so the system maintains a cadence of one blog per day.
+Use the existing script runner instead of hand-editing state:
 
-Before selecting the eligible job, make sure each site has its next scheduled calendar item promoted to `brief_pending` whenever that site has no current active brief-stage item.
+```bash
+python3 scripts/run_automation_cycle.py
+```
 
-Eligible jobs should be evaluated in this order:
+The script already handles the required workflow:
 
-1. `final_approved`
-2. `brief_approved`
-3. `needs_revision`
-4. `new`
-
-Within the same status group, prefer:
-
-- `high` priority before `medium`
-- higher `opportunity_score` before lower score
-- older jobs before newer jobs
-
-For the selected job:
-
-1. Read the job status.
-2. Load the matching site config from `config/sites`.
-3. Move the job to the next safe stage.
+1. Sync live dashboard review state from Cloudflare D1 back into the source job JSON files.
+2. Process up to one eligible job per site for this run.
+3. If a site has a `brief_approved` job, generate its draft and move it to `final_pending`.
+4. After a draft is generated, if that site has no other active brief-stage item, generate the next calendar-aligned brief and move it to `brief_pending`.
+5. Rebuild dashboard snapshot artifacts.
+6. Sync the refreshed dashboard job state back into D1.
+7. Write a run log.
 
 Rules:
 
-- Never publish unless status is `final_approved`.
-- If status is `new`, generate brief material and set status to `brief_pending`.
-- If status is `brief_approved`, create the draft package and set status to `final_pending`.
-- After any successful status transition, refill the next scheduled `brief_pending` slot for that same site if no other brief-stage item remains active there.
-- At `final_pending`, wait for human final review, including manual plagiarism checking.
-- If status is `needs_revision`, apply reviewer comments and resume from the correct stage.
-- If status is `final_approved`, publish to the configured site repo and record the result.
-- Do not process more than one job in a single scheduled run.
-- Always update timestamps, logs, and review-linked metadata.
+- This scheduled run is for drafting only, not publishing.
+- Never publish from this automation.
+- Ignore `final_approved` jobs because final approval publishing is handled immediately by the dashboard workflow.
+- If a script step fails, stop and report the failure rather than trying to improvise manual JSON edits across many jobs.
+- Preserve Jeff Martin Auctioneers as the named brand in CTA/conversion copy where applicable, and never use the microsite name as the speaking brand.

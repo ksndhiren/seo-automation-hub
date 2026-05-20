@@ -1,0 +1,30 @@
+{
+  "created_at": "2026-05-20T08:24:51.587601+00:00",
+  "results": [
+    {
+      "job_id": "2026-05-19-jma-golfcarts-sell-used-golf-cart-online, 2026-05-19-cranes-auctions-buy-used-crane-at-auction, 2026-05-19-jma-golfcarts-what-to-look-for-buying-used-golf-cart, 2026-06-08-jma-golfcarts-how-to-price-used-golf-cart-for-sale, 2026-06-09-cranes-auctions-documents-needed-to-sell-crane-at-auction\u2026",
+      "status": "synced",
+      "reason": "Pulled 45 job states from D1 before processing"
+    },
+    {
+      "job_id": "2026-05-19-cranes-auctions-buy-used-crane-at-auction",
+      "status": "updated",
+      "reason": "Generated draft"
+    },
+    {
+      "job_id": "2026-05-19-cranes-auctions-used-crane-inspection-checklist",
+      "status": "updated",
+      "reason": "Generated brief and moved job to brief_pending as the next active site brief"
+    },
+    {
+      "job_id": "2026-05-19-jma-golfcarts-sell-used-golf-cart-online",
+      "status": "updated",
+      "reason": "Generated draft"
+    },
+    {
+      "job_id": "2026-05-19-jma-golfcarts-what-to-look-for-buying-used-golf-cart",
+      "status": "updated",
+      "reason": "Generated brief and moved job to brief_pending as the next active site brief"
+    }
+  ]
+}

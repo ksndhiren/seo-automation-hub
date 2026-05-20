@@ -10,11 +10,11 @@
     "list golf cart for sale"
   ],
   "target_url": "/blog/selling-guides/how-to-sell-a-used-golf-cart-online",
-  "status": "brief_pending",
+  "status": "final_pending",
   "priority": "high",
   "assigned_reviewer": "seo-expert",
   "created_at": "2026-05-19T15:25:00+04:00",
-  "updated_at": "2026-05-19T18:00:00+04:00",
+  "updated_at": "2026-05-20T08:24:37.920197+00:00",
   "brief": {
     "summary": "Create a commercial-informational article for golf cart owners, dealers, and operators who want a practical process for listing and selling a used golf cart online. The article should explain when a marketplace approach makes sense, what buyers expect in a listing, how to prepare the cart before photos and inspection, and which mistakes reduce buyer confidence.",
     "outline": [
@@ -50,12 +50,168 @@
   "metrics": {
     "target_word_count": 1700,
     "neuronwriter_score": null,
-    "manual_plagiarism_status": "Pending manual review"
+    "manual_plagiarism_status": "Pending manual review",
+    "flagged_sections_note": ""
   },
   "publish": {
     "commit_sha": null,
     "live_url": null
   },
   "planned_publish_date": "2026-05-20",
-  "calendar_month": "2026-05-to-06"
+  "calendar_month": "2026-05-to-06",
+  "image_plan": {
+    "status": "planned",
+    "items": [
+      {
+        "placement": "Featured image",
+        "asset_hint": "/hero.webp",
+        "query": "used golf cart marketplace listing outdoor realistic",
+        "prompt": "Realistic editorial photo of a used golf cart prepared for sale outdoors, clean daylight, trustworthy marketplace mood, no text overlay, visually supports the topic 'How to sell a used golf cart online'."
+      },
+      {
+        "placement": "After section: What buyers expect to see in a used golf cart listing",
+        "asset_hint": "Prompt only",
+        "query": "golf cart inspection listing details realistic",
+        "prompt": "Detailed golf cart inspection scene with close-up listing details, service notes, and condition checks, natural light, realistic marketplace photography, no staged AI look, no text."
+      },
+      {
+        "placement": "After section: How to prepare the cart before photos and inquiries",
+        "asset_hint": "Prompt only",
+        "query": "cleaning golf cart for sale realistic",
+        "prompt": "Seller preparing a golf cart for online sale with cleaning, photo setup, and checklist steps visible, credible commercial style, realistic details, supports keyword 'sell used golf cart online'."
+      }
+    ],
+    "selected_images": []
+  },
+  "draft": {
+    "slug": "how-to-sell-a-used-golf-cart-online",
+    "title": "How to Sell a Used Golf Cart Online",
+    "description": "A practical guide for golf cart owners, dealers, and operators who want to list a used golf cart for sale online with more confidence. Learn when a marketplace works best, what buyers expect, how to prepare the cart, and which mistakes can slow the sale.",
+    "publishedAt": "2026-05-20",
+    "author": "Jeff Martin Auctioneers Editorial Team",
+    "readTime": "8 min read",
+    "category": "Selling Guides",
+    "tags": [
+      "used golf cart sales",
+      "golf cart resale process",
+      "seller checklist",
+      "online marketplace tips"
+    ],
+    "heroImage": "/hero.webp",
+    "featured": false,
+    "seoTitle": "How to Sell a Used Golf Cart Online | Seller Guide",
+    "seoDescription": "Learn how to sell a used golf cart online with a clear listing process, buyer-ready photos, preparation tips, and common mistakes to avoid. Practical guidance from Jeff Martin Auctioneers.",
+    "intro": [
+      "Selling a used golf cart online can be straightforward when you treat it like a buyer\u2019s decision, not just a post-and-wait listing. The strongest results usually come from a clear marketplace strategy, a cart that is easy to inspect, and details that help buyers compare condition with confidence.",
+      "Whether you are a private owner, a dealer moving multiple units, or a property manager replacing fleet carts, the goal is the same: make the cart easy to evaluate. A good listing helps buyers understand what they are getting, reduces back-and-forth, and makes it easier to sell golf cart fast through the right used golf cart marketplace."
+    ],
+    "sections": [
+      {
+        "heading": "When a marketplace is the right sales channel",
+        "paragraphs": [
+          "A marketplace approach makes sense when you want to reach buyers beyond your local area and give the cart a more visible, searchable listing. That is especially helpful if you are trying to sell a used golf cart online with limited time, or if the cart has features that different buyers may value in different ways, such as utility fitout, street-legal equipment, or fleet use.",
+          "For many sellers, online exposure is also a better fit than a simple local ad because it supports comparison shopping. Buyers can review photos, condition notes, and features in one place, which can create more serious inquiries than a vague classified post. If you are listing more than one cart, a marketplace can also help you manage multiple offers and match each unit to the right buyer type."
+        ],
+        "bullets": [
+          "Use a marketplace when you want broader reach than local word-of-mouth.",
+          "Choose it if your cart has clear condition and feature details buyers can compare.",
+          "It is useful for dealers, fleet operators, and sellers with more than one unit.",
+          "It works best when you can present the cart honestly and consistently with photos and notes."
+        ],
+        "callout": "A marketplace is strongest when your listing does the first round of selling for you: clear, complete, and easy to trust."
+      },
+      {
+        "heading": "What buyers expect to see in a used golf cart listing",
+        "paragraphs": [
+          "Most buyers start with the basics: year, make, model, power source, seating capacity, and whether the cart is personal, utility, or fleet oriented. They also want to know what has been added, replaced, or repaired. If you are trying to list golf cart for sale successfully, this is where specificity matters because broad descriptions create doubt and delay serious interest.",
+          "Buyers also expect proof of condition. That does not mean a perfect cart, but it does mean usable photos, a straightforward description of wear, and enough detail to estimate value. If the cart has batteries, tires, brakes, lights, upholstery, a windshield, a lift kit, or charger included, say so. If anything is missing or not working, disclose that clearly. Honest details are what make a used golf cart marketplace feel credible."
+        ],
+        "bullets": [
+          "Basic cart information: year, make, model, and power source.",
+          "Condition notes: body, seats, tires, batteries, charger, and mechanical function.",
+          "Included extras: lights, mirrors, windshield, canopy, cargo bed, or lift kit.",
+          "Clear photos from multiple angles, including close-ups of wear.",
+          "Any known issues, repairs, or parts that need attention."
+        ],
+        "callout": "If a buyer has to guess, they will usually move on to another listing."
+      },
+      {
+        "heading": "How to prepare the cart before photos and inquiries",
+        "paragraphs": [
+          "Before you photograph the cart, clean it inside and out. A washed body, vacuumed seats, and a tidy cargo area make a better first impression than a cart that looks neglected. Preparation does not mean hiding flaws; it means presenting the cart in a way that helps buyers see what they are evaluating. That is one of the simplest ways to support a stronger golf cart resale checklist.",
+          "Next, gather the facts a buyer may ask for. Test lights, horn, charger, and basic operation. Charge the batteries and note whether the cart starts and drives as expected. If you have maintenance records, service dates, or parts receipts, keep them ready. Buyers are more confident when they can connect the listing to a real ownership history, especially if they are comparing several carts online."
+        ],
+        "bullets": [
+          "Wash and detail the cart before taking photos.",
+          "Check battery charge, starting, driving, and charging function.",
+          "Gather service records, repair notes, and receipts if available.",
+          "Take photos in good lighting from all sides and from the driver\u2019s view.",
+          "Capture close-ups of tires, seats, controls, batteries, and any visible wear."
+        ],
+        "callout": "A few hours of preparation can save days of unnecessary questions later."
+      },
+      {
+        "heading": "Common mistakes that reduce buyer confidence",
+        "paragraphs": [
+          "One of the biggest mistakes is overselling condition. Phrases like \u201cruns great\u201d or \u201clike new\u201d without supporting detail often create skepticism. Buyers shopping online are used to comparing listings, so vague wording can work against you. A better approach is to describe what the cart does, what has been maintained, and what still needs attention.",
+          "Another common issue is incomplete pricing or contact information. If buyers cannot understand the asking price, location, or next step, they may assume the seller is difficult to work with. Poor photos, missing feature details, and hidden issues can also slow the sale. In a competitive online marketplace, trust is often what separates the fastest response from the listing that lingers."
+        ],
+        "bullets": [
+          "Avoid vague condition claims without evidence.",
+          "Do not hide defects, missing parts, or needed repairs.",
+          "Skip dark, blurry, or overly edited photos.",
+          "Do not leave out key details such as power source or included accessories.",
+          "Make the next step clear so buyers know how to inquire."
+        ],
+        "callout": "Clear, complete listings usually outperform flashy language with little substance."
+      },
+      {
+        "heading": "What to ask before choosing where to list",
+        "paragraphs": [
+          "Before you commit to a platform, ask how the marketplace supports qualified leads, visibility, and seller trust. Not every site is built for used golf cart sales, and the right choice depends on whether you want one-off exposure, dealer-level reach, or help moving multiple units. If you are evaluating where to sell golf cart fast, look for a place that understands the product and the buyer.",
+          "You should also ask how listings are presented, how inquiries are handled, and what seller support is available. Strong marketplace partners make it easier to present the cart accurately and connect with serious buyers. For many sellers, that is where Jeff Martin Auctioneers stands out as the trusted contact brand behind the process, especially when the goal is to convert interest into qualified leads rather than random clicks."
+        ],
+        "bullets": [
+          "Does the platform reach buyers who already want golf carts?",
+          "Can you present detailed photos, features, and condition notes clearly?",
+          "Are buyers encouraged to submit serious inquiries instead of casual messages?",
+          "Is there support for single carts, dealer inventory, or fleet units?",
+          "Will the platform help you build trust before the first call or email?"
+        ],
+        "callout": "The best place to list is the one that helps buyers understand the cart and helps you manage the sale with less friction."
+      },
+      {
+        "heading": "Closing CTA for seller support",
+        "paragraphs": [
+          "If you are ready to sell a used golf cart online, a marketplace built around transparency can make the process easier from the start. The right listing structure helps you present condition clearly, attract the right buyers, and avoid time lost to low-quality inquiries.",
+          "Jeff Martin Auctioneers can help sellers move forward with a more practical marketplace approach, whether you are listing one cart or several. If you want support preparing a listing, comparing selling options, or connecting with active buyers, reach out through the contact path on JMA Golf Carts and let Jeff Martin Auctioneers help guide the next step."
+        ],
+        "callout": "When you want a straightforward way to list golf cart for sale, start with a marketplace that puts clarity first."
+      }
+    ],
+    "faq": [
+      {
+        "question": "What is the best way to sell a used golf cart online?",
+        "answer": "The best approach is to use a marketplace that attracts active buyers, then build a listing with detailed photos, honest condition notes, and clear feature information. That combination makes it easier for buyers to compare the cart and contact you with confidence."
+      },
+      {
+        "question": "What should I include in a used golf cart listing?",
+        "answer": "Include the year, make, model, power source, seating capacity, included accessories, visible condition, and any known issues. Buyers also appreciate service records, charger details, and photos of key areas like tires, batteries, seats, and controls."
+      },
+      {
+        "question": "How can I sell golf cart fast without lowering trust?",
+        "answer": "Focus on presentation and accuracy. Clean the cart, take good photos, disclose defects, and make your listing easy to understand. A clear listing often attracts better inquiries faster than a vague one with a lower asking price."
+      },
+      {
+        "question": "Why use a marketplace instead of a local ad?",
+        "answer": "A marketplace can expand your reach, connect you with more serious buyers, and make it easier to compare carts by condition and features. That is especially useful for dealers, fleet sellers, and owners with specialized carts."
+      }
+    ],
+    "cta": {
+      "title": "Need help selling your used golf cart online?",
+      "body": "Jeff Martin Auctioneers can help you take a more confident marketplace approach, whether you are listing a single cart, comparing selling options, or trying to reach qualified buyers faster. Use the contact path on JMA Golf Carts to start the conversation and get support from a trusted golf cart marketplace team.",
+      "buttonLabel": "Contact Jeff Martin Auctioneers",
+      "buttonHref": "/contact"
+    }
+  }
 }

@@ -5,6 +5,8 @@ from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 
+from _images import build_image_plan_for_job
+
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 SITES_DIR = REPO_ROOT / "config" / "sites"
@@ -184,104 +186,7 @@ def build_seo_strategy(job: dict, site: dict) -> dict:
 
 
 def build_image_plan(job: dict) -> dict:
-    draft = job.get("draft") or {}
-    sections = draft.get("sections") or []
-    topic = job.get("topic", "blog article")
-    primary_keyword = job.get("primary_keyword", "")
-    site_id = job.get("site_id", "")
-    category_name = (
-        (job.get("seo_strategy") or {}).get("category_name")
-        or extract_category_slug(job.get("target_url", "")).replace("-", " ")
-        or "guide"
-    )
-
-    if site_id == "jma-golfcarts":
-        plans = [
-            {
-                "placement": "Featured image",
-                "asset_hint": draft.get("heroImage", "Not assigned yet"),
-                "query": "used golf cart marketplace listing outdoor realistic",
-                "prompt": (
-                    f"Realistic editorial photo of a used golf cart prepared for sale outdoors, clean daylight, "
-                    f"trustworthy marketplace mood, no text overlay, visually supports the topic '{topic}'."
-                ),
-            }
-        ]
-
-        if len(sections) >= 2:
-            plans.append(
-                {
-                    "placement": f"After section: {sections[1].get('heading', 'Listing details')}",
-                    "asset_hint": "Prompt only",
-                    "query": "golf cart inspection listing details realistic",
-                    "prompt": (
-                        "Detailed golf cart inspection scene with close-up listing details, service notes, and condition checks, "
-                        "natural light, realistic marketplace photography, no staged AI look, no text."
-                    ),
-                }
-            )
-
-        if len(sections) >= 3:
-            plans.append(
-                {
-                    "placement": f"After section: {sections[2].get('heading', 'Preparation checklist')}",
-                    "asset_hint": "Prompt only",
-                    "query": "cleaning golf cart for sale realistic",
-                    "prompt": (
-                        f"Seller preparing a golf cart for online sale with cleaning, photo setup, and checklist steps visible, "
-                        f"credible commercial style, realistic details, supports keyword '{primary_keyword}'."
-                    ),
-                }
-            )
-
-        return {
-            "status": "planned",
-            "items": plans,
-        }
-
-    plans = [
-        {
-            "placement": "Featured image",
-            "asset_hint": draft.get("heroImage", "Not assigned yet"),
-            "query": "used crane industrial yard equipment auction",
-            "prompt": (
-                f"Realistic editorial photo of a used crane prepared for auction in an industrial yard, "
-                f"clean daylight, documentary style, no text overlay, trustworthy heavy-equipment marketplace mood, "
-                f"supports the topic '{topic}'."
-            ),
-        }
-    ]
-
-    if len(sections) >= 2:
-        plans.append(
-            {
-                "placement": f"After section: {sections[1].get('heading', 'Buyer information')}",
-                "asset_hint": "Prompt only",
-                "query": "crane inspection maintenance records industrial equipment",
-                "prompt": (
-                    "Detailed crane inspection scene with paperwork, serial plate, and maintenance records visible, "
-                    "professional industrial photography, natural light, no staged AI look, no text."
-                ),
-            }
-        )
-
-    if len(sections) >= 3:
-        plans.append(
-            {
-                "placement": f"After section: {sections[2].get('heading', 'Preparation checklist')}",
-                "asset_hint": "Prompt only",
-                "query": "preparing crane for sale inspection heavy equipment yard",
-                "prompt": (
-                    f"Heavy equipment seller preparing a crane for listing, showing cleaning, inspection, and photo capture steps, "
-                    f"credible B2B industrial style, sharp realistic details, visually supports keyword '{primary_keyword}'."
-                ),
-            }
-        )
-
-    return {
-        "status": "planned",
-        "items": plans,
-    }
+    return build_image_plan_for_job(job)
 
 
 def extract_category_slug(target_url: str) -> str:
