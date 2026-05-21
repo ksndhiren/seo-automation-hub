@@ -2,14 +2,19 @@ from __future__ import annotations
 
 import argparse
 import json
-import subprocess
+import os
 from pathlib import Path
+from urllib.error import HTTPError, URLError
+from urllib.request import urlopen
 
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 SITES_DIR = REPO_ROOT / "config" / "sites"
 LOCAL_STATE_FILE = REPO_ROOT / "apps" / "dashboard" / "data" / "dashboard-state.json"
-LIVE_STATE_URL = "https://seo-automation-dashboard.pages.dev/api/state"
+LIVE_STATE_URL = os.getenv(
+    "DASHBOARD_STATE_URL",
+    "https://seo-dashboard.cranesauctions.com/api/state",
+)
 
 
 def main() -> None:
@@ -40,12 +45,9 @@ def main() -> None:
 
 def load_dashboard_state() -> dict:
     try:
-        raw = subprocess.check_output(
-            ["curl", "-sS", LIVE_STATE_URL],
-            text=True,
-        )
-        return json.loads(raw)
-    except Exception:
+        with urlopen(LIVE_STATE_URL, timeout=30) as response:
+            return json.loads(response.read().decode("utf-8"))
+    except (HTTPError, URLError, TimeoutError, json.JSONDecodeError):
         return json.loads(LOCAL_STATE_FILE.read_text())
 
 

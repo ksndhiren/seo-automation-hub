@@ -14,7 +14,7 @@
   "priority": "high",
   "assigned_reviewer": "seo-expert",
   "created_at": "2026-05-19T15:59:00+04:00",
-  "updated_at": "2026-05-20T08:24:43.225947+00:00",
+  "updated_at": "2026-05-20T19:35:34.340977+00:00",
   "brief": {
     "summary": "Create a practical buyer-focused guide that explains what to look for when buying a used golf cart, with a strong emphasis on inspection, total ownership costs, and how to compare listings before making an offer. The article should help readers spot hidden wear, verify battery and drivetrain condition, assess frame/body/rust damage, and decide whether a cart is a good value for personal, utility, or fleet use. Position Jeff Martin Auctioneers through clear, trustworthy conversion language and CTAs that encourage readers to browse inventory, compare available carts, or contact the team for help finding the right used cart through JMA Golf Carts.",
     "outline": [
@@ -31,8 +31,11 @@
   "seo_strategy": {
     "search_intent": "Commercial investigation: users want a buyer guide that helps them evaluate used golf carts, avoid costly mistakes, compare listings, and feel confident purchasing online or through a marketplace.",
     "cluster": "used golf cart buying and inspection guidance",
+    "opportunity_score": 90,
+    "opportunity_rationale": "High buyer-intent early-funnel topic with broad demand, strong checklist utility, and natural pathways into inventory, comparisons, and contact CTAs.",
     "category_slug": "buying-guides",
     "category_name": "Buying Guides",
+    "lead_goal": "buyer leads",
     "suggested_tags": [
       "used golf carts",
       "buyer checklist",

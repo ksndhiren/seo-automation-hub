@@ -14,7 +14,7 @@
   "priority": "high",
   "assigned_reviewer": "seo-expert",
   "created_at": "2026-05-18T22:10:00+04:00",
-  "updated_at": "2026-05-19T18:46:44.405397+00:00",
+  "updated_at": "2026-05-20T19:23:29.184926+00:00",
   "brief": {
     "summary": "Create a commercial-informational article for crane owners and fleet managers who want a realistic, trustworthy path to selling used cranes through auction. The piece should explain when auctioning makes sense, what documents and photos improve buyer confidence, how equipment condition affects interest, and what sellers should do before listing to avoid delays or lower bids.",
     "outline": [
@@ -30,6 +30,7 @@
   "seo_strategy": {
     "search_intent": "commercial informational",
     "cluster": "seller acquisition",
+    "lead_goal": "seller leads",
     "opportunity_score": 91,
     "opportunity_rationale": "High commercial intent, strong seller relevance, and a practical workflow topic that can rank earlier than broad crane head terms.",
     "category_slug": "selling-guides",
@@ -61,8 +62,8 @@
       "equipment valuation",
       "used crane auction"
     ],
-    "heroImage": "https://images.pexels.com/photos/29502221/pexels-photo-29502221.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "heroImageAlt": "A 40 ton ACE rough terrain crane parked in an industrial yard in Faridabad, India.",
+    "heroImage": "https://images.pexels.com/photos/27438745/pexels-photo-27438745.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "heroImageAlt": "Large industrial cranes positioned along a river port under a clear sky.",
     "featured": false,
     "seoTitle": "How to Sell a Used Crane at Auction | Seller Guide",
     "seoDescription": "Learn how to sell used crane at auction with practical tips on documents, photos, inspection prep, common mistakes, and what to ask an auction partner before listing.",
@@ -97,10 +98,10 @@
           "Included attachments, blocks, rigging, or transport items"
         ],
         "image": {
-          "src": "https://images.pexels.com/photos/19091513/pexels-photo-19091513.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-          "alt": "Close-up of a yellow industrial crane with openwork design against a cloudy blue sky.",
-          "creditName": "Михаил Крамор",
-          "creditUrl": "https://www.pexels.com/photo/rusty-yellow-crane-19091513/"
+          "src": "https://images.pexels.com/photos/35049383/pexels-photo-35049383.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+          "alt": "Industrial worker in a hard hat operating a lift platform during equipment maintenance outdoors.",
+          "creditName": "Richard REVEL",
+          "creditUrl": "https://www.pexels.com/photo/worker-in-lift-performing-maintenance-outdoors-35049383/"
         }
       },
       {
@@ -121,10 +122,10 @@
         ],
         "callout": "A well-prepared listing does not guarantee a higher bid, but it usually helps serious buyers bid with more confidence.",
         "image": {
-          "src": "https://images.pexels.com/photos/29502221/pexels-photo-29502221.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-          "alt": "A 40 ton ACE rough terrain crane parked in an industrial yard in Faridabad, India.",
-          "creditName": "Action Construction  Equipment Ltd. - ACE",
-          "creditUrl": "https://www.pexels.com/photo/40-ton-ace-rough-terrain-crane-in-faridabad-yard-29502221/"
+          "src": "https://images.pexels.com/photos/37432646/pexels-photo-37432646.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+          "alt": "Industrial shipping yard with cranes and trucks under a partly cloudy sky.",
+          "creditName": "S\u00f3c N\u0103ng \u0110\u1ed9ng",
+          "creditUrl": "https://www.pexels.com/photo/industrial-shipping-yard-with-cranes-and-trucks-37432646/"
         }
       },
       {
@@ -205,37 +206,37 @@
   "image_plan": {
     "selected_images": [
       {
-        "id": 29502221,
-        "alt": "A 40 ton ACE rough terrain crane parked in an industrial yard in Faridabad, India.",
-        "photographer": "Action Construction  Equipment Ltd. - ACE",
-        "thumb": "https://images.pexels.com/photos/29502221/pexels-photo-29502221.jpeg?auto=compress&cs=tinysrgb&dpr=1&h=350&w=640",
-        "large": "https://images.pexels.com/photos/29502221/pexels-photo-29502221.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-        "original": "https://images.pexels.com/photos/29502221/pexels-photo-29502221.jpeg",
-        "width": 940,
-        "height": 650,
-        "pexels_url": "https://www.pexels.com/photo/40-ton-ace-rough-terrain-crane-in-faridabad-yard-29502221/"
+        "id": 27438745,
+        "alt": "Large industrial cranes are positioned at Wroc\u0142aw's Odra River port under a clear sky.",
+        "photographer": "SHOX ART",
+        "thumb": "https://images.pexels.com/photos/27438745/pexels-photo-27438745.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "large": "https://images.pexels.com/photos/27438745/pexels-photo-27438745.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "original": "https://images.pexels.com/photos/27438745/pexels-photo-27438745.jpeg",
+        "width": 6000,
+        "height": 4000,
+        "pexels_url": "https://www.pexels.com/photo/dzwigi-portowe-w-porcie-rzecznym-odra-we-wroclawiu-27438745/"
       },
       {
-        "id": 19091513,
-        "alt": "Close-up of a yellow industrial crane with openwork design against a cloudy blue sky.",
-        "photographer": "Михаил Крамор",
-        "thumb": "https://images.pexels.com/photos/19091513/pexels-photo-19091513.jpeg?auto=compress&cs=tinysrgb&dpr=1&h=350&w=640",
-        "large": "https://images.pexels.com/photos/19091513/pexels-photo-19091513.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-        "original": "https://images.pexels.com/photos/19091513/pexels-photo-19091513.jpeg",
-        "width": 940,
-        "height": 650,
-        "pexels_url": "https://www.pexels.com/photo/rusty-yellow-crane-19091513/"
+        "id": 35049383,
+        "alt": "An industrial worker wearing a hard hat operating a lift platform for maintenance tasks in an outdoor setting.",
+        "photographer": "Richard REVEL",
+        "thumb": "https://images.pexels.com/photos/35049383/pexels-photo-35049383.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "large": "https://images.pexels.com/photos/35049383/pexels-photo-35049383.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "original": "https://images.pexels.com/photos/35049383/pexels-photo-35049383.jpeg",
+        "width": 7752,
+        "height": 5178,
+        "pexels_url": "https://www.pexels.com/photo/worker-in-lift-performing-maintenance-outdoors-35049383/"
       },
       {
-        "id": 29502221,
-        "alt": "A 40 ton ACE rough terrain crane parked in an industrial yard in Faridabad, India.",
-        "photographer": "Action Construction  Equipment Ltd. - ACE",
-        "thumb": "https://images.pexels.com/photos/29502221/pexels-photo-29502221.jpeg?auto=compress&cs=tinysrgb&dpr=1&h=350&w=640",
-        "large": "https://images.pexels.com/photos/29502221/pexels-photo-29502221.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-        "original": "https://images.pexels.com/photos/29502221/pexels-photo-29502221.jpeg",
-        "width": 940,
-        "height": 650,
-        "pexels_url": "https://www.pexels.com/photo/40-ton-ace-rough-terrain-crane-in-faridabad-yard-29502221/"
+        "id": 37432646,
+        "alt": "An industrial shipping yard featuring cranes and trucks under a partly cloudy sky.",
+        "photographer": "S\u00f3c N\u0103ng \u0110\u1ed9ng",
+        "thumb": "https://images.pexels.com/photos/37432646/pexels-photo-37432646.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "large": "https://images.pexels.com/photos/37432646/pexels-photo-37432646.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "original": "https://images.pexels.com/photos/37432646/pexels-photo-37432646.jpeg",
+        "width": 5520,
+        "height": 3680,
+        "pexels_url": "https://www.pexels.com/photo/industrial-shipping-yard-with-cranes-and-trucks-37432646/"
       }
     ]
   }

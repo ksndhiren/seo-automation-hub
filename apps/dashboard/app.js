@@ -529,6 +529,9 @@ function renderSelectedJob() {
   const job = dashboardState.jobs.find((item) => item.job_id === selectedJobId);
 
   if (!job) {
+    el.jobTitle.textContent = "No job selected";
+    el.jobStatusPill.textContent = "";
+    el.jobStatusPill.className = "status-pill hidden";
     el.jobEmpty.classList.remove("hidden");
     el.jobDetail.classList.add("hidden");
     renderSiteTaxonomy(selectedSiteId === "all" ? null : selectedSiteId);

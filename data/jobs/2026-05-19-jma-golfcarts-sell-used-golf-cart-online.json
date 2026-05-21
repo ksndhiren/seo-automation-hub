@@ -10,11 +10,11 @@
     "list golf cart for sale"
   ],
   "target_url": "/blog/selling-guides/how-to-sell-a-used-golf-cart-online",
-  "status": "final_pending",
+  "status": "published",
   "priority": "high",
   "assigned_reviewer": "seo-expert",
   "created_at": "2026-05-19T15:25:00+04:00",
-  "updated_at": "2026-05-20T08:24:37.920197+00:00",
+  "updated_at": "2026-05-20T19:35:21.060Z",
   "brief": {
     "summary": "Create a commercial-informational article for golf cart owners, dealers, and operators who want a practical process for listing and selling a used golf cart online. The article should explain when a marketplace approach makes sense, what buyers expect in a listing, how to prepare the cart before photos and inspection, and which mistakes reduce buyer confidence.",
     "outline": [
@@ -54,8 +54,8 @@
     "flagged_sections_note": ""
   },
   "publish": {
-    "commit_sha": null,
-    "live_url": null
+    "commit_sha": "manual-cloudflare-deploy",
+    "live_url": "https://www.jmagolfcarts.com/blog/selling-guides/how-to-sell-a-used-golf-cart-online"
   },
   "planned_publish_date": "2026-05-20",
   "calendar_month": "2026-05-to-06",
@@ -81,7 +81,41 @@
         "prompt": "Seller preparing a golf cart for online sale with cleaning, photo setup, and checklist steps visible, credible commercial style, realistic details, supports keyword 'sell used golf cart online'."
       }
     ],
-    "selected_images": []
+    "selected_images": [
+      {
+        "id": 9366576,
+        "alt": "Stylish woman in a red shirt with golf cart on a vibrant golf course, embodying sporty fashion.",
+        "photographer": "Mikhail Nilov",
+        "thumb": "https://images.pexels.com/photos/9366576/pexels-photo-9366576.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "large": "https://images.pexels.com/photos/9366576/pexels-photo-9366576.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "original": "https://images.pexels.com/photos/9366576/pexels-photo-9366576.jpeg",
+        "width": 6000,
+        "height": 4000,
+        "pexels_url": "https://www.pexels.com/photo/woman-standing-near-a-parked-golf-cart-9366576/"
+      },
+      {
+        "id": 13655868,
+        "alt": "Golf carts parked in a row on a scenic golf course with lush greenery.",
+        "photographer": "Dylan  Stopford",
+        "thumb": "https://images.pexels.com/photos/13655868/pexels-photo-13655868.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "large": "https://images.pexels.com/photos/13655868/pexels-photo-13655868.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "original": "https://images.pexels.com/photos/13655868/pexels-photo-13655868.jpeg",
+        "width": 5184,
+        "height": 3456,
+        "pexels_url": "https://www.pexels.com/photo/golf-carts-on-golf-course-13655868/"
+      },
+      {
+        "id": 9207248,
+        "alt": "Hands gripping a golf cart steering wheel on a sunny day in a park by the water.",
+        "photographer": "Mikhail Nilov",
+        "thumb": "https://images.pexels.com/photos/9207248/pexels-photo-9207248.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "large": "https://images.pexels.com/photos/9207248/pexels-photo-9207248.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "original": "https://images.pexels.com/photos/9207248/pexels-photo-9207248.jpeg",
+        "width": 5430,
+        "height": 3620,
+        "pexels_url": "https://www.pexels.com/photo/person-driving-a-golf-cart-9207248/"
+      }
+    ]
   },
   "draft": {
     "slug": "how-to-sell-a-used-golf-cart-online",

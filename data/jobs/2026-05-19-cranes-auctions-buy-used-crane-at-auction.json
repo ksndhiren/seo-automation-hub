@@ -10,11 +10,11 @@
     "heavy equipment auction checklist"
   ],
   "target_url": "/blog/buying-guides/how-to-buy-a-used-crane-at-auction",
-  "status": "final_pending",
+  "status": "published",
   "priority": "high",
   "assigned_reviewer": "seo-expert",
   "created_at": "2026-05-19T15:55:00+04:00",
-  "updated_at": "2026-05-20T08:24:15.937596+00:00",
+  "updated_at": "2026-05-20T19:25:46.957Z",
   "seo_strategy": {
     "search_intent": "commercial informational",
     "cluster": "buyer acquisition",
@@ -42,8 +42,8 @@
     "flagged_sections_note": ""
   },
   "publish": {
-    "commit_sha": null,
-    "live_url": null
+    "commit_sha": "manual-cloudflare-deploy",
+    "live_url": "https://www.cranesauctions.com/blog/buying-guides/how-to-buy-a-used-crane-at-auction"
   },
   "planned_publish_date": "2026-05-20",
   "calendar_month": "2026-05-to-06",
@@ -69,7 +69,41 @@
         "prompt": "Heavy equipment seller preparing a crane for listing, showing cleaning, inspection, and photo capture steps, credible B2B industrial style, sharp realistic details, visually supports keyword 'how to buy a used crane at auction'."
       }
     ],
-    "selected_images": []
+    "selected_images": [
+      {
+        "id": 29502221,
+        "alt": "A 40 ton ACE rough terrain crane parked in an industrial yard in Faridabad, India.",
+        "photographer": "Action Construction  Equipment Ltd. - ACE",
+        "thumb": "https://images.pexels.com/photos/29502221/pexels-photo-29502221.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "large": "https://images.pexels.com/photos/29502221/pexels-photo-29502221.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "original": "https://images.pexels.com/photos/29502221/pexels-photo-29502221.jpeg",
+        "width": 6240,
+        "height": 4160,
+        "pexels_url": "https://www.pexels.com/photo/40-ton-ace-rough-terrain-crane-in-faridabad-yard-29502221/"
+      },
+      {
+        "id": 19091513,
+        "alt": "Close-up of a yellow industrial crane with openwork design against a cloudy blue sky.",
+        "photographer": "\u041c\u0438\u0445\u0430\u0438\u043b \u041a\u0440\u0430\u043c\u043e\u0440",
+        "thumb": "https://images.pexels.com/photos/19091513/pexels-photo-19091513.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "large": "https://images.pexels.com/photos/19091513/pexels-photo-19091513.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "original": "https://images.pexels.com/photos/19091513/pexels-photo-19091513.jpeg",
+        "width": 5688,
+        "height": 3792,
+        "pexels_url": "https://www.pexels.com/photo/rusty-yellow-crane-19091513/"
+      },
+      {
+        "id": 29502220,
+        "alt": "A 40 ton ACE rough terrain crane parked outdoors in an industrial yard in Faridabad, India.",
+        "photographer": "Action Construction  Equipment Ltd. - ACE",
+        "thumb": "https://images.pexels.com/photos/29502220/pexels-photo-29502220.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "large": "https://images.pexels.com/photos/29502220/pexels-photo-29502220.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "original": "https://images.pexels.com/photos/29502220/pexels-photo-29502220.jpeg",
+        "width": 6240,
+        "height": 4160,
+        "pexels_url": "https://www.pexels.com/photo/40-ton-ace-rough-terrain-crane-in-industrial-yard-29502220/"
+      }
+    ]
   },
   "draft": {
     "slug": "how-to-buy-a-used-crane-at-auction",

@@ -131,6 +131,8 @@ def process_job(job: dict, site: dict) -> dict:
         return generate_brief(job, site)
     if status == "brief_approved":
         return generate_draft(job, site)
+    if status == "needs_revision":
+        return resume_revision(job, site)
     return {"changed": False, "status": "skipped", "reason": f"No automation for status {status}"}
 
 
@@ -240,7 +242,9 @@ Return a JSON object with exactly these keys:
         "summary": result["brief_summary"],
         "outline": result["outline"],
     }
+    existing_strategy = dict(job.get("seo_strategy") or {})
     job["seo_strategy"] = {
+        **existing_strategy,
         "search_intent": result["search_intent"],
         "cluster": result["cluster"],
         "category_slug": result["category_slug"],
@@ -340,6 +344,17 @@ Rules:
         "status": "updated",
         "reason": f"Generated draft{image_reason}",
     }
+
+
+def resume_revision(job: dict, site: dict) -> dict:
+    if job.get("draft"):
+        outcome = generate_draft(job, site)
+        if outcome["changed"]:
+            job["status"] = "final_pending"
+            image_reason = outcome["reason"].replace("Generated draft", "", 1)
+            outcome["reason"] = f"Regenerated draft from revision notes{image_reason}"
+        return outcome
+    return generate_brief(job, site)
 
 
 def rebuild_dashboard_state() -> None:

@@ -25,6 +25,7 @@ export async function onRequestPost(context) {
   }
 
   const jobId = String(payload.job_id || "").trim();
+  const force = Boolean(payload.force);
   if (!jobId) {
     return json({ ok: false, message: "job_id is required." }, { status: 400 });
   }
@@ -40,7 +41,7 @@ export async function onRequestPost(context) {
     return json({ ok: false, message: "Job not found." }, { status: 404 });
   }
 
-  if (reviewRow.status === "published") {
+  if (reviewRow.status === "published" && !force) {
     return json(
       {
         ok: false,
@@ -131,6 +132,7 @@ export async function onRequestPost(context) {
   return json({
     ok: true,
     job_id: jobId,
+    forced: force,
     selected_images: selections,
     selected_count: selections.filter(Boolean).length,
     search_debug: searchDebug,

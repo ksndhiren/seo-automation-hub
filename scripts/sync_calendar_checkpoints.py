@@ -6,7 +6,6 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 JOBS_DIR = REPO_ROOT / "data" / "jobs"
-UPDATED_AT = "2026-05-19T22:20:00+04:00"
 ACTIVE_STATUSES = {
     "brief_pending",
     "brief_approved",
@@ -52,7 +51,7 @@ def sync_site(site_id: str, jobs: list[tuple[Path, dict]]) -> str | None:
 
     path, payload = candidates[0]
     payload["status"] = "brief_pending"
-    payload["updated_at"] = UPDATED_AT
+    payload["updated_at"] = now_iso()
     save_job(path, payload)
     return payload.get("job_id")
 
@@ -66,6 +65,12 @@ def sync_calendar_checkpoints() -> list[tuple[str, str]]:
         if job_id:
             promoted.append((site_id, job_id))
     return promoted
+
+
+def now_iso() -> str:
+    from datetime import datetime, timezone
+
+    return datetime.now(timezone.utc).isoformat()
 
 
 def main() -> None:
