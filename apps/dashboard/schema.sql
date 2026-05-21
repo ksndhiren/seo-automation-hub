@@ -11,6 +11,7 @@ CREATE TABLE IF NOT EXISTS dashboard_jobs (
   word_count TEXT,
   brief_summary TEXT NOT NULL,
   outline_json TEXT NOT NULL,
+  draft_json TEXT NOT NULL DEFAULT 'null',
   final_checklist_json TEXT NOT NULL,
   manual_plagiarism_status TEXT NOT NULL,
   flagged_sections_note TEXT NOT NULL DEFAULT '',

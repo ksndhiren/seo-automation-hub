@@ -58,6 +58,7 @@ export async function onRequestGet(context) {
           word_count,
           brief_summary,
           outline_json,
+          draft_json,
           final_checklist_json,
           manual_plagiarism_status,
           flagged_sections_note,
@@ -101,7 +102,7 @@ export async function onRequestGet(context) {
           ...(assetJob.image_plan || {}),
           selected_images: JSON.parse(row.selected_images_json || "[]"),
         },
-        draft: assetJob.draft || null,
+        draft: row.draft_json ? JSON.parse(row.draft_json) : assetJob.draft || null,
         final_review: {
           checklist: JSON.parse(row.final_checklist_json || "[]"),
           manual_plagiarism_status: row.manual_plagiarism_status,

@@ -38,15 +38,25 @@ def main() -> None:
     args = parser.parse_args()
 
     load_dotenv()
-    synced_job_ids = sync_jobs_from_d1()
+    processed: list[dict] = []
+
+    try:
+        synced_job_ids = sync_jobs_from_d1()
+    except Exception as exc:
+        synced_job_ids = []
+        processed.append(
+            {
+                "job_id": "dashboard-d1-sync",
+                "status": "warning",
+                "reason": f"Failed to pull job state from D1 before processing: {exc}",
+            }
+        )
     sites = load_sites()
     job_paths = sorted(JOBS_DIR.glob("*.json"))
     job_records = [
         (path, json.loads(path.read_text()))
         for path in job_paths
     ]
-    processed: list[dict] = []
-
     if synced_job_ids:
         processed.append(
             {
@@ -80,8 +90,9 @@ def main() -> None:
                 process_and_record(candidate[0], candidate[1], sites, processed)
             ensure_site_has_active_brief(site_id, job_records, sites, processed)
 
-    rebuild_dashboard_state()
-    sync_dashboard_jobs_to_d1()
+    rebuild_dashboard_state(processed)
+    sync_dashboard_to_d1(processed)
+    verify_dashboard_consistency(processed)
     write_run_log(processed)
 
     for item in processed:
@@ -113,16 +124,29 @@ def process_and_record(path: Path, job: dict, sites: dict[str, dict], processed:
         )
         return
 
-    outcome = process_job(job, site)
-    if outcome["changed"]:
+    try:
+        outcome = process_job(job, site)
+        if outcome["changed"]:
+            path.write_text(json.dumps(job, indent=2) + "\n")
+        processed.append(
+            {
+                "job_id": job.get("job_id"),
+                "status": outcome["status"],
+                "reason": outcome["reason"],
+            }
+        )
+    except Exception as exc:
+        job.setdefault("metrics", {})
+        job["metrics"]["last_error"] = str(exc)
+        job["updated_at"] = now_iso()
         path.write_text(json.dumps(job, indent=2) + "\n")
-    processed.append(
-        {
-            "job_id": job.get("job_id"),
-            "status": outcome["status"],
-            "reason": outcome["reason"],
-        }
-    )
+        processed.append(
+            {
+                "job_id": job.get("job_id"),
+                "status": "error",
+                "reason": f"Automation failed for this job and it was left in {job.get('status')}: {exc}",
+            }
+        )
 
 
 def process_job(job: dict, site: dict) -> dict:
@@ -357,15 +381,53 @@ def resume_revision(job: dict, site: dict) -> dict:
     return generate_brief(job, site)
 
 
-def rebuild_dashboard_state() -> None:
-    subprocess.run(
-        ["python3", str(REPO_ROOT / "scripts" / "build_dashboard_state.py")],
-        check=True,
-    )
-    subprocess.run(
-        ["python3", str(REPO_ROOT / "scripts" / "build_dashboard_seed_sql.py")],
-        check=True,
-    )
+def rebuild_dashboard_state(processed: list[dict]) -> None:
+    try:
+        subprocess.run(
+            ["python3", str(REPO_ROOT / "scripts" / "build_dashboard_state.py")],
+            check=True,
+        )
+        subprocess.run(
+            ["python3", str(REPO_ROOT / "scripts" / "build_dashboard_seed_sql.py")],
+            check=True,
+        )
+    except Exception as exc:
+        processed.append(
+            {
+                "job_id": "dashboard-build",
+                "status": "warning",
+                "reason": f"Dashboard snapshot rebuild failed: {exc}",
+            }
+        )
+
+
+def sync_dashboard_to_d1(processed: list[dict]) -> None:
+    try:
+        sync_dashboard_jobs_to_d1()
+    except Exception as exc:
+        processed.append(
+            {
+                "job_id": "dashboard-d1-push",
+                "status": "warning",
+                "reason": f"Failed to push dashboard snapshot into D1: {exc}",
+            }
+        )
+
+
+def verify_dashboard_consistency(processed: list[dict]) -> None:
+    try:
+        subprocess.run(
+            ["python3", str(REPO_ROOT / "scripts" / "verify_dashboard_consistency.py")],
+            check=True,
+        )
+    except Exception as exc:
+        processed.append(
+            {
+                "job_id": "dashboard-consistency",
+                "status": "warning",
+                "reason": f"Dashboard consistency check failed: {exc}",
+            }
+        )
 
 
 def write_run_log(processed: list[dict]) -> None:

@@ -30,7 +30,7 @@ def main() -> None:
         lines.append(
             "INSERT INTO dashboard_jobs ("
             "job_id, site_id, site_name, topic, primary_keyword, secondary_keywords_json, "
-            "target_url, target_audience, status, word_count, brief_summary, outline_json, "
+            "target_url, target_audience, status, word_count, brief_summary, outline_json, draft_json, "
             "final_checklist_json, manual_plagiarism_status, flagged_sections_note, selected_images_json, meta_title, meta_description, "
             "activity_json, publish_branch, publish_path, updated_at"
             ") VALUES ("
@@ -48,6 +48,7 @@ def main() -> None:
                     sql_quote(job.get("word_count", "")),
                     sql_quote(job.get("brief", {}).get("summary", "")),
                     sql_quote(json.dumps(job.get("brief", {}).get("outline", []))),
+                    sql_quote(json.dumps(job.get("draft"))),
                     sql_quote(
                         json.dumps(job.get("final_review", {}).get("checklist", []))
                     ),

@@ -10,11 +10,11 @@
     "used golf cart buyer guide"
   ],
   "target_url": "/blog/buying-guides/what-to-look-for-when-buying-a-used-golf-cart",
-  "status": "brief_pending",
+  "status": "published",
   "priority": "high",
   "assigned_reviewer": "seo-expert",
   "created_at": "2026-05-19T15:59:00+04:00",
-  "updated_at": "2026-05-20T19:35:34.340977+00:00",
+  "updated_at": "2026-05-21T08:46:42.894Z",
   "brief": {
     "summary": "Create a practical buyer-focused guide that explains what to look for when buying a used golf cart, with a strong emphasis on inspection, total ownership costs, and how to compare listings before making an offer. The article should help readers spot hidden wear, verify battery and drivetrain condition, assess frame/body/rust damage, and decide whether a cart is a good value for personal, utility, or fleet use. Position Jeff Martin Auctioneers through clear, trustworthy conversion language and CTAs that encourage readers to browse inventory, compare available carts, or contact the team for help finding the right used cart through JMA Golf Carts.",
     "outline": [
@@ -53,8 +53,8 @@
   "metrics": {
     "target_word_count": 1400,
     "neuronwriter_score": null,
-    "manual_plagiarism_status": "Pending manual review",
-    "flagged_sections_note": ""
+    "manual_plagiarism_status": "Passed",
+    "flagged_sections_note": "The content is 95% unique which is good to post."
   },
   "publish": {
     "commit_sha": null,
@@ -63,6 +63,204 @@
   "planned_publish_date": "2026-05-21",
   "calendar_month": "2026-05-to-06",
   "image_plan": {
-    "selected_images": []
-  }
+    "status": "planned",
+    "items": [
+      {
+        "placement": "Featured image",
+        "asset_hint": "/hero.webp",
+        "query": "used golf cart marketplace listing outdoor realistic",
+        "prompt": "Realistic editorial photo of a used golf cart prepared for sale outdoors, clean daylight, trustworthy marketplace mood, no text overlay, visually supports the topic 'What to look for when buying a used golf cart'."
+      },
+      {
+        "placement": "After section: Used Golf Cart Buying Checklist: The Core Inspection Points",
+        "asset_hint": "Prompt only",
+        "query": "golf cart inspection listing details realistic",
+        "prompt": "Detailed golf cart inspection scene with close-up listing details, service notes, and condition checks, natural light, realistic marketplace photography, no staged AI look, no text."
+      },
+      {
+        "placement": "After section: What to Inspect on Batteries, Charger, Motor, and Drivetrain",
+        "asset_hint": "Prompt only",
+        "query": "cleaning golf cart for sale realistic",
+        "prompt": "Seller preparing a golf cart for online sale with cleaning, photo setup, and checklist steps visible, credible commercial style, realistic details, supports keyword 'what to look for when buying a used golf cart'."
+      }
+    ],
+    "selected_images": [
+      {
+        "id": 9366549,
+        "alt": "A woman in golf attire standing confidently beside a golf cart on a vibrant green golf course.",
+        "photographer": "Mikhail Nilov",
+        "thumb": "https://images.pexels.com/photos/9366549/pexels-photo-9366549.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "large": "https://images.pexels.com/photos/9366549/pexels-photo-9366549.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "original": "https://images.pexels.com/photos/9366549/pexels-photo-9366549.jpeg",
+        "width": 6000,
+        "height": 4000,
+        "pexels_url": "https://www.pexels.com/photo/a-woman-in-red-polo-shirt-standing-on-golf-cart-9366549/"
+      },
+      {
+        "id": 274108,
+        "alt": "Multiple golf carts parked in a row on a golf course under a clear sky.",
+        "photographer": "Pixabay",
+        "thumb": "https://images.pexels.com/photos/274108/pexels-photo-274108.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "large": "https://images.pexels.com/photos/274108/pexels-photo-274108.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "original": "https://images.pexels.com/photos/274108/pexels-photo-274108.jpeg",
+        "width": 3701,
+        "height": 2590,
+        "pexels_url": "https://www.pexels.com/photo/blue-and-white-golf-carts-274108/"
+      },
+      {
+        "id": 9366569,
+        "alt": "A woman wearing a red polo and bucket hat stands next to a golf cart. Captured outdoors in natural light.",
+        "photographer": "Mikhail Nilov",
+        "thumb": "https://images.pexels.com/photos/9366569/pexels-photo-9366569.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "large": "https://images.pexels.com/photos/9366569/pexels-photo-9366569.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "original": "https://images.pexels.com/photos/9366569/pexels-photo-9366569.jpeg",
+        "width": 6000,
+        "height": 4000,
+        "pexels_url": "https://www.pexels.com/photo/a-golfer-looking-afar-while-standing-near-a-golf-cart-9366569/"
+      }
+    ]
+  },
+  "draft": {
+    "slug": "what-to-look-for-when-buying-a-used-golf-cart",
+    "title": "What to Look for When Buying a Used Golf Cart",
+    "description": "Learn what to inspect before you buy a used golf cart, from batteries and drivetrain condition to frame damage, tires, and total ownership costs. Use this practical buyer guide to compare listings with more confidence and avoid expensive surprises.",
+    "publishedAt": "2026-05-21",
+    "author": "Jeff Martin Auctioneers Editorial Team",
+    "readTime": "8 min read",
+    "category": "Buying Guides",
+    "tags": [
+      "used golf carts",
+      "buyer checklist",
+      "golf cart inspection",
+      "cart comparison",
+      "online marketplace"
+    ],
+    "heroImage": "/hero.webp",
+    "featured": false,
+    "seoTitle": "What to Look for When Buying a Used Golf Cart | Buyer Guide",
+    "seoDescription": "Use this used golf cart buyer guide to inspect batteries, drivetrain, frame, tires, and body condition, compare listings, and understand total ownership costs before you buy.",
+    "intro": [
+      "Buying a used golf cart can be a smart way to get the right cart at a lower upfront cost, but only if you know what to inspect before you make an offer. The best deals usually come from carts with clear maintenance history, honest condition details, and a use case that matches your needs.",
+      "This guide walks through what to look for when buying a used golf cart, how to compare listings, and which warning signs matter most for personal, utility, fleet, and street-legal use. If you are shopping online, a careful review now can save you from costly repairs later."
+    ],
+    "sections": [
+      {
+        "heading": "Start with the Right Use Case: Personal, Utility, Fleet, or Street-Legal",
+        "paragraphs": [
+          "Before you compare condition or price, decide how the cart will be used. A personal golf cart for neighborhood driving does not need the same setup as a utility cart for a property team or a fleet cart that will be used heavily every day.",
+          "Match the cart to the job first. That helps you avoid overpaying for features you do not need, or buying a cart that looks good online but cannot handle the workload you expect."
+        ],
+        "bullets": [
+          "Personal use: comfort, seating layout, and basic reliability",
+          "Utility use: payload, cargo setup, and work-ready accessories",
+          "Fleet use: consistency, easy maintenance, and parts availability",
+          "Street-legal use: lighting, mirrors, turn signals, and local compliance"
+        ]
+      },
+      {
+        "heading": "Used Golf Cart Buying Checklist: The Core Inspection Points",
+        "paragraphs": [
+          "A good used golf cart buying checklist starts with the basics: overall condition, battery health, drivetrain performance, frame integrity, and signs of wear that may point to bigger problems. Photos can help, but they do not replace a real inspection or a detailed seller conversation.",
+          "When possible, inspect golf cart before buying by testing how it starts, drives, stops, and turns. If you are buying online, ask for close-up images, service notes, and a walkaround video so you can evaluate more than just the exterior shine."
+        ],
+        "bullets": [
+          "Confirm the model, year, and power type: electric or gas",
+          "Check that the cart starts, accelerates, and stops smoothly",
+          "Look for corrosion, rust, cracks, or repairs on the frame",
+          "Inspect the tires, seats, roof, wheels, and body panels",
+          "Review the charger, battery setup, and visible wiring",
+          "Ask about service records, storage conditions, and prior use"
+        ]
+      },
+      {
+        "heading": "What to Inspect on Batteries, Charger, Motor, and Drivetrain",
+        "paragraphs": [
+          "For electric carts, battery condition is one of the most important value factors. Look for swelling, corrosion on terminals, damaged cables, uneven battery ages, and signs that the cart has been sitting unused for long periods. Ask when the batteries were last replaced and whether they hold a charge consistently.",
+          "Also check the charger and electrical system. A weak charger, loose wiring, or inconsistent power delivery can turn a lower-priced cart into a more expensive project. On gas carts, listen for engine noise, check for hard starts, and make sure the drivetrain feels responsive without jerking or slipping."
+        ],
+        "bullets": [
+          "Batteries: age, appearance, charging behavior, and terminal corrosion",
+          "Charger: correct fit, working indicators, and clean connection points",
+          "Motor or engine: smooth startup, steady operation, and unusual noise",
+          "Drivetrain: hesitation, vibration, grinding, or slipping under load",
+          "Controller and wiring: melted insulation, loose connectors, or damage"
+        ]
+      },
+      {
+        "heading": "Frame, Suspension, Tires, Brakes, and Body Damage to Watch For",
+        "paragraphs": [
+          "A cart can look clean on the outside and still have hidden wear underneath. Inspect the frame for rust, bends, weld repairs, or cracks, especially around stress points. For carts used on property or rough terrain, suspension wear can show up quickly in uneven ride quality or visible sagging.",
+          "Tires should wear evenly and have enough tread for the use you plan. Brake performance matters too, especially for heavier carts or carts used in hilly areas. Finally, check the body, seats, and roof for damage that could indicate a hard life or poor storage."
+        ],
+        "bullets": [
+          "Frame rust, corrosion, bent components, or patched repairs",
+          "Suspension wear, sagging, or uneven ride height",
+          "Tires with uneven wear, dry rot, or mismatched replacements",
+          "Brakes that feel weak, noisy, or slow to respond",
+          "Body cracks, faded panels, broken mounts, or missing hardware"
+        ]
+      },
+      {
+        "heading": "Questions to Ask the Seller Before You Buy Used Golf Cart Online",
+        "paragraphs": [
+          "Good questions help you separate a well-kept cart from one that needs immediate attention. Ask how the cart was used, where it was stored, whether it has been modified, and what maintenance has been performed recently. If the seller cannot answer clearly, treat that as a warning sign.",
+          "When you buy used golf cart online, request details that are easy to verify: battery age, charger type, mileage or usage estimate if available, and whether the cart has titles or paperwork required in your area. The more specific the answers, the easier it is to compare listings accurately."
+        ],
+        "bullets": [
+          "How was the cart used: personal, rental, fleet, or property service?",
+          "What is the known battery age or service history?",
+          "Has the cart been modified, lifted, repainted, or re-wired?",
+          "Are there any current mechanical or electrical issues?",
+          "What documents, serial numbers, or ownership details are available?"
+        ]
+      },
+      {
+        "heading": "How to Compare Condition, Age, and Price Across Listings",
+        "paragraphs": [
+          "Price alone does not tell you whether a cart is a good value. Two carts with similar asking prices can be very different once you account for battery replacement, tire wear, charger condition, missing accessories, or needed repairs. Compare the cart\u2019s age, usage, and visible condition against those added costs before you decide.",
+          "A smart used golf cart buyer guide focuses on total ownership cost, not just the purchase number. A lower-priced cart may need repairs right away, while a slightly higher-priced cart with better condition and clear records may be the better deal overall."
+        ],
+        "bullets": [
+          "Compare asking price against visible condition and included equipment",
+          "Estimate likely near-term repairs before making an offer",
+          "Look at battery and tire condition as part of total cost",
+          "Weigh fleet-ready or work-ready features against your actual needs",
+          "Favor clear listings with photos, details, and responsive sellers"
+        ]
+      },
+      {
+        "heading": "Where to Find Trusted Used Golf Carts and When to Contact Jeff Martin Auctioneers",
+        "paragraphs": [
+          "If you want a more efficient way to compare used carts, a marketplace with organized listings and clear condition details can save time. Browse inventory carefully, compare similar carts side by side, and use the information provided to narrow your shortlist before you reach out.",
+          "Jeff Martin Auctioneers helps buyers find used golf carts through a trusted marketplace approach that supports clearer comparisons and more confident decisions. If you are looking for a personal cart, a utility option, or multiple carts for fleet use, contact Jeff Martin Auctioneers for help finding the right fit and reviewing current inventory."
+        ],
+        "callout": "For buyers who want a straightforward way to compare used golf carts, Jeff Martin Auctioneers is the trusted marketplace contact behind JMA Golf Carts. Browse available inventory, review listings, and reach out for help identifying carts that match your use case and budget."
+      }
+    ],
+    "faq": [
+      {
+        "question": "What should I inspect first on a used golf cart?",
+        "answer": "Start with the power system, then move to the frame, tires, brakes, and body. For electric carts, battery condition and charger function are especially important. For gas carts, focus on startup, engine sound, and drivetrain performance."
+      },
+      {
+        "question": "Is it better to buy a used golf cart online or in person?",
+        "answer": "Both can work well if you have enough detail. In person, you can test the cart directly. Online, ask for close-up photos, videos, maintenance history, and clear answers about condition so you can compare listings before making an offer."
+      },
+      {
+        "question": "How do I know if a used golf cart is a good value?",
+        "answer": "Look beyond the asking price and consider battery age, tire wear, frame condition, accessories, and expected repairs. The best value is usually a cart with honest condition details, fewer near-term repairs, and the right features for your use case."
+      },
+      {
+        "question": "Should I ask for service records before buying?",
+        "answer": "Yes. Service records, battery replacement history, and notes about repairs can help you verify how the cart was maintained. If records are unavailable, ask detailed questions and inspect the cart more carefully before moving forward."
+      }
+    ],
+    "cta": {
+      "title": "Browse Used Golf Carts With Confidence",
+      "body": "If you are comparing used golf carts and want a trusted place to start, Jeff Martin Auctioneers can help you review inventory, compare listings, and find the right cart for personal, utility, or fleet use. Reach out for guidance before you buy.",
+      "buttonLabel": "Contact Jeff Martin Auctioneers",
+      "buttonHref": "https://www.jmagolfcarts.com/contact"
+    }
+  },
+  "publish_url": "https://www.jmagolfcarts.com/blog/buying-guides/what-to-look-for-when-buying-a-used-golf-cart"
 }
