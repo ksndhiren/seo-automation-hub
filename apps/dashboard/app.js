@@ -1256,11 +1256,21 @@ async function saveSelectedImages(job, selections, comment) {
 async function handleReviewAction(action) {
   const job = dashboardState.jobs.find((item) => item.job_id === selectedJobId);
   if (!job) return;
+  const rawComment = el.reviewComment.value.trim();
+
+  if (action === "request_changes" && !rawComment) {
+    el.reviewPreview.innerHTML = `
+      <h3>Reviewer notes required</h3>
+      <p>Add reviewer notes before sending the job back so the AI has exact rewrite instructions.</p>
+    `;
+    el.reviewComment.focus();
+    return;
+  }
 
   const comment =
     action === "save_review_notes"
-      ? el.reviewComment.value.trim() || "Review notes updated."
-      : el.reviewComment.value.trim() || "No comment added.";
+      ? rawComment || "Review notes updated."
+      : rawComment || "No comment added.";
   const actionLabel =
     action === "approve"
       ? "Approved"
@@ -1306,7 +1316,20 @@ async function handleReviewAction(action) {
         manual_plagiarism_status: result.manual_plagiarism_status,
         flagged_sections_note: result.flagged_sections_note,
       };
+      if (result.draft) {
+        job.draft = result.draft;
+      }
+      if (result.brief) {
+        job.brief = result.brief;
+      }
+      if (result.selected_images) {
+        job.image_plan = {
+          ...(job.image_plan || {}),
+          selected_images: result.selected_images,
+        };
+      }
       renderJobs();
+      renderSelectedJob();
       el.reviewPreview.innerHTML = `
         <h3>${escapeHtml(actionLabel)}</h3>
         <p><strong>Job:</strong> ${escapeHtml(job.topic)}</p>

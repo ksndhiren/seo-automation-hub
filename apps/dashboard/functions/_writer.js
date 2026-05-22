@@ -179,6 +179,190 @@ Rules:
   };
 }
 
+export async function reviseBriefFromFeedback(context, reviewRow, reviewerNote) {
+  const apiKey = context.env.OPENAI_API_KEY;
+  if (!apiKey) {
+    return {
+      ok: false,
+      message:
+        "OPENAI_API_KEY is not configured in Cloudflare Pages. Brief revision cannot run instantly yet.",
+    };
+  }
+
+  const assetJob = await loadAssetJob(context, reviewRow.job_id);
+  if (!assetJob?.brief?.summary || !assetJob?.brief?.outline?.length) {
+    return {
+      ok: false,
+      message: "The current brief snapshot is unavailable, so brief revision could not continue.",
+    };
+  }
+  const site = SITE_CONFIGS[reviewRow.site_id];
+  if (!site) {
+    return { ok: false, message: `No writer config found for site_id ${reviewRow.site_id}.` };
+  }
+
+  const systemPrompt =
+    "You are an SEO strategist revising article briefs after human reviewer feedback. Return only valid JSON. Preserve the core keyword opportunity, but improve clarity, angle, and structure based on the note.";
+  const userPrompt = `
+Site name: ${site.siteName}
+Site URL: ${site.siteUrl}
+Lead generation brand: ${site.leadGenerationBrand}
+Brand tone: ${site.tone}
+Lead generation context: ${site.leadGenerationContext}
+Audience: ${JSON.stringify(site.audience)}
+
+Job topic: ${assetJob.topic}
+Primary keyword: ${assetJob.primary_keyword}
+Secondary keywords: ${JSON.stringify(assetJob.secondary_keywords || [])}
+Target URL: ${assetJob.target_url}
+Existing brief summary: ${assetJob.brief?.summary || ""}
+Existing outline: ${JSON.stringify(assetJob.brief?.outline || [])}
+SEO strategy: ${JSON.stringify(assetJob.seo_strategy || {})}
+Reviewer note: ${reviewerNote}
+
+Return a JSON object with exactly these keys:
+- brief_summary: string
+- outline: array of 6 to 8 strings
+- search_intent: string
+- cluster: string
+- category_slug: string
+- category_name: string
+- suggested_tags: array of 3 to 6 strings
+- recommended_internal_link_types: array of 3 to 5 strings
+- target_word_count: integer
+`;
+
+  const result = await callOpenAIJson({
+    apiKey,
+    systemPrompt,
+    userPrompt,
+    maxOutputTokens: 2200,
+  });
+
+  return {
+    ok: true,
+    brief: {
+      summary: result.brief_summary,
+      outline: result.outline,
+    },
+    seoStrategy: {
+      ...(assetJob.seo_strategy || {}),
+      search_intent: result.search_intent,
+      cluster: result.cluster,
+      category_slug: result.category_slug,
+      category_name: result.category_name,
+      suggested_tags: result.suggested_tags,
+      recommended_internal_link_types: result.recommended_internal_link_types,
+    },
+    targetWordCount: Number(result.target_word_count) || null,
+  };
+}
+
+export async function reviseDraftFromFeedback(context, reviewRow, reviewerNote) {
+  const apiKey = context.env.OPENAI_API_KEY;
+  if (!apiKey) {
+    return {
+      ok: false,
+      message:
+        "OPENAI_API_KEY is not configured in Cloudflare Pages. Draft revision cannot run instantly yet.",
+    };
+  }
+
+  const assetJob = await loadAssetJob(context, reviewRow.job_id);
+  if (!assetJob?.draft) {
+    return {
+      ok: false,
+      message: "The current draft snapshot is unavailable, so draft revision could not continue.",
+    };
+  }
+  const site = SITE_CONFIGS[reviewRow.site_id];
+  if (!site) {
+    return { ok: false, message: `No writer config found for site_id ${reviewRow.site_id}.` };
+  }
+
+  const systemPrompt =
+    "You are a senior B2B content writer revising a structured blog draft after human reviewer feedback. Return only valid JSON. Address the reviewer note directly while preserving the article's keyword intent and commercial usefulness.";
+  const userPrompt = `
+Site name: ${site.siteName}
+Site URL: ${site.siteUrl}
+Lead generation brand: ${site.leadGenerationBrand}
+Brand tone: ${site.tone}
+Lead generation context: ${site.leadGenerationContext}
+Audience: ${JSON.stringify(site.audience)}
+Avoid: ${JSON.stringify(site.avoid)}
+
+Job topic: ${assetJob.topic}
+Primary keyword: ${assetJob.primary_keyword}
+Secondary keywords: ${JSON.stringify(assetJob.secondary_keywords || [])}
+Target URL: ${assetJob.target_url}
+Brief summary: ${assetJob.brief?.summary || ""}
+Outline: ${JSON.stringify(assetJob.brief?.outline || [])}
+SEO strategy: ${JSON.stringify(assetJob.seo_strategy || {})}
+Current draft: ${JSON.stringify(assetJob.draft || {})}
+Reviewer note: ${reviewerNote}
+
+Return a JSON object with exactly these keys:
+- title: string
+- description: string
+- readTime: string
+- category: string
+- tags: array of 3 to 6 strings
+- seoTitle: string
+- seoDescription: string
+- intro: array of 2 strings
+- sections: array of objects with keys heading (string), paragraphs (array of 2 strings minimum), optional bullets (array of strings), optional callout (string)
+- faq: array of 2 to 4 objects with keys question and answer
+- cta: object with keys title, body, buttonLabel, buttonHref
+`;
+
+  const result = await callOpenAIJson({
+    apiKey,
+    systemPrompt,
+    userPrompt,
+    maxOutputTokens: 5200,
+  });
+
+  const currentDraft = assetJob.draft || {};
+  const draft = {
+    ...currentDraft,
+    title: result.title,
+    description: result.description,
+    readTime: result.readTime,
+    category: result.category,
+    tags: result.tags,
+    seoTitle: result.seoTitle,
+    seoDescription: result.seoDescription,
+    intro: result.intro,
+    sections: result.sections,
+    faq: result.faq,
+    cta: result.cta,
+  };
+
+  const mergedJob = {
+    ...assetJob,
+    site_id: reviewRow.site_id,
+    draft,
+    image_plan: assetJob.image_plan || {},
+  };
+  const imagePlan = buildImagePlanForJob(mergedJob);
+  const selectedImages = await autoSelectDraftImages(context, reviewRow, mergedJob, imagePlan);
+
+  if (selectedImages[0]) {
+    draft.heroImage = selectedImages[0].large || selectedImages[0].thumb || draft.heroImage || "/hero.webp";
+    draft.heroImageAlt = selectedImages[0].alt || draft.title;
+  }
+
+  return {
+    ok: true,
+    draft,
+    imagePlan: {
+      ...imagePlan,
+      selected_images: selectedImages,
+    },
+    selectedImages,
+  };
+}
+
 async function autoSelectDraftImages(context, reviewRow, job, imagePlan) {
   const apiKey = context.env.PEXELS_API_KEY;
   const items = imagePlan?.items || [];

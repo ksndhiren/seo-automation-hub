@@ -1,5 +1,9 @@
 import { getStatusAfterAction, isSupportedAction, isTerminalStatus, json } from "../_shared.js";
-import { generateDraftForApprovedBrief } from "../_writer.js";
+import {
+  generateDraftForApprovedBrief,
+  reviseBriefFromFeedback,
+  reviseDraftFromFeedback,
+} from "../_writer.js";
 
 export async function onRequestPost(context) {
   const d1 = context.env.DASHBOARD_DB;
@@ -59,9 +63,19 @@ export async function onRequestPost(context) {
     );
   }
 
+  if (action === "request_changes" && !comment) {
+    return json(
+      {
+        ok: false,
+        message: "Reviewer notes are required before sending a job back.",
+      },
+      { status: 400 },
+    );
+  }
+
   const existing = await d1
     .prepare(
-      "SELECT job_id, site_id, status, manual_plagiarism_status, flagged_sections_note, selected_images_json, draft_json, publish_branch, publish_path FROM dashboard_jobs WHERE job_id = ? LIMIT 1",
+      "SELECT job_id, site_id, status, topic, primary_keyword, secondary_keywords_json, target_url, word_count, brief_summary, outline_json, manual_plagiarism_status, flagged_sections_note, selected_images_json, draft_json, publish_branch, publish_path FROM dashboard_jobs WHERE job_id = ? LIMIT 1",
     )
     .bind(jobId)
     .first();
@@ -101,8 +115,11 @@ export async function onRequestPost(context) {
     ? selectedImages
     : JSON.parse(existing.selected_images_json || "[]");
   let nextDraftJson = existing.draft_json || null;
+  let nextBriefSummary = existing.brief_summary || "";
+  let nextOutlineJson = existing.outline_json || "[]";
 
   let draftResult = null;
+  let briefRevisionResult = null;
   if (!saveReviewOnly && !saveImageSelectionOnly && action === "approve" && existing.status === "brief_pending") {
     draftResult = await generateDraftForApprovedBrief(context, existing);
     if (!draftResult.ok) {
@@ -119,14 +136,50 @@ export async function onRequestPost(context) {
     nextStatus = "final_pending";
   }
 
+  if (!saveReviewOnly && !saveImageSelectionOnly && action === "request_changes") {
+    const hasDraft = existing.draft_json && existing.draft_json !== "null";
+    if (hasDraft) {
+      draftResult = await reviseDraftFromFeedback(context, existing, comment);
+      if (!draftResult.ok) {
+        return json(
+          {
+            ok: false,
+            message: draftResult.message,
+            previous_status: existing.status,
+          },
+          { status: 502 },
+        );
+      }
+      nextDraftJson = JSON.stringify(draftResult.draft);
+      nextStatus = "final_pending";
+    } else {
+      briefRevisionResult = await reviseBriefFromFeedback(context, existing, comment);
+      if (!briefRevisionResult.ok) {
+        return json(
+          {
+            ok: false,
+            message: briefRevisionResult.message,
+            previous_status: existing.status,
+          },
+          { status: 502 },
+        );
+      }
+      nextBriefSummary = briefRevisionResult.brief.summary;
+      nextOutlineJson = JSON.stringify(briefRevisionResult.brief.outline);
+      nextStatus = "brief_pending";
+    }
+  }
+
   await d1
     .prepare(
       `UPDATE dashboard_jobs
-        SET status = ?, manual_plagiarism_status = ?, flagged_sections_note = ?, selected_images_json = ?, draft_json = ?, updated_at = ?
+        SET status = ?, brief_summary = ?, outline_json = ?, manual_plagiarism_status = ?, flagged_sections_note = ?, selected_images_json = ?, draft_json = ?, updated_at = ?
         WHERE job_id = ?`,
     )
     .bind(
       nextStatus,
+      nextBriefSummary,
+      nextOutlineJson,
       nextManualPlagiarismStatus,
       nextFlaggedSectionsNote,
       JSON.stringify(draftResult?.selectedImages || nextSelectedImages),
@@ -154,8 +207,14 @@ export async function onRequestPost(context) {
         comment
           || (draftResult
             ? "Approved and drafted immediately."
+            : briefRevisionResult
+            ? "Brief revised from reviewer notes."
             : action === "approve" && existing.status === "final_pending"
             ? "Approved and queued for scheduled publish."
+            : action === "request_changes" && existing.draft_json && existing.draft_json !== "null"
+            ? "Draft revised immediately from reviewer notes."
+            : action === "request_changes"
+            ? "Brief revised immediately from reviewer notes."
             : saveImageSelectionOnly
             ? "Image selections updated."
             : "Review notes updated."),
@@ -175,6 +234,10 @@ export async function onRequestPost(context) {
     flagged_sections_note: nextFlaggedSectionsNote,
     selected_images: draftResult?.selectedImages || nextSelectedImages,
     draft: draftResult?.draft || (nextDraftJson ? JSON.parse(nextDraftJson) : null),
+    brief: briefRevisionResult?.brief || {
+      summary: nextBriefSummary,
+      outline: JSON.parse(nextOutlineJson || "[]"),
+    },
     draft_generated: Boolean(draftResult),
     persisted_at: now,
   });
