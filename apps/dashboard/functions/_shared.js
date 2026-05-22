@@ -23,6 +23,7 @@ export function getStatusAfterAction(currentStatus, action) {
 
   if (action === "approve") {
     if (currentStatus === "brief_pending") return "brief_approved";
+    if (currentStatus === "needs_revision") return "needs_revision";
     if (currentStatus === "final_pending") return "final_approved";
   }
 

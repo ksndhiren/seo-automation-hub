@@ -20,6 +20,7 @@ def sync_jobs_from_d1() -> list[str]:
           manual_plagiarism_status,
           flagged_sections_note,
           selected_images_json,
+          draft_json,
           updated_at
         FROM dashboard_jobs
         """
@@ -55,6 +56,9 @@ def sync_jobs_from_d1() -> list[str]:
         payload["image_plan"]["selected_images"] = json.loads(
             row.get("selected_images_json") or "[]"
         )
+        draft_json = row.get("draft_json")
+        if draft_json:
+            payload["draft"] = json.loads(draft_json)
 
         path.write_text(json.dumps(payload, indent=2) + "\n")
         updated_job_ids.append(job_id)

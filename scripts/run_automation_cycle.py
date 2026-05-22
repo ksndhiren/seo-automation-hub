@@ -40,10 +40,12 @@ def main() -> None:
     load_dotenv()
     processed: list[dict] = []
 
+    d1_sync_failed = False
     try:
         synced_job_ids = sync_jobs_from_d1()
     except Exception as exc:
         synced_job_ids = []
+        d1_sync_failed = True
         processed.append(
             {
                 "job_id": "dashboard-d1-sync",
@@ -66,6 +68,18 @@ def main() -> None:
                 "reason": f"Pulled {len(synced_job_ids)} job states from D1 before processing",
             }
         )
+
+    if d1_sync_failed:
+        rebuild_dashboard_state(processed)
+        sync_dashboard_to_d1(processed)
+        verify_dashboard_consistency(processed)
+        write_run_log(processed)
+        for item in processed:
+            print(
+                f"{item['job_id']}: {item['status']}"
+                + (f" ({item['reason']})" if item.get("reason") else "")
+            )
+        return
 
     if args.job_id:
         target = next(

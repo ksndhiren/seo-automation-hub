@@ -1,5 +1,5 @@
 import { getStatusAfterAction, isSupportedAction, isTerminalStatus, json } from "../_shared.js";
-import { publishApprovedJob } from "../_publish.js";
+import { generateDraftForApprovedBrief } from "../_writer.js";
 
 export async function onRequestPost(context) {
   const d1 = context.env.DASHBOARD_DB;
@@ -61,7 +61,7 @@ export async function onRequestPost(context) {
 
   const existing = await d1
     .prepare(
-      "SELECT job_id, site_id, status, manual_plagiarism_status, flagged_sections_note, selected_images_json, publish_branch, publish_path FROM dashboard_jobs WHERE job_id = ? LIMIT 1",
+      "SELECT job_id, site_id, status, manual_plagiarism_status, flagged_sections_note, selected_images_json, draft_json, publish_branch, publish_path FROM dashboard_jobs WHERE job_id = ? LIMIT 1",
     )
     .bind(jobId)
     .first();
@@ -84,6 +84,10 @@ export async function onRequestPost(context) {
   let nextStatus = saveReviewOnly || saveImageSelectionOnly
     ? existing.status
     : getStatusAfterAction(existing.status, action);
+  if (!saveReviewOnly && !saveImageSelectionOnly && action === "approve" && existing.status === "needs_revision") {
+    const hasDraft = existing.draft_json && existing.draft_json !== "null";
+    nextStatus = hasDraft ? "final_pending" : "brief_approved";
+  }
   const now = new Date().toISOString();
   const nextManualPlagiarismStatus =
     hasManualPlagiarismStatus
@@ -96,41 +100,37 @@ export async function onRequestPost(context) {
   const nextSelectedImages = selectedImages
     ? selectedImages
     : JSON.parse(existing.selected_images_json || "[]");
+  let nextDraftJson = existing.draft_json || null;
 
-  let publishResult = null;
-  if (!saveReviewOnly && !saveImageSelectionOnly && action === "approve" && existing.status === "final_pending") {
-    publishResult = await publishApprovedJob(context, {
-      ...existing,
-      manual_plagiarism_status: nextManualPlagiarismStatus,
-      flagged_sections_note: nextFlaggedSectionsNote,
-      selected_images_json: JSON.stringify(nextSelectedImages),
-    });
-
-    if (!publishResult.ok) {
+  let draftResult = null;
+  if (!saveReviewOnly && !saveImageSelectionOnly && action === "approve" && existing.status === "brief_pending") {
+    draftResult = await generateDraftForApprovedBrief(context, existing);
+    if (!draftResult.ok) {
       return json(
         {
           ok: false,
-          message: publishResult.message,
+          message: draftResult.message,
           previous_status: existing.status,
         },
         { status: 502 },
       );
     }
-
-    nextStatus = "published";
+    nextDraftJson = JSON.stringify(draftResult.draft);
+    nextStatus = "final_pending";
   }
 
   await d1
     .prepare(
       `UPDATE dashboard_jobs
-        SET status = ?, manual_plagiarism_status = ?, flagged_sections_note = ?, selected_images_json = ?, updated_at = ?
+        SET status = ?, manual_plagiarism_status = ?, flagged_sections_note = ?, selected_images_json = ?, draft_json = ?, updated_at = ?
         WHERE job_id = ?`,
     )
     .bind(
       nextStatus,
       nextManualPlagiarismStatus,
       nextFlaggedSectionsNote,
-      JSON.stringify(nextSelectedImages),
+      JSON.stringify(draftResult?.selectedImages || nextSelectedImages),
+      nextDraftJson,
       now,
       jobId,
     )
@@ -152,8 +152,10 @@ export async function onRequestPost(context) {
         action,
         reviewer,
         comment
-          || (publishResult
-            ? `Approved and published to ${publishResult.liveUrl}.`
+          || (draftResult
+            ? "Approved and drafted immediately."
+            : action === "approve" && existing.status === "final_pending"
+            ? "Approved and queued for scheduled publish."
             : saveImageSelectionOnly
             ? "Image selections updated."
             : "Review notes updated."),
@@ -171,8 +173,9 @@ export async function onRequestPost(context) {
     comment,
     manual_plagiarism_status: nextManualPlagiarismStatus,
     flagged_sections_note: nextFlaggedSectionsNote,
-    selected_images: nextSelectedImages,
-    publish: publishResult,
+    selected_images: draftResult?.selectedImages || nextSelectedImages,
+    draft: draftResult?.draft || (nextDraftJson ? JSON.parse(nextDraftJson) : null),
+    draft_generated: Boolean(draftResult),
     persisted_at: now,
   });
 }

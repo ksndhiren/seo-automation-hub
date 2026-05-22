@@ -10,33 +10,35 @@
     "battery life golf cart"
   ],
   "target_url": "/blog/maintenance-ownership/golf-cart-battery-replacement-cost",
-  "status": "new",
+  "status": "brief_pending",
   "priority": "medium",
   "assigned_reviewer": "seo-expert",
   "created_at": "2026-05-19T16:01:00+04:00",
-  "updated_at": "2026-05-21T08:08:53.527539+00:00",
+  "updated_at": "2026-05-22T07:50:10.810842+00:00",
   "seo_strategy": {
-    "search_intent": "commercial informational",
-    "cluster": "ownership education",
+    "search_intent": "Informational with commercial comparison intent: the reader wants to understand replacement costs, compare battery types, and decide whether to replace batteries or purchase another cart.",
+    "cluster": "Golf cart ownership cost and maintenance planning",
     "opportunity_score": 83,
     "opportunity_rationale": "Strong practical demand signal and helpfulness potential, with good top-of-funnel reach that can support later buyer-conversion content.",
     "category_slug": "maintenance-ownership",
     "category_name": "Maintenance & Ownership",
     "suggested_tags": [
-      "battery cost",
-      "ownership guide",
-      "electric golf cart maintenance",
-      "replacement timing"
+      "battery replacement",
+      "electric golf cart",
+      "ownership costs",
+      "battery life",
+      "maintenance tips"
     ],
     "recommended_internal_link_types": [
-      "buying guide posts",
-      "inventory pages",
-      "brand comparison posts"
+      "inventory and auction listing pages",
+      "contact and lead capture sections",
+      "brand and category landing pages",
+      "used golf cart comparison pages"
     ],
     "lead_goal": "buyer leads"
   },
   "metrics": {
-    "target_word_count": 1600,
+    "target_word_count": 1200,
     "neuronwriter_score": null,
     "manual_plagiarism_status": "Pending manual review",
     "flagged_sections_note": ""
@@ -49,5 +51,18 @@
   "calendar_month": "2026-05-to-06",
   "image_plan": {
     "selected_images": []
+  },
+  "brief": {
+    "summary": "Create a practical, buyer-focused guide that explains golf cart battery replacement cost in plain language, with clear price ranges, the main factors that affect cost, and when it makes sense to replace batteries versus upgrade carts. Position JMA Golf Carts as the trusted marketplace resource backed by Jeff Martin Auctioneers, and use conversion-oriented CTAs that invite readers to browse inventory, compare cart options, or contact the team for help sourcing a cart with the right battery setup.",
+    "outline": [
+      "# Golf Cart Battery Replacement Cost: What Buyers Should Expect",
+      "## How much does it cost to replace golf cart batteries?",
+      "## What affects electric golf cart battery cost?",
+      "## Battery type comparison: lead-acid vs lithium and how pricing changes",
+      "## Signs your golf cart batteries are near the end of their life",
+      "## Replace golf cart batteries or buy a different cart?",
+      "## How battery life impacts golf cart ownership cost over time",
+      "## Where to find carts, replacement-ready options, and expert help from Jeff Martin Auctioneers"
+    ]
   }
 }

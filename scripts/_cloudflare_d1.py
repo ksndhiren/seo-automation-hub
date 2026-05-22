@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import re
+import time
 import urllib.error
 import urllib.request
 from pathlib import Path
@@ -43,16 +44,28 @@ def d1_query(sql: str, params: list | None = None) -> list[dict]:
         method="POST",
     )
 
-    try:
-        with urllib.request.urlopen(request, timeout=30) as response:
-            payload = json.loads(response.read().decode("utf-8"))
-    except urllib.error.HTTPError as exc:
-        details = exc.read().decode("utf-8", errors="ignore")
-        raise RuntimeError(
-            f"Cloudflare D1 query failed with HTTP {exc.code}: {details}"
-        ) from exc
-    except urllib.error.URLError as exc:
-        raise RuntimeError(f"Cloudflare D1 request failed: {exc}") from exc
+    payload = None
+    last_error: Exception | None = None
+    for attempt in range(3):
+        try:
+            with urllib.request.urlopen(request, timeout=30) as response:
+                payload = json.loads(response.read().decode("utf-8"))
+            break
+        except urllib.error.HTTPError as exc:
+            last_error = exc
+            details = exc.read().decode("utf-8", errors="ignore")
+            if exc.code not in {408, 429, 500, 502, 503, 504} or attempt == 2:
+                raise RuntimeError(
+                    f"Cloudflare D1 query failed with HTTP {exc.code}: {details}"
+                ) from exc
+        except urllib.error.URLError as exc:
+            last_error = exc
+            if attempt == 2:
+                raise RuntimeError(f"Cloudflare D1 request failed: {exc}") from exc
+        time.sleep(2 * (attempt + 1))
+
+    if payload is None:
+        raise RuntimeError(f"Cloudflare D1 query failed: {last_error}")
 
     if not payload.get("success"):
         errors = payload.get("errors") or []

@@ -35,6 +35,81 @@ export async function searchPexels(apiKey, query, perPage = 6) {
   }));
 }
 
+export function buildImagePlanForJob(job) {
+  const draft = job?.draft || {};
+  const sections = draft.sections || [];
+  const topic = job?.topic || "blog article";
+  const primaryKeyword = job?.primary_keyword || "";
+  const siteId = job?.site_id || "";
+  const selectedImages = job?.image_plan?.selected_images || [];
+
+  if (siteId === "jma-golfcarts") {
+    const plans = [
+      {
+        placement: "Featured image",
+        asset_hint: draft.heroImage || "Not assigned yet",
+        query: "used golf cart marketplace listing outdoor realistic",
+        prompt:
+          `Realistic editorial photo of a used golf cart prepared for sale outdoors, clean daylight, trustworthy marketplace mood, no text overlay, visually supports the topic '${topic}'.`,
+      },
+    ];
+
+    if (sections.length >= 2) {
+      plans.push({
+        placement: `After section: ${sections[1]?.heading || "Listing details"}`,
+        asset_hint: "Prompt only",
+        query: "golf cart inspection listing details realistic",
+        prompt:
+          "Detailed golf cart inspection scene with close-up listing details, service notes, and condition checks, natural light, realistic marketplace photography, no staged AI look, no text.",
+      });
+    }
+
+    if (sections.length >= 3) {
+      plans.push({
+        placement: `After section: ${sections[2]?.heading || "Preparation checklist"}`,
+        asset_hint: "Prompt only",
+        query: "cleaning golf cart for sale realistic",
+        prompt:
+          `Seller preparing a golf cart for online sale with cleaning, photo setup, and checklist steps visible, credible commercial style, realistic details, supports keyword '${primaryKeyword}'.`,
+      });
+    }
+
+    return { status: "planned", items: plans, selected_images: selectedImages };
+  }
+
+  const plans = [
+    {
+      placement: "Featured image",
+      asset_hint: draft.heroImage || "Not assigned yet",
+      query: "used crane industrial yard equipment auction",
+      prompt:
+        `Realistic editorial photo of a used crane prepared for auction in an industrial yard, clean daylight, documentary style, no text overlay, trustworthy heavy-equipment marketplace mood, supports the topic '${topic}'.`,
+    },
+  ];
+
+  if (sections.length >= 2) {
+    plans.push({
+      placement: `After section: ${sections[1]?.heading || "Buyer information"}`,
+      asset_hint: "Prompt only",
+      query: "crane inspection maintenance records industrial equipment",
+      prompt:
+        "Detailed crane inspection scene with paperwork, serial plate, and maintenance records visible, professional industrial photography, natural light, no staged AI look, no text.",
+    });
+  }
+
+  if (sections.length >= 3) {
+    plans.push({
+      placement: `After section: ${sections[2]?.heading || "Preparation checklist"}`,
+      asset_hint: "Prompt only",
+      query: "preparing crane for sale inspection heavy equipment yard",
+      prompt:
+        `Heavy equipment seller preparing a crane for listing, showing cleaning, inspection, and photo capture steps, credible B2B industrial style, sharp realistic details, visually supports keyword '${primaryKeyword}'.`,
+    });
+  }
+
+  return { status: "planned", items: plans, selected_images: selectedImages };
+}
+
 export function buildFallbackQueries(job, item) {
   const siteId = job.site_id || "";
   const category = job.seo_strategy?.category_name || "";

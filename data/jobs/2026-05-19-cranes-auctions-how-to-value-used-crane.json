@@ -10,11 +10,11 @@
     "what affects crane resale value"
   ],
   "target_url": "/blog/equipment-insights/how-to-value-a-used-crane-before-selling",
-  "status": "brief_pending",
+  "status": "final_pending",
   "priority": "high",
   "assigned_reviewer": "seo-expert",
   "created_at": "2026-05-19T15:58:00+04:00",
-  "updated_at": "2026-05-21T08:08:53.527539+00:00",
+  "updated_at": "2026-05-22T07:49:43.944341+00:00",
   "seo_strategy": {
     "search_intent": "Informational with commercial investigation intent; the reader wants a practical method to estimate used crane value before deciding whether to sell privately or through auction, and is likely evaluating professional support.",
     "cluster": "Crane valuation and selling prep",
@@ -50,6 +50,27 @@
   "planned_publish_date": "2026-05-22",
   "calendar_month": "2026-05-to-06",
   "image_plan": {
+    "status": "planned",
+    "items": [
+      {
+        "placement": "Featured image",
+        "asset_hint": "/hero.webp",
+        "query": "used crane industrial yard equipment auction",
+        "prompt": "Realistic editorial photo of a used crane prepared for auction in an industrial yard, clean daylight, documentary style, no text overlay, trustworthy heavy-equipment marketplace mood, supports the topic 'How to value a used crane before selling'."
+      },
+      {
+        "placement": "After section: The main crane appraisal factors that influence used crane value",
+        "asset_hint": "Prompt only",
+        "query": "crane inspection maintenance records industrial equipment",
+        "prompt": "Detailed crane inspection scene with paperwork, serial plate, and maintenance records visible, professional industrial photography, natural light, no staged AI look, no text."
+      },
+      {
+        "placement": "After section: Build an equipment valuation checklist before you price the machine",
+        "asset_hint": "Prompt only",
+        "query": "preparing crane for sale inspection heavy equipment yard",
+        "prompt": "Heavy equipment seller preparing a crane for listing, showing cleaning, inspection, and photo capture steps, credible B2B industrial style, sharp realistic details, visually supports keyword 'how to value a used crane'."
+      }
+    ],
     "selected_images": []
   },
   "brief": {
@@ -64,5 +85,148 @@
       "H2: When to get a professional valuation or auction advisory opinion from Jeff Martin Auctioneers",
       "H2: Next steps: prepare your crane for sale and request a market-based evaluation"
     ]
+  },
+  "draft": {
+    "slug": "how-to-value-a-used-crane-before-selling",
+    "title": "How to Value a Used Crane Before Selling",
+    "description": "Learn how to value a used crane before selling by reviewing key appraisal factors, checking market demand, and using a practical equipment valuation checklist.",
+    "publishedAt": "2026-05-22",
+    "author": "Jeff Martin Auctioneers Editorial Team",
+    "readTime": "7 min read",
+    "category": "Equipment Insights",
+    "tags": [
+      "used crane value",
+      "crane appraisal",
+      "equipment valuation",
+      "crane resale",
+      "auction advisory"
+    ],
+    "heroImage": "/hero.webp",
+    "featured": false,
+    "seoTitle": "How to Value a Used Crane Before Selling | Jeff Martin Auctioneers",
+    "seoDescription": "Learn how to value a used crane before selling. Review crane appraisal factors, used crane value drivers, and a seller checklist from Jeff Martin Auctioneers.",
+    "intro": [
+      "If you are planning to sell a crane, the first question is usually the hardest one: what is it actually worth? The answer depends on more than age or original purchase price. Used crane value is shaped by condition, capacity, configuration, service history, market demand, and the kind of buyer likely to compete for it.",
+      "This guide walks through how to value a used crane before selling, with a practical focus on what affects crane resale value and how to build a realistic price range. If you want a market-based opinion before listing, Jeff Martin Auctioneers can help with auction guidance, equipment insight, and seller support."
+    ],
+    "sections": [
+      {
+        "heading": "Start with the crane\u2019s basic details: make, model, year, and configuration",
+        "paragraphs": [
+          "Begin with the facts that define the machine. Make, model, serial number, year of manufacture, capacity, boom length, carrier type, and configuration all matter when estimating used crane value. A crane with the same model name can command very different interest depending on whether it is a rough-terrain, all-terrain, crawler, truck crane, or tower crane setup.",
+          "Buyers also look closely at how the crane was equipped. Counterweights, jib packages, hook blocks, lattice sections, and other attachments can raise or reduce appeal depending on completeness and compatibility. A clean equipment record makes pricing easier because it gives you a more reliable starting point before you evaluate the broader crane appraisal factors."
+        ],
+        "bullets": [
+          "Make and model",
+          "Year of manufacture",
+          "Serial number and ownership history",
+          "Crane type and configuration",
+          "Rated capacity and boom/jib setup",
+          "Included attachments and loose components"
+        ]
+      },
+      {
+        "heading": "The main crane appraisal factors that influence used crane value",
+        "paragraphs": [
+          "Several crane appraisal factors affect resale value more than sellers expect. Operating condition is usually the biggest one. Hours, wear, structural integrity, hydraulic performance, drivetrain condition, and any signs of corrosion or prior damage all influence what buyers are willing to pay.",
+          "Documentation matters too. Maintenance logs, inspection reports, recent service work, and records of major repairs help support a stronger valuation. A crane with clear service history often looks less risky than a similar unit with missing records, even if both machines appear functional."
+        ],
+        "bullets": [
+          "Operating hours and overall wear",
+          "Structural condition and weld history",
+          "Hydraulic, engine, and drivetrain performance",
+          "Control systems and electrical condition",
+          "Inspection and maintenance documentation",
+          "Compliance status and outstanding repair needs"
+        ],
+        "callout": "Small issues can have an outsized impact on value when buyers are comparing similar cranes. A machine that appears ready to work often attracts more serious attention than one that needs uncertain reconditioning."
+      },
+      {
+        "heading": "Build an equipment valuation checklist before you price the machine",
+        "paragraphs": [
+          "A simple equipment valuation checklist helps you avoid guesswork. It should cover physical condition, paperwork, attachments, testing results, and transport considerations. If you are a fleet manager or dealer, it is especially useful to standardize this process across multiple assets so each crane gets evaluated on the same basis.",
+          "Try to document the crane as a buyer would see it. Photograph the exterior, cab, undercarriage or carrier, boom sections, outriggers, tires or tracks, and any visible wear points. If the crane is operational, note whether it starts easily, functions smoothly, and passes basic inspection checks."
+        ],
+        "bullets": [
+          "Confirm model, year, and serial number",
+          "List all attachments, parts, and accessories",
+          "Record hours, inspections, and repair history",
+          "Note visible wear, leaks, damage, or corrosion",
+          "Gather photos from multiple angles",
+          "Estimate any repair or transport costs"
+        ]
+      },
+      {
+        "heading": "Compare market demand, recent auction results, and replacement cost",
+        "paragraphs": [
+          "Once you know the crane\u2019s condition, compare it to the market. Recent auction results are useful because they show what buyers have actually paid for similar units, not just asking prices. That makes auction data one of the most practical ways to estimate used crane value.",
+          "Replacement cost can also provide context. If a comparable new crane is expensive and lead times are long, a clean used unit may draw stronger interest. On the other hand, if similar models are abundant or newer alternatives are widely available, resale value may be more restrained. The key is to balance replacement cost with realistic buyer demand."
+        ],
+        "bullets": [
+          "Review recent sales of comparable cranes",
+          "Compare similar capacity and configuration",
+          "Check regional demand and transportation reach",
+          "Assess buyer appetite for your crane type",
+          "Use replacement cost as context, not a price shortcut"
+        ]
+      },
+      {
+        "heading": "Common mistakes sellers make when estimating what affects crane resale value",
+        "paragraphs": [
+          "A common mistake is pricing from original purchase cost. What a crane cost new may have little relationship to current resale value. Another mistake is assuming that a machine with low hours automatically commands a premium. If service history is weak or condition is uneven, hours alone will not carry the valuation.",
+          "Sellers also sometimes overstate value by ignoring reconditioning, disassembly, transport, or commissioning costs. Those expenses can reduce the amount a buyer is willing to pay, especially for larger cranes or equipment that must move long distances. A realistic number is usually better than an optimistic one that leads to stalled interest."
+        ],
+        "bullets": [
+          "Using original purchase price as a valuation shortcut",
+          "Ignoring repair or reconditioning needs",
+          "Overestimating the value of low hours alone",
+          "Leaving out transport and setup costs",
+          "Pricing above comparable market sales",
+          "Skipping documentation and photo preparation"
+        ]
+      },
+      {
+        "heading": "When to get a professional valuation or auction advisory opinion from Jeff Martin Auctioneers",
+        "paragraphs": [
+          "A professional opinion makes sense when the crane is specialized, high value, incomplete, or difficult to compare against recent sales. It is also useful if you are deciding between private sale and auction, or if you need help setting a reserve strategy that reflects current market conditions. In these situations, a market-based advisory review can save time and reduce pricing errors.",
+          "Jeff Martin Auctioneers works with crane owners, dealers, contractors, fleet managers, and heavy transport businesses that need credible guidance before selling. Their team understands crane appraisal factors, live market behavior, and how buyer competition can change depending on equipment type and location."
+        ],
+        "callout": "If you want a practical, market-informed view of used crane value, Jeff Martin Auctioneers can provide auction advisory support and help you decide whether now is the right time to sell."
+      },
+      {
+        "heading": "Next steps: prepare your crane for sale and request a market-based evaluation",
+        "paragraphs": [
+          "After you estimate value, focus on presentation. Clean the machine, organize records, identify missing parts, and document any known issues before marketing it. Even small preparation steps can improve buyer confidence and reduce back-and-forth during the selling process.",
+          "If you are ready to move forward, ask for a market-based evaluation from Jeff Martin Auctioneers. Their team can help you understand current demand, compare recent auction activity, and decide on the most credible path to sale. You can also review current and recent crane auction listings to see how similar equipment is performing in the market."
+        ],
+        "bullets": [
+          "Gather records and service history",
+          "Take clear photos and note known issues",
+          "Review current crane auction listings",
+          "Compare your unit against recent sales",
+          "Contact Jeff Martin Auctioneers for seller guidance"
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "What is the best way to estimate used crane value before selling?",
+        "answer": "The best approach is to combine machine details, condition, maintenance history, recent auction results, and current market demand. That gives you a more realistic range than relying on age or original cost alone."
+      },
+      {
+        "question": "Which crane appraisal factors matter most to buyers?",
+        "answer": "Condition, operating hours, service records, configuration, included attachments, and compliance history usually matter most. Buyers also pay close attention to any repairs, corrosion, structural concerns, and transport requirements."
+      },
+      {
+        "question": "Should I sell a crane privately or through auction?",
+        "answer": "It depends on the machine, timeline, and market. Auction can be a strong fit when you want exposure to active buyers, need to sell on a schedule, or want a market-driven price discovery process. Jeff Martin Auctioneers can help you evaluate the options."
+      }
+    ],
+    "cta": {
+      "title": "Get a market-based crane valuation from Jeff Martin Auctioneers",
+      "body": "If you are preparing to sell a used crane, Jeff Martin Auctioneers can help you review crane appraisal factors, assess current market demand, and determine the most practical path to sale. Reach out for seller support, auction guidance, and a professional evaluation grounded in real market activity.",
+      "buttonLabel": "Contact Jeff Martin Auctioneers",
+      "buttonHref": "https://www.cranesauctions.com/contact"
+    }
   }
 }

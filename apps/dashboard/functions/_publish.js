@@ -26,7 +26,8 @@ export async function publishApprovedJob(context, reviewRow) {
   }
 
   const assetJob = await loadAssetJob(context, reviewRow.job_id);
-  if (!assetJob || !assetJob.draft) {
+  const d1Draft = parseJson(reviewRow.draft_json);
+  if (!assetJob || !(assetJob.draft || d1Draft)) {
     return {
       ok: false,
       message: "The current draft snapshot is unavailable, so publishing could not continue.",
@@ -43,6 +44,7 @@ export async function publishApprovedJob(context, reviewRow) {
 
   const mergedJob = {
     ...assetJob,
+    draft: d1Draft || assetJob.draft,
     status: reviewRow.status,
     final_review: {
       ...(assetJob.final_review || {}),
@@ -114,6 +116,15 @@ async function loadAssetJob(context, jobId) {
 
   const assetState = await assetResponse.json();
   return (assetState.jobs || []).find((job) => job.job_id === jobId) || null;
+}
+
+function parseJson(value) {
+  if (!value || value === "null") return null;
+  try {
+    return JSON.parse(value);
+  } catch {
+    return null;
+  }
 }
 
 async function getExistingContent({ owner, repo, path, branch, token }) {

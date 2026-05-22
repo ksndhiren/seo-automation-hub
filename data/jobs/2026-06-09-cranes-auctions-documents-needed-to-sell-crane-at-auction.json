@@ -41,7 +41,8 @@
     "target_word_count": 1700,
     "neuronwriter_score": null,
     "manual_plagiarism_status": "Pending manual review",
-    "flagged_sections_note": ""
+    "flagged_sections_note": "",
+    "last_error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
   },
   "publish": {
     "commit_sha": null,

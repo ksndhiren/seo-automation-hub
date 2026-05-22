@@ -1,3 +1,4 @@
+import { buildImagePlanForJob } from "../_images.js";
 import { json } from "../_shared.js";
 
 function sortJobs(jobs) {
@@ -78,6 +79,14 @@ export async function onRequestGet(context) {
 
     const normalizedJobs = rows.map((row) => {
       const assetJob = assetJobsById[row.job_id] || {};
+      const draft = row.draft_json ? JSON.parse(row.draft_json) : assetJob.draft || null;
+      const imagePlan = buildImagePlanForJob({
+        ...assetJob,
+        site_id: row.site_id,
+        topic: row.topic,
+        primary_keyword: row.primary_keyword,
+        draft,
+      });
       statusSet.add(row.status);
       return {
         job_id: row.job_id,
@@ -99,10 +108,10 @@ export async function onRequestGet(context) {
         },
         seo_strategy: assetJob.seo_strategy || {},
         image_plan: {
-          ...(assetJob.image_plan || {}),
+          ...imagePlan,
           selected_images: JSON.parse(row.selected_images_json || "[]"),
         },
-        draft: row.draft_json ? JSON.parse(row.draft_json) : assetJob.draft || null,
+        draft,
         final_review: {
           checklist: JSON.parse(row.final_checklist_json || "[]"),
           manual_plagiarism_status: row.manual_plagiarism_status,

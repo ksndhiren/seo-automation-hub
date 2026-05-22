@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 import json
+import time
+import urllib.error
 import urllib.request
 
 from _env import load_dotenv, require_env
@@ -39,8 +41,23 @@ def call_openai_json(
         },
     )
 
-    with urllib.request.urlopen(request, timeout=120) as response:
-        body = json.loads(response.read().decode("utf-8"))
+    last_error = None
+    for attempt in range(3):
+        try:
+            with urllib.request.urlopen(request, timeout=120) as response:
+                body = json.loads(response.read().decode("utf-8"))
+            break
+        except urllib.error.HTTPError as exc:
+            last_error = exc
+            if exc.code not in {408, 429, 500, 502, 503, 504} or attempt == 2:
+                raise
+        except urllib.error.URLError as exc:
+            last_error = exc
+            if attempt == 2:
+                raise
+        time.sleep(2 * (attempt + 1))
+    else:
+        raise last_error
 
     raw_text = extract_text(body)
     return parse_json_object(raw_text)
