@@ -118,6 +118,10 @@ async function loadAssetJob(context, jobId) {
   return (assetState.jobs || []).find((job) => job.job_id === jobId) || null;
 }
 
+export async function loadAssetJobForReview(context, jobId) {
+  return loadAssetJob(context, jobId);
+}
+
 function parseJson(value) {
   if (!value || value === "null") return null;
   try {

@@ -1,4 +1,5 @@
 import { getStatusAfterAction, isSupportedAction, isTerminalStatus, json } from "../_shared.js";
+import { loadAssetJobForReview, publishApprovedJob } from "../_publish.js";
 import {
   generateDraftForApprovedBrief,
   reviseBriefFromFeedback,
@@ -117,9 +118,11 @@ export async function onRequestPost(context) {
   let nextDraftJson = existing.draft_json || null;
   let nextBriefSummary = existing.brief_summary || "";
   let nextOutlineJson = existing.outline_json || "[]";
+  const assetJob = await loadAssetJobForReview(context, jobId);
 
   let draftResult = null;
   let briefRevisionResult = null;
+  let publishResult = null;
   if (!saveReviewOnly && !saveImageSelectionOnly && action === "approve" && existing.status === "brief_pending") {
     draftResult = await generateDraftForApprovedBrief(context, existing);
     if (!draftResult.ok) {
@@ -170,6 +173,32 @@ export async function onRequestPost(context) {
     }
   }
 
+  if (!saveReviewOnly && !saveImageSelectionOnly && action === "approve" && existing.status === "final_pending") {
+    const shouldPublishNow = shouldPublishImmediately(assetJob?.planned_publish_date, now);
+    if (shouldPublishNow) {
+      publishResult = await publishApprovedJob(context, {
+        ...existing,
+        draft_json: nextDraftJson,
+        manual_plagiarism_status: nextManualPlagiarismStatus,
+        flagged_sections_note: nextFlaggedSectionsNote,
+        selected_images_json: JSON.stringify(draftResult?.selectedImages || nextSelectedImages),
+      });
+      if (!publishResult.ok) {
+        return json(
+          {
+            ok: false,
+            message: publishResult.message,
+            previous_status: existing.status,
+          },
+          { status: 502 },
+        );
+      }
+      nextStatus = "published";
+    } else {
+      nextStatus = "final_approved";
+    }
+  }
+
   await d1
     .prepare(
       `UPDATE dashboard_jobs
@@ -209,6 +238,8 @@ export async function onRequestPost(context) {
             ? "Approved and drafted immediately."
             : briefRevisionResult
             ? "Brief revised from reviewer notes."
+            : publishResult
+            ? `Approved and published to ${publishResult.liveUrl}.`
             : action === "approve" && existing.status === "final_pending"
             ? "Approved and queued for scheduled publish."
             : action === "request_changes" && existing.draft_json && existing.draft_json !== "null"
@@ -239,6 +270,45 @@ export async function onRequestPost(context) {
       outline: JSON.parse(nextOutlineJson || "[]"),
     },
     draft_generated: Boolean(draftResult),
+    publish: publishResult,
     persisted_at: now,
   });
+}
+
+function shouldPublishImmediately(plannedPublishDate, nowIso) {
+  if (!plannedPublishDate) {
+    return true;
+  }
+
+  const todayTbilisi = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Asia/Tbilisi",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  })
+    .format(new Date(nowIso))
+    .replaceAll("/", "-");
+
+  if (plannedPublishDate < todayTbilisi) {
+    return true;
+  }
+  if (plannedPublishDate > todayTbilisi) {
+    return false;
+  }
+
+  const hour = Number(
+    new Intl.DateTimeFormat("en-US", {
+      timeZone: "Asia/Tbilisi",
+      hour: "2-digit",
+      hour12: false,
+    }).format(new Date(nowIso)),
+  );
+  const minute = Number(
+    new Intl.DateTimeFormat("en-US", {
+      timeZone: "Asia/Tbilisi",
+      minute: "2-digit",
+    }).format(new Date(nowIso)),
+  );
+
+  return hour > 17 || (hour === 17 && minute >= 0);
 }

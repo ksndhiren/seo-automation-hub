@@ -1,8 +1,8 @@
 {
   "summary": {
-    "generated_at": "2026-05-22T08:50:24.738341+00:00",
+    "generated_at": "2026-05-22T14:14:26.618035+00:00",
     "statuses": [
-      "brief_pending",
+      "final_approved",
       "final_pending",
       "new",
       "published"
@@ -22,11 +22,11 @@
       },
       {
         "label": "Needs brief approval",
-        "value": 2
+        "value": 0
       },
       {
         "label": "Needs final review",
-        "value": 2
+        "value": 1
       }
     ]
   },
@@ -107,7 +107,7 @@
       ],
       "target_url": "/blog/maintenance-ownership/golf-cart-battery-replacement-cost",
       "target_audience": "Golf cart buyers comparing personal, utility, and fleet carts \u2022 Dealers looking to move multiple carts through a marketplace \u2022 Property owners and communities sourcing utility or street-legal carts \u2022 Businesses evaluating fleet and maintenance cart options \u2022 Sellers listing used golf carts online",
-      "status": "brief_pending",
+      "status": "final_approved",
       "priority": "medium",
       "planned_publish_date": "2026-05-25",
       "calendar_month": "2026-05-to-06",
@@ -152,14 +152,193 @@
         "items": [
           {
             "placement": "Featured image",
-            "asset_hint": "Not assigned yet",
+            "asset_hint": "https://images.pexels.com/photos/9366580/pexels-photo-9366580.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
             "query": "used golf cart marketplace listing outdoor realistic",
             "prompt": "Realistic editorial photo of a used golf cart prepared for sale outdoors, clean daylight, trustworthy marketplace mood, no text overlay, visually supports the topic 'Golf cart battery replacement cost'."
+          },
+          {
+            "placement": "After section: What affects electric golf cart battery cost?",
+            "asset_hint": "Prompt only",
+            "query": "golf cart inspection listing details realistic",
+            "prompt": "Detailed golf cart inspection scene with close-up listing details, service notes, and condition checks, natural light, realistic marketplace photography, no staged AI look, no text."
+          },
+          {
+            "placement": "After section: Battery type comparison: lead-acid vs lithium and how pricing changes",
+            "asset_hint": "Prompt only",
+            "query": "cleaning golf cart for sale realistic",
+            "prompt": "Seller preparing a golf cart for online sale with cleaning, photo setup, and checklist steps visible, credible commercial style, realistic details, supports keyword 'golf cart battery replacement cost'."
           }
         ],
-        "selected_images": []
+        "selected_images": [
+          {
+            "id": 9366580,
+            "alt": "Young woman in red polo with golf gear by cart, golf course setting.",
+            "photographer": "Mikhail Nilov",
+            "thumb": "https://images.pexels.com/photos/9366580/pexels-photo-9366580.jpeg?auto=compress&cs=tinysrgb&h=350",
+            "large": "https://images.pexels.com/photos/9366580/pexels-photo-9366580.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+            "original": "https://images.pexels.com/photos/9366580/pexels-photo-9366580.jpeg",
+            "width": 6000,
+            "height": 4000,
+            "pexels_url": "https://www.pexels.com/photo/woman-leaning-on-a-golf-cart-9366580/"
+          },
+          {
+            "id": 9207200,
+            "alt": "Family with kids having fun on a golf cart at a golf course during daylight.",
+            "photographer": "Mikhail Nilov",
+            "thumb": "https://images.pexels.com/photos/9207200/pexels-photo-9207200.jpeg?auto=compress&cs=tinysrgb&h=350",
+            "large": "https://images.pexels.com/photos/9207200/pexels-photo-9207200.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+            "original": "https://images.pexels.com/photos/9207200/pexels-photo-9207200.jpeg",
+            "width": 5848,
+            "height": 3898,
+            "pexels_url": "https://www.pexels.com/photo/kids-sitting-on-a-golf-cart-with-their-parents-9207200/"
+          },
+          {
+            "id": 9366556,
+            "alt": "Stylish woman in red polo shirt and bucket hat preparing for golf game.",
+            "photographer": "Mikhail Nilov",
+            "thumb": "https://images.pexels.com/photos/9366556/pexels-photo-9366556.jpeg?auto=compress&cs=tinysrgb&h=350",
+            "large": "https://images.pexels.com/photos/9366556/pexels-photo-9366556.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+            "original": "https://images.pexels.com/photos/9366556/pexels-photo-9366556.jpeg",
+            "width": 6000,
+            "height": 4000,
+            "pexels_url": "https://www.pexels.com/photo/a-woman-in-red-polo-shirt-9366556/"
+          }
+        ]
       },
-      "draft": null,
+      "draft": {
+        "slug": "golf-cart-battery-replacement-cost",
+        "title": "Golf Cart Battery Replacement Cost: What Buyers Should Expect",
+        "description": "A practical guide to golf cart battery replacement cost, including price ranges, battery type differences, warning signs, and when it may make more sense to replace batteries or shop for a different cart.",
+        "publishedAt": "2026-05-22",
+        "author": "Jeff Martin Auctioneers Editorial Team",
+        "readTime": "7 min read",
+        "category": "Maintenance & Ownership",
+        "tags": [
+          "battery replacement",
+          "electric golf cart",
+          "ownership costs",
+          "battery life",
+          "maintenance tips"
+        ],
+        "heroImage": "https://images.pexels.com/photos/9366580/pexels-photo-9366580.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "featured": false,
+        "seoTitle": "Golf Cart Battery Replacement Cost | Buyer Guide",
+        "seoDescription": "Learn golf cart battery replacement cost, what affects pricing, when to replace golf cart batteries, and how battery type impacts long-term golf cart ownership cost.",
+        "intro": [
+          "If you own or are shopping for an electric cart, golf cart battery replacement cost is one of the biggest maintenance expenses to plan for. The total can vary a lot based on battery type, cart size, labor, and whether you are replacing a full pack or only a few weak batteries.",
+          "This guide breaks down what buyers should expect in plain language. You will learn the typical cost drivers, how to spot battery trouble early, and when it may be smarter to replace golf cart batteries or consider a different cart altogether. If you need help comparing options, Jeff Martin Auctioneers can help you source carts with the right setup for your needs."
+        ],
+        "sections": [
+          {
+            "heading": "How much does it cost to replace golf cart batteries?",
+            "paragraphs": [
+              "The cost to replace golf cart batteries depends on how many batteries your cart uses and which battery chemistry it runs. For many standard electric carts, a full battery pack replacement can land anywhere from a few hundred dollars to well over a thousand once parts and labor are included.",
+              "A basic lead-acid setup is usually the lower-cost option upfront, while lithium systems cost more at the start but can change the total golf cart ownership cost over time. If you are pricing an electric golf cart battery cost estimate, always ask whether the quote includes installation, disposal of old batteries, and any wiring or charger updates."
+            ],
+            "bullets": [
+              "Full pack replacement usually costs more than swapping a single weak battery.",
+              "Labor and disposal fees can change the final bill.",
+              "Charging equipment may also need attention when changing battery type."
+            ]
+          },
+          {
+            "heading": "What affects electric golf cart battery cost?",
+            "paragraphs": [
+              "Several factors can raise or lower the final bill. Cart make and model matter because different carts use different voltage systems and battery counts. Battery brand and capacity also play a role, especially if you need higher performance for hills, heavier loads, or longer runtime.",
+              "Local labor rates, dealer service fees, and whether your batteries are easy to access can affect installation cost. In some cases, a cart may also need cable repairs, terminal cleaning, or charger replacement, which adds to the overall project price. That is why it helps to compare the full replacement-ready solution instead of looking only at battery sticker price."
+            ],
+            "bullets": [
+              "Cart voltage and battery count",
+              "Lead-acid or lithium battery type",
+              "Labor, disposal, and service fees",
+              "Charger compatibility and accessory updates",
+              "Condition of cables, terminals, and connections"
+            ]
+          },
+          {
+            "heading": "Battery type comparison: lead-acid vs lithium and how pricing changes",
+            "paragraphs": [
+              "Lead-acid batteries are common because they cost less upfront and are widely available. They usually require more maintenance, including water checks and regular cleaning, and they can weigh more than lithium systems. For buyers focused on lower purchase price, this is often the default option.",
+              "Lithium batteries usually cost more initially, but they can reduce maintenance and may last longer under the right conditions. They are also lighter and often provide steadier performance. The better choice depends on how the cart will be used, how long you plan to keep it, and whether you are comparing replacement cost against long-term battery life golf cart value."
+            ],
+            "bullets": [
+              "Lead-acid: lower upfront cost, higher maintenance",
+              "Lithium: higher upfront cost, less routine upkeep",
+              "Lithium may improve resale appeal on some carts",
+              "Your charger and electrical system must match the battery type"
+            ],
+            "callout": "The cheapest battery setup is not always the lowest-cost ownership choice. Think about runtime, maintenance, and how long you plan to keep the cart."
+          },
+          {
+            "heading": "Signs your golf cart batteries are near the end of their life",
+            "paragraphs": [
+              "One of the clearest signs is shorter driving range. If the cart used to make a full round or complete a work shift and now struggles much sooner, the batteries may be weakening. Slow acceleration, sluggish hill climbing, and noticeable voltage drop are also common warning signs.",
+              "Other clues include batteries that take much longer to charge, cases that look swollen or corroded, and fluid levels that keep dropping on lead-acid batteries. If you are seeing several of these issues at once, it may be time to replace golf cart batteries rather than keep paying for temporary fixes."
+            ],
+            "bullets": [
+              "Reduced range after a full charge",
+              "Slow speed or weak hill performance",
+              "Charging problems or long charge times",
+              "Corrosion, swelling, or physical damage",
+              "Frequent service calls for the same issue"
+            ]
+          },
+          {
+            "heading": "Replace golf cart batteries or buy a different cart?",
+            "paragraphs": [
+              "If the cart body, controller, tires, and suspension are in good shape, replacing the batteries can be a practical move. This makes sense when the cart already fits your needs and the rest of the machine still has useful life left. It is often the better option for buyers who know the cart and want to keep it in service.",
+              "But if the cart needs batteries plus other major repairs, a different cart may offer better value. That is especially true if you are upgrading from a basic personal cart to a utility, fleet, or street-legal model. In those cases, comparing replacement cost against available inventory can help you avoid putting more money into a cart that no longer fits the job."
+            ],
+            "callout": "A repair can be smart when the cart is otherwise solid. A replacement purchase can be smarter when multiple systems are worn out."
+          },
+          {
+            "heading": "How battery life impacts golf cart ownership cost over time",
+            "paragraphs": [
+              "Battery life affects more than just replacement timing. It influences charging habits, downtime, performance, and how often you need service. A cart with strong battery life may cost more upfront but be easier to own day to day, while a cheaper setup can become more expensive if it needs frequent maintenance or earlier replacement.",
+              "When you compare golf cart ownership cost, look beyond the purchase price. Include charging equipment, service intervals, battery replacement cycles, and expected use. For commercial buyers, fleets, and communities, those details can make a major difference in budget planning and uptime."
+            ],
+            "bullets": [
+              "Upfront price is only one part of ownership cost",
+              "Longer-lasting batteries can reduce downtime",
+              "Maintenance needs affect both labor and reliability",
+              "Fleet buyers should model cost over several years"
+            ]
+          },
+          {
+            "heading": "Where to find carts, replacement-ready options, and expert help from Jeff Martin Auctioneers",
+            "paragraphs": [
+              "If you are weighing repair versus replacement, it helps to compare carts with the battery setup, condition, and use case already in mind. That includes used electric carts, utility carts, and fleet-ready units that may better fit your budget than a full rebuild.",
+              "JMA Golf Carts is a practical marketplace resource backed by Jeff Martin Auctioneers, helping buyers and sellers compare inventory with confidence. If you want help sourcing a cart, evaluating replacement-ready options, or finding a better fit for your next battery cycle, Jeff Martin Auctioneers is the trusted contact brand to start with."
+            ],
+            "callout": "Browse inventory, compare cart options, or contact Jeff Martin Auctioneers for help finding a cart with the right battery setup for your needs."
+          }
+        ],
+        "faq": [
+          {
+            "question": "How often do golf cart batteries need to be replaced?",
+            "answer": "It depends on battery type, maintenance, and use. Lead-acid batteries often need replacement sooner than lithium systems, especially if they are heavily used or not maintained properly. Regular charging and correct care can extend battery life, but every pack will eventually wear out."
+          },
+          {
+            "question": "Is it worth replacing just one golf cart battery?",
+            "answer": "Sometimes, but not always. If one battery fails early in a matched pack, replacing only that battery may solve the short-term issue. However, if the rest of the pack is also aging, a full replacement is often the better long-term value."
+          },
+          {
+            "question": "Does lithium lower golf cart ownership cost?",
+            "answer": "It can, but not for every buyer. Lithium usually costs more upfront, yet it may reduce maintenance and improve long-term performance. The right answer depends on how long you plan to keep the cart and how hard it will be used."
+          },
+          {
+            "question": "Should I buy batteries or a different cart?",
+            "answer": "If the rest of the cart is in good shape, batteries may be the simplest fix. If the cart needs several repairs or no longer meets your needs, comparing replacement-ready inventory may be the smarter move."
+          }
+        ],
+        "cta": {
+          "title": "Compare carts before you commit to a battery bill",
+          "body": "If you are evaluating golf cart battery replacement cost, Jeff Martin Auctioneers can help you compare inventory, replacement-ready carts, and better-fit options for your budget and use case. Browse available carts or contact the team for practical sourcing support.",
+          "buttonLabel": "Contact Jeff Martin Auctioneers",
+          "buttonHref": "/contact"
+        },
+        "heroImageAlt": "Young woman in red polo with golf gear by cart, golf course setting."
+      },
       "final_review": {
         "checklist": [
           "Review final article quality and conversion alignment.",
@@ -172,10 +351,10 @@
         "meta_description": "Pending"
       },
       "activity": [
-        "Job status: brief_pending",
+        "Job status: final_approved",
         "Site target: JMA Golf Carts",
         "Created: 2026-05-19T16:01:00+04:00",
-        "Last updated: 2026-05-22T07:50:10.810842+00:00",
+        "Last updated: 2026-05-22T13:56:45.453Z",
         "Planned publish date: 2026-05-25",
         "Snapshot generated from automation hub data"
       ],
@@ -198,7 +377,7 @@
       ],
       "target_url": "/blog/auction-strategy/auction-vs-private-sale-for-heavy-equipment",
       "target_audience": "Crane owners looking to sell underutilized equipment \u2022 Equipment dealers with inventory to move \u2022 Contractors sourcing cranes and heavy equipment \u2022 Fleet managers handling surplus or replacement cycles \u2022 Heavy transport and rigging businesses",
-      "status": "brief_pending",
+      "status": "final_approved",
       "priority": "medium",
       "planned_publish_date": "2026-05-25",
       "calendar_month": "2026-05-to-06",
@@ -243,14 +422,189 @@
         "items": [
           {
             "placement": "Featured image",
-            "asset_hint": "Not assigned yet",
+            "asset_hint": "https://images.pexels.com/photos/35202662/pexels-photo-35202662.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
             "query": "used crane industrial yard equipment auction",
             "prompt": "Realistic editorial photo of a used crane prepared for auction in an industrial yard, clean daylight, documentary style, no text overlay, trustworthy heavy-equipment marketplace mood, supports the topic 'Auction vs private sale for heavy equipment'."
+          },
+          {
+            "placement": "After section: When to use an auction for cranes and heavy equipment",
+            "asset_hint": "Prompt only",
+            "query": "crane inspection maintenance records industrial equipment",
+            "prompt": "Detailed crane inspection scene with paperwork, serial plate, and maintenance records visible, professional industrial photography, natural light, no staged AI look, no text."
+          },
+          {
+            "placement": "After section: When a private sale may be the better fit",
+            "asset_hint": "Prompt only",
+            "query": "preparing crane for sale inspection heavy equipment yard",
+            "prompt": "Heavy equipment seller preparing a crane for listing, showing cleaning, inspection, and photo capture steps, credible B2B industrial style, sharp realistic details, visually supports keyword 'auction vs private sale heavy equipment'."
           }
         ],
-        "selected_images": []
+        "selected_images": [
+          {
+            "id": 35202662,
+            "alt": "View of a shipping yard with heavy machinery and industrial pipes under a cloudy sky.",
+            "photographer": "thanh nhan do",
+            "thumb": "https://images.pexels.com/photos/35202662/pexels-photo-35202662.jpeg?auto=compress&cs=tinysrgb&h=350",
+            "large": "https://images.pexels.com/photos/35202662/pexels-photo-35202662.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+            "original": "https://images.pexels.com/photos/35202662/pexels-photo-35202662.jpeg",
+            "width": 5315,
+            "height": 3543,
+            "pexels_url": "https://www.pexels.com/photo/industrial-shipping-yard-with-large-cranes-35202662/"
+          },
+          {
+            "id": 16368437,
+            "alt": "A worker in safety gear examines industrial machinery in an outdoor setting, showcasing industry work.",
+            "photographer": "Marianna Zuzanna",
+            "thumb": "https://images.pexels.com/photos/16368437/pexels-photo-16368437.jpeg?auto=compress&cs=tinysrgb&h=350",
+            "large": "https://images.pexels.com/photos/16368437/pexels-photo-16368437.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+            "original": "https://images.pexels.com/photos/16368437/pexels-photo-16368437.jpeg",
+            "width": 5760,
+            "height": 3840,
+            "pexels_url": "https://www.pexels.com/photo/back-view-of-a-worker-wearing-a-helmet-walking-by-a-machinery-16368437/"
+          },
+          {
+            "id": 29502226,
+            "alt": "ACE 40 XW crane displayed at a construction site in Faridabad, Haryana, India.",
+            "photographer": "Action Construction  Equipment Ltd. - ACE",
+            "thumb": "https://images.pexels.com/photos/29502226/pexels-photo-29502226.jpeg?auto=compress&cs=tinysrgb&h=350",
+            "large": "https://images.pexels.com/photos/29502226/pexels-photo-29502226.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+            "original": "https://images.pexels.com/photos/29502226/pexels-photo-29502226.jpeg",
+            "width": 6240,
+            "height": 4160,
+            "pexels_url": "https://www.pexels.com/photo/heavy-duty-ace-40-xw-rough-terrain-crane-onsite-29502226/"
+          }
+        ]
       },
-      "draft": null,
+      "draft": {
+        "slug": "auction-vs-private-sale-for-heavy-equipment",
+        "title": "Auction vs Private Sale for Heavy Equipment: Which Exit Strategy Fits Your Asset?",
+        "description": "Compare auction vs private sale heavy equipment strategies for cranes, fleet assets, and surplus machinery. Learn when to use an auction, when private sale makes sense, and how to choose the right exit path.",
+        "publishedAt": "2026-05-22",
+        "author": "Jeff Martin Auctioneers Editorial Team",
+        "readTime": "7 min read",
+        "category": "Auction Strategy",
+        "tags": [
+          "heavy equipment selling",
+          "auction strategy",
+          "private sale",
+          "equipment resale",
+          "asset disposition"
+        ],
+        "heroImage": "https://images.pexels.com/photos/35202662/pexels-photo-35202662.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "featured": false,
+        "seoTitle": "Auction vs Private Sale Heavy Equipment | Which Strategy Fits Best?",
+        "seoDescription": "Compare auction vs private sale heavy equipment strategies. Learn when to sell heavy equipment at auction, when private sale works, and how to choose the best equipment resale strategy.",
+        "intro": [
+          "Choosing between an auction and a private sale is one of the most important decisions in any equipment disposal plan. For crane owners, fleet managers, dealers, contractors, and heavy transport businesses, the right path depends on timing, asset condition, market demand, and how much certainty you need from the transaction.",
+          "This guide breaks down auction vs private sale heavy equipment in practical terms so you can compare speed, pricing, marketing reach, risk, and complexity. If you want a trusted recommendation on when to use an auction, Jeff Martin Auctioneers can help evaluate the asset and suggest a sale strategy that fits your goals."
+        ],
+        "sections": [
+          {
+            "heading": "What\u2019s the real difference between auction and private sale for heavy equipment?",
+            "paragraphs": [
+              "The core difference is process. A private sale is typically one buyer, one negotiation, and a price that is agreed in advance. An auction places the asset in a competitive sales environment where multiple buyers can bid in a set time frame, creating urgency and market discovery.",
+              "For heavy equipment, that distinction matters. Cranes, attachments, trailers, and support equipment can attract very different buyer pools depending on the channel. A private sale may reward patience and a narrow target buyer, while an auction can be better when you want broad exposure, faster movement, and a defined closing date."
+            ],
+            "callout": "The best equipment resale strategy is not always the one with the highest hoped-for price. It is the one that matches your timeline, risk tolerance, and asset profile."
+          },
+          {
+            "heading": "When to use an auction for cranes and heavy equipment",
+            "paragraphs": [
+              "An auction is often the right choice when speed matters or when you have multiple assets to move at once. Sellers who need to free up yard space, reduce carrying costs, meet financing targets, or prepare for a fleet refresh often benefit from a structured auction timeline.",
+              "Auction can also be a strong fit when the asset is specialized but still has active demand. Cranes, rigging gear, transport equipment, and surplus support machinery may draw interest from contractors, dealers, and fleet buyers who are watching for value and ready to act quickly."
+            ],
+            "bullets": [
+              "You need a clear sale date and faster liquidation",
+              "You have several assets and want efficient disposition",
+              "The market for the equipment is broad enough to support competitive bidding",
+              "The asset is used, surplus, or replacement inventory rather than a highly tailored one-off machine",
+              "You want strong marketing reach without managing individual negotiations"
+            ]
+          },
+          {
+            "heading": "When a private sale may be the better fit",
+            "paragraphs": [
+              "A private sale can make sense when the equipment is highly specialized, the buyer pool is limited, or you already know a likely purchaser. In some cases, a controlled negotiation allows the seller to maintain more direct influence over timing, inspection, and contract terms.",
+              "Private sale vs auction equipment often comes down to certainty versus flexibility. If the asset has unusual specifications, a long remaining service life, or a known end user who values that exact configuration, a negotiated sale may be a better fit than opening it up to the broader market."
+            ],
+            "bullets": [
+              "You have a specific buyer already in discussion",
+              "The machine is highly customized or niche",
+              "You want more control over timing and terms",
+              "The asset may need technical explanation or extended negotiation",
+              "You can afford a longer marketing and closing cycle"
+            ]
+          },
+          {
+            "heading": "Key factors to compare: speed, pricing, marketing reach, condition, and risk",
+            "paragraphs": [
+              "Speed is usually the easiest factor to compare. If you need to sell heavy equipment at auction, the process is designed to move assets on a schedule. Private sales often take longer because each buyer conversation is separate and may involve multiple rounds of review, inspection, and negotiation.",
+              "Pricing certainty is more nuanced. A private sale can offer a negotiated price, but that does not always mean it is the best market outcome. An auction may produce a stronger result when demand is broad and the asset is well presented, but it also introduces market risk. Buyers bid based on the moment, the competition, and how the equipment is perceived on sale day."
+            ],
+            "bullets": [
+              "Speed: auctions are typically faster and more predictable on timing",
+              "Pricing certainty: private sales can set a negotiated price, while auctions rely on market response",
+              "Marketing reach: auctions can expose assets to a wider buyer base",
+              "Condition: equipment with clear service history and presentable condition can perform well in either channel",
+              "Risk: private sales can reduce market uncertainty, while auctions can reduce time-on-market risk"
+            ]
+          },
+          {
+            "heading": "How to decide on the best equipment resale strategy for your fleet",
+            "paragraphs": [
+              "The right equipment resale strategy starts with an honest read on the asset and the business need behind the sale. Ask whether your main goal is speed, maximum market exposure, reduced effort, or control over pricing and negotiations. Different goals point to different sale channels.",
+              "It also helps to think in terms of total cost, not just expected price. Storage, transportation, maintenance, insurance, inspection prep, and internal time all affect the final outcome. For many fleet managers and contractors, the better question is not only what the equipment might sell for, but which path clears it most efficiently and credibly."
+            ],
+            "callout": "Jeff Martin Auctioneers can help you compare channels, review asset condition, and recommend whether auction or private sale is the stronger fit for your situation."
+          },
+          {
+            "heading": "Common mistakes sellers make when choosing between private sale vs auction equipment",
+            "paragraphs": [
+              "One common mistake is overestimating how much time a private sale will save. If multiple buyers need to be sourced one at a time, the process can stretch longer than expected and create more internal workload than planned. Another mistake is assuming an auction is always a distressed path. In the right market, an auction can be a strategic, efficient sale method rather than a last resort.",
+              "Sellers also sometimes ignore the importance of preparation. Clear documentation, maintenance records, serial numbers, photos, and accurate asset descriptions matter in both channels. Without that information, even strong equipment can underperform because buyers do not have enough confidence to move quickly."
+            ],
+            "bullets": [
+              "Choosing a sale method before defining the goal",
+              "Ignoring carrying costs while waiting for a private buyer",
+              "Underpreparing the asset and marketing materials",
+              "Failing to account for the complexity of inspections, transport, and paperwork",
+              "Treating auction as a default instead of a strategic tool"
+            ]
+          },
+          {
+            "heading": "Talk to Jeff Martin Auctioneers for a sale recommendation and next-step valuation",
+            "paragraphs": [
+              "If you are weighing auction vs private sale heavy equipment, the best next step is a practical review of the asset and the market. Jeff Martin Auctioneers works with crane owners, dealers, contractors, fleet managers, and transport businesses to help determine whether an auction, a private sale, or a hybrid approach makes the most sense.",
+              "The team can discuss asset condition, timing, market exposure, and transaction complexity so you can move forward with a clearer plan. If you are ready to sell heavy equipment at auction or simply want a second opinion before listing privately, reach out for a valuation and sale strategy conversation."
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "question": "Is auction better than private sale for heavy equipment?",
+            "answer": "It depends on your goals. Auction is often better when you need speed, broad buyer reach, and a defined sale date. Private sale may be better if you already have a qualified buyer, want more direct control over negotiations, or have a highly specialized asset."
+          },
+          {
+            "question": "When should I use an auction for a crane or other heavy equipment asset?",
+            "answer": "Use an auction when you need to move equipment efficiently, reduce carrying costs, or expose the asset to a wide market of buyers. Auction is also a strong option when you have multiple units, surplus inventory, or equipment that is still attractive to active buyers but would be slow to place privately."
+          },
+          {
+            "question": "Can a private sale get a higher price than an auction?",
+            "answer": "Sometimes, yes. A private sale can work well if a specific buyer values the asset highly and the negotiation is strong. But that is not guaranteed. An auction can also achieve a strong result when demand is competitive and the equipment is well represented."
+          },
+          {
+            "question": "How do I choose the best equipment resale strategy?",
+            "answer": "Start with your timeline, asset condition, buyer demand, and the level of control you want over the process. Then compare total cost, market reach, and transaction complexity. Jeff Martin Auctioneers can help you assess those factors and recommend the most practical path."
+          }
+        ],
+        "cta": {
+          "title": "Need help choosing between auction and private sale?",
+          "body": "Talk with Jeff Martin Auctioneers for a clear recommendation based on your equipment, timeline, and sales goals. Whether you are considering an auction, a private sale, or just want a valuation and next-step plan, our team can help you move forward with confidence.",
+          "buttonLabel": "Contact Jeff Martin Auctioneers",
+          "buttonHref": "https://www.cranesauctions.com/contact"
+        },
+        "heroImageAlt": "View of a shipping yard with heavy machinery and industrial pipes under a cloudy sky."
+      },
       "final_review": {
         "checklist": [
           "Review final article quality and conversion alignment.",
@@ -263,10 +617,10 @@
         "meta_description": "Pending"
       },
       "activity": [
-        "Job status: brief_pending",
+        "Job status: final_approved",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T15:57:00+04:00",
-        "Last updated: 2026-05-22T07:49:47.969692+00:00",
+        "Last updated: 2026-05-22T13:54:59.096Z",
         "Planned publish date: 2026-05-25",
         "Snapshot generated from automation hub data"
       ],
@@ -348,7 +702,7 @@
         "Job status: new",
         "Site target: JMA Golf Carts",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-21T08:08:53.527539+00:00",
+        "Last updated: 2026-05-22T07:50:10.895615+00:00",
         "Planned publish date: 2026-05-27",
         "Snapshot generated from automation hub data"
       ],
@@ -430,7 +784,7 @@
         "Job status: new",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-21T08:08:53.527539+00:00",
+        "Last updated: 2026-05-22T07:50:10.895615+00:00",
         "Planned publish date: 2026-05-28",
         "Snapshot generated from automation hub data"
       ],
@@ -512,7 +866,7 @@
         "Job status: new",
         "Site target: JMA Golf Carts",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-21T08:08:53.527539+00:00",
+        "Last updated: 2026-05-22T07:50:10.895615+00:00",
         "Planned publish date: 2026-06-01",
         "Snapshot generated from automation hub data"
       ],
@@ -594,7 +948,7 @@
         "Job status: new",
         "Site target: JMA Golf Carts",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-21T08:08:53.527539+00:00",
+        "Last updated: 2026-05-22T07:50:10.895615+00:00",
         "Planned publish date: 2026-05-28",
         "Snapshot generated from automation hub data"
       ],
@@ -676,7 +1030,7 @@
         "Job status: new",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-21T08:08:53.527539+00:00",
+        "Last updated: 2026-05-22T07:50:10.895615+00:00",
         "Planned publish date: 2026-06-10",
         "Snapshot generated from automation hub data"
       ],
@@ -758,7 +1112,7 @@
         "Job status: new",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-21T08:08:53.527539+00:00",
+        "Last updated: 2026-05-22T07:50:10.895615+00:00",
         "Planned publish date: 2026-05-27",
         "Snapshot generated from automation hub data"
       ],
@@ -840,7 +1194,7 @@
         "Job status: new",
         "Site target: JMA Golf Carts",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-21T08:08:53.527539+00:00",
+        "Last updated: 2026-05-22T07:50:10.895615+00:00",
         "Planned publish date: 2026-06-03",
         "Snapshot generated from automation hub data"
       ],
@@ -922,7 +1276,7 @@
         "Job status: new",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-21T08:08:53.527539+00:00",
+        "Last updated: 2026-05-22T07:50:10.895615+00:00",
         "Planned publish date: 2026-05-29",
         "Snapshot generated from automation hub data"
       ],
@@ -1004,7 +1358,7 @@
         "Job status: new",
         "Site target: JMA Golf Carts",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-21T08:08:53.527539+00:00",
+        "Last updated: 2026-05-22T07:50:10.895615+00:00",
         "Planned publish date: 2026-06-17",
         "Snapshot generated from automation hub data"
       ],
@@ -1086,7 +1440,7 @@
         "Job status: new",
         "Site target: JMA Golf Carts",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-21T08:08:53.527539+00:00",
+        "Last updated: 2026-05-22T07:50:10.895615+00:00",
         "Planned publish date: 2026-05-29",
         "Snapshot generated from automation hub data"
       ],
@@ -1168,7 +1522,7 @@
         "Job status: new",
         "Site target: JMA Golf Carts",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-21T08:08:53.527539+00:00",
+        "Last updated: 2026-05-22T07:50:10.895615+00:00",
         "Planned publish date: 2026-06-05",
         "Snapshot generated from automation hub data"
       ],
@@ -1250,7 +1604,7 @@
         "Job status: new",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-21T08:08:53.527539+00:00",
+        "Last updated: 2026-05-22T07:50:10.895615+00:00",
         "Planned publish date: 2026-06-09",
         "Snapshot generated from automation hub data"
       ],
@@ -1332,7 +1686,7 @@
         "Job status: new",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-21T08:08:53.527539+00:00",
+        "Last updated: 2026-05-22T07:50:10.895615+00:00",
         "Planned publish date: 2026-06-01",
         "Snapshot generated from automation hub data"
       ],
@@ -1414,7 +1768,7 @@
         "Job status: new",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-21T08:08:53.527539+00:00",
+        "Last updated: 2026-05-22T07:50:10.895615+00:00",
         "Planned publish date: 2026-06-02",
         "Snapshot generated from automation hub data"
       ],
@@ -1496,7 +1850,7 @@
         "Job status: new",
         "Site target: JMA Golf Carts",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-21T08:08:53.527539+00:00",
+        "Last updated: 2026-05-22T07:50:10.895615+00:00",
         "Planned publish date: 2026-06-08",
         "Snapshot generated from automation hub data"
       ],
@@ -1578,7 +1932,7 @@
         "Job status: new",
         "Site target: JMA Golf Carts",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-21T08:08:53.527539+00:00",
+        "Last updated: 2026-05-22T07:50:10.895615+00:00",
         "Planned publish date: 2026-06-11",
         "Snapshot generated from automation hub data"
       ],
@@ -1660,7 +2014,7 @@
         "Job status: new",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-21T08:08:53.527539+00:00",
+        "Last updated: 2026-05-22T07:50:10.895615+00:00",
         "Planned publish date: 2026-06-15",
         "Snapshot generated from automation hub data"
       ],
@@ -1742,7 +2096,7 @@
         "Job status: new",
         "Site target: JMA Golf Carts",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-21T08:08:53.527539+00:00",
+        "Last updated: 2026-05-22T07:50:10.895615+00:00",
         "Planned publish date: 2026-06-02",
         "Snapshot generated from automation hub data"
       ],
@@ -1824,7 +2178,7 @@
         "Job status: new",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-21T08:08:53.527539+00:00",
+        "Last updated: 2026-05-22T07:50:10.895615+00:00",
         "Planned publish date: 2026-06-03",
         "Snapshot generated from automation hub data"
       ],
@@ -1906,7 +2260,7 @@
         "Job status: new",
         "Site target: JMA Golf Carts",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-21T08:08:53.527539+00:00",
+        "Last updated: 2026-05-22T07:50:10.895615+00:00",
         "Planned publish date: 2026-06-16",
         "Snapshot generated from automation hub data"
       ],
@@ -1988,7 +2342,7 @@
         "Job status: new",
         "Site target: JMA Golf Carts",
         "Created: 2026-05-19T16:00:00+04:00",
-        "Last updated: 2026-05-21T08:08:53.527539+00:00",
+        "Last updated: 2026-05-22T07:50:10.895615+00:00",
         "Planned publish date: 2026-05-26",
         "Snapshot generated from automation hub data"
       ],
@@ -2070,7 +2424,7 @@
         "Job status: new",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-21T08:08:53.527539+00:00",
+        "Last updated: 2026-05-22T07:50:10.895615+00:00",
         "Planned publish date: 2026-06-04",
         "Snapshot generated from automation hub data"
       ],
@@ -2152,7 +2506,7 @@
         "Job status: new",
         "Site target: JMA Golf Carts",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-21T08:08:53.527539+00:00",
+        "Last updated: 2026-05-22T07:50:10.895615+00:00",
         "Planned publish date: 2026-06-10",
         "Snapshot generated from automation hub data"
       ],
@@ -2234,7 +2588,7 @@
         "Job status: new",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-21T08:08:53.527539+00:00",
+        "Last updated: 2026-05-22T07:50:10.895615+00:00",
         "Planned publish date: 2026-06-12",
         "Snapshot generated from automation hub data"
       ],
@@ -2316,7 +2670,7 @@
         "Job status: new",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-21T08:08:53.527539+00:00",
+        "Last updated: 2026-05-22T07:50:10.895615+00:00",
         "Planned publish date: 2026-05-26",
         "Snapshot generated from automation hub data"
       ],
@@ -2398,7 +2752,7 @@
         "Job status: new",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-21T08:08:53.527539+00:00",
+        "Last updated: 2026-05-22T07:50:10.895615+00:00",
         "Planned publish date: 2026-06-08",
         "Snapshot generated from automation hub data"
       ],
@@ -2480,7 +2834,7 @@
         "Job status: new",
         "Site target: JMA Golf Carts",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-21T08:08:53.527539+00:00",
+        "Last updated: 2026-05-22T07:50:10.895615+00:00",
         "Planned publish date: 2026-06-09",
         "Snapshot generated from automation hub data"
       ],
@@ -2562,7 +2916,7 @@
         "Job status: new",
         "Site target: JMA Golf Carts",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-21T08:08:53.527539+00:00",
+        "Last updated: 2026-05-22T07:50:10.895615+00:00",
         "Planned publish date: 2026-06-04",
         "Snapshot generated from automation hub data"
       ],
@@ -2644,7 +2998,7 @@
         "Job status: new",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-21T08:08:53.527539+00:00",
+        "Last updated: 2026-05-22T07:50:10.895615+00:00",
         "Planned publish date: 2026-06-05",
         "Snapshot generated from automation hub data"
       ],
@@ -2726,7 +3080,7 @@
         "Job status: new",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-21T08:08:53.527539+00:00",
+        "Last updated: 2026-05-22T07:50:10.895615+00:00",
         "Planned publish date: 2026-06-11",
         "Snapshot generated from automation hub data"
       ],
@@ -2808,7 +3162,7 @@
         "Job status: new",
         "Site target: JMA Golf Carts",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-21T08:08:53.527539+00:00",
+        "Last updated: 2026-05-22T07:50:10.895615+00:00",
         "Planned publish date: 2026-06-12",
         "Snapshot generated from automation hub data"
       ],
@@ -2890,7 +3244,7 @@
         "Job status: new",
         "Site target: JMA Golf Carts",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-21T08:08:53.527539+00:00",
+        "Last updated: 2026-05-22T07:50:10.895615+00:00",
         "Planned publish date: 2026-06-15",
         "Snapshot generated from automation hub data"
       ],
@@ -2972,7 +3326,7 @@
         "Job status: new",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-21T08:08:53.527539+00:00",
+        "Last updated: 2026-05-22T07:50:10.895615+00:00",
         "Planned publish date: 2026-06-16",
         "Snapshot generated from automation hub data"
       ],
@@ -3054,7 +3408,7 @@
         "Job status: new",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-21T08:08:53.527539+00:00",
+        "Last updated: 2026-05-22T07:50:10.895615+00:00",
         "Planned publish date: 2026-06-17",
         "Snapshot generated from automation hub data"
       ],
@@ -3136,7 +3490,7 @@
         "Job status: new",
         "Site target: JMA Golf Carts",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-21T08:08:53.527539+00:00",
+        "Last updated: 2026-05-22T07:50:10.895615+00:00",
         "Planned publish date: 2026-06-18",
         "Snapshot generated from automation hub data"
       ],
@@ -3218,7 +3572,7 @@
         "Job status: new",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-21T08:08:53.527539+00:00",
+        "Last updated: 2026-05-22T07:50:10.895615+00:00",
         "Planned publish date: 2026-06-18",
         "Snapshot generated from automation hub data"
       ],
@@ -3303,7 +3657,19 @@
             "prompt": "Heavy equipment seller preparing a crane for listing, showing cleaning, inspection, and photo capture steps, credible B2B industrial style, sharp realistic details, visually supports keyword 'how to value a used crane'."
           }
         ],
-        "selected_images": []
+        "selected_images": [
+          {
+            "id": 33996166,
+            "alt": "Rusty steel pipes stacked outdoors with cranes and cloudy sky.",
+            "photographer": "Shuaizhi Tian",
+            "thumb": "https://images.pexels.com/photos/33996166/pexels-photo-33996166.jpeg?auto=compress&cs=tinysrgb&h=350",
+            "large": "https://images.pexels.com/photos/33996166/pexels-photo-33996166.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+            "original": "https://images.pexels.com/photos/33996166/pexels-photo-33996166.jpeg",
+            "width": 4032,
+            "height": 3024,
+            "pexels_url": "https://www.pexels.com/photo/industrial-yard-with-stacked-steel-pipes-and-cranes-33996166/"
+          }
+        ]
       },
       "draft": {
         "slug": "how-to-value-a-used-crane-before-selling",
@@ -3463,245 +3829,13 @@
         "Job status: final_pending",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T15:58:00+04:00",
-        "Last updated: 2026-05-22T07:49:43.944341+00:00",
+        "Last updated: 2026-05-22T07:53:42.052Z",
         "Planned publish date: 2026-05-22",
         "Snapshot generated from automation hub data"
       ],
       "publish": {
         "branch": "main",
         "path": "src/web/content/blog"
-      }
-    },
-    {
-      "job_id": "2026-05-19-jma-golfcarts-club-car-vs-ez-go-golf-cart",
-      "site_id": "jma-golfcarts",
-      "site_name": "JMA Golf Carts",
-      "topic": "Club Car vs EZGO golf cart",
-      "primary_keyword": "club car vs ez go golf cart",
-      "secondary_keywords": [
-        "club car vs ezgo comparison",
-        "best golf cart brand",
-        "used club car vs ezgo",
-        "golf cart brand comparison"
-      ],
-      "target_url": "/blog/brand-comparisons/club-car-vs-ezgo-golf-cart",
-      "target_audience": "Golf cart buyers comparing personal, utility, and fleet carts \u2022 Dealers looking to move multiple carts through a marketplace \u2022 Property owners and communities sourcing utility or street-legal carts \u2022 Businesses evaluating fleet and maintenance cart options \u2022 Sellers listing used golf carts online",
-      "status": "final_pending",
-      "priority": "medium",
-      "planned_publish_date": "2026-05-22",
-      "calendar_month": "2026-05-to-06",
-      "word_count": "1200 words",
-      "brief": {
-        "summary": "Create a practical, comparison-focused article that helps buyers decide between Club Car and EZGO golf carts based on build quality, ride comfort, maintenance, parts availability, resale value, customization potential, and best-use scenarios. Keep the tone helpful and marketplace-oriented, with clear guidance for shoppers considering new or used carts and a subtle lead-gen path to Jeff Martin Auctioneers for inventory browsing, auction listings, and direct inquiries. The piece should feel like a trusted buying guide rather than a brand fan article, and should end with conversion-oriented CTAs to view current carts or contact the team for help comparing options.",
-        "outline": [
-          "H1: Club Car vs EZGO Golf Cart: Which Brand Is Right for You?",
-          "H2: Quick Comparison Overview: Club Car vs EZGO at a Glance",
-          "H2: Build Quality, Ride Comfort, and Performance Differences",
-          "H2: Maintenance, Parts Availability, and Long-Term Ownership Costs",
-          "H2: Used Club Car vs EZGO: What to Check Before You Buy",
-          "H2: Which Is the Best Golf Cart Brand for Your Use Case?",
-          "H2: Club Car vs EZGO Comparison for Street-Legal, Utility, and Fleet Needs",
-          "H2: Where to Find Reliable Used Club Car and EZGO Listings"
-        ]
-      },
-      "seo_strategy": {
-        "search_intent": "Commercial investigation: users want to compare Club Car and EZGO before buying, often looking for the best golf cart brand, used-cart value, and practical ownership differences.",
-        "cluster": "Golf cart buying guides and brand comparisons",
-        "lead_goal": "buyer leads",
-        "opportunity_score": 84,
-        "opportunity_rationale": "Brand comparison content can capture strong decision-stage traffic and support conversions, but requires clearer differentiation to outperform existing comparison pages.",
-        "category_slug": "brand-comparisons",
-        "category_name": "Brand Comparisons",
-        "suggested_tags": [
-          "Club Car",
-          "EZGO",
-          "brand comparison",
-          "used golf carts",
-          "buying guide"
-        ],
-        "recommended_internal_link_types": [
-          "inventory and auction listing pages",
-          "contact and lead capture sections",
-          "brand and category landing pages"
-        ]
-      },
-      "image_plan": {
-        "status": "planned",
-        "items": [
-          {
-            "placement": "Featured image",
-            "asset_hint": "/hero.webp",
-            "query": "used golf cart marketplace listing outdoor realistic",
-            "prompt": "Realistic editorial photo of a used golf cart prepared for sale outdoors, clean daylight, trustworthy marketplace mood, no text overlay, visually supports the topic 'Club Car vs EZGO golf cart'."
-          },
-          {
-            "placement": "After section: Build Quality, Ride Comfort, and Performance Differences",
-            "asset_hint": "Prompt only",
-            "query": "golf cart inspection listing details realistic",
-            "prompt": "Detailed golf cart inspection scene with close-up listing details, service notes, and condition checks, natural light, realistic marketplace photography, no staged AI look, no text."
-          },
-          {
-            "placement": "After section: Maintenance, Parts Availability, and Long-Term Ownership Costs",
-            "asset_hint": "Prompt only",
-            "query": "cleaning golf cart for sale realistic",
-            "prompt": "Seller preparing a golf cart for online sale with cleaning, photo setup, and checklist steps visible, credible commercial style, realistic details, supports keyword 'club car vs ez go golf cart'."
-          }
-        ],
-        "selected_images": []
-      },
-      "draft": {
-        "slug": "club-car-vs-ezgo-golf-cart",
-        "title": "Club Car vs EZGO Golf Cart: Which Brand Is Right for You?",
-        "description": "Compare Club Car vs EZGO golf carts across build quality, ride comfort, maintenance, parts, resale value, and best-use scenarios so you can choose the right cart with confidence.",
-        "publishedAt": "2026-05-22",
-        "author": "Jeff Martin Auctioneers Editorial Team",
-        "readTime": "7 min read",
-        "category": "Brand Comparisons",
-        "tags": [
-          "Club Car",
-          "EZGO",
-          "brand comparison",
-          "used golf carts",
-          "buying guide"
-        ],
-        "heroImage": "/hero.webp",
-        "featured": false,
-        "seoTitle": "Club Car vs EZGO Golf Cart Comparison | Buyer\u2019s Guide",
-        "seoDescription": "Compare Club Car vs EZGO golf carts for build quality, ride comfort, maintenance, parts, resale value, and best-use scenarios. Shop smarter with Jeff Martin Auctioneers.",
-        "intro": [
-          "Choosing between a Club Car and an EZGO golf cart usually comes down to how you plan to use it, how much maintenance you want to take on, and what matters most in the long run. Both are well-known names in the golf cart market, but they tend to appeal to buyers in different ways.",
-          "This club car vs ez go golf cart guide breaks down the practical differences so you can compare value, comfort, parts support, and ownership costs before you buy new or used. If you want help finding current inventory or auction listings, Jeff Martin Auctioneers can help you compare options quickly and confidently."
-        ],
-        "sections": [
-          {
-            "heading": "Quick Comparison Overview: Club Car vs EZGO at a Glance",
-            "paragraphs": [
-              "A club car vs ezgo comparison is less about which brand is universally better and more about which one fits your priorities. Club Car is often associated with a solid ride, strong frame feel, and a reputation for long-term durability. EZGO is widely recognized for straightforward design, broad parts support, and a long history in golf and utility use.",
-              "For many shoppers, the best golf cart brand is the one that matches the way the cart will actually be used. If you care most about ride refinement and resale appeal, Club Car may stand out. If you want easy serviceability and a large pool of used options, EZGO is often a strong candidate."
-            ],
-            "bullets": [
-              "Club Car: commonly chosen for durability, ride quality, and resale strength",
-              "EZGO: often valued for simplicity, parts access, and broad market availability",
-              "Both brands offer gas and electric models in many configurations",
-              "The right choice depends on use case, age, and condition more than badge alone"
-            ]
-          },
-          {
-            "heading": "Build Quality, Ride Comfort, and Performance Differences",
-            "paragraphs": [
-              "When comparing Club Car vs EZGO golf cart models, build quality and ride feel are usually the first differences buyers notice. Club Car models are often praised for a more planted ride and a sturdy frame feel, which can matter on uneven paths, resort roads, or property routes. That said, model year and maintenance history matter just as much as brand name.",
-              "EZGO carts are known for practical design and dependable performance. Many buyers appreciate the simple layout, which can make ownership easier over time. For performance, the question is less about raw speed and more about whether the cart handles your terrain, payload, and route consistently."
-            ],
-            "callout": "If ride comfort is a top concern, compare the suspension feel, tire condition, and any lift or accessory modifications before focusing on brand alone."
-          },
-          {
-            "heading": "Maintenance, Parts Availability, and Long-Term Ownership Costs",
-            "paragraphs": [
-              "Maintenance is a major part of any golf cart brand comparison. EZGO models often appeal to buyers who want straightforward service and widely available parts. Club Car also has strong parts support, and many technicians are comfortable working on both brands, especially for common wear items like batteries, brakes, controllers, and steering components.",
-              "Long-term ownership costs depend on more than the logo on the body. Battery condition, charger compatibility, tire wear, age of the electrical system, and previous modifications all affect what you will spend after purchase. A well-kept used Club Car can cost less to own than a neglected EZGO, and the reverse can also be true."
-            ],
-            "bullets": [
-              "Check battery age and service history on electric carts",
-              "Ask about charger type and compatibility",
-              "Inspect brakes, steering, tires, and suspension wear",
-              "Review whether replacement parts are readily available for the exact model year"
-            ]
-          },
-          {
-            "heading": "Used Club Car vs EZGO: What to Check Before You Buy",
-            "paragraphs": [
-              "When shopping used Club Car vs EZGO carts, condition matters more than a simple brand preference. Look closely at the frame, body panels, battery tray, wiring, and undercarriage for rust, corrosion, cracks, or signs of poor repairs. A cart that has been rebuilt well can be a better value than a newer cart with hidden issues.",
-              "It also helps to evaluate how the cart was used. Fleet carts may have seen regular maintenance but heavy daily use, while private-owner carts may have lower hours but less consistent service records. Ask for maintenance notes, test-drive the cart if possible, and verify that the speed, braking, and charging system all work as expected."
-            ],
-            "bullets": [
-              "Inspect for corrosion, frame damage, and body repairs",
-              "Test drive for acceleration, stopping, steering, and noise",
-              "Ask whether the cart was used for golf, property work, or street use",
-              "Confirm title, registration, or ownership paperwork where applicable"
-            ]
-          },
-          {
-            "heading": "Which Is the Best Golf Cart Brand for Your Use Case?",
-            "paragraphs": [
-              "There is no single best golf cart brand for every buyer. Club Car is often a strong fit for buyers who want a refined ride, a durable feel, and a cart that may hold value well in the resale market. EZGO is often a smart choice for shoppers who want easy maintenance, broad parts access, and a wide range of used inventory to compare.",
-              "For personal use, either brand can be a great choice if the cart is in good condition and configured correctly. For property management, fleet use, or utility applications, serviceability and parts support may matter more than premium features. That is where model history and current condition should guide the decision."
-            ],
-            "bullets": [
-              "Choose Club Car if you prioritize ride comfort and resale appeal",
-              "Choose EZGO if you want straightforward service and broad used-market options",
-              "Let condition, configuration, and maintenance history guide the final decision",
-              "Match the cart to your terrain, payload, and daily operating needs"
-            ]
-          },
-          {
-            "heading": "Club Car vs EZGO Comparison for Street-Legal, Utility, and Fleet Needs",
-            "paragraphs": [
-              "For street-legal use, both brands can be converted or purchased in LSV-style configurations, depending on local rules and model availability. The better choice is the one that already has the right safety equipment, lighting, mirrors, tires, and documentation for your area. A strong base cart with proper upgrades is usually more important than brand name alone.",
-              "For utility and fleet applications, think about payload capacity, parts replacement, uptime, and ease of maintenance. Buyers sourcing multiple carts for communities, campuses, resorts, or businesses often benefit from buying a matched set or a well-documented group of carts rather than chasing individual brand preferences."
-            ],
-            "bullets": [
-              "Street-legal carts should be checked for local compliance requirements",
-              "Utility carts should be evaluated for cargo needs and durability",
-              "Fleet buyers should consider standardization for maintenance efficiency",
-              "Accessories and aftermarket support can affect total value"
-            ]
-          },
-          {
-            "heading": "Where to Find Reliable Used Club Car and EZGO Listings",
-            "paragraphs": [
-              "The easiest way to compare a club car vs ez go golf cart in the real world is to review current listings side by side. That lets you compare age, condition, accessories, and pricing context without guessing. Auction listings and marketplace inventory can be especially helpful because they show what is actually available now, not just what a brochure says.",
-              "Jeff Martin Auctioneers helps buyers, sellers, dealers, and businesses evaluate used carts with a transparent marketplace approach. If you are looking for current Club Car or EZGO inventory, direct auction opportunities, or help narrowing down the right cart for your needs, the team can help you move from research to action."
-            ],
-            "callout": "Looking for a practical next step? Review current listings, compare similar carts, and contact Jeff Martin Auctioneers for help finding the right fit."
-          }
-        ],
-        "faq": [
-          {
-            "question": "Is Club Car better than EZGO?",
-            "answer": "Neither brand is automatically better. Club Car is often favored for ride quality and resale appeal, while EZGO is often appreciated for simplicity, parts access, and broad availability. The better choice depends on the cart\u2019s condition and how you plan to use it."
-          },
-          {
-            "question": "Which brand is better for used golf carts?",
-            "answer": "For used carts, condition matters more than brand. A well-maintained used Club Car or EZGO can be a better purchase than a poorly cared-for newer cart. Always inspect batteries, frame, wiring, suspension, and service history before buying."
-          },
-          {
-            "question": "Are parts easier to find for Club Car or EZGO?",
-            "answer": "Both brands have strong parts support, and many common components are widely available. EZGO is often seen as especially straightforward to service, but Club Car parts are also easy to source for many popular models."
-          },
-          {
-            "question": "Which brand is best for a fleet or utility cart?",
-            "answer": "For fleet and utility use, the best option is usually the cart that offers the right mix of durability, serviceability, and parts availability for your operation. Either Club Car or EZGO can work well if the model fits your workload and maintenance plan."
-          }
-        ],
-        "cta": {
-          "title": "Compare Club Car and EZGO Carts with Confidence",
-          "body": "View current used golf cart listings, explore auction inventory, or contact Jeff Martin Auctioneers for help comparing Club Car vs EZGO options for personal, utility, fleet, or street-legal use.",
-          "buttonLabel": "Browse Listings",
-          "buttonHref": "/contact"
-        }
-      },
-      "final_review": {
-        "checklist": [
-          "Review final article quality and conversion alignment.",
-          "Complete manual plagiarism check before approving publish.",
-          "Confirm metadata and internal links look correct."
-        ],
-        "manual_plagiarism_status": "Pending manual review",
-        "flagged_sections_note": "",
-        "meta_title": "Pending",
-        "meta_description": "Pending"
-      },
-      "activity": [
-        "Job status: final_pending",
-        "Site target: JMA Golf Carts",
-        "Created: 2026-05-19T16:02:00+04:00",
-        "Last updated: 2026-05-22T07:50:06.198308+00:00",
-        "Planned publish date: 2026-05-22",
-        "Snapshot generated from automation hub data"
-      ],
-      "publish": {
-        "branch": "main",
-        "path": "src/content/blog/generated"
       }
     },
     {
@@ -3959,7 +4093,7 @@
         "Job status: published",
         "Site target: JMA Golf Carts",
         "Created: 2026-05-19T15:25:00+04:00",
-        "Last updated: 2026-05-21T08:08:53.527539+00:00",
+        "Last updated: 2026-05-22T07:50:10.895615+00:00",
         "Planned publish date: 2026-05-20",
         "Snapshot generated from automation hub data"
       ],
@@ -4238,7 +4372,7 @@
         "Job status: published",
         "Site target: CranesAuctions",
         "Created: 2026-05-18T22:10:00+04:00",
-        "Last updated: 2026-05-21T08:08:53.527539+00:00",
+        "Last updated: 2026-05-22T07:50:10.895615+00:00",
         "Snapshot generated from automation hub data"
       ],
       "publish": {
@@ -4515,7 +4649,7 @@
         "Job status: published",
         "Site target: JMA Golf Carts",
         "Created: 2026-05-19T15:59:00+04:00",
-        "Last updated: 2026-05-21T08:46:42.894Z",
+        "Last updated: 2026-05-22T07:50:10.895615+00:00",
         "Planned publish date: 2026-05-21",
         "Snapshot generated from automation hub data"
       ],
@@ -4787,7 +4921,7 @@
         "Job status: published",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T15:55:00+04:00",
-        "Last updated: 2026-05-21T08:08:53.527539+00:00",
+        "Last updated: 2026-05-22T07:50:10.895615+00:00",
         "Planned publish date: 2026-05-20",
         "Snapshot generated from automation hub data"
       ],
@@ -5071,13 +5205,257 @@
         "Job status: published",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T15:56:00+04:00",
-        "Last updated: 2026-05-21T08:41:09.885Z",
+        "Last updated: 2026-05-22T07:50:10.895615+00:00",
         "Planned publish date: 2026-05-21",
         "Snapshot generated from automation hub data"
       ],
       "publish": {
         "branch": "main",
         "path": "src/web/content/blog"
+      }
+    },
+    {
+      "job_id": "2026-05-19-jma-golfcarts-club-car-vs-ez-go-golf-cart",
+      "site_id": "jma-golfcarts",
+      "site_name": "JMA Golf Carts",
+      "topic": "Club Car vs EZGO golf cart",
+      "primary_keyword": "club car vs ez go golf cart",
+      "secondary_keywords": [
+        "club car vs ezgo comparison",
+        "best golf cart brand",
+        "used club car vs ezgo",
+        "golf cart brand comparison"
+      ],
+      "target_url": "/blog/brand-comparisons/club-car-vs-ezgo-golf-cart",
+      "target_audience": "Golf cart buyers comparing personal, utility, and fleet carts \u2022 Dealers looking to move multiple carts through a marketplace \u2022 Property owners and communities sourcing utility or street-legal carts \u2022 Businesses evaluating fleet and maintenance cart options \u2022 Sellers listing used golf carts online",
+      "status": "published",
+      "priority": "medium",
+      "planned_publish_date": "2026-05-22",
+      "calendar_month": "2026-05-to-06",
+      "word_count": "1200 words",
+      "brief": {
+        "summary": "Create a practical, comparison-focused article that helps buyers decide between Club Car and EZGO golf carts based on build quality, ride comfort, maintenance, parts availability, resale value, customization potential, and best-use scenarios. Keep the tone helpful and marketplace-oriented, with clear guidance for shoppers considering new or used carts and a subtle lead-gen path to Jeff Martin Auctioneers for inventory browsing, auction listings, and direct inquiries. The piece should feel like a trusted buying guide rather than a brand fan article, and should end with conversion-oriented CTAs to view current carts or contact the team for help comparing options.",
+        "outline": [
+          "H1: Club Car vs EZGO Golf Cart: Which Brand Is Right for You?",
+          "H2: Quick Comparison Overview: Club Car vs EZGO at a Glance",
+          "H2: Build Quality, Ride Comfort, and Performance Differences",
+          "H2: Maintenance, Parts Availability, and Long-Term Ownership Costs",
+          "H2: Used Club Car vs EZGO: What to Check Before You Buy",
+          "H2: Which Is the Best Golf Cart Brand for Your Use Case?",
+          "H2: Club Car vs EZGO Comparison for Street-Legal, Utility, and Fleet Needs",
+          "H2: Where to Find Reliable Used Club Car and EZGO Listings"
+        ]
+      },
+      "seo_strategy": {
+        "search_intent": "Commercial investigation: users want to compare Club Car and EZGO before buying, often looking for the best golf cart brand, used-cart value, and practical ownership differences.",
+        "cluster": "Golf cart buying guides and brand comparisons",
+        "lead_goal": "buyer leads",
+        "opportunity_score": 84,
+        "opportunity_rationale": "Brand comparison content can capture strong decision-stage traffic and support conversions, but requires clearer differentiation to outperform existing comparison pages.",
+        "category_slug": "brand-comparisons",
+        "category_name": "Brand Comparisons",
+        "suggested_tags": [
+          "Club Car",
+          "EZGO",
+          "brand comparison",
+          "used golf carts",
+          "buying guide"
+        ],
+        "recommended_internal_link_types": [
+          "inventory and auction listing pages",
+          "contact and lead capture sections",
+          "brand and category landing pages"
+        ]
+      },
+      "image_plan": {
+        "status": "planned",
+        "items": [
+          {
+            "placement": "Featured image",
+            "asset_hint": "/hero.webp",
+            "query": "used golf cart marketplace listing outdoor realistic",
+            "prompt": "Realistic editorial photo of a used golf cart prepared for sale outdoors, clean daylight, trustworthy marketplace mood, no text overlay, visually supports the topic 'Club Car vs EZGO golf cart'."
+          },
+          {
+            "placement": "After section: Build Quality, Ride Comfort, and Performance Differences",
+            "asset_hint": "Prompt only",
+            "query": "golf cart inspection listing details realistic",
+            "prompt": "Detailed golf cart inspection scene with close-up listing details, service notes, and condition checks, natural light, realistic marketplace photography, no staged AI look, no text."
+          },
+          {
+            "placement": "After section: Maintenance, Parts Availability, and Long-Term Ownership Costs",
+            "asset_hint": "Prompt only",
+            "query": "cleaning golf cart for sale realistic",
+            "prompt": "Seller preparing a golf cart for online sale with cleaning, photo setup, and checklist steps visible, credible commercial style, realistic details, supports keyword 'club car vs ez go golf cart'."
+          }
+        ],
+        "selected_images": [
+          {
+            "id": 9207084,
+            "alt": "A relaxing scene of family leisure with golf carts on a sunny golf course path.",
+            "photographer": "Mikhail Nilov",
+            "thumb": "https://images.pexels.com/photos/9207084/pexels-photo-9207084.jpeg?auto=compress&cs=tinysrgb&h=350",
+            "large": "https://images.pexels.com/photos/9207084/pexels-photo-9207084.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+            "original": "https://images.pexels.com/photos/9207084/pexels-photo-9207084.jpeg",
+            "width": 5558,
+            "height": 3705,
+            "pexels_url": "https://www.pexels.com/photo/golf-carts-on-concrete-pathway-9207084/"
+          }
+        ]
+      },
+      "draft": {
+        "slug": "club-car-vs-ezgo-golf-cart",
+        "title": "Club Car vs EZGO Golf Cart: Which Brand Is Right for You?",
+        "description": "Compare Club Car vs EZGO golf carts across build quality, ride comfort, maintenance, parts, resale value, and best-use scenarios so you can choose the right cart with confidence.",
+        "publishedAt": "2026-05-22",
+        "author": "Jeff Martin Auctioneers Editorial Team",
+        "readTime": "7 min read",
+        "category": "Brand Comparisons",
+        "tags": [
+          "Club Car",
+          "EZGO",
+          "brand comparison",
+          "used golf carts",
+          "buying guide"
+        ],
+        "heroImage": "/hero.webp",
+        "featured": false,
+        "seoTitle": "Club Car vs EZGO Golf Cart Comparison | Buyer\u2019s Guide",
+        "seoDescription": "Compare Club Car vs EZGO golf carts for build quality, ride comfort, maintenance, parts, resale value, and best-use scenarios. Shop smarter with Jeff Martin Auctioneers.",
+        "intro": [
+          "Choosing between a Club Car and an EZGO golf cart usually comes down to how you plan to use it, how much maintenance you want to take on, and what matters most in the long run. Both are well-known names in the golf cart market, but they tend to appeal to buyers in different ways.",
+          "This club car vs ez go golf cart guide breaks down the practical differences so you can compare value, comfort, parts support, and ownership costs before you buy new or used. If you want help finding current inventory or auction listings, Jeff Martin Auctioneers can help you compare options quickly and confidently."
+        ],
+        "sections": [
+          {
+            "heading": "Quick Comparison Overview: Club Car vs EZGO at a Glance",
+            "paragraphs": [
+              "A club car vs ezgo comparison is less about which brand is universally better and more about which one fits your priorities. Club Car is often associated with a solid ride, strong frame feel, and a reputation for long-term durability. EZGO is widely recognized for straightforward design, broad parts support, and a long history in golf and utility use.",
+              "For many shoppers, the best golf cart brand is the one that matches the way the cart will actually be used. If you care most about ride refinement and resale appeal, Club Car may stand out. If you want easy serviceability and a large pool of used options, EZGO is often a strong candidate."
+            ],
+            "bullets": [
+              "Club Car: commonly chosen for durability, ride quality, and resale strength",
+              "EZGO: often valued for simplicity, parts access, and broad market availability",
+              "Both brands offer gas and electric models in many configurations",
+              "The right choice depends on use case, age, and condition more than badge alone"
+            ]
+          },
+          {
+            "heading": "Build Quality, Ride Comfort, and Performance Differences",
+            "paragraphs": [
+              "When comparing Club Car vs EZGO golf cart models, build quality and ride feel are usually the first differences buyers notice. Club Car models are often praised for a more planted ride and a sturdy frame feel, which can matter on uneven paths, resort roads, or property routes. That said, model year and maintenance history matter just as much as brand name.",
+              "EZGO carts are known for practical design and dependable performance. Many buyers appreciate the simple layout, which can make ownership easier over time. For performance, the question is less about raw speed and more about whether the cart handles your terrain, payload, and route consistently."
+            ],
+            "callout": "If ride comfort is a top concern, compare the suspension feel, tire condition, and any lift or accessory modifications before focusing on brand alone."
+          },
+          {
+            "heading": "Maintenance, Parts Availability, and Long-Term Ownership Costs",
+            "paragraphs": [
+              "Maintenance is a major part of any golf cart brand comparison. EZGO models often appeal to buyers who want straightforward service and widely available parts. Club Car also has strong parts support, and many technicians are comfortable working on both brands, especially for common wear items like batteries, brakes, controllers, and steering components.",
+              "Long-term ownership costs depend on more than the logo on the body. Battery condition, charger compatibility, tire wear, age of the electrical system, and previous modifications all affect what you will spend after purchase. A well-kept used Club Car can cost less to own than a neglected EZGO, and the reverse can also be true."
+            ],
+            "bullets": [
+              "Check battery age and service history on electric carts",
+              "Ask about charger type and compatibility",
+              "Inspect brakes, steering, tires, and suspension wear",
+              "Review whether replacement parts are readily available for the exact model year"
+            ]
+          },
+          {
+            "heading": "Used Club Car vs EZGO: What to Check Before You Buy",
+            "paragraphs": [
+              "When shopping used Club Car vs EZGO carts, condition matters more than a simple brand preference. Look closely at the frame, body panels, battery tray, wiring, and undercarriage for rust, corrosion, cracks, or signs of poor repairs. A cart that has been rebuilt well can be a better value than a newer cart with hidden issues.",
+              "It also helps to evaluate how the cart was used. Fleet carts may have seen regular maintenance but heavy daily use, while private-owner carts may have lower hours but less consistent service records. Ask for maintenance notes, test-drive the cart if possible, and verify that the speed, braking, and charging system all work as expected."
+            ],
+            "bullets": [
+              "Inspect for corrosion, frame damage, and body repairs",
+              "Test drive for acceleration, stopping, steering, and noise",
+              "Ask whether the cart was used for golf, property work, or street use",
+              "Confirm title, registration, or ownership paperwork where applicable"
+            ]
+          },
+          {
+            "heading": "Which Is the Best Golf Cart Brand for Your Use Case?",
+            "paragraphs": [
+              "There is no single best golf cart brand for every buyer. Club Car is often a strong fit for buyers who want a refined ride, a durable feel, and a cart that may hold value well in the resale market. EZGO is often a smart choice for shoppers who want easy maintenance, broad parts access, and a wide range of used inventory to compare.",
+              "For personal use, either brand can be a great choice if the cart is in good condition and configured correctly. For property management, fleet use, or utility applications, serviceability and parts support may matter more than premium features. That is where model history and current condition should guide the decision."
+            ],
+            "bullets": [
+              "Choose Club Car if you prioritize ride comfort and resale appeal",
+              "Choose EZGO if you want straightforward service and broad used-market options",
+              "Let condition, configuration, and maintenance history guide the final decision",
+              "Match the cart to your terrain, payload, and daily operating needs"
+            ]
+          },
+          {
+            "heading": "Club Car vs EZGO Comparison for Street-Legal, Utility, and Fleet Needs",
+            "paragraphs": [
+              "For street-legal use, both brands can be converted or purchased in LSV-style configurations, depending on local rules and model availability. The better choice is the one that already has the right safety equipment, lighting, mirrors, tires, and documentation for your area. A strong base cart with proper upgrades is usually more important than brand name alone.",
+              "For utility and fleet applications, think about payload capacity, parts replacement, uptime, and ease of maintenance. Buyers sourcing multiple carts for communities, campuses, resorts, or businesses often benefit from buying a matched set or a well-documented group of carts rather than chasing individual brand preferences."
+            ],
+            "bullets": [
+              "Street-legal carts should be checked for local compliance requirements",
+              "Utility carts should be evaluated for cargo needs and durability",
+              "Fleet buyers should consider standardization for maintenance efficiency",
+              "Accessories and aftermarket support can affect total value"
+            ]
+          },
+          {
+            "heading": "Where to Find Reliable Used Club Car and EZGO Listings",
+            "paragraphs": [
+              "The easiest way to compare a club car vs ez go golf cart in the real world is to review current listings side by side. That lets you compare age, condition, accessories, and pricing context without guessing. Auction listings and marketplace inventory can be especially helpful because they show what is actually available now, not just what a brochure says.",
+              "Jeff Martin Auctioneers helps buyers, sellers, dealers, and businesses evaluate used carts with a transparent marketplace approach. If you are looking for current Club Car or EZGO inventory, direct auction opportunities, or help narrowing down the right cart for your needs, the team can help you move from research to action."
+            ],
+            "callout": "Looking for a practical next step? Review current listings, compare similar carts, and contact Jeff Martin Auctioneers for help finding the right fit."
+          }
+        ],
+        "faq": [
+          {
+            "question": "Is Club Car better than EZGO?",
+            "answer": "Neither brand is automatically better. Club Car is often favored for ride quality and resale appeal, while EZGO is often appreciated for simplicity, parts access, and broad availability. The better choice depends on the cart\u2019s condition and how you plan to use it."
+          },
+          {
+            "question": "Which brand is better for used golf carts?",
+            "answer": "For used carts, condition matters more than brand. A well-maintained used Club Car or EZGO can be a better purchase than a poorly cared-for newer cart. Always inspect batteries, frame, wiring, suspension, and service history before buying."
+          },
+          {
+            "question": "Are parts easier to find for Club Car or EZGO?",
+            "answer": "Both brands have strong parts support, and many common components are widely available. EZGO is often seen as especially straightforward to service, but Club Car parts are also easy to source for many popular models."
+          },
+          {
+            "question": "Which brand is best for a fleet or utility cart?",
+            "answer": "For fleet and utility use, the best option is usually the cart that offers the right mix of durability, serviceability, and parts availability for your operation. Either Club Car or EZGO can work well if the model fits your workload and maintenance plan."
+          }
+        ],
+        "cta": {
+          "title": "Compare Club Car and EZGO Carts with Confidence",
+          "body": "View current used golf cart listings, explore auction inventory, or contact Jeff Martin Auctioneers for help comparing Club Car vs EZGO options for personal, utility, fleet, or street-legal use.",
+          "buttonLabel": "Browse Listings",
+          "buttonHref": "/contact"
+        }
+      },
+      "final_review": {
+        "checklist": [
+          "Review final article quality and conversion alignment.",
+          "Complete manual plagiarism check before approving publish.",
+          "Confirm metadata and internal links look correct."
+        ],
+        "manual_plagiarism_status": "Passed",
+        "flagged_sections_note": "Content is 98% unique.",
+        "meta_title": "Pending",
+        "meta_description": "Pending"
+      },
+      "activity": [
+        "Job status: published",
+        "Site target: JMA Golf Carts",
+        "Created: 2026-05-19T16:02:00+04:00",
+        "Last updated: 2026-05-22T14:14:26.552048+00:00",
+        "Planned publish date: 2026-05-22",
+        "Snapshot generated from automation hub data"
+      ],
+      "publish": {
+        "branch": "main",
+        "path": "src/content/blog/generated"
       }
     }
   ]
