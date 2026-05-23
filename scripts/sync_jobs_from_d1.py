@@ -9,13 +9,26 @@ from _env import load_dotenv
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 JOBS_DIR = REPO_ROOT / "data" / "jobs"
+SITES_DIR = REPO_ROOT / "config" / "sites"
+
+
+def load_sites() -> dict[str, dict]:
+    sites: dict[str, dict] = {}
+    for path in SITES_DIR.glob("*.json"):
+        if path.is_file() and not path.name.endswith(".example.json"):
+            payload = json.loads(path.read_text())
+            sites[payload["site_id"]] = payload
+    return sites
 
 
 def sync_jobs_from_d1() -> list[str]:
+    sites = load_sites()
     rows = d1_query(
         """
         SELECT
           job_id,
+          site_id,
+          target_url,
           status,
           manual_plagiarism_status,
           flagged_sections_note,
@@ -59,6 +72,16 @@ def sync_jobs_from_d1() -> list[str]:
         draft_json = row.get("draft_json")
         if draft_json:
             payload["draft"] = json.loads(draft_json)
+
+        if payload.get("status") == "published":
+            site = sites.get(payload.get("site_id") or row.get("site_id"))
+            target_url = payload.get("target_url") or row.get("target_url")
+            if site and target_url:
+                live_url = f"{site['site_url'].rstrip('/')}{target_url}"
+                payload.setdefault("publish", {})
+                payload["publish"]["live_url"] = live_url
+                payload.setdefault("publish_result", {})
+                payload["publish_result"]["live_url"] = live_url
 
         path.write_text(json.dumps(payload, indent=2) + "\n")
         updated_job_ids.append(job_id)

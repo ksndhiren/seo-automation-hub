@@ -13,6 +13,7 @@
   "image_path": "public/blog",
   "content_model_status": "proposed",
   "lead_generation_brand": "Jeff Martin Auctioneers",
+  "cta_url": "https://www.cranesauctions.com/#connect",
   "brand_guidelines": {
     "tone": "Experienced crane marketplace specialists who make buying, selling, and auctioning equipment feel credible, straightforward, and well-supported.",
     "lead_generation_context": "This micro-site exists to generate qualified leads for Jeff Martin Auctioneers. Content should position Jeff Martin Auctioneers as the real auction and advisory brand behind the experience, especially in CTAs, contact language, and trust-building references.",
@@ -70,9 +71,9 @@
   "internal_link_rules": {
     "max_suggested_links": 5,
     "preferred_destinations": [
-      "equipment category pages",
-      "contact and lead capture sections",
-      "auction-related landing pages"
+      "connect and lead registration sections",
+      "auction inventory and equipment category pages",
+      "auction-related landing pages that move buyers or sellers toward inquiry"
     ]
   },
   "notes": [

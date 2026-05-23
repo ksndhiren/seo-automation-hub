@@ -13,6 +13,7 @@ const SITE_CONFIGS = {
   "cranes-auctions": {
     siteName: "CranesAuctions",
     siteUrl: "https://www.cranesauctions.com/",
+    ctaUrl: "https://www.cranesauctions.com/#connect",
     leadGenerationBrand: "Jeff Martin Auctioneers",
     tone:
       "Experienced crane marketplace specialists who make buying, selling, and auctioning equipment feel credible, straightforward, and well-supported.",
@@ -36,6 +37,7 @@ const SITE_CONFIGS = {
   "jma-golfcarts": {
     siteName: "JMA Golf Carts",
     siteUrl: "https://www.jmagolfcarts.com/",
+    ctaUrl: "https://www.jmagolfcarts.com/#buyer-register",
     leadGenerationBrand: "Jeff Martin Auctioneers",
     tone:
       "Practical golf cart marketplace specialists who make buying, selling, and comparing carts feel simple, transparent, and trustworthy.",
@@ -89,6 +91,7 @@ export async function generateDraftForApprovedBrief(context, reviewRow) {
   const userPrompt = `
 Site name: ${site.siteName}
 Site URL: ${site.siteUrl}
+CTA destination URL: ${site.ctaUrl}
 Lead generation brand: ${site.leadGenerationBrand}
 Brand tone: ${site.tone}
 Lead generation context: ${site.leadGenerationContext}
@@ -121,6 +124,8 @@ Rules:
 - Use the category from seo_strategy where possible.
 - The CTA and conversion language should name Jeff Martin Auctioneers as the trusted contact brand behind the micro-site whenever a company name is used.
 - Do not make the microsite itself the speaking auction brand in CTA copy if Jeff Martin Auctioneers should be the named contact.
+- Set cta.buttonHref exactly to the CTA destination URL provided above.
+- Keep conversion intent strong. When the article references internal navigation or next steps, prioritize registration, connect, inquiry, or lead-capture destinations ahead of generic browsing paths.
 - Do not include markdown fences.
 - Do not include any extra keys.
 `;
@@ -206,6 +211,7 @@ export async function reviseBriefFromFeedback(context, reviewRow, reviewerNote) 
   const userPrompt = `
 Site name: ${site.siteName}
 Site URL: ${site.siteUrl}
+CTA destination URL: ${site.ctaUrl}
 Lead generation brand: ${site.leadGenerationBrand}
 Brand tone: ${site.tone}
 Lead generation context: ${site.leadGenerationContext}
@@ -230,6 +236,11 @@ Return a JSON object with exactly these keys:
 - suggested_tags: array of 3 to 6 strings
 - recommended_internal_link_types: array of 3 to 5 strings
 - target_word_count: integer
+
+Rules:
+- recommended_internal_link_types must prioritize lead-generation paths first.
+- The first recommended_internal_link_types item must be the site's primary registration, connect, or lead capture destination type.
+- Secondary internal link suggestions can support inventory, category, and landing-page discovery, but should not outrank the lead-generation path.
 `;
 
   const result = await callOpenAIJson({
@@ -313,6 +324,10 @@ Return a JSON object with exactly these keys:
 - sections: array of objects with keys heading (string), paragraphs (array of 2 strings minimum), optional bullets (array of strings), optional callout (string)
 - faq: array of 2 to 4 objects with keys question and answer
 - cta: object with keys title, body, buttonLabel, buttonHref
+
+Rules:
+- Preserve the CTA destination by setting cta.buttonHref exactly to the CTA destination URL provided above.
+- When revising any internal navigation or next-step language, prioritize registration, connect, inquiry, or lead-capture destinations ahead of generic browsing paths.
 `;
 
   const result = await callOpenAIJson({

@@ -54,12 +54,18 @@ def sync_dashboard_jobs_to_d1() -> int:
     for job in jobs:
         existing = existing_rows.get(job["job_id"], {})
         existing_updated_at = parse_iso(existing.get("updated_at"))
+        existing_status = existing.get("status")
+        local_status = job.get("status")
         preserve_dashboard_state = bool(
             existing
             and existing_updated_at
             and local_generated_at
             and existing_updated_at > local_generated_at
         )
+        # Never let a stale local snapshot downgrade a job that is already
+        # terminal in D1.
+        if existing_status == "published" and local_status != "published":
+            preserve_dashboard_state = True
 
         status = (
             existing.get("status", job["status"])

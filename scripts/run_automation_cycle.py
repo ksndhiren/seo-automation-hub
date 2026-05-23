@@ -247,6 +247,7 @@ def generate_brief(job: dict, site: dict) -> dict:
 Site name: {site['site_name']}
 Site URL: {site.get('site_url', '')}
 Lead generation brand: {site.get('lead_generation_brand', '')}
+CTA destination URL: {site.get('cta_url', '')}
 Brand tone: {site.get('brand_guidelines', {}).get('tone', '')}
 Lead generation context: {site.get('brand_guidelines', {}).get('lead_generation_context', '')}
 Audience: {json.dumps(site.get('brand_guidelines', {}).get('audience', []))}
@@ -268,6 +269,11 @@ Return a JSON object with exactly these keys:
 - suggested_tags: array of 3 to 6 strings
 - recommended_internal_link_types: array of 3 to 5 strings
 - target_word_count: integer
+
+Rules:
+- recommended_internal_link_types must prioritize lead-generation paths first.
+- The first recommended_internal_link_types item must be the site's primary registration, connect, or lead capture destination type.
+- Secondary internal link suggestions can support inventory, category, and landing-page discovery, but should not outrank the lead-generation path.
 """
 
     result = call_openai_json(
@@ -337,6 +343,8 @@ Rules:
 - Use the category from seo_strategy where possible.
 - The CTA and conversion language should name Jeff Martin Auctioneers as the trusted contact brand behind the micro-site whenever a company name is used.
 - Do not make the microsite itself the speaking auction brand in CTA copy if Jeff Martin Auctioneers should be the named contact.
+- Keep conversion intent strong. When the article references internal navigation or next steps, prioritize registration, connect, inquiry, or lead-capture destinations ahead of generic browsing paths.
+- Set cta.buttonHref exactly to the CTA destination URL provided above.
 - Do not include markdown fences.
 - Do not include any extra keys.
 """
