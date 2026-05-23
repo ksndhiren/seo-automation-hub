@@ -224,6 +224,24 @@ function renderPerformance(site) {
   const overview = sitePerformance.overview || {};
   const pages = sitePerformance.top_blog_pages || [];
   const events = sitePerformance.events || [];
+  const eventLegend = [
+    {
+      name: "cta_click",
+      description: "Clicks on blog CTA buttons and key homepage CTA buttons.",
+    },
+    {
+      name: "registration_start",
+      description: "Registration-intent CTA clicks that send a visitor toward buyer signup.",
+    },
+    {
+      name: "registration_complete",
+      description: "Successful buyer registration form submissions.",
+    },
+    {
+      name: "contact_click",
+      description: "Seller/contact form submissions plus tracked phone or email contact actions.",
+    },
+  ];
 
   el.performanceSummary.innerHTML = `
     <div class="performance-meta">
@@ -284,6 +302,23 @@ function renderPerformance(site) {
               .join("")
           : `<p class="muted">No tracked CTA or registration events have appeared in GA4 yet.</p>`
       }
+    </div>
+    <div class="performance-legend">
+      <div class="performance-section-head">
+        <h4>Event legend</h4>
+      </div>
+      <div class="performance-legend-list">
+        ${eventLegend
+          .map(
+            (item) => `
+              <div class="performance-legend-item">
+                <strong>${escapeHtml(item.name)}</strong>
+                <p>${escapeHtml(item.description)}</p>
+              </div>
+            `,
+          )
+          .join("")}
+      </div>
     </div>
   `;
 }

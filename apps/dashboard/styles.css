@@ -291,6 +291,37 @@ select {
   gap: 10px;
 }
 
+.performance-legend {
+  display: grid;
+  gap: 10px;
+}
+
+.performance-legend-list {
+  display: grid;
+  gap: 10px;
+}
+
+.performance-legend-item {
+  padding: 14px 16px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.performance-legend-item strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 0.92rem;
+  color: var(--text);
+}
+
+.performance-legend-item p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
 .event-chip {
   display: inline-flex;
   align-items: center;
