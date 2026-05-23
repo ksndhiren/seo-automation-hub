@@ -1,0 +1,36 @@
+{
+  "generated_at": "2026-05-23T19:32:26.750317+00:00",
+  "source": "ga4",
+  "sites": [
+    {
+      "site_id": "cranes-auctions",
+      "site_name": "CranesAuctions",
+      "property_id": "538033489",
+      "overview": {
+        "sessions": "14",
+        "activeUsers": "12",
+        "screenPageViews": "13",
+        "engagedSessions": "3",
+        "engagementRate": "0.21428571428571427",
+        "averageSessionDuration": "71.912208428571418"
+      },
+      "top_blog_pages": [],
+      "events": []
+    },
+    {
+      "site_id": "jma-golfcarts",
+      "site_name": "JMA Golf Carts",
+      "property_id": "538046014",
+      "overview": {
+        "sessions": "22",
+        "activeUsers": "19",
+        "screenPageViews": "23",
+        "engagedSessions": "6",
+        "engagementRate": "0.27272727272727271",
+        "averageSessionDuration": "127.72915663636363"
+      },
+      "top_blog_pages": [],
+      "events": []
+    }
+  ]
+}

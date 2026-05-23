@@ -9,6 +9,8 @@ coverage
 
 # runtime output
 tmp/
+keys/
+data/runs/*.json
 
 # keep data folder structure, but ignore generated records if desired later
 data/jobs/*.generated.json

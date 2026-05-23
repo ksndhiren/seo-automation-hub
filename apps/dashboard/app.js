@@ -30,8 +30,13 @@ const el = {
   planningSiteContext: document.getElementById("planning-site-context"),
   planningOverviewView: document.getElementById("planning-overview-view"),
   planningCalendarView: document.getElementById("planning-calendar-view"),
+  planningPerformanceView: document.getElementById("planning-performance-view"),
   planningViewOverviewButton: document.getElementById("planning-view-overview"),
   planningViewCalendarButton: document.getElementById("planning-view-calendar"),
+  planningViewPerformanceButton: document.getElementById("planning-view-performance"),
+  performanceSummary: document.getElementById("performance-summary"),
+  performancePages: document.getElementById("performance-pages"),
+  performanceEvents: document.getElementById("performance-events"),
 };
 
 const tabs = Array.from(document.querySelectorAll(".tab"));
@@ -90,6 +95,11 @@ function bindEvents() {
 
   el.planningViewCalendarButton.addEventListener("click", () => {
     activePlanningView = "calendar";
+    updatePlanningViews();
+  });
+
+  el.planningViewPerformanceButton.addEventListener("click", () => {
+    activePlanningView = "performance";
     updatePlanningViews();
   });
 
@@ -189,7 +199,93 @@ function renderPlanningBoard() {
   renderClusterMap(jobs);
   renderUrlFramework(primarySite);
   renderContentCalendar(jobs);
+  renderPerformance(primarySite);
   updatePlanningViews();
+}
+
+function renderPerformance(site) {
+  const performance = dashboardState.performance || { sites: [], source: "pending-oauth" };
+  const sitePerformance =
+    performance.sites?.find((item) => item.site_id === (selectedSiteId === "all" ? site?.site_id : selectedSiteId))
+    || performance.sites?.[0];
+
+  if (!sitePerformance) {
+    el.performanceSummary.innerHTML = `
+      <div class="empty-state compact-empty">
+        <strong>GA4 is not connected yet.</strong>
+        <p>Run the Google OAuth bootstrap once, then fetch the GA4 snapshot to populate site performance here.</p>
+      </div>
+    `;
+    el.performancePages.innerHTML = "";
+    el.performanceEvents.innerHTML = "";
+    return;
+  }
+
+  const overview = sitePerformance.overview || {};
+  const pages = sitePerformance.top_blog_pages || [];
+  const events = sitePerformance.events || [];
+
+  el.performanceSummary.innerHTML = `
+    <div class="performance-meta">
+      <span class="meta-chip meta-chip-soft">${escapeHtml(sitePerformance.site_name)}</span>
+      <span class="meta-chip meta-chip-soft">GA4 property ${escapeHtml(String(sitePerformance.property_id || ""))}</span>
+      <span class="meta-chip meta-chip-soft">Updated ${escapeHtml(formatDateTime(dashboardState.performance.generated_at || ""))}</span>
+    </div>
+    <div class="performance-metrics">
+      ${performanceMetric("Sessions (28d)", formatNumber(overview.sessions))}
+      ${performanceMetric("Users (28d)", formatNumber(overview.activeUsers))}
+      ${performanceMetric("Page views (28d)", formatNumber(overview.screenPageViews))}
+      ${performanceMetric("Engagement rate", formatPercent(overview.engagementRate))}
+      ${performanceMetric("Avg. session", formatDuration(overview.averageSessionDuration))}
+    </div>
+  `;
+
+  el.performancePages.innerHTML = `
+    <div class="performance-section-head">
+      <h4>Top blog pages</h4>
+    </div>
+    <div class="performance-table">
+      ${
+        pages.length
+          ? pages
+              .map(
+                (row) => `
+                <div class="performance-row">
+                  <div class="performance-path">${escapeHtml(row.pagePath || "")}</div>
+                  <div>${formatNumber(row.screenPageViews)}</div>
+                  <div>${formatNumber(row.sessions)}</div>
+                  <div>${formatNumber(row.activeUsers)}</div>
+                  <div>${formatPercent(row.engagementRate)}</div>
+                </div>
+              `,
+              )
+              .join("")
+          : `<p class="muted">No blog page metrics available yet.</p>`
+      }
+    </div>
+  `;
+
+  el.performanceEvents.innerHTML = `
+    <div class="performance-section-head">
+      <h4>Lead events</h4>
+    </div>
+    <div class="performance-events-list">
+      ${
+        events.length
+          ? events
+              .map(
+                (row) => `
+                <div class="event-chip">
+                  <span>${escapeHtml(row.eventName || "")}</span>
+                  <strong>${formatNumber(row.eventCount)}</strong>
+                </div>
+              `,
+              )
+              .join("")
+          : `<p class="muted">No tracked CTA or registration events have appeared in GA4 yet.</p>`
+      }
+    </div>
+  `;
 }
 
 function renderCategoryPipeline(site, jobs) {
@@ -414,10 +510,44 @@ function renderCalendarEvent(job) {
 
 function updatePlanningViews() {
   const isOverview = activePlanningView === "overview";
+  const isCalendar = activePlanningView === "calendar";
+  const isPerformance = activePlanningView === "performance";
   el.planningOverviewView.classList.toggle("active", isOverview);
-  el.planningCalendarView.classList.toggle("active", !isOverview);
+  el.planningCalendarView.classList.toggle("active", isCalendar);
+  el.planningPerformanceView.classList.toggle("active", isPerformance);
   el.planningViewOverviewButton.classList.toggle("active", isOverview);
-  el.planningViewCalendarButton.classList.toggle("active", !isOverview);
+  el.planningViewCalendarButton.classList.toggle("active", isCalendar);
+  el.planningViewPerformanceButton.classList.toggle("active", isPerformance);
+}
+
+function performanceMetric(label, value) {
+  return `
+    <article class="summary-card performance-metric-card">
+      <span class="summary-label">${escapeHtml(label)}</span>
+      <strong class="summary-value">${escapeHtml(String(value || "—"))}</strong>
+    </article>
+  `;
+}
+
+function formatNumber(value) {
+  const num = Number(value);
+  if (!Number.isFinite(num)) return "—";
+  return new Intl.NumberFormat().format(num);
+}
+
+function formatPercent(value) {
+  const num = Number(value);
+  if (!Number.isFinite(num)) return "—";
+  return `${(num * 100).toFixed(1)}%`;
+}
+
+function formatDuration(value) {
+  const num = Number(value);
+  if (!Number.isFinite(num)) return "—";
+  const minutes = Math.floor(num / 60);
+  const seconds = Math.round(num % 60);
+  if (!minutes) return `${seconds}s`;
+  return `${minutes}m ${seconds}s`;
 }
 
 function renderFilters() {

@@ -39,6 +39,9 @@ export async function onRequestGet(context) {
   const dataUrl = new URL("/data/dashboard-state.json", url.origin);
   const assetResponse = await context.env.ASSETS.fetch(dataUrl);
   const assetState = await assetResponse.json();
+  const performanceUrl = new URL("/data/performance-state.json", url.origin);
+  const performanceResponse = await context.env.ASSETS.fetch(performanceUrl);
+  const performanceState = performanceResponse.ok ? await performanceResponse.json() : { generated_at: null, source: "missing", sites: [] };
   const assetJobsById = Object.fromEntries(
     (assetState.jobs || []).map((job) => [job.job_id, job]),
   );
@@ -160,12 +163,14 @@ export async function onRequestGet(context) {
       },
       sites: assetState.sites || [],
       jobs: sortedJobs,
+      performance: performanceState,
       persistence: "d1",
     });
   }
 
   return json({
     ...assetState,
+    performance: performanceState,
     persistence: "static",
   });
 }
