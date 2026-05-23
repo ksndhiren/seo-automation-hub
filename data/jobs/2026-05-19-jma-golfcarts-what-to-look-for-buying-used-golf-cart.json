@@ -58,9 +58,12 @@
   },
   "publish": {
     "commit_sha": null,
-    "live_url": null
+    "live_url": "https://www.jmagolfcarts.com/blog/buying-guides/what-to-look-for-when-buying-a-used-golf-cart"
   },
   "planned_publish_date": "2026-05-21",
+  "publish_result": {
+    "live_url": "https://www.jmagolfcarts.com/blog/buying-guides/what-to-look-for-when-buying-a-used-golf-cart"
+  },
   "calendar_month": "2026-05-to-06",
   "image_plan": {
     "status": "planned",

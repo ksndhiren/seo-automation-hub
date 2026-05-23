@@ -44,9 +44,12 @@
   },
   "publish": {
     "commit_sha": null,
-    "live_url": null
+    "live_url": "https://www.cranesauctions.com/blog/equipment-insights/used-crane-inspection-checklist-before-you-bid"
   },
   "planned_publish_date": "2026-05-21",
+  "publish_result": {
+    "live_url": "https://www.cranesauctions.com/blog/equipment-insights/used-crane-inspection-checklist-before-you-bid"
+  },
   "calendar_month": "2026-05-to-06",
   "image_plan": {
     "status": "planned",
