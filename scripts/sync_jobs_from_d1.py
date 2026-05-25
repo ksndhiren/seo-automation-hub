@@ -78,10 +78,15 @@ def sync_jobs_from_d1() -> list[str]:
             target_url = payload.get("target_url") or row.get("target_url")
             if site and target_url:
                 live_url = f"{site['site_url'].rstrip('/')}{target_url}"
+                payload["live_url"] = live_url
                 payload.setdefault("publish", {})
                 payload["publish"]["live_url"] = live_url
                 payload.setdefault("publish_result", {})
                 payload["publish_result"]["live_url"] = live_url
+            draft = payload.get("draft") or {}
+            published_at = draft.get("publishedAt")
+            if published_at:
+                payload["published_at"] = published_at
 
         path.write_text(json.dumps(payload, indent=2) + "\n")
         updated_job_ids.append(job_id)
