@@ -1,0 +1,32 @@
+name: Scheduled Publish
+
+on:
+  schedule:
+    - cron: "5 * * * *"
+  workflow_dispatch:
+
+jobs:
+  publish-due-posts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out automation hub
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run publish scheduler
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PUBLISH_GITHUB_TOKEN }}
+          GIT_AUTHOR_NAME: ${{ secrets.GIT_AUTHOR_NAME }}
+          GIT_AUTHOR_EMAIL: ${{ secrets.GIT_AUTHOR_EMAIL }}
+          PUBLISH_REQUIRE_WINDOW: "1"
+          PUBLISH_TIMEZONE: "America/Chicago"
+          PUBLISH_HOUR: "8"
+          PUBLISH_MINUTE: "0"
+          PUBLISH_WINDOW_MINUTES: "90"
+        run: python3 scripts/publish_scheduled_posts.py

@@ -2,9 +2,12 @@ from __future__ import annotations
 
 import json
 import os
+import shutil
 import subprocess
-from datetime import datetime, timezone
+import tempfile
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 from _env import load_dotenv, require_env
 from sync_dashboard_jobs_to_d1 import sync_dashboard_jobs_to_d1
@@ -19,9 +22,23 @@ RUNS_DIR = REPO_ROOT / "data" / "runs"
 
 def main() -> None:
     load_dotenv()
+    gating = current_publish_window()
+    if gating is not None:
+        write_run_log(
+            [
+                {
+                    "job_id": "publish-window",
+                    "status": "skipped",
+                    "reason": gating,
+                }
+            ]
+        )
+        print(gating)
+        return
+
     synced_job_ids = sync_jobs_from_d1()
     sites = load_sites()
-    today = datetime.now(timezone.utc).date().isoformat()
+    today = current_publish_date()
     processed: list[dict] = []
 
     if synced_job_ids:
@@ -110,7 +127,7 @@ def publish_job(path: Path, job: dict, site: dict, published_at: str) -> None:
     if not job.get("draft"):
         raise RuntimeError("Job does not have a draft to publish.")
 
-    repo_path = Path(site["local_repo_path"])
+    repo_path = prepare_repo(site)
     content_path = repo_path / site["content_path"]
     draft = job["draft"]
     draft["publishedAt"] = published_at
@@ -161,6 +178,56 @@ def publish_job(path: Path, job: dict, site: dict, published_at: str) -> None:
         }
     )
     path.write_text(json.dumps(job, indent=2) + "\n")
+
+
+def current_publish_window() -> str | None:
+    if os.environ.get("PUBLISH_REQUIRE_WINDOW", "").strip() not in {"1", "true", "TRUE", "yes", "YES"}:
+        return None
+
+    tz_name = os.environ.get("PUBLISH_TIMEZONE", "America/Chicago").strip() or "America/Chicago"
+    publish_hour = int(os.environ.get("PUBLISH_HOUR", "8"))
+    publish_minute = int(os.environ.get("PUBLISH_MINUTE", "0"))
+    window_minutes = int(os.environ.get("PUBLISH_WINDOW_MINUTES", "90"))
+    now_local = datetime.now(ZoneInfo(tz_name))
+    start = now_local.replace(hour=publish_hour, minute=publish_minute, second=0, microsecond=0)
+    end = start + timedelta(minutes=window_minutes)
+
+    if start <= now_local < end:
+        return None
+
+    return (
+        f"Skipped scheduled publish: current {tz_name} time "
+        f"{now_local.strftime('%Y-%m-%d %H:%M')} is outside the "
+        f"{publish_hour:02d}:{publish_minute:02d} publish window."
+    )
+
+
+def current_publish_date() -> str:
+    tz_name = os.environ.get("PUBLISH_TIMEZONE", "").strip()
+    if tz_name:
+        return datetime.now(ZoneInfo(tz_name)).date().isoformat()
+    return datetime.now(timezone.utc).date().isoformat()
+
+
+def prepare_repo(site: dict) -> Path:
+    local_repo = Path(site.get("local_repo_path", ""))
+    if local_repo.exists():
+        return local_repo
+
+    token = require_env("GITHUB_TOKEN")
+    repo_url = site.get("github_repo", "").strip()
+    if not repo_url:
+        raise RuntimeError(f"Site {site.get('site_id')} is missing github_repo.")
+
+    clone_root = Path(tempfile.gettempdir()) / "seo-automation-publish" / site["site_id"]
+    if clone_root.exists():
+        shutil.rmtree(clone_root)
+    clone_root.parent.mkdir(parents=True, exist_ok=True)
+
+    auth_url = repo_url.replace("https://", f"https://x-access-token:{token}@")
+    subprocess.run(["git", "clone", auth_url, str(clone_root)], check=True)
+    subprocess.run(["git", "-C", str(clone_root), "checkout", site["publish_branch"]], check=True)
+    return clone_root
 
 
 def render_typescript_module(job: dict, site: dict) -> str:
