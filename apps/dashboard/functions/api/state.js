@@ -2,32 +2,13 @@ import { buildImagePlanForJob } from "../_images.js";
 import { json } from "../_shared.js";
 
 function sortJobs(jobs) {
-  const statusRank = {
-    final_approved: 0,
-    brief_approved: 1,
-    needs_revision: 2,
-    brief_pending: 3,
-    new: 4,
-    final_pending: 5,
-    published: 6,
-  };
-  const priorityRank = {
-    high: 0,
-    medium: 1,
-    low: 2,
-  };
-
   return [...jobs].sort((left, right) => {
-    const leftScore = left.seo_strategy?.opportunity_score ?? 0;
-    const rightScore = right.seo_strategy?.opportunity_score ?? 0;
+    const leftDate = left.planned_publish_date || "9999-12-31";
+    const rightDate = right.planned_publish_date || "9999-12-31";
 
     return (
-      (statusRank[left.status] ?? 99) - (statusRank[right.status] ?? 99) ||
-      (priorityRank[left.priority] ?? 99) - (priorityRank[right.priority] ?? 99) ||
-      rightScore - leftScore ||
-      String(left.planned_publish_date || "").localeCompare(
-        String(right.planned_publish_date || ""),
-      ) ||
+      leftDate.localeCompare(rightDate) ||
+      String(left.site_name || "").localeCompare(String(right.site_name || "")) ||
       String(left.topic || "").localeCompare(String(right.topic || ""))
     );
   });
