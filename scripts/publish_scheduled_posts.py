@@ -10,6 +10,7 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 from _env import load_dotenv, require_env
+from sync_calendar_checkpoints import sync_calendar_checkpoints
 from sync_dashboard_jobs_to_d1 import sync_dashboard_jobs_to_d1
 from sync_jobs_from_d1 import sync_jobs_from_d1
 
@@ -92,6 +93,16 @@ def main() -> None:
                     "reason": f"Scheduled publish failed: {exc}",
                 }
             )
+
+    promoted = sync_calendar_checkpoints()
+    for site_id, job_id in promoted:
+        processed.append(
+            {
+                "job_id": job_id,
+                "status": "brief_pending",
+                "reason": f"Promoted next scheduled brief for {site_id} after publish cycle",
+            }
+        )
 
     rebuild_dashboard_state()
     try:
