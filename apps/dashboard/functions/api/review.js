@@ -254,6 +254,10 @@ export async function onRequestPost(context) {
       .run();
   }
 
+  const promotedNextBrief = (!saveReviewOnly && !saveImageSelectionOnly)
+    ? await promoteNextBriefIfNeeded(context, existing.site_id, now)
+    : null;
+
   return json({
     ok: true,
     job_id: jobId,
@@ -269,6 +273,7 @@ export async function onRequestPost(context) {
       summary: nextBriefSummary,
       outline: JSON.parse(nextOutlineJson || "[]"),
     },
+    promoted_next_brief: promotedNextBrief,
     draft_generated: Boolean(draftResult),
     publish: publishResult,
     persisted_at: now,
@@ -311,4 +316,100 @@ function shouldPublishImmediately(plannedPublishDate, nowIso) {
   );
 
   return hour > 17 || (hour === 17 && minute >= 0);
+}
+
+async function promoteNextBriefIfNeeded(context, siteId, now) {
+  if (!siteId) return null;
+
+  const d1 = context.env.DASHBOARD_DB;
+  if (!d1) return null;
+
+  const activeBriefs = await d1
+    .prepare(
+      `SELECT job_id
+       FROM dashboard_jobs
+       WHERE site_id = ? AND status IN ('brief_pending', 'brief_approved')
+       LIMIT 1`,
+    )
+    .bind(siteId)
+    .all();
+
+  if ((activeBriefs.results || []).length > 0) {
+    return null;
+  }
+
+  const assetJobsById = await loadAssetJobsById(context);
+  const candidates = [];
+  const rows = await d1
+    .prepare(
+      `SELECT job_id, topic
+       FROM dashboard_jobs
+       WHERE site_id = ? AND status = 'new'`,
+    )
+    .bind(siteId)
+    .all();
+
+  for (const row of rows.results || []) {
+    const assetJob = assetJobsById[row.job_id];
+    const plannedPublishDate = assetJob?.planned_publish_date || null;
+    if (!plannedPublishDate) continue;
+    candidates.push({
+      job_id: row.job_id,
+      topic: row.topic,
+      planned_publish_date: plannedPublishDate,
+      opportunity_score: assetJob?.seo_strategy?.opportunity_score || 0,
+    });
+  }
+
+  candidates.sort((left, right) =>
+    left.planned_publish_date.localeCompare(right.planned_publish_date)
+    || right.opportunity_score - left.opportunity_score
+    || String(left.job_id).localeCompare(String(right.job_id)),
+  );
+
+  const next = candidates[0];
+  if (!next) {
+    return null;
+  }
+
+  await d1
+    .prepare(
+      `UPDATE dashboard_jobs
+       SET status = 'brief_pending', updated_at = ?
+       WHERE job_id = ?`,
+    )
+    .bind(now, next.job_id)
+    .run();
+
+  await d1
+    .prepare(
+      `INSERT INTO dashboard_reviews (
+        job_id,
+        action,
+        reviewer,
+        comment,
+        created_at
+      ) VALUES (?, ?, ?, ?, ?)`,
+    )
+    .bind(
+      next.job_id,
+      "system_promote",
+      "system",
+      "Promoted automatically to brief_pending as the next scheduled site brief.",
+      now,
+    )
+    .run();
+
+  return next;
+}
+
+async function loadAssetJobsById(context) {
+  const requestUrl = new URL(context.request.url);
+  const dataUrl = new URL("/data/dashboard-state.json", requestUrl.origin);
+  const assetResponse = await context.env.ASSETS.fetch(dataUrl);
+  if (!assetResponse.ok) {
+    return {};
+  }
+  const assetState = await assetResponse.json();
+  return Object.fromEntries((assetState.jobs || []).map((job) => [job.job_id, job]));
 }
