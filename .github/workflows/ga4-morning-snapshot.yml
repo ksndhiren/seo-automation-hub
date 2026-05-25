@@ -1,0 +1,45 @@
+name: GA4 Morning Snapshot
+
+on:
+  schedule:
+    - cron: "0 5 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh-ga4-snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out automation hub
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Materialize Google OAuth files
+        run: |
+          mkdir -p keys
+          printf '%s' '${{ secrets.GOOGLE_OAUTH_CLIENT_JSON }}' > keys/client_secret_github_actions.json
+          printf '%s' '${{ secrets.GOOGLE_REPORTING_TOKEN_JSON }}' > keys/google_reporting_token.json
+
+      - name: Refresh GA4 snapshot
+        run: python3 scripts/fetch_ga4_performance.py
+
+      - name: Commit updated performance snapshot
+        env:
+          GIT_AUTHOR_NAME: ${{ secrets.GIT_AUTHOR_NAME }}
+          GIT_AUTHOR_EMAIL: ${{ secrets.GIT_AUTHOR_EMAIL }}
+        run: |
+          git config user.name "$GIT_AUTHOR_NAME"
+          git config user.email "$GIT_AUTHOR_EMAIL"
+          git add apps/dashboard/data/performance-state.json
+          if git diff --cached --quiet; then
+            echo "No GA4 snapshot changes to commit."
+            exit 0
+          fi
+          git commit -m "Refresh GA4 performance snapshot"
+          git push origin main
