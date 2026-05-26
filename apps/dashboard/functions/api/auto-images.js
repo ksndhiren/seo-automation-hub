@@ -76,14 +76,26 @@ export async function onRequestPost(context) {
   }
 
   const existingSelections = JSON.parse(reviewRow.selected_images_json || "[]");
+  const seenSelectionKeys = new Set();
   const selections = [...existingSelections];
   const searchDebug = [];
 
   for (let index = 0; index < assetJob.image_plan.items.length; index += 1) {
     if (selections[index]) {
       const existingKey = normalizePhotoId(selections[index]);
-      if (existingKey) usedIds.add(existingKey);
-      continue;
+      if (existingKey && !seenSelectionKeys.has(existingKey)) {
+        seenSelectionKeys.add(existingKey);
+        usedIds.add(existingKey);
+        continue;
+      }
+      selections[index] = null;
+      searchDebug.push({
+        placement: assetJob.image_plan.items[index]?.placement || `Placement ${index + 1}`,
+        query: null,
+        results: 0,
+        picked: null,
+        replaced_duplicate: existingKey || true,
+      });
     }
 
     const item = assetJob.image_plan.items[index];

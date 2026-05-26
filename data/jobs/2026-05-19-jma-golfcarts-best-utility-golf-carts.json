@@ -51,15 +51,15 @@
   "image_plan": {
     "selected_images": [
       {
-        "id": 9207084,
-        "alt": "A relaxing scene of family leisure with golf carts on a sunny golf course path.",
-        "photographer": "Mikhail Nilov",
-        "thumb": "https://images.pexels.com/photos/9207084/pexels-photo-9207084.jpeg?auto=compress&cs=tinysrgb&h=350",
-        "large": "https://images.pexels.com/photos/9207084/pexels-photo-9207084.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-        "original": "https://images.pexels.com/photos/9207084/pexels-photo-9207084.jpeg",
-        "width": 5558,
-        "height": 3705,
-        "pexels_url": "https://www.pexels.com/photo/golf-carts-on-concrete-pathway-9207084/"
+        "id": 1325716,
+        "alt": "A utility vehicle parked outdoors at a sprawling golf course under a clear sky.",
+        "photographer": "Jopwell",
+        "thumb": "https://images.pexels.com/photos/1325716/pexels-photo-1325716.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "large": "https://images.pexels.com/photos/1325716/pexels-photo-1325716.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "original": "https://images.pexels.com/photos/1325716/pexels-photo-1325716.jpeg",
+        "width": 7951,
+        "height": 4914,
+        "pexels_url": "https://www.pexels.com/photo/person-driving-black-and-green-2-door-cart-1325716/"
       },
       {
         "id": 1325753,
@@ -73,15 +73,15 @@
         "pexels_url": "https://www.pexels.com/photo/man-wearing-white-cap-and-holding-printer-paper-and-pen-1325753/"
       },
       {
-        "id": 9207084,
-        "alt": "A relaxing scene of family leisure with golf carts on a sunny golf course path.",
-        "photographer": "Mikhail Nilov",
-        "thumb": "https://images.pexels.com/photos/9207084/pexels-photo-9207084.jpeg?auto=compress&cs=tinysrgb&h=350",
-        "large": "https://images.pexels.com/photos/9207084/pexels-photo-9207084.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-        "original": "https://images.pexels.com/photos/9207084/pexels-photo-9207084.jpeg",
-        "width": 5558,
-        "height": 3705,
-        "pexels_url": "https://www.pexels.com/photo/golf-carts-on-concrete-pathway-9207084/"
+        "id": 3051966,
+        "alt": "A stationary green golf cart parked by a building on a sunny day.",
+        "photographer": "Isaac Taylor",
+        "thumb": "https://images.pexels.com/photos/3051966/pexels-photo-3051966.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "large": "https://images.pexels.com/photos/3051966/pexels-photo-3051966.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "original": "https://images.pexels.com/photos/3051966/pexels-photo-3051966.jpeg",
+        "width": 5316,
+        "height": 3608,
+        "pexels_url": "https://www.pexels.com/photo/black-golf-cart-3051966/"
       }
     ]
   },
@@ -100,7 +100,7 @@
       "property use",
       "golf carts for work use"
     ],
-    "heroImage": "https://images.pexels.com/photos/9207084/pexels-photo-9207084.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "heroImage": "https://images.pexels.com/photos/1325716/pexels-photo-1325716.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "featured": false,
     "seoTitle": "Best Utility Golf Carts for Work and Property Use | Buyer Guide",
     "seoDescription": "Compare the best utility golf carts for work use, property maintenance, and commercial tasks. Learn what to look for before you buy utility golf carts for sale.",
@@ -227,7 +227,7 @@
       "buttonLabel": "Register with Jeff Martin Auctioneers",
       "buttonHref": "https://www.jmagolfcarts.com/#buyer-register"
     },
-    "heroImageAlt": "A relaxing scene of family leisure with golf carts on a sunny golf course path."
+    "heroImageAlt": "A utility vehicle parked outdoors at a sprawling golf course under a clear sky."
   },
   "publish_result": {
     "live_url": "https://www.jmagolfcarts.com/blog/utility-work-carts/best-utility-golf-carts-for-work-and-property-use",

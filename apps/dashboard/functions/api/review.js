@@ -5,6 +5,7 @@ import {
   reviseBriefFromFeedback,
   reviseDraftFromFeedback,
 } from "../_writer.js";
+import { normalizePhotoId } from "../_images.js";
 
 export async function onRequestPost(context) {
   const d1 = context.env.DASHBOARD_DB;
@@ -72,6 +73,25 @@ export async function onRequestPost(context) {
       },
       { status: 400 },
     );
+  }
+
+  if (selectedImages?.length) {
+    const seenKeys = new Set();
+    for (const image of selectedImages.filter(Boolean)) {
+      const key = normalizePhotoId(image);
+      if (!key) continue;
+      if (seenKeys.has(key)) {
+        return json(
+          {
+            ok: false,
+            message:
+              "The same image is selected more than once in this draft. Choose a different image for each placement.",
+          },
+          { status: 400 },
+        );
+      }
+      seenKeys.add(key);
+    }
   }
 
   const existing = await d1

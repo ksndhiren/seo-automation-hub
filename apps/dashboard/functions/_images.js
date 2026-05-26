@@ -42,13 +42,14 @@ export function buildImagePlanForJob(job) {
   const primaryKeyword = job?.primary_keyword || "";
   const siteId = job?.site_id || "";
   const selectedImages = job?.image_plan?.selected_images || [];
+  const categorySlug = job?.seo_strategy?.category_slug || "";
 
   if (siteId === "jma-golfcarts") {
     const plans = [
       {
         placement: "Featured image",
         asset_hint: draft.heroImage || "Not assigned yet",
-        query: "used golf cart marketplace listing outdoor realistic",
+        query: golfCartFeaturedQuery(categorySlug, primaryKeyword, topic),
         prompt:
           `Realistic editorial photo of a used golf cart prepared for sale outdoors, clean daylight, trustworthy marketplace mood, no text overlay, visually supports the topic '${topic}'.`,
       },
@@ -113,15 +114,19 @@ export function buildImagePlanForJob(job) {
 export function buildFallbackQueries(job, item) {
   const siteId = job.site_id || "";
   const category = job.seo_strategy?.category_name || "";
+  const categorySlug = job.seo_strategy?.category_slug || "";
   const primary = job.primary_keyword || "";
+  const topic = job.topic || "";
   const placement = item?.placement || "";
 
   if (siteId === "jma-golfcarts") {
     return uniqueStrings([
       item?.query,
+      topic,
       primary,
       `${primary} golf cart`,
       `${category} golf cart`,
+      golfCartFeaturedQuery(categorySlug, primary, topic),
       "used golf cart",
       "golf cart",
       placement.includes("Featured") ? "golf cart outdoors" : "golf cart detail",
@@ -166,7 +171,7 @@ export function chooseBestPexelsPhoto(job, item, photos, usedIds = new Set()) {
     .sort((a, b) => b.score - a.score);
 
   const uniqueChoice = ranked.find((item_) => !usedIds.has(normalizePhotoId(item_.photo)));
-  return uniqueChoice?.photo || ranked[0]?.photo || null;
+  return uniqueChoice?.photo || null;
 }
 
 function scorePexelsPhoto(photo, keywordTerms, siteId, usedIds) {
@@ -213,6 +218,27 @@ function uniqueStrings(values) {
     result.push(text);
   }
   return result;
+}
+
+function golfCartFeaturedQuery(categorySlug, primaryKeyword, topic) {
+  switch (categorySlug) {
+    case "utility-work-carts":
+      return "utility golf cart work property maintenance realistic";
+    case "brand-comparisons":
+      return "club car ezgo golf carts comparison realistic";
+    case "maintenance-ownership":
+      return "golf cart maintenance service inspection realistic";
+    case "street-legal-carts":
+      return "street legal golf cart neighborhood realistic";
+    case "selling-guides":
+      return "used golf cart for sale listing realistic";
+    case "buying-guides":
+      return "used golf cart buyer guide realistic";
+    default:
+      return primaryKeyword
+        ? `${primaryKeyword} realistic`
+        : `${topic || "used golf cart"} realistic`;
+  }
 }
 
 export function jsonOk(data, init = {}) {
