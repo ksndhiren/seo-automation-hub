@@ -3,6 +3,8 @@ name: GA4 Morning Snapshot
 on:
   schedule:
     - cron: "0 5 * * *"
+    - cron: "10 5 * * *"
+    - cron: "20 5 * * *"
   workflow_dispatch:
 
 permissions:
@@ -27,6 +29,9 @@ jobs:
           printf '%s' '${{ secrets.GOOGLE_REPORTING_TOKEN_JSON }}' > keys/google_reporting_token.json
 
       - name: Refresh GA4 snapshot
+        env:
+          GA4_SKIP_IF_ALREADY_REFRESHED_TODAY: "true"
+          GA4_SNAPSHOT_TIMEZONE: "Asia/Tbilisi"
         run: python3 scripts/fetch_ga4_performance.py
 
       - name: Commit updated performance snapshot

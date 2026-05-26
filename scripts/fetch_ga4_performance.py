@@ -1,10 +1,12 @@
 from __future__ import annotations
 
 import json
+import os
 import urllib.parse
 import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -13,6 +15,25 @@ KEYS_DIR = REPO_ROOT / "keys"
 CLIENT_SECRET_PATH = next(KEYS_DIR.glob("client_secret_*.json"))
 TOKEN_PATH = KEYS_DIR / "google_reporting_token.json"
 OUTPUT_PATH = REPO_ROOT / "apps" / "dashboard" / "data" / "performance-state.json"
+
+
+def should_skip_for_today() -> bool:
+    flag = os.environ.get("GA4_SKIP_IF_ALREADY_REFRESHED_TODAY", "false").strip().lower()
+    if flag not in {"1", "true", "yes"}:
+        return False
+    if not OUTPUT_PATH.exists():
+        return False
+
+    payload = json.loads(OUTPUT_PATH.read_text())
+    generated_at = payload.get("generated_at")
+    if not generated_at:
+        return False
+
+    tz_name = os.environ.get("GA4_SNAPSHOT_TIMEZONE", "Asia/Tbilisi").strip() or "Asia/Tbilisi"
+    local_tz = ZoneInfo(tz_name)
+    generated_local = datetime.fromisoformat(generated_at.replace("Z", "+00:00")).astimezone(local_tz)
+    now_local = datetime.now(local_tz)
+    return generated_local.date() == now_local.date()
 
 
 def load_client() -> dict:
@@ -185,6 +206,10 @@ def event_breakdown(property_id: str, access_token: str) -> list[dict]:
 
 
 def main() -> None:
+    if should_skip_for_today():
+        print("GA4 snapshot already refreshed for the current local day; skipping.")
+        return
+
     client = load_client()
     token_payload = json.loads(TOKEN_PATH.read_text())
     refresh_token = token_payload.get("refresh_token")
