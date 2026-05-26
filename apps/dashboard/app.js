@@ -608,11 +608,13 @@ function renderFilters() {
 
 function renderJobs() {
   const filter = el.statusFilter.value || "all";
-  const jobs = dashboardState.jobs.filter((job) => {
-    if (selectedSiteId !== "all" && job.site_id !== selectedSiteId) return false;
-    if (filter === "all") return true;
-    return previewStatus[job.job_id] === filter;
-  });
+  const jobs = dashboardState.jobs
+    .filter((job) => {
+      if (selectedSiteId !== "all" && job.site_id !== selectedSiteId) return false;
+      if (filter === "all") return true;
+      return previewStatus[job.job_id] === filter;
+    })
+    .sort((left, right) => compareQueueJobs(left, right, filter));
 
   if (!selectedJobId && jobs[0]) {
     selectedJobId = jobs[0].job_id;
@@ -688,6 +690,28 @@ function renderJobs() {
   });
 
   renderSelectedJob();
+}
+
+function compareQueueJobs(left, right, filter) {
+  if (filter === "published") {
+    const leftDate = left.planned_publish_date || left.draft?.publishedAt || "";
+    const rightDate = right.planned_publish_date || right.draft?.publishedAt || "";
+
+    return (
+      rightDate.localeCompare(leftDate)
+      || String(right.site_name || "").localeCompare(String(left.site_name || ""))
+      || String(right.topic || "").localeCompare(String(left.topic || ""))
+    );
+  }
+
+  const leftDate = left.planned_publish_date || "9999-12-31";
+  const rightDate = right.planned_publish_date || "9999-12-31";
+
+  return (
+    leftDate.localeCompare(rightDate)
+    || String(left.site_name || "").localeCompare(String(right.site_name || ""))
+    || String(left.topic || "").localeCompare(String(right.topic || ""))
+  );
 }
 
 function renderSelectedJob() {
