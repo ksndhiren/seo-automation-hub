@@ -20,9 +20,7 @@ export async function onRequestGet(context) {
   const dataUrl = new URL("/data/dashboard-state.json", url.origin);
   const assetResponse = await context.env.ASSETS.fetch(dataUrl);
   const assetState = await assetResponse.json();
-  const performanceUrl = new URL("/data/performance-state.json", url.origin);
-  const performanceResponse = await context.env.ASSETS.fetch(performanceUrl);
-  const performanceState = performanceResponse.ok ? await performanceResponse.json() : { generated_at: null, source: "missing", sites: [] };
+  const performanceState = await loadPerformanceState(context, url);
   const assetJobsById = Object.fromEntries(
     (assetState.jobs || []).map((job) => [job.job_id, job]),
   );
@@ -154,4 +152,26 @@ export async function onRequestGet(context) {
     performance: performanceState,
     persistence: "static",
   });
+}
+
+async function loadPerformanceState(context, url) {
+  const d1 = context.env.DASHBOARD_DB;
+  if (d1) {
+    const row = await d1
+      .prepare("SELECT payload_json FROM dashboard_performance WHERE id = 'latest' LIMIT 1")
+      .first();
+    if (row?.payload_json) {
+      try {
+        return JSON.parse(row.payload_json);
+      } catch {
+        // Fall through to the static snapshot if a bad row ever lands in D1.
+      }
+    }
+  }
+
+  const performanceUrl = new URL("/data/performance-state.json", url.origin);
+  const performanceResponse = await context.env.ASSETS.fetch(performanceUrl);
+  return performanceResponse.ok
+    ? await performanceResponse.json()
+    : { generated_at: null, source: "missing", sites: [] };
 }

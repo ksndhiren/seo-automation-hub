@@ -33,3 +33,10 @@ CREATE TABLE IF NOT EXISTS dashboard_reviews (
   created_at TEXT NOT NULL,
   FOREIGN KEY (job_id) REFERENCES dashboard_jobs(job_id)
 );
+
+CREATE TABLE IF NOT EXISTS dashboard_performance (
+  id TEXT PRIMARY KEY,
+  payload_json TEXT NOT NULL,
+  generated_at TEXT NOT NULL,
+  source TEXT NOT NULL DEFAULT 'ga4'
+);

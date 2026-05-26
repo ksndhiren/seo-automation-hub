@@ -1,0 +1,21 @@
+name = "seo-automation-scheduler"
+main = "src/index.js"
+compatibility_date = "2026-05-18"
+
+[triggers]
+crons = [
+  "5,15,25 13 * * *",
+  "5,15,25 14 * * *",
+  "0,10,20 5 * * *"
+]
+
+[[d1_databases]]
+binding = "DASHBOARD_DB"
+database_name = "seo-automation-dashboard-db"
+database_id = "144264b9-6907-463a-ae9b-5b77437065f4"
+
+[vars]
+GITHUB_OWNER = "ksndhiren"
+GIT_AUTHOR_NAME = "SEO Automation Bot"
+GIT_AUTHOR_EMAIL = "seo-automation@example.com"
+DASHBOARD_STATE_URL = "https://seo-automation-dashboard.pages.dev/data/dashboard-state.json"

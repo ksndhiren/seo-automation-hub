@@ -1,9 +1,6 @@
 name: Scheduled Publish
 
 on:
-  schedule:
-    - cron: "5,15,25 13 * * *"
-    - cron: "5,15,25 14 * * *"
   workflow_dispatch:
 
 jobs:

@@ -6,6 +6,7 @@ dist
 .next
 coverage
 *.log
+.wrangler/
 
 # runtime output
 tmp/
