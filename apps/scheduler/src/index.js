@@ -65,11 +65,8 @@ async function runScheduled(event, env) {
   const now = new Date(event.scheduledTime || Date.now());
   const results = {};
 
-  if (isPublishCron(event.cron)) {
+  if (isChicagoMorningCron(event.cron)) {
     results.publish = await safeRun(() => publishDuePosts(env, now));
-  }
-
-  if (isPerformanceCron(event.cron)) {
     results.performance = await safeRun(() => refreshPerformance(env, now));
   }
 
@@ -87,12 +84,8 @@ async function safeRun(task) {
   }
 }
 
-function isPublishCron(cron) {
+function isChicagoMorningCron(cron) {
   return cron?.includes("13 * * *") || cron?.includes("14 * * *");
-}
-
-function isPerformanceCron(cron) {
-  return cron?.includes("5 * * *");
 }
 
 async function publishDuePosts(env, now = new Date()) {
