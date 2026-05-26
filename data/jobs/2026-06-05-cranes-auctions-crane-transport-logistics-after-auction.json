@@ -10,11 +10,11 @@
     "auction removal planning"
   ],
   "target_url": "/blog/transport-logistics/crane-transport-logistics-after-auction",
-  "status": "new",
+  "status": "published",
   "priority": "medium",
   "assigned_reviewer": "seo-expert",
   "created_at": "2026-05-19T18:00:00+04:00",
-  "updated_at": "2026-05-22T07:50:10.895615+00:00",
+  "updated_at": "2026-05-26T16:49:39.098812+00:00",
   "planned_publish_date": "2026-05-26",
   "calendar_month": "2026-05-to-06",
   "seo_strategy": {
@@ -40,15 +40,192 @@
   "metrics": {
     "target_word_count": 1600,
     "neuronwriter_score": null,
-    "manual_plagiarism_status": "Pending manual review",
-    "flagged_sections_note": ""
+    "manual_plagiarism_status": "Passed",
+    "flagged_sections_note": "96% unique.",
+    "last_error": "Command '['git', '-C', '/Users/abhishekutkarsha/Documents/Codex/Golfcarts/Auctioncrane', 'push', 'origin', 'main']' returned non-zero exit status 128."
   },
   "publish": {
     "commit_sha": null,
     "live_url": null
   },
   "image_plan": {
-    "selected_images": []
+    "selected_images": [
+      {
+        "id": 9914005,
+        "alt": "A construction site in Warri, Nigeria featuring stacked rusty metal pipes and heavy machinery.",
+        "photographer": "Erique Erufu Onojoserio",
+        "thumb": "https://images.pexels.com/photos/9914005/pexels-photo-9914005.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "large": "https://images.pexels.com/photos/9914005/pexels-photo-9914005.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "original": "https://images.pexels.com/photos/9914005/pexels-photo-9914005.jpeg",
+        "width": 8000,
+        "height": 6000,
+        "pexels_url": "https://www.pexels.com/photo/rusty-metal-pipes-on-the-ground-9914005/"
+      },
+      {
+        "id": 16442672,
+        "alt": "Worker in safety gear inspecting machinery on an outdoor industrial site.",
+        "photographer": "Marianna Zuzanna",
+        "thumb": "https://images.pexels.com/photos/16442672/pexels-photo-16442672.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "large": "https://images.pexels.com/photos/16442672/pexels-photo-16442672.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "original": "https://images.pexels.com/photos/16442672/pexels-photo-16442672.jpeg",
+        "width": 5616,
+        "height": 3744,
+        "pexels_url": "https://www.pexels.com/photo/water-protection-pros-poland-trousers-with-shoulder-straps-for-better-user-comfort-aquaproof-fabric-lightweight-coated-waterproof-and-flexible-high-frequency-electricity-welding-tech-16442672/"
+      },
+      {
+        "id": 29502205,
+        "alt": "ACE TX 150 hydraulic crane photographed in an outdoor industrial setting in Faridabad, India.",
+        "photographer": "Action Construction  Equipment Ltd. - ACE",
+        "thumb": "https://images.pexels.com/photos/29502205/pexels-photo-29502205.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "large": "https://images.pexels.com/photos/29502205/pexels-photo-29502205.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "original": "https://images.pexels.com/photos/29502205/pexels-photo-29502205.jpeg",
+        "width": 6240,
+        "height": 4160,
+        "pexels_url": "https://www.pexels.com/photo/ace-tx-150-crane-in-industrial-yard-29502205/"
+      }
+    ]
   },
-  "draft": null
+  "draft": {
+    "slug": "crane-transport-logistics-after-auction",
+    "title": "Crane Transport Logistics After Auction: What Buyers Need to Plan Before Pickup",
+    "description": "Learn how crane transport logistics after auction works, what to confirm before pickup, and how to avoid delays when moving a crane after sale. A practical guide for buyers, sellers, and fleet managers.",
+    "publishedAt": "2026-05-26",
+    "author": "Jeff Martin Auctioneers Editorial Team",
+    "readTime": "7 min read",
+    "category": "Transport & Logistics",
+    "tags": [
+      "transport logistics",
+      "auction removal",
+      "crane shipping",
+      "post-sale planning"
+    ],
+    "heroImage": "https://images.pexels.com/photos/9914005/pexels-photo-9914005.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "featured": false,
+    "seoTitle": "Crane Transport Logistics After Auction | Pickup Planning Guide",
+    "seoDescription": "Understand crane transport logistics after auction, including pickup coordination, permits, carrier planning, and heavy equipment transport after sale. Practical guidance for buyers and sellers.",
+    "intro": [
+      "Winning a crane at auction is only the first step. The real work often starts when it is time to remove the unit, coordinate transport, and get the machine to its next jobsite or yard.",
+      "Crane transport logistics after auction can be simple when everyone is aligned early. It becomes costly and stressful when buyers wait too long to line up hauling, permits, escorts, or site access. That is why careful auction removal planning matters just as much as bidding strategy."
+    ],
+    "sections": [
+      {
+        "heading": "Why transport planning should start before the auction ends",
+        "paragraphs": [
+          "If you are serious about a crane purchase, you should treat transport as part of the buying decision, not an afterthought. The size, weight, configuration, and location of the machine all affect how it can be moved, what permits may be needed, and how quickly it can leave the auction site.",
+          "For many buyers, the biggest surprises come after the hammer falls. A crane may require boom disassembly, counterweight removal, specialized trailers, escort vehicles, or site scheduling that depends on local rules and the auction yard's loading windows. Early planning reduces the risk of storage charges, missed pickup deadlines, or a crane that sits idle longer than expected."
+        ]
+      },
+      {
+        "heading": "Key details to confirm before you arrange a move",
+        "paragraphs": [
+          "Before you book heavy equipment transport after sale, gather the core facts that will drive the move. The more complete your information, the easier it is for a carrier or rigging team to quote accurately and choose the right equipment for the job.",
+          "You should confirm the crane's make, model, serial number, operating weight, dimensions, attachments, boom length, counterweights, and whether the unit will be picked up in running condition or as a dismantled load. It also helps to know if the machine is on site, stored offsite, or subject to any removal restrictions from the auction or seller."
+        ],
+        "bullets": [
+          "Exact pickup location and site access instructions",
+          "Auction removal deadlines and storage policies",
+          "Whether the crane must be disassembled before transport",
+          "Loading equipment available on site, if any",
+          "Permit and escort requirements by route and state",
+          "Insurance needs for hauling and rigging"
+        ],
+        "callout": "Accurate transport planning starts with accurate equipment information. If you are unsure what details matter, Jeff Martin Auctioneers can help buyers and sellers organize the right next step before pickup becomes a bottleneck."
+      },
+      {
+        "heading": "Common challenges in crane pickup logistics",
+        "paragraphs": [
+          "Crane pickup logistics can get complicated quickly because these machines are rarely moved like standard freight. Even smaller cranes may exceed normal road limits, and larger units can require a coordinated effort between the buyer, carrier, yard staff, and sometimes a rigging crew.",
+          "The most common issues are timing, site constraints, and incomplete preparation. A buyer may arrive without the correct trailer, discover that counterweights must be removed first, or learn that the carrier needs permit lead time. Weather, yard congestion, and limited loading equipment can also affect the schedule.",
+          "Another frequent issue is assuming the crane is ready to roll when it is not. If the machine has been sitting, batteries may be dead, fluids may need attention, and wheels or tracks may need to be checked before movement. Even when the crane is sold as-is, safe removal still requires a practical plan."
+        ],
+        "bullets": [
+          "Missed permit lead times",
+          "Unexpected disassembly requirements",
+          "Loading delays caused by site congestion",
+          "Limited access for oversized transport",
+          "Poor coordination between buyer and carrier"
+        ],
+        "callout": "A smooth removal depends on communication. When buyers are proactive and auction teams know the intended carrier timeline, it is much easier to keep the move on schedule."
+      },
+      {
+        "heading": "How to build a realistic removal timeline",
+        "paragraphs": [
+          "A reliable auction removal planning timeline starts with the auction terms, then works backward from the pickup date. Buyers should give themselves enough time to confirm transport quotes, check permit needs, and coordinate any required dismantling or yard support.",
+          "If the crane needs to be moved quickly, ask the auction team what can realistically be done within the removal window. In some cases, a short delay in booking transport can create a larger delay in site access or force the buyer into storage fees. A clear plan from the start protects both schedule and budget.",
+          "For fleet managers and dealers, timeline discipline is especially important when several units are moving at once. Aligning auction dates, transport availability, and internal receiving capacity helps prevent yard clutter and keeps replacement cycles on track."
+        ]
+      },
+      {
+        "heading": "What buyers should expect from a transport provider",
+        "paragraphs": [
+          "Not every carrier handles oversized crane moves. The right provider should understand heavy equipment transport after sale, not just standard freight. They should be able to advise on load planning, route constraints, securement, and the type of trailer or escort support needed for the specific unit.",
+          "A qualified transport partner will usually ask for photos, measurements, axle information, and access details before quoting. They may also flag whether the crane needs partial teardown or whether a specialized rigging company should handle dismantling before the haul begins. That kind of early feedback is valuable because it helps prevent last-minute problems.",
+          "If you are buying at auction often, it can help to keep a preferred list of carriers and rigging partners. That makes future moves faster and gives you a repeatable process for pickup, delivery, and receiving inspection."
+        ],
+        "bullets": [
+          "Oversize load experience",
+          "Knowledge of permit and escort rules",
+          "Load securement planning",
+          "Clear communication on pickup windows",
+          "Ability to coordinate with riggers or dismantling crews"
+        ]
+      },
+      {
+        "heading": "How sellers and auction teams can support smoother removal",
+        "paragraphs": [
+          "Crane transport logistics after auction is not only a buyer issue. Sellers and auction teams can make the process easier by providing clear asset details, honest condition notes, and accessible pickup instructions. That reduces confusion and helps serious buyers plan with confidence.",
+          "When listing information includes dimensions, operating status, known missing components, and site constraints, buyers can make better transport decisions before they bid. That usually leads to fewer surprises after sale and a cleaner removal process for everyone involved.",
+          "For owners preparing to sell, this is also a useful reminder that well-documented equipment tends to move more efficiently. Clear information helps buyers line up freight, which can support more qualified interest when the auction runs."
+        ],
+        "callout": "If you are planning to sell crane inventory or surplus fleet equipment, Jeff Martin Auctioneers can help structure the sale in a way that supports buyer confidence and post-sale execution."
+      },
+      {
+        "heading": "Practical checklist for auction removal planning",
+        "paragraphs": [
+          "A short checklist can save a lot of time when the hammer drops. Before pickup day, confirm the transport plan, site access, and who is responsible for each step of the move. That keeps everyone accountable and reduces the chance of avoidable delays.",
+          "It also helps to assign one point of contact on the buyer side. When the carrier, auction team, and site staff know who is coordinating, questions get answered faster and the move is less likely to stall."
+        ],
+        "bullets": [
+          "Review auction terms and removal deadlines",
+          "Confirm crane dimensions, weight, and configuration",
+          "Book transport and any needed rigging support",
+          "Verify permits, escorts, and route planning",
+          "Share pickup contact names and arrival windows",
+          "Prepare payment, insurance, and release documents",
+          "Inspect the site for loading access and obstacles"
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "How soon should I arrange crane transport after auction?",
+        "answer": "As early as possible, ideally before the auction closes. Oversized crane moves often require permit coordination, route review, and carrier availability checks. Early booking helps you avoid storage fees and rushed decisions."
+      },
+      {
+        "question": "Do all cranes require special hauling after sale?",
+        "answer": "Not all cranes, but many do require specialized planning. Weight, dimensions, boom length, counterweights, and site access can all affect the move. Even smaller units may need permit review or partial disassembly before transport."
+      },
+      {
+        "question": "What information do I need for a transport quote?",
+        "answer": "Carriers usually want the crane make and model, dimensions, operating weight, pickup location, access conditions, and whether the machine is running or dismantled. Photos and auction details also help narrow the quote."
+      },
+      {
+        "question": "Can Jeff Martin Auctioneers help with removal planning?",
+        "answer": "Yes. Jeff Martin Auctioneers can help buyers and sellers coordinate the right next step after sale, including connect and lead registration for transport or auction support needs. For guidance on crane pickup logistics and post-sale planning, use the contact form to start a conversation."
+      }
+    ],
+    "cta": {
+      "title": "Need help planning a crane move after auction?",
+      "body": "Connect with Jeff Martin Auctioneers for practical support with crane pickup logistics, auction removal planning, and the next step after a purchase or sale. If you are buying, selling, or moving surplus crane equipment, their team can help you coordinate a straightforward path from sale to removal.",
+      "buttonLabel": "Connect with Jeff Martin Auctioneers",
+      "buttonHref": "https://www.cranesauctions.com/#connect"
+    },
+    "heroImageAlt": "A construction site in Warri, Nigeria featuring stacked rusty metal pipes and heavy machinery."
+  },
+  "publish_result": {
+    "live_url": "https://www.cranesauctions.com/blog/transport-logistics/crane-transport-logistics-after-auction",
+    "published_at": "2026-05-26",
+    "branch": "main",
+    "path": "src/web/content/blog"
+  }
 }

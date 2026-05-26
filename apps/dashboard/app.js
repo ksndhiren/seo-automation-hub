@@ -1292,7 +1292,7 @@ async function handleImageSearch(index) {
     const response = await fetch(
       `./api/pexels-search?query=${encodeURIComponent(query)}&per_page=6`,
     );
-    const result = await response.json();
+    const result = await readApiJson(response);
     if (!response.ok || !result.ok) {
       throw new Error(result.message || "Pexels search failed.");
     }
@@ -1332,7 +1332,7 @@ async function handleAutoPickImages() {
         job_id: job.job_id,
       }),
     });
-    const payload = await response.json();
+    const payload = await readApiJson(response);
     if (!response.ok || !payload.ok) {
       throw new Error(payload.message || "Auto-pick failed.");
     }
@@ -1398,7 +1398,7 @@ async function saveSelectedImages(job, selections, comment) {
         selected_images: selections,
       }),
     });
-    const payload = await response.json();
+    const payload = await readApiJson(response);
     if (!response.ok || !payload.ok) {
       throw new Error(payload.message || "Image selection failed.");
     }
@@ -1470,7 +1470,7 @@ async function handleReviewAction(action) {
         }),
       });
 
-      const result = await response.json();
+      const result = await readApiJson(response);
       if (!response.ok || !result.ok) {
         throw new Error(result.message || "Review action failed.");
       }
@@ -1535,6 +1535,22 @@ async function handleReviewAction(action) {
     <p><strong>Note:</strong> ${escapeHtml(comment)}</p>
     <p class="muted">Static mode is active. Persist the dashboard state to save this action.</p>
   `;
+}
+
+async function readApiJson(response) {
+  const contentType = response.headers.get("content-type") || "";
+  if (contentType.includes("application/json")) {
+    return response.json();
+  }
+
+  const text = await response.text();
+  if (text.trim().startsWith("<")) {
+    throw new Error(
+      "The dashboard session or API route returned an HTML page. Please refresh and sign in again, then retry.",
+    );
+  }
+
+  throw new Error(text.trim() || "The dashboard API returned an unexpected response.");
 }
 
 function renderCheckpointSummary(status) {
