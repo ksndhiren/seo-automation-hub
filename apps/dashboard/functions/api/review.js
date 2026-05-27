@@ -1,6 +1,7 @@
 import { getStatusAfterAction, isSupportedAction, isTerminalStatus, json } from "../_shared.js";
 import { loadAssetJobForReview, publishApprovedJob } from "../_publish.js";
 import {
+  generateBriefForJob,
   generateDraftForApprovedBrief,
   reviseBriefFromFeedback,
   reviseDraftFromFeedback,
@@ -196,6 +197,10 @@ export async function onRequestPost(context) {
   if (!saveReviewOnly && !saveImageSelectionOnly && action === "approve" && existing.status === "final_pending") {
     const shouldPublishNow = shouldPublishImmediately(assetJob?.planned_publish_date, now);
     if (shouldPublishNow) {
+      nextDraftJson = JSON.stringify({
+        ...(JSON.parse(nextDraftJson || "{}")),
+        publishedAt: formatDateForZone(now, "America/Chicago"),
+      });
       publishResult = await publishApprovedJob(context, {
         ...existing,
         draft_json: nextDraftJson,
@@ -274,7 +279,7 @@ export async function onRequestPost(context) {
       .run();
   }
 
-  const promotedNextBrief = (!saveReviewOnly && !saveImageSelectionOnly)
+  const promotedNextBrief = (!saveReviewOnly && !saveImageSelectionOnly && publishResult)
     ? await promoteNextBriefIfNeeded(context, existing.site_id, now)
     : null;
 
@@ -305,8 +310,8 @@ function shouldPublishImmediately(plannedPublishDate, nowIso) {
     return true;
   }
 
-  const todayTbilisi = new Intl.DateTimeFormat("en-CA", {
-    timeZone: "Asia/Tbilisi",
+  const todayChicago = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "America/Chicago",
     year: "numeric",
     month: "2-digit",
     day: "2-digit",
@@ -314,28 +319,39 @@ function shouldPublishImmediately(plannedPublishDate, nowIso) {
     .format(new Date(nowIso))
     .replaceAll("/", "-");
 
-  if (plannedPublishDate < todayTbilisi) {
+  if (plannedPublishDate < todayChicago) {
     return true;
   }
-  if (plannedPublishDate > todayTbilisi) {
+  if (plannedPublishDate > todayChicago) {
     return false;
   }
 
   const hour = Number(
     new Intl.DateTimeFormat("en-US", {
-      timeZone: "Asia/Tbilisi",
+      timeZone: "America/Chicago",
       hour: "2-digit",
       hour12: false,
     }).format(new Date(nowIso)),
   );
   const minute = Number(
     new Intl.DateTimeFormat("en-US", {
-      timeZone: "Asia/Tbilisi",
+      timeZone: "America/Chicago",
       minute: "2-digit",
     }).format(new Date(nowIso)),
   );
 
-  return hour > 17 || (hour === 17 && minute >= 0);
+  return hour > 8 || (hour === 8 && minute >= 0);
+}
+
+function formatDateForZone(nowIso, timeZone) {
+  return new Intl.DateTimeFormat("en-CA", {
+    timeZone,
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  })
+    .format(new Date(nowIso))
+    .replaceAll("/", "-");
 }
 
 async function promoteNextBriefIfNeeded(context, siteId, now) {
@@ -343,6 +359,9 @@ async function promoteNextBriefIfNeeded(context, siteId, now) {
 
   const d1 = context.env.DASHBOARD_DB;
   if (!d1) return null;
+  const assetJobsById = await loadAssetJobsById(context);
+
+  await enforceSingleActiveBriefForSite(d1, siteId, assetJobsById, now);
 
   const activeBriefs = await d1
     .prepare(
@@ -358,7 +377,6 @@ async function promoteNextBriefIfNeeded(context, siteId, now) {
     return null;
   }
 
-  const assetJobsById = await loadAssetJobsById(context);
   const candidates = [];
   const rows = await d1
     .prepare(
@@ -392,13 +410,35 @@ async function promoteNextBriefIfNeeded(context, siteId, now) {
     return null;
   }
 
+  const briefResult = await generateBriefForJob(context, {
+    job_id: next.job_id,
+    site_id: siteId,
+  });
+  if (!briefResult.ok) {
+    return {
+      ...next,
+      promotion_failed: true,
+      message: briefResult.message,
+    };
+  }
+
   await d1
     .prepare(
       `UPDATE dashboard_jobs
-       SET status = 'brief_pending', updated_at = ?
+       SET status = 'brief_pending',
+           brief_summary = ?,
+           outline_json = ?,
+           word_count = ?,
+           updated_at = ?
        WHERE job_id = ?`,
     )
-    .bind(now, next.job_id)
+    .bind(
+      briefResult.brief.summary,
+      JSON.stringify(briefResult.brief.outline),
+      briefResult.targetWordCount ? `${briefResult.targetWordCount} words` : "",
+      now,
+      next.job_id,
+    )
     .run();
 
   await d1
@@ -420,7 +460,85 @@ async function promoteNextBriefIfNeeded(context, siteId, now) {
     )
     .run();
 
-  return next;
+  return {
+    ...next,
+    brief_generated: true,
+  };
+}
+
+async function enforceSingleActiveBriefForSite(d1, siteId, assetJobsById, now) {
+  const rows = await d1
+    .prepare(
+      `SELECT job_id, status, updated_at
+       FROM dashboard_jobs
+       WHERE site_id = ? AND status IN ('brief_pending', 'brief_approved')`,
+    )
+    .bind(siteId)
+    .all();
+
+  const activeRows = rows.results || [];
+  if (activeRows.length <= 1) {
+    return null;
+  }
+
+  const ranked = activeRows.map((row) => {
+    const assetJob = assetJobsById[row.job_id] || {};
+    return {
+      ...row,
+      planned_publish_date: assetJob.planned_publish_date || "9999-12-31",
+      opportunity_score: assetJob.seo_strategy?.opportunity_score || 0,
+    };
+  });
+
+  ranked.sort((left, right) =>
+    statusRank(left.status) - statusRank(right.status)
+    || left.planned_publish_date.localeCompare(right.planned_publish_date)
+    || right.opportunity_score - left.opportunity_score
+    || String(left.job_id).localeCompare(String(right.job_id)),
+  );
+
+  const [kept, ...extras] = ranked;
+  for (const extra of extras) {
+    await d1
+      .prepare(
+        `UPDATE dashboard_jobs
+         SET status = 'new', updated_at = ?
+         WHERE job_id = ? AND status IN ('brief_pending', 'brief_approved')`,
+      )
+      .bind(now, extra.job_id)
+      .run();
+
+    await d1
+      .prepare(
+        `INSERT INTO dashboard_reviews (
+          job_id,
+          action,
+          reviewer,
+          comment,
+          created_at
+        ) VALUES (?, ?, ?, ?, ?)`,
+      )
+      .bind(
+        extra.job_id,
+        "system_guard_demote",
+        "system",
+        `Demoted to new because ${siteId} already has active brief ${kept.job_id}.`,
+        now,
+      )
+      .run();
+  }
+
+  return {
+    site_id: siteId,
+    kept: kept.job_id,
+    demoted: extras.map((row) => row.job_id),
+  };
+}
+
+function statusRank(status) {
+  if (status === "brief_approved") return 0;
+  if (status === "brief_pending") return 1;
+  return 2;
 }
 
 async function loadAssetJobsById(context) {

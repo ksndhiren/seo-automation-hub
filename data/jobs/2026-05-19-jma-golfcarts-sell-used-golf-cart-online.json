@@ -14,7 +14,7 @@
   "priority": "high",
   "assigned_reviewer": "seo-expert",
   "created_at": "2026-05-19T15:25:00+04:00",
-  "updated_at": "2026-05-22T07:50:10.895615+00:00",
+  "updated_at": "2026-05-26T16:34:34.467954+00:00",
   "brief": {
     "summary": "Create a commercial-informational article for golf cart owners, dealers, and operators who want a practical process for listing and selling a used golf cart online. The article should explain when a marketplace approach makes sense, what buyers expect in a listing, how to prepare the cart before photos and inspection, and which mistakes reduce buyer confidence.",
     "outline": [
@@ -245,7 +245,12 @@
       "title": "Need help selling your used golf cart online?",
       "body": "Jeff Martin Auctioneers can help you take a more confident marketplace approach, whether you are listing a single cart, comparing selling options, or trying to reach qualified buyers faster. Use the contact path on JMA Golf Carts to start the conversation and get support from a trusted golf cart marketplace team.",
       "buttonLabel": "Contact Jeff Martin Auctioneers",
-      "buttonHref": "/contact"
+      "buttonHref": "https://www.jmagolfcarts.com/#buyer-register"
     }
-  }
+  },
+  "publish_result": {
+    "live_url": "https://www.jmagolfcarts.com/blog/selling-guides/how-to-sell-a-used-golf-cart-online"
+  },
+  "live_url": "https://www.jmagolfcarts.com/blog/selling-guides/how-to-sell-a-used-golf-cart-online",
+  "published_at": "2026-05-20"
 }

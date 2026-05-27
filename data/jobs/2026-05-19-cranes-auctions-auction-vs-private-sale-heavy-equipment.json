@@ -10,11 +10,11 @@
     "when to use an auction"
   ],
   "target_url": "/blog/auction-strategy/auction-vs-private-sale-for-heavy-equipment",
-  "status": "final_approved",
+  "status": "published",
   "priority": "medium",
   "assigned_reviewer": "seo-expert",
   "created_at": "2026-05-19T15:57:00+04:00",
-  "updated_at": "2026-05-22T13:54:59.096Z",
+  "updated_at": "2026-05-26T16:34:34.467954+00:00",
   "seo_strategy": {
     "search_intent": "Commercial investigation: users want to compare selling options and determine whether auction or private sale is the better resale strategy for heavy equipment.",
     "cluster": "heavy equipment selling strategy and disposition",
@@ -39,12 +39,12 @@
   "metrics": {
     "target_word_count": 1400,
     "neuronwriter_score": null,
-    "manual_plagiarism_status": "Pending manual review",
+    "manual_plagiarism_status": "Passed",
     "flagged_sections_note": ""
   },
   "publish": {
     "commit_sha": null,
-    "live_url": null
+    "live_url": "https://www.cranesauctions.com/blog/auction-strategy/auction-vs-private-sale-for-heavy-equipment"
   },
   "planned_publish_date": "2026-05-25",
   "calendar_month": "2026-05-to-06",
@@ -102,7 +102,7 @@
     "slug": "auction-vs-private-sale-for-heavy-equipment",
     "title": "Auction vs Private Sale for Heavy Equipment: Which Exit Strategy Fits Your Asset?",
     "description": "Compare auction vs private sale heavy equipment strategies for cranes, fleet assets, and surplus machinery. Learn when to use an auction, when private sale makes sense, and how to choose the right exit path.",
-    "publishedAt": "2026-05-22",
+    "publishedAt": "2026-05-25",
     "author": "Jeff Martin Auctioneers Editorial Team",
     "readTime": "7 min read",
     "category": "Auction Strategy",
@@ -224,8 +224,16 @@
       "title": "Need help choosing between auction and private sale?",
       "body": "Talk with Jeff Martin Auctioneers for a clear recommendation based on your equipment, timeline, and sales goals. Whether you are considering an auction, a private sale, or just want a valuation and next-step plan, our team can help you move forward with confidence.",
       "buttonLabel": "Contact Jeff Martin Auctioneers",
-      "buttonHref": "https://www.cranesauctions.com/contact"
+      "buttonHref": "https://www.cranesauctions.com/#connect"
     },
     "heroImageAlt": "View of a shipping yard with heavy machinery and industrial pipes under a cloudy sky."
-  }
+  },
+  "publish_result": {
+    "live_url": "https://www.cranesauctions.com/blog/auction-strategy/auction-vs-private-sale-for-heavy-equipment",
+    "published_at": "2026-05-25",
+    "branch": "main",
+    "path": "src/web/content/blog"
+  },
+  "live_url": "https://www.cranesauctions.com/blog/auction-strategy/auction-vs-private-sale-for-heavy-equipment",
+  "published_at": "2026-05-25"
 }

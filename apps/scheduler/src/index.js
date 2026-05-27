@@ -24,6 +24,9 @@ const LEAD_EVENTS = [
   "contact_click",
 ];
 
+const OPENAI_URL = "https://api.openai.com/v1/responses";
+const DEFAULT_MODEL = "gpt-5.4-mini";
+
 export default {
   async scheduled(event, env, ctx) {
     ctx.waitUntil(runScheduled(event, env));
@@ -97,6 +100,7 @@ async function publishDuePosts(env, now = new Date()) {
   }
 
   const state = await loadDashboardState(env);
+  const guardedQueues = await enforceAllActiveBriefGuards(env, state, new Date().toISOString());
   const assetJobsById = Object.fromEntries((state.jobs || []).map((job) => [job.job_id, job]));
   const rows = await env.DASHBOARD_DB
     .prepare(
@@ -145,7 +149,7 @@ async function publishDuePosts(env, now = new Date()) {
       continue;
     }
 
-    const publishResult = await publishJob(env, row, assetJob);
+    const publishResult = await publishJob(env, row, assetJob, now);
     if (!publishResult.ok) {
       errors.push({ job_id: row.job_id, message: publishResult.message });
       continue;
@@ -153,8 +157,8 @@ async function publishDuePosts(env, now = new Date()) {
 
     const updatedAt = new Date().toISOString();
     await env.DASHBOARD_DB
-      .prepare("UPDATE dashboard_jobs SET status = 'published', updated_at = ? WHERE job_id = ?")
-      .bind(updatedAt, row.job_id)
+      .prepare("UPDATE dashboard_jobs SET status = 'published', draft_json = ?, updated_at = ? WHERE job_id = ?")
+      .bind(JSON.stringify(publishResult.draft), updatedAt, row.job_id)
       .run();
     await insertReview(
       env,
@@ -172,6 +176,7 @@ async function publishDuePosts(env, now = new Date()) {
   return {
     ok: errors.length === 0,
     ran_at: new Date().toISOString(),
+    guarded_queues: guardedQueues,
     published,
     skipped,
     errors,
@@ -186,7 +191,7 @@ function isDueForPublish(plannedPublishDate, now) {
   return isAfterLocalTime(now, "America/Chicago", 8, 0);
 }
 
-async function publishJob(env, row, assetJob) {
+async function publishJob(env, row, assetJob, now = new Date()) {
   if (!assetJob) {
     return { ok: false, message: "Static job metadata was not found in dashboard-state.json." };
   }
@@ -196,10 +201,14 @@ async function publishJob(env, row, assetJob) {
     return { ok: false, message: `No publish config found for ${row.site_id}.` };
   }
 
-  const draft = parseJson(row.draft_json) || assetJob.draft;
-  if (!draft) {
+  const sourceDraft = parseJson(row.draft_json) || assetJob.draft;
+  if (!sourceDraft) {
     return { ok: false, message: "Draft JSON is missing." };
   }
+  const draft = {
+    ...sourceDraft,
+    publishedAt: formatDate(now, "America/Chicago"),
+  };
 
   const selectedImages = parseJson(row.selected_images_json) || [];
   const mergedJob = {
@@ -258,11 +267,15 @@ async function publishJob(env, row, assetJob) {
     ok: true,
     commitSha: payload?.commit?.sha || null,
     filePath,
+    draft,
+    publishedAt: draft.publishedAt,
     liveUrl: `${siteConfig.siteUrl}${mergedJob.target_url}`,
   };
 }
 
 async function promoteNextBriefIfNeeded(env, siteId, state, now) {
+  await enforceSingleActiveBriefForSite(env, siteId, state, now);
+
   const activeBriefs = await env.DASHBOARD_DB
     .prepare(
       `SELECT job_id
@@ -309,13 +322,40 @@ async function promoteNextBriefIfNeeded(env, siteId, state, now) {
   const next = candidates[0];
   if (!next) return null;
 
+  const briefResult = await generateBriefForJob(env, siteId, next.job_id, assetJobsById[next.job_id]);
+  if (!briefResult.ok) {
+    await insertReview(
+      env,
+      next.job_id,
+      "system_promote_failed",
+      "system",
+      `Promotion failed before brief generation: ${briefResult.message}`,
+      now,
+    );
+    return {
+      ...next,
+      promotion_failed: true,
+      message: briefResult.message,
+    };
+  }
+
   await env.DASHBOARD_DB
     .prepare(
       `UPDATE dashboard_jobs
-       SET status = 'brief_pending', updated_at = ?
+       SET status = 'brief_pending',
+           brief_summary = ?,
+           outline_json = ?,
+           word_count = ?,
+           updated_at = ?
        WHERE job_id = ?`,
     )
-    .bind(now, next.job_id)
+    .bind(
+      briefResult.brief.summary,
+      JSON.stringify(briefResult.brief.outline),
+      briefResult.targetWordCount ? `${briefResult.targetWordCount} words` : "",
+      now,
+      next.job_id,
+    )
     .run();
   await insertReview(
     env,
@@ -326,7 +366,161 @@ async function promoteNextBriefIfNeeded(env, siteId, state, now) {
     now,
   );
 
-  return next;
+  return {
+    ...next,
+    brief_generated: true,
+  };
+}
+
+async function enforceAllActiveBriefGuards(env, state, now) {
+  const siteIds = Object.keys(SITE_CONFIGS);
+  const results = [];
+  for (const siteId of siteIds) {
+    const result = await enforceSingleActiveBriefForSite(env, siteId, state, now);
+    if (result?.demoted?.length) {
+      results.push(result);
+    }
+  }
+  return results;
+}
+
+async function enforceSingleActiveBriefForSite(env, siteId, state, now) {
+  if (!siteId) return null;
+
+  const rows = await env.DASHBOARD_DB
+    .prepare(
+      `SELECT job_id, status, updated_at
+       FROM dashboard_jobs
+       WHERE site_id = ? AND status IN ('brief_pending', 'brief_approved')`,
+    )
+    .bind(siteId)
+    .all();
+
+  const activeRows = rows.results || [];
+  if (activeRows.length <= 1) {
+    return { site_id: siteId, kept: activeRows[0]?.job_id || null, demoted: [] };
+  }
+
+  const assetJobsById = Object.fromEntries((state.jobs || []).map((job) => [job.job_id, job]));
+  const ranked = activeRows.map((row) => {
+    const assetJob = assetJobsById[row.job_id] || {};
+    return {
+      ...row,
+      planned_publish_date: assetJob.planned_publish_date || "9999-12-31",
+      opportunity_score: assetJob.seo_strategy?.opportunity_score || 0,
+    };
+  });
+
+  ranked.sort((left, right) =>
+    statusRank(left.status) - statusRank(right.status)
+    || left.planned_publish_date.localeCompare(right.planned_publish_date)
+    || right.opportunity_score - left.opportunity_score
+    || String(left.job_id).localeCompare(String(right.job_id)),
+  );
+
+  const [kept, ...extras] = ranked;
+  for (const extra of extras) {
+    await env.DASHBOARD_DB
+      .prepare(
+        `UPDATE dashboard_jobs
+         SET status = 'new', updated_at = ?
+         WHERE job_id = ? AND status IN ('brief_pending', 'brief_approved')`,
+      )
+      .bind(now, extra.job_id)
+      .run();
+    await insertReview(
+      env,
+      extra.job_id,
+      "system_guard_demote",
+      "system",
+      `Demoted to new because ${siteId} already has active brief ${kept.job_id}.`,
+      now,
+    );
+  }
+
+  return {
+    site_id: siteId,
+    kept: kept.job_id,
+    demoted: extras.map((row) => row.job_id),
+  };
+}
+
+function statusRank(status) {
+  if (status === "brief_approved") return 0;
+  if (status === "brief_pending") return 1;
+  return 2;
+}
+
+async function generateBriefForJob(env, siteId, jobId, assetJob) {
+  const apiKey = env.OPENAI_API_KEY;
+  if (!apiKey) {
+    return {
+      ok: false,
+      message: "OPENAI_API_KEY secret is missing on the scheduler Worker.",
+    };
+  }
+  if (!assetJob?.topic || !assetJob?.primary_keyword || !assetJob?.target_url) {
+    return {
+      ok: false,
+      message: "Static job metadata is missing for the promoted brief.",
+    };
+  }
+
+  const site = siteId && SITE_CONFIGS[siteId];
+  if (!site) {
+    return {
+      ok: false,
+      message: `No site config found for ${siteId}.`,
+    };
+  }
+
+  const systemPrompt =
+    "You are an SEO strategist building article briefs for a human-reviewed content workflow. Return only valid JSON. Be specific, commercially aware, and avoid keyword stuffing.";
+  const userPrompt = `
+Site name: ${siteId === "cranes-auctions" ? "CranesAuctions" : "JMA Golf Carts"}
+Site URL: ${site.siteUrl}
+Lead generation brand: Jeff Martin Auctioneers
+Audience: ${JSON.stringify(assetJob.target_audience || [])}
+
+Job topic: ${assetJob.topic}
+Primary keyword: ${assetJob.primary_keyword}
+Secondary keywords: ${JSON.stringify(assetJob.secondary_keywords || [])}
+Target URL: ${assetJob.target_url}
+SEO strategy: ${JSON.stringify(assetJob.seo_strategy || {})}
+
+Return a JSON object with exactly these keys:
+- brief_summary: string
+- outline: array of 6 to 8 strings
+- search_intent: string
+- cluster: string
+- category_slug: string
+- category_name: string
+- suggested_tags: array of 3 to 6 strings
+- recommended_internal_link_types: array of 3 to 5 strings
+- target_word_count: integer
+
+Rules:
+- recommended_internal_link_types must prioritize lead-generation paths first.
+- The first recommended_internal_link_types item must be the site's primary registration, connect, or lead capture destination type.
+- Secondary internal link suggestions can support inventory, category, and landing-page discovery, but should not outrank the lead-generation path.
+`;
+
+  try {
+    const result = await callOpenAIJson(apiKey, systemPrompt, userPrompt, 2200);
+    return {
+      ok: true,
+      brief: {
+        summary: result.brief_summary,
+        outline: result.outline,
+      },
+      targetWordCount: Number(result.target_word_count) || null,
+    };
+  } catch (error) {
+    return {
+      ok: false,
+      message: error?.message || "OpenAI brief generation failed.",
+    };
+  }
 }
 
 async function refreshPerformance(env, now = new Date()) {
@@ -628,6 +822,65 @@ function parseSecretJson(value, name) {
     throw new Error(`${name} secret is missing.`);
   }
   return JSON.parse(value);
+}
+
+async function callOpenAIJson(apiKey, systemPrompt, userPrompt, maxOutputTokens = 4000) {
+  const payload = {
+    model: DEFAULT_MODEL,
+    input: [
+      { role: "system", content: systemPrompt },
+      { role: "user", content: userPrompt },
+    ],
+    max_output_tokens: maxOutputTokens,
+  };
+
+  let lastError = null;
+  for (let attempt = 0; attempt < 3; attempt += 1) {
+    try {
+      const response = await fetch(OPENAI_URL, {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${apiKey}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (!response.ok) {
+        const errorPayload = await response.json().catch(() => ({}));
+        throw new Error(errorPayload?.error?.message || "OpenAI request failed.");
+      }
+
+      const data = await response.json();
+      const text = extractResponseText(data);
+      return JSON.parse(text);
+    } catch (error) {
+      lastError = error;
+      await new Promise((resolve) => setTimeout(resolve, 250 * (attempt + 1)));
+    }
+  }
+
+  throw lastError || new Error("OpenAI request failed.");
+}
+
+function extractResponseText(data) {
+  const outputs = Array.isArray(data?.output) ? data.output : [];
+  const parts = [];
+
+  for (const output of outputs) {
+    const content = Array.isArray(output?.content) ? output.content : [];
+    for (const item of content) {
+      if (item?.type === "output_text" && typeof item.text === "string") {
+        parts.push(item.text);
+      }
+    }
+  }
+
+  if (!parts.length && typeof data?.output_text === "string") {
+    return data.output_text;
+  }
+
+  return parts.join("").trim();
 }
 
 function parseJson(value) {

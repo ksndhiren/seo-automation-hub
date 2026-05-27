@@ -10,6 +10,7 @@ from _env import load_dotenv
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 STATE_FILE = REPO_ROOT / "apps" / "dashboard" / "data" / "dashboard-state.json"
+ACTIVE_BRIEF_STATUSES = {"brief_pending", "brief_approved"}
 
 
 def parse_iso(value: str | None) -> datetime | None:
@@ -200,7 +201,85 @@ def sync_dashboard_jobs_to_d1() -> int:
             [json.dumps(job.get("draft")), job["job_id"]],
         )
 
+    enforce_single_active_briefs(jobs)
+
     return len(jobs)
+
+
+def enforce_single_active_briefs(jobs: list[dict]) -> None:
+    metadata_by_id = {job.get("job_id"): job for job in jobs if job.get("job_id")}
+    site_ids = sorted({job.get("site_id") for job in jobs if job.get("site_id")})
+    now = datetime.now(timezone.utc).isoformat()
+
+    for site_id in site_ids:
+        active_rows = d1_query(
+            """
+            SELECT job_id, status
+            FROM dashboard_jobs
+            WHERE site_id = ? AND status IN ('brief_pending', 'brief_approved')
+            """,
+            [site_id],
+        )
+        if len(active_rows) <= 1:
+            continue
+
+        active_rows.sort(
+            key=lambda row: (
+                status_rank(row.get("status", "")),
+                metadata_by_id.get(row.get("job_id"), {}).get(
+                    "planned_publish_date", "9999-99-99"
+                ),
+                -(
+                    (
+                        metadata_by_id.get(row.get("job_id"), {}).get(
+                            "seo_strategy"
+                        )
+                        or {}
+                    ).get("opportunity_score")
+                    or 0
+                ),
+                row.get("job_id", ""),
+            )
+        )
+        kept = active_rows[0]
+        for row in active_rows[1:]:
+            d1_query(
+                """
+                UPDATE dashboard_jobs
+                SET status = 'new', updated_at = ?
+                WHERE job_id = ? AND status IN ('brief_pending', 'brief_approved')
+                """,
+                [now, row["job_id"]],
+            )
+            d1_query(
+                """
+                INSERT INTO dashboard_reviews (
+                  job_id,
+                  action,
+                  reviewer,
+                  comment,
+                  created_at
+                ) VALUES (?, ?, ?, ?, ?)
+                """,
+                [
+                    row["job_id"],
+                    "system_guard_demote",
+                    "system",
+                    (
+                        f"Demoted to new because {site_id} already has active "
+                        f"brief {kept['job_id']}."
+                    ),
+                    now,
+                ],
+            )
+
+
+def status_rank(status: str) -> int:
+    if status == "brief_approved":
+        return 0
+    if status == "brief_pending":
+        return 1
+    return 2
 
 
 def main() -> None:

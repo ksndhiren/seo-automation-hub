@@ -184,6 +184,89 @@ Rules:
   };
 }
 
+export async function generateBriefForJob(context, reviewRow) {
+  const apiKey = context.env.OPENAI_API_KEY;
+  if (!apiKey) {
+    return {
+      ok: false,
+      message:
+        "OPENAI_API_KEY is not configured in Cloudflare Pages. Brief generation cannot run instantly yet.",
+    };
+  }
+
+  const assetJob = await loadAssetJob(context, reviewRow.job_id);
+  if (!assetJob?.topic || !assetJob?.primary_keyword || !assetJob?.target_url) {
+    return {
+      ok: false,
+      message: "The current job snapshot is unavailable, so brief generation could not continue.",
+    };
+  }
+
+  const site = SITE_CONFIGS[reviewRow.site_id];
+  if (!site) {
+    return { ok: false, message: `No writer config found for site_id ${reviewRow.site_id}.` };
+  }
+
+  const systemPrompt =
+    "You are an SEO strategist building article briefs for a human-reviewed content workflow. Return only valid JSON. Be specific, commercially aware, and avoid keyword stuffing.";
+  const userPrompt = `
+Site name: ${site.siteName}
+Site URL: ${site.siteUrl}
+CTA destination URL: ${site.ctaUrl}
+Lead generation brand: ${site.leadGenerationBrand}
+Brand tone: ${site.tone}
+Lead generation context: ${site.leadGenerationContext}
+Audience: ${JSON.stringify(site.audience)}
+
+Job topic: ${assetJob.topic}
+Primary keyword: ${assetJob.primary_keyword}
+Secondary keywords: ${JSON.stringify(assetJob.secondary_keywords || [])}
+Target URL: ${assetJob.target_url}
+SEO strategy: ${JSON.stringify(assetJob.seo_strategy || {})}
+
+Return a JSON object with exactly these keys:
+- brief_summary: string
+- outline: array of 6 to 8 strings
+- search_intent: string
+- cluster: string
+- category_slug: string
+- category_name: string
+- suggested_tags: array of 3 to 6 strings
+- recommended_internal_link_types: array of 3 to 5 strings
+- target_word_count: integer
+
+Rules:
+- recommended_internal_link_types must prioritize lead-generation paths first.
+- The first recommended_internal_link_types item must be the site's primary registration, connect, or lead capture destination type.
+- Secondary internal link suggestions can support inventory, category, and landing-page discovery, but should not outrank the lead-generation path.
+`;
+
+  const result = await callOpenAIJson({
+    apiKey,
+    systemPrompt,
+    userPrompt,
+    maxOutputTokens: 2200,
+  });
+
+  return {
+    ok: true,
+    brief: {
+      summary: result.brief_summary,
+      outline: result.outline,
+    },
+    seoStrategy: {
+      ...(assetJob.seo_strategy || {}),
+      search_intent: result.search_intent,
+      cluster: result.cluster,
+      category_slug: result.category_slug,
+      category_name: result.category_name,
+      suggested_tags: result.suggested_tags,
+      recommended_internal_link_types: result.recommended_internal_link_types,
+    },
+    targetWordCount: Number(result.target_word_count) || null,
+  };
+}
+
 export async function reviseBriefFromFeedback(context, reviewRow, reviewerNote) {
   const apiKey = context.env.OPENAI_API_KEY;
   if (!apiKey) {
@@ -431,7 +514,47 @@ async function loadAssetJob(context, jobId) {
   }
 
   const assetState = await assetResponse.json();
-  return (assetState.jobs || []).find((job) => job.job_id === jobId) || null;
+  const assetJob = (assetState.jobs || []).find((job) => job.job_id === jobId) || null;
+  if (!assetJob) {
+    return null;
+  }
+
+  const d1 = context.env.DASHBOARD_DB;
+  if (!d1) {
+    return assetJob;
+  }
+
+  const row = await d1
+    .prepare(
+      `SELECT brief_summary, outline_json, draft_json, selected_images_json, word_count
+       FROM dashboard_jobs
+       WHERE job_id = ?
+       LIMIT 1`,
+    )
+    .bind(jobId)
+    .first();
+
+  if (!row) {
+    return assetJob;
+  }
+
+  return {
+    ...assetJob,
+    brief: {
+      summary: row.brief_summary || assetJob.brief?.summary || "",
+      outline: JSON.parse(row.outline_json || "[]").length
+        ? JSON.parse(row.outline_json || "[]")
+        : assetJob.brief?.outline || [],
+    },
+    draft: row.draft_json && row.draft_json !== "null"
+      ? JSON.parse(row.draft_json)
+      : assetJob.draft || null,
+    image_plan: {
+      ...(assetJob.image_plan || {}),
+      selected_images: JSON.parse(row.selected_images_json || "[]"),
+    },
+    word_count: row.word_count || assetJob.word_count || "",
+  };
 }
 
 async function callOpenAIJson({ apiKey, systemPrompt, userPrompt, maxOutputTokens = 4000 }) {

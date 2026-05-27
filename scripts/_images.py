@@ -14,6 +14,7 @@ def build_image_plan_for_job(job: dict) -> dict:
     topic = job.get("topic", "blog article")
     primary_keyword = job.get("primary_keyword", "")
     site_id = job.get("site_id", "")
+    category_slug = (job.get("seo_strategy") or {}).get("category_slug", "")
     selected_images = (job.get("image_plan") or {}).get("selected_images", [])
 
     if site_id == "jma-golfcarts":
@@ -21,7 +22,7 @@ def build_image_plan_for_job(job: dict) -> dict:
             {
                 "placement": "Featured image",
                 "asset_hint": draft.get("heroImage", "Not assigned yet"),
-                "query": "used golf cart marketplace listing outdoor realistic",
+                "query": golf_cart_featured_query(category_slug, primary_keyword, topic),
                 "prompt": (
                     f"Realistic editorial photo of a used golf cart prepared for sale outdoors, clean daylight, "
                     f"trustworthy marketplace mood, no text overlay, visually supports the topic '{topic}'."
@@ -115,6 +116,7 @@ def auto_pick_images_for_job(job: dict) -> int:
         return 0
 
     selections = list(plan.get("selected_images") or [])
+    used_ids = {normalize_photo_id(item) for item in selections if item}
     changed = 0
     for index, item in enumerate(items):
         if index < len(selections) and selections[index]:
@@ -122,10 +124,15 @@ def auto_pick_images_for_job(job: dict) -> int:
         photos = search_pexels(item.get("query", ""), per_page=6)
         if not photos:
             continue
-        best = choose_best_pexels_photo(job, item, photos)
+        best = choose_best_pexels_photo(job, item, photos, used_ids)
+        if not best:
+            continue
         while len(selections) <= index:
             selections.append(None)
         selections[index] = best
+        used_id = normalize_photo_id(best)
+        if used_id:
+            used_ids.add(used_id)
         changed += 1
 
     plan["selected_images"] = selections
@@ -189,9 +196,14 @@ def search_pexels(query: str, per_page: int = 6) -> list[dict]:
     ]
 
 
-def choose_best_pexels_photo(job: dict, item: dict, photos: list[dict]) -> dict | None:
+def choose_best_pexels_photo(
+    job: dict, item: dict, photos: list[dict], used_ids: set[str] | None = None
+) -> dict | None:
     if not photos:
         return None
+
+    if used_ids is None:
+        used_ids = set()
 
     keyword_terms = " ".join(
         str(value)
@@ -210,17 +222,24 @@ def choose_best_pexels_photo(job: dict, item: dict, photos: list[dict]) -> dict 
         (
             {
                 "photo": photo,
-                "score": score_pexels_photo(photo, keyword_terms, job.get("site_id", "")),
+                "score": score_pexels_photo(
+                    photo, keyword_terms, job.get("site_id", ""), used_ids
+                ),
             }
             for photo in photos
         ),
         key=lambda item_: item_["score"],
         reverse=True,
     )
-    return ranked[0]["photo"] if ranked else photos[0]
+    for item_ in ranked:
+        if normalize_photo_id(item_["photo"]) not in used_ids:
+            return item_["photo"]
+    return None
 
 
-def score_pexels_photo(photo: dict, keyword_terms: list[str], site_id: str) -> int:
+def score_pexels_photo(
+    photo: dict, keyword_terms: list[str], site_id: str, used_ids: set[str]
+) -> int:
     text = f"{photo.get('alt', '')} {photo.get('photographer', '')}".lower()
     score = 0
 
@@ -246,4 +265,35 @@ def score_pexels_photo(photo: dict, keyword_terms: list[str], site_id: str) -> i
     if photo.get("width") and photo.get("height") and photo["width"] > photo["height"]:
         score += 1
 
+    if normalize_photo_id(photo) in used_ids:
+        score -= 100
+
     return score
+
+
+def normalize_photo_id(photo: dict | None) -> str:
+    if not photo:
+        return ""
+    if photo.get("id") is not None:
+        return f"id:{photo['id']}"
+    if photo.get("pexels_url"):
+        return f"url:{photo['pexels_url']}"
+    if photo.get("large"):
+        return f"img:{photo['large']}"
+    return ""
+
+
+def golf_cart_featured_query(category_slug: str, primary_keyword: str, topic: str) -> str:
+    if category_slug == "utility-work-carts":
+        return "utility golf cart work property maintenance realistic"
+    if category_slug == "brand-comparisons":
+        return "club car ezgo golf carts comparison realistic"
+    if category_slug == "maintenance-ownership":
+        return "golf cart maintenance service inspection realistic"
+    if category_slug == "street-legal-carts":
+        return "street legal golf cart neighborhood realistic"
+    if category_slug == "selling-guides":
+        return "used golf cart for sale listing realistic"
+    if category_slug == "buying-guides":
+        return "used golf cart buyer guide realistic"
+    return f"{primary_keyword or topic or 'used golf cart'} realistic"

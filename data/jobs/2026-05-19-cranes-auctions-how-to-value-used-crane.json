@@ -14,7 +14,7 @@
   "priority": "high",
   "assigned_reviewer": "seo-expert",
   "created_at": "2026-05-19T15:58:00+04:00",
-  "updated_at": "2026-05-23T08:15:00Z",
+  "updated_at": "2026-05-26T16:34:34.467954+00:00",
   "seo_strategy": {
     "search_intent": "Informational with commercial investigation intent; the reader wants a practical method to estimate used crane value before deciding whether to sell privately or through auction, and is likely evaluating professional support.",
     "cluster": "Crane valuation and selling prep",
@@ -237,7 +237,7 @@
       "title": "Get a market-based crane valuation from Jeff Martin Auctioneers",
       "body": "If you are preparing to sell a used crane, Jeff Martin Auctioneers can help you review crane appraisal factors, assess current market demand, and determine the most practical path to sale. Reach out for seller support, auction guidance, and a professional evaluation grounded in real market activity.",
       "buttonLabel": "Contact Jeff Martin Auctioneers",
-      "buttonHref": "https://www.cranesauctions.com/contact"
+      "buttonHref": "https://www.cranesauctions.com/#connect"
     }
   },
   "publish_result": {
@@ -245,5 +245,7 @@
     "published_at": "2026-05-22",
     "branch": "main",
     "path": "src/web/content/blog"
-  }
+  },
+  "live_url": "https://www.cranesauctions.com/blog/equipment-insights/how-to-value-a-used-crane-before-selling",
+  "published_at": "2026-05-22"
 }

@@ -31,6 +31,7 @@ def sync_site(site_id: str, jobs: list[tuple[Path, dict]]) -> str | None:
         for path, payload in jobs
         if payload.get("site_id") == site_id
     ]
+    enforce_single_active_brief(site_id, site_jobs)
     if any(payload.get("status") in ACTIVE_STATUSES for _, payload in site_jobs):
         return None
 
@@ -54,6 +55,42 @@ def sync_site(site_id: str, jobs: list[tuple[Path, dict]]) -> str | None:
     payload["updated_at"] = now_iso()
     save_job(path, payload)
     return payload.get("job_id")
+
+
+def enforce_single_active_brief(site_id: str, site_jobs: list[tuple[Path, dict]]) -> None:
+    active = [
+        (path, payload)
+        for path, payload in site_jobs
+        if payload.get("status") in ACTIVE_STATUSES
+    ]
+    if len(active) <= 1:
+        return
+
+    active.sort(
+        key=lambda item: (
+            status_rank(item[1].get("status", "")),
+            item[1].get("planned_publish_date", "9999-99-99"),
+            -((item[1].get("seo_strategy") or {}).get("opportunity_score") or 0),
+            item[1].get("job_id", ""),
+        )
+    )
+    kept_job_id = active[0][1].get("job_id")
+    for path, payload in active[1:]:
+        payload["status"] = "new"
+        payload["updated_at"] = now_iso()
+        payload.setdefault("activity", [])
+        payload["activity"].append(
+            f"Demoted to new because {site_id} already has active brief {kept_job_id}."
+        )
+        save_job(path, payload)
+
+
+def status_rank(status: str) -> int:
+    if status == "brief_approved":
+        return 0
+    if status == "brief_pending":
+        return 1
+    return 2
 
 
 def sync_calendar_checkpoints() -> list[tuple[str, str]]:

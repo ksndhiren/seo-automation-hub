@@ -14,12 +14,12 @@
   "priority": "high",
   "assigned_reviewer": "seo-expert",
   "created_at": "2026-05-19T18:00:00+04:00",
-  "updated_at": "2026-05-26T16:34:34.467954+00:00",
+  "updated_at": "2026-05-27T07:47:30.723148+00:00",
   "planned_publish_date": "2026-05-27",
   "calendar_month": "2026-05-to-06",
   "seo_strategy": {
-    "search_intent": "commercial informational",
-    "cluster": "seller acquisition",
+    "search_intent": "Commercial investigation: users want to estimate resale value, compare used golf cart pricing, and set a competitive asking price before selling.",
+    "cluster": "Used golf cart resale and seller guidance",
     "lead_goal": "seller leads",
     "opportunity_score": 88,
     "opportunity_rationale": "Seller-intent topic with strong commercial fit because pricing uncertainty often appears right before a listing inquiry.",
@@ -27,18 +27,20 @@
     "category_name": "Selling Guides",
     "suggested_tags": [
       "used golf cart pricing",
-      "seller guide",
-      "resale value",
-      "listing prep"
+      "golf cart resale value",
+      "sell a golf cart",
+      "pricing guide",
+      "resale tips"
     ],
     "recommended_internal_link_types": [
       "buyer registration and lead capture sections",
       "inventory and auction listing pages",
-      "brand and category landing pages that support registration"
+      "brand and category landing pages that support registration",
+      "sell-with-us or seller inquiry pages"
     ]
   },
   "metrics": {
-    "target_word_count": 1700,
+    "target_word_count": 1400,
     "neuronwriter_score": null,
     "manual_plagiarism_status": "Pending manual review",
     "flagged_sections_note": "",
@@ -51,5 +53,19 @@
   "image_plan": {
     "selected_images": []
   },
-  "draft": null
+  "draft": null,
+  "brief": {
+    "summary": "Create a practical, trust-building guide that helps sellers estimate a fair market price for a used golf cart and confidently decide how to price it to sell. The article should explain the main value drivers\u2014brand, battery type, age, condition, tires, upgrades, street-legal features, and local demand\u2014while positioning Jeff Martin Auctioneers as the trusted marketplace behind JMA Golf Carts. Include a simple pricing framework, common mistakes to avoid, and a clear next step to register or connect for selling support and marketplace exposure.",
+    "outline": [
+      "# How to Price a Used Golf Cart for Sale",
+      "## What determines used golf cart pricing?",
+      "## Start with the cart\u2019s basics: brand, model, year, and power type",
+      "## Check condition: batteries, tires, body, seat, charger, and maintenance history",
+      "## Factor in upgrades and street-legal features that raise resale value",
+      "## Compare similar golf carts to estimate fair market value",
+      "## How to price a golf cart to sell faster vs. maximize return",
+      "## Common pricing mistakes sellers make",
+      "## Where to get help listing your cart with Jeff Martin Auctioneers"
+    ]
+  }
 }

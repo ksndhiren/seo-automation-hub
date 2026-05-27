@@ -14,7 +14,7 @@
   "priority": "medium",
   "assigned_reviewer": "seo-expert",
   "created_at": "2026-05-19T16:02:00+04:00",
-  "updated_at": "2026-05-22T14:14:26.552048+00:00",
+  "updated_at": "2026-05-26T16:34:34.467954+00:00",
   "seo_strategy": {
     "search_intent": "Commercial investigation: users want to compare Club Car and EZGO before buying, often looking for the best golf cart brand, used-cart value, and practical ownership differences.",
     "cluster": "Golf cart buying guides and brand comparisons",
@@ -44,7 +44,7 @@
   },
   "publish": {
     "commit_sha": null,
-    "live_url": null
+    "live_url": "https://www.jmagolfcarts.com/blog/brand-comparisons/club-car-vs-ezgo-golf-cart"
   },
   "planned_publish_date": "2026-05-22",
   "calendar_month": "2026-05-to-06",
@@ -225,7 +225,7 @@
       "title": "Compare Club Car and EZGO Carts with Confidence",
       "body": "View current used golf cart listings, explore auction inventory, or contact Jeff Martin Auctioneers for help comparing Club Car vs EZGO options for personal, utility, fleet, or street-legal use.",
       "buttonLabel": "Browse Listings",
-      "buttonHref": "/contact"
+      "buttonHref": "https://www.jmagolfcarts.com/#buyer-register"
     }
   },
   "publish_result": {
@@ -233,5 +233,7 @@
     "published_at": "2026-05-22",
     "branch": "main",
     "path": "src/content/blog/generated"
-  }
+  },
+  "live_url": "https://www.jmagolfcarts.com/blog/brand-comparisons/club-car-vs-ezgo-golf-cart",
+  "published_at": "2026-05-22"
 }

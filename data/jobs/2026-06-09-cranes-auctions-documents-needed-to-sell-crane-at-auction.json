@@ -14,31 +14,32 @@
   "priority": "high",
   "assigned_reviewer": "seo-expert",
   "created_at": "2026-05-19T18:00:00+04:00",
-  "updated_at": "2026-05-22T07:50:10.895615+00:00",
+  "updated_at": "2026-05-27T07:39:13.150344+00:00",
   "planned_publish_date": "2026-05-28",
   "calendar_month": "2026-05-to-06",
   "seo_strategy": {
-    "search_intent": "commercial informational",
-    "cluster": "seller acquisition",
+    "search_intent": "Informational with strong commercial investigation intent: the reader wants to know exactly which documents are required or recommended to sell a crane at auction and is likely evaluating how to prepare for consignment or seller registration.",
+    "cluster": "crane selling preparation and auction readiness",
     "lead_goal": "seller leads",
     "opportunity_score": 87,
     "opportunity_rationale": "High-conversion seller topic because paperwork readiness is a real blocker that often surfaces right before a listing inquiry.",
     "category_slug": "selling-guides",
     "category_name": "Selling Guides",
     "suggested_tags": [
-      "seller paperwork",
-      "auction documents",
-      "ownership records",
-      "listing prep"
+      "crane title paperwork",
+      "auction seller documents",
+      "equipment ownership records",
+      "paperwork for selling crane",
+      "crane consignment prep"
     ],
     "recommended_internal_link_types": [
       "connect and lead registration sections",
-      "auction inventory and equipment category pages",
-      "auction-related landing pages that move buyers or sellers toward inquiry"
+      "auction-related landing pages that move buyers or sellers toward inquiry",
+      "auction inventory and equipment category pages"
     ]
   },
   "metrics": {
-    "target_word_count": 1700,
+    "target_word_count": 1400,
     "neuronwriter_score": null,
     "manual_plagiarism_status": "Pending manual review",
     "flagged_sections_note": "",
@@ -51,5 +52,18 @@
   "image_plan": {
     "selected_images": []
   },
-  "draft": null
+  "draft": null,
+  "brief": {
+    "summary": "Explain the exact documents a seller should gather before listing a crane at auction, with a practical checklist that reduces delays, supports title transfer, and builds buyer confidence. Frame Jeff Martin Auctioneers as the expert auction partner that can review paperwork, flag gaps, and guide sellers through a smoother consignment or auction process. Include common scenarios such as missing title paperwork, lien releases, serial number verification, maintenance records, and ownership proof, while prompting readers to connect with the Jeff Martin Auctioneers team for help preparing a crane for sale.",
+    "outline": [
+      "H1: Documents Needed to Sell a Crane at Auction",
+      "H2: Why the Right Paperwork Matters Before Your Crane Goes to Auction",
+      "H2: Core Documents to Gather: Crane Title Paperwork, Ownership Records, and ID",
+      "H2: Auction Seller Documents That Help Verify Condition, History, and Value",
+      "H2: What to Do If You Do Not Have a Clean Title or Complete Ownership Records",
+      "H2: Extra Paperwork That Can Speed Up Sale and Buyer Confidence",
+      "H2: Crane Auction Document Checklist for Sellers",
+      "H2: How Jeff Martin Auctioneers Helps Sellers Prepare for a Successful Auction"
+    ]
+  }
 }

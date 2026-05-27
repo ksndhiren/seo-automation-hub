@@ -14,31 +14,33 @@
   "priority": "high",
   "assigned_reviewer": "seo-expert",
   "created_at": "2026-05-19T18:00:00+04:00",
-  "updated_at": "2026-05-26T16:34:34.467954+00:00",
+  "updated_at": "2026-05-27T07:47:22.848656+00:00",
   "planned_publish_date": "2026-05-27",
   "calendar_month": "2026-05-to-06",
   "seo_strategy": {
-    "search_intent": "commercial informational",
-    "cluster": "seller acquisition",
+    "search_intent": "Commercial informational intent with lead-generation intent: users want to know when to sell a used crane for the best return and how auction timing, demand cycles, and market conditions affect sale outcomes.",
+    "cluster": "Used crane selling strategy and auction timing",
     "lead_goal": "seller leads",
     "opportunity_score": 84,
     "opportunity_rationale": "Strong seller-timing topic that can pull valuation and listing inquiries from owners who are already thinking about market readiness.",
     "category_slug": "market-updates",
     "category_name": "Market Updates",
     "suggested_tags": [
-      "market timing",
-      "seller strategy",
-      "used crane market",
-      "resale timing"
+      "used crane sales",
+      "auction timing",
+      "equipment resale",
+      "crane market",
+      "selling heavy equipment"
     ],
     "recommended_internal_link_types": [
       "connect and lead registration sections",
+      "auction-related landing pages that move buyers or sellers toward inquiry",
       "auction inventory and equipment category pages",
-      "auction-related landing pages that move buyers or sellers toward inquiry"
+      "contact or appraisal request pathways"
     ]
   },
   "metrics": {
-    "target_word_count": 1700,
+    "target_word_count": 1100,
     "neuronwriter_score": null,
     "manual_plagiarism_status": "Pending manual review",
     "flagged_sections_note": ""
@@ -50,5 +52,18 @@
   "image_plan": {
     "selected_images": []
   },
-  "draft": null
+  "draft": null,
+  "brief": {
+    "summary": "This article should help crane owners, dealers, contractors, and fleet managers understand the best time to sell a used crane by balancing seasonality, market demand, project cycles, equipment condition, and auction timing. Position Jeff Martin Auctioneers as the trusted advisor behind the process, with clear guidance on when to list, how to evaluate crane market timing, and how auction support can help sellers pursue the strongest result with less uncertainty.",
+    "outline": [
+      "H1: Best Time to Sell a Used Crane",
+      "H2: What Affects Crane Market Timing?",
+      "H2: Seasonal Demand and Heavy Equipment Resale Season",
+      "H2: Signs It\u2019s Time to Sell Used Crane Inventory",
+      "H2: How to Sell a Crane at the Best Price",
+      "H2: When Auction Timing Can Outperform a Private Sale",
+      "H2: What Sellers Should Prepare Before Listing",
+      "H2: Talk to Jeff Martin Auctioneers About Your Crane Sale"
+    ]
+  }
 }

@@ -14,7 +14,7 @@
   "priority": "high",
   "assigned_reviewer": "seo-expert",
   "created_at": "2026-05-18T22:10:00+04:00",
-  "updated_at": "2026-05-22T07:50:10.895615+00:00",
+  "updated_at": "2026-05-26T16:34:34.467954+00:00",
   "brief": {
     "summary": "Create a commercial-informational article for crane owners and fleet managers who want a realistic, trustworthy path to selling used cranes through auction. The piece should explain when auctioning makes sense, what documents and photos improve buyer confidence, how equipment condition affects interest, and what sellers should do before listing to avoid delays or lower bids.",
     "outline": [
@@ -190,7 +190,7 @@
       "title": "Need help listing a used crane for auction?",
       "body": "Talk with Jeff Martin Auctioneers about your equipment, documents, and sale goals. We can help you decide whether auction is the right channel and what you need to prepare before listing.",
       "buttonLabel": "Request a Valuation",
-      "buttonHref": "https://www.cranesauctions.com/contact"
+      "buttonHref": "https://www.cranesauctions.com/#connect"
     }
   },
   "metrics": {
@@ -239,5 +239,10 @@
         "pexels_url": "https://www.pexels.com/photo/industrial-shipping-yard-with-cranes-and-trucks-37432646/"
       }
     ]
-  }
+  },
+  "publish_result": {
+    "live_url": "https://www.cranesauctions.com/blog/selling-guides/sell-used-crane-at-auction"
+  },
+  "live_url": "https://www.cranesauctions.com/blog/selling-guides/sell-used-crane-at-auction",
+  "published_at": "2026-05-19"
 }

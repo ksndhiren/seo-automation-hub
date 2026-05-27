@@ -1,6 +1,6 @@
 {
   "summary": {
-    "generated_at": "2026-05-26T16:49:39.138245+00:00",
+    "generated_at": "2026-05-27T10:43:02.329482+00:00",
     "statuses": [
       "brief_pending",
       "new",
@@ -110,16 +110,24 @@
       "priority": "high",
       "planned_publish_date": "2026-05-27",
       "calendar_month": "2026-05-to-06",
-      "word_count": "1700 words",
+      "word_count": "1400 words",
       "brief": {
-        "summary": "Brief content has not been generated yet.",
+        "summary": "Create a practical, trust-building guide that helps sellers estimate a fair market price for a used golf cart and confidently decide how to price it to sell. The article should explain the main value drivers\u2014brand, battery type, age, condition, tires, upgrades, street-legal features, and local demand\u2014while positioning Jeff Martin Auctioneers as the trusted marketplace behind JMA Golf Carts. Include a simple pricing framework, common mistakes to avoid, and a clear next step to register or connect for selling support and marketplace exposure.",
         "outline": [
-          "Outline will appear after the first briefing pass."
+          "# How to Price a Used Golf Cart for Sale",
+          "## What determines used golf cart pricing?",
+          "## Start with the cart\u2019s basics: brand, model, year, and power type",
+          "## Check condition: batteries, tires, body, seat, charger, and maintenance history",
+          "## Factor in upgrades and street-legal features that raise resale value",
+          "## Compare similar golf carts to estimate fair market value",
+          "## How to price a golf cart to sell faster vs. maximize return",
+          "## Common pricing mistakes sellers make",
+          "## Where to get help listing your cart with Jeff Martin Auctioneers"
         ]
       },
       "seo_strategy": {
-        "search_intent": "commercial informational",
-        "cluster": "seller acquisition",
+        "search_intent": "Commercial investigation: users want to estimate resale value, compare used golf cart pricing, and set a competitive asking price before selling.",
+        "cluster": "Used golf cart resale and seller guidance",
         "lead_goal": "seller leads",
         "opportunity_score": 88,
         "opportunity_rationale": "Seller-intent topic with strong commercial fit because pricing uncertainty often appears right before a listing inquiry.",
@@ -127,14 +135,16 @@
         "category_name": "Selling Guides",
         "suggested_tags": [
           "used golf cart pricing",
-          "seller guide",
-          "resale value",
-          "listing prep"
+          "golf cart resale value",
+          "sell a golf cart",
+          "pricing guide",
+          "resale tips"
         ],
         "recommended_internal_link_types": [
           "buyer registration and lead capture sections",
           "inventory and auction listing pages",
-          "brand and category landing pages that support registration"
+          "brand and category landing pages that support registration",
+          "sell-with-us or seller inquiry pages"
         ]
       },
       "image_plan": {
@@ -143,7 +153,7 @@
           {
             "placement": "Featured image",
             "asset_hint": "Not assigned yet",
-            "query": "used golf cart marketplace listing outdoor realistic",
+            "query": "used golf cart for sale listing realistic",
             "prompt": "Realistic editorial photo of a used golf cart prepared for sale outdoors, clean daylight, trustworthy marketplace mood, no text overlay, visually supports the topic 'How to price a used golf cart for sale'."
           }
         ],
@@ -165,7 +175,7 @@
         "Job status: brief_pending",
         "Site target: JMA Golf Carts",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-26T16:34:34.467954+00:00",
+        "Last updated: 2026-05-27T07:47:30.723148+00:00",
         "Planned publish date: 2026-05-27",
         "Snapshot generated from automation hub data"
       ],
@@ -192,31 +202,40 @@
       "priority": "high",
       "planned_publish_date": "2026-05-27",
       "calendar_month": "2026-05-to-06",
-      "word_count": "1700 words",
+      "word_count": "1100 words",
       "brief": {
-        "summary": "Brief content has not been generated yet.",
+        "summary": "This article should help crane owners, dealers, contractors, and fleet managers understand the best time to sell a used crane by balancing seasonality, market demand, project cycles, equipment condition, and auction timing. Position Jeff Martin Auctioneers as the trusted advisor behind the process, with clear guidance on when to list, how to evaluate crane market timing, and how auction support can help sellers pursue the strongest result with less uncertainty.",
         "outline": [
-          "Outline will appear after the first briefing pass."
+          "H1: Best Time to Sell a Used Crane",
+          "H2: What Affects Crane Market Timing?",
+          "H2: Seasonal Demand and Heavy Equipment Resale Season",
+          "H2: Signs It\u2019s Time to Sell Used Crane Inventory",
+          "H2: How to Sell a Crane at the Best Price",
+          "H2: When Auction Timing Can Outperform a Private Sale",
+          "H2: What Sellers Should Prepare Before Listing",
+          "H2: Talk to Jeff Martin Auctioneers About Your Crane Sale"
         ]
       },
       "seo_strategy": {
-        "search_intent": "commercial informational",
-        "cluster": "seller acquisition",
+        "search_intent": "Commercial informational intent with lead-generation intent: users want to know when to sell a used crane for the best return and how auction timing, demand cycles, and market conditions affect sale outcomes.",
+        "cluster": "Used crane selling strategy and auction timing",
         "lead_goal": "seller leads",
         "opportunity_score": 84,
         "opportunity_rationale": "Strong seller-timing topic that can pull valuation and listing inquiries from owners who are already thinking about market readiness.",
         "category_slug": "market-updates",
         "category_name": "Market Updates",
         "suggested_tags": [
-          "market timing",
-          "seller strategy",
-          "used crane market",
-          "resale timing"
+          "used crane sales",
+          "auction timing",
+          "equipment resale",
+          "crane market",
+          "selling heavy equipment"
         ],
         "recommended_internal_link_types": [
           "connect and lead registration sections",
+          "auction-related landing pages that move buyers or sellers toward inquiry",
           "auction inventory and equipment category pages",
-          "auction-related landing pages that move buyers or sellers toward inquiry"
+          "contact or appraisal request pathways"
         ]
       },
       "image_plan": {
@@ -247,7 +266,7 @@
         "Job status: brief_pending",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-26T16:34:34.467954+00:00",
+        "Last updated: 2026-05-27T07:47:22.848656+00:00",
         "Planned publish date: 2026-05-27",
         "Snapshot generated from automation hub data"
       ],
@@ -274,31 +293,39 @@
       "priority": "high",
       "planned_publish_date": "2026-05-28",
       "calendar_month": "2026-05-to-06",
-      "word_count": "1700 words",
+      "word_count": "1400 words",
       "brief": {
-        "summary": "Brief content has not been generated yet.",
+        "summary": "Explain the exact documents a seller should gather before listing a crane at auction, with a practical checklist that reduces delays, supports title transfer, and builds buyer confidence. Frame Jeff Martin Auctioneers as the expert auction partner that can review paperwork, flag gaps, and guide sellers through a smoother consignment or auction process. Include common scenarios such as missing title paperwork, lien releases, serial number verification, maintenance records, and ownership proof, while prompting readers to connect with the Jeff Martin Auctioneers team for help preparing a crane for sale.",
         "outline": [
-          "Outline will appear after the first briefing pass."
+          "H1: Documents Needed to Sell a Crane at Auction",
+          "H2: Why the Right Paperwork Matters Before Your Crane Goes to Auction",
+          "H2: Core Documents to Gather: Crane Title Paperwork, Ownership Records, and ID",
+          "H2: Auction Seller Documents That Help Verify Condition, History, and Value",
+          "H2: What to Do If You Do Not Have a Clean Title or Complete Ownership Records",
+          "H2: Extra Paperwork That Can Speed Up Sale and Buyer Confidence",
+          "H2: Crane Auction Document Checklist for Sellers",
+          "H2: How Jeff Martin Auctioneers Helps Sellers Prepare for a Successful Auction"
         ]
       },
       "seo_strategy": {
-        "search_intent": "commercial informational",
-        "cluster": "seller acquisition",
+        "search_intent": "Informational with strong commercial investigation intent: the reader wants to know exactly which documents are required or recommended to sell a crane at auction and is likely evaluating how to prepare for consignment or seller registration.",
+        "cluster": "crane selling preparation and auction readiness",
         "lead_goal": "seller leads",
         "opportunity_score": 87,
         "opportunity_rationale": "High-conversion seller topic because paperwork readiness is a real blocker that often surfaces right before a listing inquiry.",
         "category_slug": "selling-guides",
         "category_name": "Selling Guides",
         "suggested_tags": [
-          "seller paperwork",
-          "auction documents",
-          "ownership records",
-          "listing prep"
+          "crane title paperwork",
+          "auction seller documents",
+          "equipment ownership records",
+          "paperwork for selling crane",
+          "crane consignment prep"
         ],
         "recommended_internal_link_types": [
           "connect and lead registration sections",
-          "auction inventory and equipment category pages",
-          "auction-related landing pages that move buyers or sellers toward inquiry"
+          "auction-related landing pages that move buyers or sellers toward inquiry",
+          "auction inventory and equipment category pages"
         ]
       },
       "image_plan": {
@@ -329,7 +356,7 @@
         "Job status: new",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-26T16:34:34.467954+00:00",
+        "Last updated: 2026-05-27T07:39:13.150344+00:00",
         "Planned publish date: 2026-05-28",
         "Snapshot generated from automation hub data"
       ],
@@ -389,7 +416,7 @@
           {
             "placement": "Featured image",
             "asset_hint": "Not assigned yet",
-            "query": "used golf cart marketplace listing outdoor realistic",
+            "query": "used golf cart buyer guide realistic",
             "prompt": "Realistic editorial photo of a used golf cart prepared for sale outdoors, clean daylight, trustworthy marketplace mood, no text overlay, visually supports the topic 'Used golf cart inspection checklist before buying'."
           }
         ],
@@ -438,31 +465,42 @@
       "priority": "high",
       "planned_publish_date": "2026-05-28",
       "calendar_month": "2026-05-to-06",
-      "word_count": "1600 words",
+      "word_count": "1400 words",
       "brief": {
-        "summary": "Brief content has not been generated yet.",
+        "summary": "Create a practical, comparison-focused guide that helps neighborhood buyers choose the best golf cart for residential and community use. The article should explain which cart types fit short trips, HOA-friendly travel, and neighborhood driving needs, with clear coverage of electric vs. gas, seating capacity, speed, street-legal considerations, and ownership costs. Position Jeff Martin Auctioneers as the trusted marketplace behind the site, and include soft conversion points that drive readers to register as buyers and explore available inventory.",
         "outline": [
-          "Outline will appear after the first briefing pass."
+          "H1: Best Golf Cart for Neighborhood Use",
+          "H2: What Makes a Golf Cart a Good Fit for Neighborhood Use?",
+          "H2: Electric vs. Gas for Residential Driving: Which Is Better?",
+          "H2: Best Golf Cart Features for Community and Personal Use",
+          "H2: Street-Legal vs. Neighborhood-Only Carts: What Buyers Should Know",
+          "H2: How to Compare Used Golf Carts for Home, HOA, and Community Needs",
+          "H2: Buying Through Jeff Martin Auctioneers: How to Register and Find the Right Cart",
+          "H2: Final Checklist Before You Choose a Neighborhood Golf Cart"
         ]
       },
       "seo_strategy": {
-        "search_intent": "commercial informational",
-        "cluster": "buyer acquisition",
+        "search_intent": "Commercial investigation: users want to compare golf cart types and features before buying for neighborhood or community use, with some ready to register or browse inventory.",
+        "cluster": "Golf cart buying guides for residential, personal, and community use",
         "lead_goal": "buyer leads",
         "opportunity_score": 85,
         "opportunity_rationale": "High-intent use-case content can convert buyers earlier than broad brand pages because it starts with the real ownership context.",
         "category_slug": "buying-guides",
         "category_name": "Buying Guides",
         "suggested_tags": [
-          "neighborhood carts",
-          "personal use",
-          "buyer guide",
-          "residential carts"
+          "neighborhood golf cart guide",
+          "best golf cart for personal use",
+          "residential golf cart buying guide",
+          "golf cart for community use",
+          "electric golf carts",
+          "used golf carts"
         ],
         "recommended_internal_link_types": [
           "buyer registration and lead capture sections",
           "inventory and auction listing pages",
-          "brand and category landing pages that support registration"
+          "brand and category landing pages that support registration",
+          "related buying guide articles",
+          "street-legal cart category pages"
         ]
       },
       "image_plan": {
@@ -471,7 +509,7 @@
           {
             "placement": "Featured image",
             "asset_hint": "Not assigned yet",
-            "query": "used golf cart marketplace listing outdoor realistic",
+            "query": "used golf cart buyer guide realistic",
             "prompt": "Realistic editorial photo of a used golf cart prepared for sale outdoors, clean daylight, trustworthy marketplace mood, no text overlay, visually supports the topic 'Best golf cart for neighborhood use'."
           }
         ],
@@ -493,7 +531,7 @@
         "Job status: new",
         "Site target: JMA Golf Carts",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-26T16:34:34.467954+00:00",
+        "Last updated: 2026-05-27T07:39:21.130499+00:00",
         "Planned publish date: 2026-05-28",
         "Snapshot generated from automation hub data"
       ],
@@ -635,7 +673,7 @@
           {
             "placement": "Featured image",
             "asset_hint": "Not assigned yet",
-            "query": "used golf cart marketplace listing outdoor realistic",
+            "query": "street legal golf cart neighborhood realistic",
             "prompt": "Realistic editorial photo of a used golf cart prepared for sale outdoors, clean daylight, trustworthy marketplace mood, no text overlay, visually supports the topic 'Street legal golf cart requirements buyer checklist'."
           }
         ],
@@ -799,7 +837,7 @@
           {
             "placement": "Featured image",
             "asset_hint": "Not assigned yet",
-            "query": "used golf cart marketplace listing outdoor realistic",
+            "query": "used golf cart for sale listing realistic",
             "prompt": "Realistic editorial photo of a used golf cart prepared for sale outdoors, clean daylight, trustworthy marketplace mood, no text overlay, visually supports the topic 'How dealers can move used golf cart inventory faster'."
           }
         ],
@@ -881,7 +919,7 @@
           {
             "placement": "Featured image",
             "asset_hint": "Not assigned yet",
-            "query": "used golf cart marketplace listing outdoor realistic",
+            "query": "utility golf cart work property maintenance realistic",
             "prompt": "Realistic editorial photo of a used golf cart prepared for sale outdoors, clean daylight, trustworthy marketplace mood, no text overlay, visually supports the topic 'Best golf cart for campground or resort use'."
           }
         ],
@@ -963,7 +1001,7 @@
           {
             "placement": "Featured image",
             "asset_hint": "Not assigned yet",
-            "query": "used golf cart marketplace listing outdoor realistic",
+            "query": "used golf cart buyer guide realistic",
             "prompt": "Realistic editorial photo of a used golf cart prepared for sale outdoors, clean daylight, trustworthy marketplace mood, no text overlay, visually supports the topic 'Common mistakes when buying a used golf cart online'."
           }
         ],
@@ -1291,7 +1329,7 @@
           {
             "placement": "Featured image",
             "asset_hint": "Not assigned yet",
-            "query": "used golf cart marketplace listing outdoor realistic",
+            "query": "club car ezgo golf carts comparison realistic",
             "prompt": "Realistic editorial photo of a used golf cart prepared for sale outdoors, clean daylight, trustworthy marketplace mood, no text overlay, visually supports the topic 'Electric vs gas golf cart for neighborhoods'."
           }
         ],
@@ -1373,7 +1411,7 @@
           {
             "placement": "Featured image",
             "asset_hint": "Not assigned yet",
-            "query": "used golf cart marketplace listing outdoor realistic",
+            "query": "utility golf cart work property maintenance realistic",
             "prompt": "Realistic editorial photo of a used golf cart prepared for sale outdoors, clean daylight, trustworthy marketplace mood, no text overlay, visually supports the topic 'Best golf cart for property maintenance crews'."
           }
         ],
@@ -1537,7 +1575,7 @@
           {
             "placement": "Featured image",
             "asset_hint": "Not assigned yet",
-            "query": "used golf cart marketplace listing outdoor realistic",
+            "query": "golf cart maintenance service inspection realistic",
             "prompt": "Realistic editorial photo of a used golf cart prepared for sale outdoors, clean daylight, trustworthy marketplace mood, no text overlay, visually supports the topic 'How long do golf cart batteries last?'."
           }
         ],
@@ -1701,7 +1739,7 @@
           {
             "placement": "Featured image",
             "asset_hint": "Not assigned yet",
-            "query": "used golf cart marketplace listing outdoor realistic",
+            "query": "street legal golf cart neighborhood realistic",
             "prompt": "Realistic editorial photo of a used golf cart prepared for sale outdoors, clean daylight, trustworthy marketplace mood, no text overlay, visually supports the topic 'What to ask before buying a street legal golf cart'."
           }
         ],
@@ -1865,7 +1903,7 @@
           {
             "placement": "Featured image",
             "asset_hint": "Not assigned yet",
-            "query": "used golf cart marketplace listing outdoor realistic",
+            "query": "used golf cart buyer guide realistic",
             "prompt": "Realistic editorial photo of a used golf cart prepared for sale outdoors, clean daylight, trustworthy marketplace mood, no text overlay, visually supports the topic 'Best 4 seater golf cart for family use'."
           }
         ],
@@ -2111,7 +2149,7 @@
           {
             "placement": "Featured image",
             "asset_hint": "Not assigned yet",
-            "query": "used golf cart marketplace listing outdoor realistic",
+            "query": "used golf cart for sale listing realistic",
             "prompt": "Realistic editorial photo of a used golf cart prepared for sale outdoors, clean daylight, trustworthy marketplace mood, no text overlay, visually supports the topic 'What affects used golf cart resale value'."
           }
         ],
@@ -2193,7 +2231,7 @@
           {
             "placement": "Featured image",
             "asset_hint": "Not assigned yet",
-            "query": "used golf cart marketplace listing outdoor realistic",
+            "query": "used golf cart for sale listing realistic",
             "prompt": "Realistic editorial photo of a used golf cart prepared for sale outdoors, clean daylight, trustworthy marketplace mood, no text overlay, visually supports the topic 'How to take better photos when selling a golf cart'."
           }
         ],
@@ -2439,7 +2477,7 @@
           {
             "placement": "Featured image",
             "asset_hint": "Not assigned yet",
-            "query": "used golf cart marketplace listing outdoor realistic",
+            "query": "used golf cart buyer guide realistic",
             "prompt": "Realistic editorial photo of a used golf cart prepared for sale outdoors, clean daylight, trustworthy marketplace mood, no text overlay, visually supports the topic 'How to compare golf cart listings online'."
           }
         ],
@@ -2521,7 +2559,7 @@
           {
             "placement": "Featured image",
             "asset_hint": "Not assigned yet",
-            "query": "used golf cart marketplace listing outdoor realistic",
+            "query": "golf cart maintenance service inspection realistic",
             "prompt": "Realistic editorial photo of a used golf cart prepared for sale outdoors, clean daylight, trustworthy marketplace mood, no text overlay, visually supports the topic 'When to replace golf cart batteries before selling'."
           }
         ],
@@ -2767,7 +2805,7 @@
           {
             "placement": "Featured image",
             "asset_hint": "Not assigned yet",
-            "query": "used golf cart marketplace listing outdoor realistic",
+            "query": "golf cart maintenance service inspection realistic",
             "prompt": "Realistic editorial photo of a used golf cart prepared for sale outdoors, clean daylight, trustworthy marketplace mood, no text overlay, visually supports the topic 'Golf cart charger problems buyers should check first'."
           }
         ],
@@ -2937,7 +2975,7 @@
           {
             "placement": "Featured image",
             "asset_hint": "/hero.webp",
-            "query": "used golf cart marketplace listing outdoor realistic",
+            "query": "used golf cart for sale listing realistic",
             "prompt": "Realistic editorial photo of a used golf cart prepared for sale outdoors, clean daylight, trustworthy marketplace mood, no text overlay, visually supports the topic 'How to sell a used golf cart online'."
           },
           {
@@ -3117,7 +3155,7 @@
           "title": "Need help selling your used golf cart online?",
           "body": "Jeff Martin Auctioneers can help you take a more confident marketplace approach, whether you are listing a single cart, comparing selling options, or trying to reach qualified buyers faster. Use the contact path on JMA Golf Carts to start the conversation and get support from a trusted golf cart marketplace team.",
           "buttonLabel": "Contact Jeff Martin Auctioneers",
-          "buttonHref": "/contact"
+          "buttonHref": "https://www.jmagolfcarts.com/#buyer-register"
         }
       },
       "final_review": {
@@ -3396,7 +3434,7 @@
           "title": "Need help listing a used crane for auction?",
           "body": "Talk with Jeff Martin Auctioneers about your equipment, documents, and sale goals. We can help you decide whether auction is the right channel and what you need to prepare before listing.",
           "buttonLabel": "Request a Valuation",
-          "buttonHref": "https://www.cranesauctions.com/contact"
+          "buttonHref": "https://www.cranesauctions.com/#connect"
         }
       },
       "final_review": {
@@ -3482,7 +3520,7 @@
           {
             "placement": "Featured image",
             "asset_hint": "/hero.webp",
-            "query": "used golf cart marketplace listing outdoor realistic",
+            "query": "used golf cart buyer guide realistic",
             "prompt": "Realistic editorial photo of a used golf cart prepared for sale outdoors, clean daylight, trustworthy marketplace mood, no text overlay, visually supports the topic 'What to look for when buying a used golf cart'."
           },
           {
@@ -3673,7 +3711,7 @@
           "title": "Browse Used Golf Carts With Confidence",
           "body": "If you are comparing used golf carts and want a trusted place to start, Jeff Martin Auctioneers can help you review inventory, compare listings, and find the right cart for personal, utility, or fleet use. Reach out for guidance before you buy.",
           "buttonLabel": "Contact Jeff Martin Auctioneers",
-          "buttonHref": "https://www.jmagolfcarts.com/contact"
+          "buttonHref": "https://www.jmagolfcarts.com/#buyer-register"
         }
       },
       "final_review": {
@@ -3945,7 +3983,7 @@
           "title": "Need help evaluating a used crane before you bid?",
           "body": "Talk with Jeff Martin Auctioneers for practical guidance on auction terms, inventory, and buyer strategy. Whether you are buying one crane or building a fleet, the team can help you approach the auction with more clarity and confidence.",
           "buttonLabel": "Contact Jeff Martin Auctioneers",
-          "buttonHref": "https://www.cranesauctions.com/contact"
+          "buttonHref": "https://www.cranesauctions.com/#connect"
         }
       },
       "final_review": {
@@ -4227,7 +4265,7 @@
           "title": "Need help evaluating a used crane before you bid?",
           "body": "Jeff Martin Auctioneers can help you review listings, request additional details, and make a more informed bidding decision. If you're comparing used cranes or need help interpreting condition and auction information, reach out before the sale closes.",
           "buttonLabel": "Contact Jeff Martin Auctioneers",
-          "buttonHref": "https://www.cranesauctions.com/contact"
+          "buttonHref": "https://www.cranesauctions.com/#connect"
         }
       },
       "final_review": {
@@ -4483,7 +4521,7 @@
           "title": "Get a market-based crane valuation from Jeff Martin Auctioneers",
           "body": "If you are preparing to sell a used crane, Jeff Martin Auctioneers can help you review crane appraisal factors, assess current market demand, and determine the most practical path to sale. Reach out for seller support, auction guidance, and a professional evaluation grounded in real market activity.",
           "buttonLabel": "Contact Jeff Martin Auctioneers",
-          "buttonHref": "https://www.cranesauctions.com/contact"
+          "buttonHref": "https://www.cranesauctions.com/#connect"
         }
       },
       "final_review": {
@@ -4569,7 +4607,7 @@
           {
             "placement": "Featured image",
             "asset_hint": "/hero.webp",
-            "query": "used golf cart marketplace listing outdoor realistic",
+            "query": "club car ezgo golf carts comparison realistic",
             "prompt": "Realistic editorial photo of a used golf cart prepared for sale outdoors, clean daylight, trustworthy marketplace mood, no text overlay, visually supports the topic 'Club Car vs EZGO golf cart'."
           },
           {
@@ -4727,7 +4765,7 @@
           "title": "Compare Club Car and EZGO Carts with Confidence",
           "body": "View current used golf cart listings, explore auction inventory, or contact Jeff Martin Auctioneers for help comparing Club Car vs EZGO options for personal, utility, fleet, or street-legal use.",
           "buttonLabel": "Browse Listings",
-          "buttonHref": "/contact"
+          "buttonHref": "https://www.jmagolfcarts.com/#buyer-register"
         }
       },
       "final_review": {
@@ -4813,7 +4851,7 @@
           {
             "placement": "Featured image",
             "asset_hint": "https://images.pexels.com/photos/9366580/pexels-photo-9366580.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-            "query": "used golf cart marketplace listing outdoor realistic",
+            "query": "golf cart maintenance service inspection realistic",
             "prompt": "Realistic editorial photo of a used golf cart prepared for sale outdoors, clean daylight, trustworthy marketplace mood, no text overlay, visually supports the topic 'Golf cart battery replacement cost'."
           },
           {
@@ -4995,7 +5033,7 @@
           "title": "Compare carts before you commit to a battery bill",
           "body": "If you are evaluating golf cart battery replacement cost, Jeff Martin Auctioneers can help you compare inventory, replacement-ready carts, and better-fit options for your budget and use case. Browse available carts or contact the team for practical sourcing support.",
           "buttonLabel": "Contact Jeff Martin Auctioneers",
-          "buttonHref": "/contact"
+          "buttonHref": "https://www.jmagolfcarts.com/#buyer-register"
         },
         "heroImageAlt": "Young woman in red polo with golf gear by cart, golf course setting."
       },
@@ -5260,7 +5298,7 @@
           "title": "Need help choosing between auction and private sale?",
           "body": "Talk with Jeff Martin Auctioneers for a clear recommendation based on your equipment, timeline, and sales goals. Whether you are considering an auction, a private sale, or just want a valuation and next-step plan, our team can help you move forward with confidence.",
           "buttonLabel": "Contact Jeff Martin Auctioneers",
-          "buttonHref": "https://www.cranesauctions.com/contact"
+          "buttonHref": "https://www.cranesauctions.com/#connect"
         },
         "heroImageAlt": "View of a shipping yard with heavy machinery and industrial pipes under a cloudy sky."
       },
@@ -5338,8 +5376,8 @@
         "items": [
           {
             "placement": "Featured image",
-            "asset_hint": "https://images.pexels.com/photos/9207084/pexels-photo-9207084.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-            "query": "used golf cart marketplace listing outdoor realistic",
+            "asset_hint": "https://images.pexels.com/photos/1325716/pexels-photo-1325716.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+            "query": "utility golf cart work property maintenance realistic",
             "prompt": "Realistic editorial photo of a used golf cart prepared for sale outdoors, clean daylight, trustworthy marketplace mood, no text overlay, visually supports the topic 'Best utility golf carts for work and property use'."
           },
           {
@@ -5357,15 +5395,15 @@
         ],
         "selected_images": [
           {
-            "id": 9207084,
-            "alt": "A relaxing scene of family leisure with golf carts on a sunny golf course path.",
-            "photographer": "Mikhail Nilov",
-            "thumb": "https://images.pexels.com/photos/9207084/pexels-photo-9207084.jpeg?auto=compress&cs=tinysrgb&h=350",
-            "large": "https://images.pexels.com/photos/9207084/pexels-photo-9207084.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-            "original": "https://images.pexels.com/photos/9207084/pexels-photo-9207084.jpeg",
-            "width": 5558,
-            "height": 3705,
-            "pexels_url": "https://www.pexels.com/photo/golf-carts-on-concrete-pathway-9207084/"
+            "id": 1325716,
+            "alt": "A utility vehicle parked outdoors at a sprawling golf course under a clear sky.",
+            "photographer": "Jopwell",
+            "thumb": "https://images.pexels.com/photos/1325716/pexels-photo-1325716.jpeg?auto=compress&cs=tinysrgb&h=350",
+            "large": "https://images.pexels.com/photos/1325716/pexels-photo-1325716.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+            "original": "https://images.pexels.com/photos/1325716/pexels-photo-1325716.jpeg",
+            "width": 7951,
+            "height": 4914,
+            "pexels_url": "https://www.pexels.com/photo/person-driving-black-and-green-2-door-cart-1325716/"
           },
           {
             "id": 1325753,
@@ -5379,15 +5417,15 @@
             "pexels_url": "https://www.pexels.com/photo/man-wearing-white-cap-and-holding-printer-paper-and-pen-1325753/"
           },
           {
-            "id": 9207084,
-            "alt": "A relaxing scene of family leisure with golf carts on a sunny golf course path.",
-            "photographer": "Mikhail Nilov",
-            "thumb": "https://images.pexels.com/photos/9207084/pexels-photo-9207084.jpeg?auto=compress&cs=tinysrgb&h=350",
-            "large": "https://images.pexels.com/photos/9207084/pexels-photo-9207084.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-            "original": "https://images.pexels.com/photos/9207084/pexels-photo-9207084.jpeg",
-            "width": 5558,
-            "height": 3705,
-            "pexels_url": "https://www.pexels.com/photo/golf-carts-on-concrete-pathway-9207084/"
+            "id": 3051966,
+            "alt": "A stationary green golf cart parked by a building on a sunny day.",
+            "photographer": "Isaac Taylor",
+            "thumb": "https://images.pexels.com/photos/3051966/pexels-photo-3051966.jpeg?auto=compress&cs=tinysrgb&h=350",
+            "large": "https://images.pexels.com/photos/3051966/pexels-photo-3051966.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+            "original": "https://images.pexels.com/photos/3051966/pexels-photo-3051966.jpeg",
+            "width": 5316,
+            "height": 3608,
+            "pexels_url": "https://www.pexels.com/photo/black-golf-cart-3051966/"
           }
         ]
       },
@@ -5406,7 +5444,7 @@
           "property use",
           "golf carts for work use"
         ],
-        "heroImage": "https://images.pexels.com/photos/9207084/pexels-photo-9207084.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "heroImage": "https://images.pexels.com/photos/1325716/pexels-photo-1325716.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
         "featured": false,
         "seoTitle": "Best Utility Golf Carts for Work and Property Use | Buyer Guide",
         "seoDescription": "Compare the best utility golf carts for work use, property maintenance, and commercial tasks. Learn what to look for before you buy utility golf carts for sale.",
@@ -5533,7 +5571,7 @@
           "buttonLabel": "Register with Jeff Martin Auctioneers",
           "buttonHref": "https://www.jmagolfcarts.com/#buyer-register"
         },
-        "heroImageAlt": "A relaxing scene of family leisure with golf carts on a sunny golf course path."
+        "heroImageAlt": "A utility vehicle parked outdoors at a sprawling golf course under a clear sky."
       },
       "final_review": {
         "checklist": [

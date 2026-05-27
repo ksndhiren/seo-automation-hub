@@ -14,31 +14,35 @@
   "priority": "high",
   "assigned_reviewer": "seo-expert",
   "created_at": "2026-05-19T18:00:00+04:00",
-  "updated_at": "2026-05-22T07:50:10.895615+00:00",
+  "updated_at": "2026-05-27T07:39:21.130499+00:00",
   "planned_publish_date": "2026-05-28",
   "calendar_month": "2026-05-to-06",
   "seo_strategy": {
-    "search_intent": "commercial informational",
-    "cluster": "buyer acquisition",
+    "search_intent": "Commercial investigation: users want to compare golf cart types and features before buying for neighborhood or community use, with some ready to register or browse inventory.",
+    "cluster": "Golf cart buying guides for residential, personal, and community use",
     "lead_goal": "buyer leads",
     "opportunity_score": 85,
     "opportunity_rationale": "High-intent use-case content can convert buyers earlier than broad brand pages because it starts with the real ownership context.",
     "category_slug": "buying-guides",
     "category_name": "Buying Guides",
     "suggested_tags": [
-      "neighborhood carts",
-      "personal use",
-      "buyer guide",
-      "residential carts"
+      "neighborhood golf cart guide",
+      "best golf cart for personal use",
+      "residential golf cart buying guide",
+      "golf cart for community use",
+      "electric golf carts",
+      "used golf carts"
     ],
     "recommended_internal_link_types": [
       "buyer registration and lead capture sections",
       "inventory and auction listing pages",
-      "brand and category landing pages that support registration"
+      "brand and category landing pages that support registration",
+      "related buying guide articles",
+      "street-legal cart category pages"
     ]
   },
   "metrics": {
-    "target_word_count": 1600,
+    "target_word_count": 1400,
     "neuronwriter_score": null,
     "manual_plagiarism_status": "Pending manual review",
     "flagged_sections_note": ""
@@ -50,5 +54,18 @@
   "image_plan": {
     "selected_images": []
   },
-  "draft": null
+  "draft": null,
+  "brief": {
+    "summary": "Create a practical, comparison-focused guide that helps neighborhood buyers choose the best golf cart for residential and community use. The article should explain which cart types fit short trips, HOA-friendly travel, and neighborhood driving needs, with clear coverage of electric vs. gas, seating capacity, speed, street-legal considerations, and ownership costs. Position Jeff Martin Auctioneers as the trusted marketplace behind the site, and include soft conversion points that drive readers to register as buyers and explore available inventory.",
+    "outline": [
+      "H1: Best Golf Cart for Neighborhood Use",
+      "H2: What Makes a Golf Cart a Good Fit for Neighborhood Use?",
+      "H2: Electric vs. Gas for Residential Driving: Which Is Better?",
+      "H2: Best Golf Cart Features for Community and Personal Use",
+      "H2: Street-Legal vs. Neighborhood-Only Carts: What Buyers Should Know",
+      "H2: How to Compare Used Golf Carts for Home, HOA, and Community Needs",
+      "H2: Buying Through Jeff Martin Auctioneers: How to Register and Find the Right Cart",
+      "H2: Final Checklist Before You Choose a Neighborhood Golf Cart"
+    ]
+  }
 }
