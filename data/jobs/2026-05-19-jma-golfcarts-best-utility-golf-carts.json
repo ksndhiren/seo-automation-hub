@@ -14,7 +14,7 @@
   "priority": "medium",
   "assigned_reviewer": "seo-expert",
   "created_at": "2026-05-19T16:00:00+04:00",
-  "updated_at": "2026-05-26T16:49:39.076612+00:00",
+  "updated_at": "2026-05-27T12:09:23.637161+00:00",
   "seo_strategy": {
     "search_intent": "commercial informational",
     "cluster": "buyer acquisition",
@@ -44,7 +44,7 @@
   },
   "publish": {
     "commit_sha": null,
-    "live_url": null
+    "live_url": "https://www.jmagolfcarts.com/blog/utility-work-carts/best-utility-golf-carts-for-work-and-property-use"
   },
   "planned_publish_date": "2026-05-26",
   "calendar_month": "2026-05-to-06",
@@ -234,5 +234,23 @@
     "published_at": "2026-05-26",
     "branch": "main",
     "path": "src/content/blog/generated"
+  },
+  "live_url": "https://www.jmagolfcarts.com/blog/utility-work-carts/best-utility-golf-carts-for-work-and-property-use",
+  "published_at": "2026-05-26",
+  "brief": {
+    "summary": "A practical guide to choosing utility golf carts for work sites, property maintenance, and commercial operations, with buying tips that help you compare features, power options, and use cases with confidence.",
+    "outline": [
+      "Best Utility Golf Carts for Work and Property Use",
+      "What Makes a Utility Golf Cart the Best Fit for Work",
+      "Common Types of Utility Golf Carts",
+      "Gas vs. Electric for Property Maintenance Use",
+      "Features to Prioritize in a Commercial Buying Guide",
+      "How to Match the Cart to the Property",
+      "Buying Used Utility Golf Carts with More Confidence",
+      "Who Benefits Most from Utility Golf Carts",
+      "How to Compare the Best Utility Golf Carts Before You Buy",
+      "Frequently asked questions",
+      "Find the Right Utility Cart for Your Worksite"
+    ]
   }
 }

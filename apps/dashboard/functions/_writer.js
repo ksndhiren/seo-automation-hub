@@ -156,7 +156,7 @@ Rules:
     intro: result.intro,
     sections: result.sections,
     faq: result.faq,
-    cta: result.cta,
+    cta: normalizeCta(result.cta, site),
   };
 
   const mergedJob = {
@@ -252,7 +252,7 @@ Rules:
     ok: true,
     brief: {
       summary: result.brief_summary,
-      outline: result.outline,
+      outline: cleanOutlineItems(result.outline),
     },
     seoStrategy: {
       ...(assetJob.seo_strategy || {}),
@@ -337,7 +337,7 @@ Rules:
     ok: true,
     brief: {
       summary: result.brief_summary,
-      outline: result.outline,
+      outline: cleanOutlineItems(result.outline),
     },
     seoStrategy: {
       ...(assetJob.seo_strategy || {}),
@@ -379,6 +379,7 @@ export async function reviseDraftFromFeedback(context, reviewRow, reviewerNote) 
   const userPrompt = `
 Site name: ${site.siteName}
 Site URL: ${site.siteUrl}
+CTA destination URL: ${site.ctaUrl}
 Lead generation brand: ${site.leadGenerationBrand}
 Brand tone: ${site.tone}
 Lead generation context: ${site.leadGenerationContext}
@@ -410,6 +411,7 @@ Return a JSON object with exactly these keys:
 
 Rules:
 - Preserve the CTA destination by setting cta.buttonHref exactly to the CTA destination URL provided above.
+- The CTA and conversion language should name Jeff Martin Auctioneers as the trusted contact brand behind the micro-site whenever a company name is used.
 - When revising any internal navigation or next-step language, prioritize registration, connect, inquiry, or lead-capture destinations ahead of generic browsing paths.
 `;
 
@@ -433,7 +435,7 @@ Rules:
     intro: result.intro,
     sections: result.sections,
     faq: result.faq,
-    cta: result.cta,
+    cta: normalizeCta(result.cta, site),
   };
 
   const mergedJob = {
@@ -503,6 +505,29 @@ async function autoSelectDraftImages(context, reviewRow, job, imagePlan) {
   }
 
   return selections;
+}
+
+function cleanOutlineItems(outline) {
+  if (!Array.isArray(outline)) return [];
+  return outline
+    .map((item) =>
+      String(item || "")
+        .replace(/^\s*#{1,6}\s+/, "")
+        .replace(/^\s*H[1-6]:\s*/i, "")
+        .trim(),
+    )
+    .filter(Boolean);
+}
+
+function normalizeCta(cta, site) {
+  return {
+    title: cta?.title || `Connect with ${site.leadGenerationBrand}`,
+    body:
+      cta?.body ||
+      `Talk with ${site.leadGenerationBrand} about the next step and use the site registration path to get started.`,
+    buttonLabel: cta?.buttonLabel || "Get started",
+    buttonHref: site.ctaUrl,
+  };
 }
 
 async function loadAssetJob(context, jobId) {

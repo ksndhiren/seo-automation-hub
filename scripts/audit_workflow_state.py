@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import re
 from collections import defaultdict
 from datetime import datetime
 from pathlib import Path
@@ -12,6 +13,7 @@ JOBS_DIR = REPO_ROOT / "data" / "jobs"
 SITES_DIR = REPO_ROOT / "config" / "sites"
 ACTIVE_BRIEF_STATUSES = {"brief_pending", "brief_approved"}
 PLACEHOLDER_SUMMARY = "Brief content has not been generated yet."
+HEADING_MARKER_RE = re.compile(r"^\s*(#{1,6}\s+|H[1-6]:\s*)", re.IGNORECASE)
 
 
 def load_json(path: Path) -> dict:
@@ -52,19 +54,38 @@ def audit_jobs(jobs: list[dict], sites: dict[str, dict]) -> list[str]:
             urls[job["target_url"]].append(job["job_id"])
 
         selected_images = (job.get("image_plan") or {}).get("selected_images") or []
+        job_image_ids: list[str] = []
         for image in selected_images:
             image_id = normalize_image_id(image)
             if image_id:
+                job_image_ids.append(image_id)
                 used_images[site_id][image_id].append(job["job_id"])
+        if len(job_image_ids) != len(set(job_image_ids)):
+            issues.append(f"{job['job_id']}: selected images contain duplicates")
 
         status = job.get("status")
         brief = job.get("brief") or {}
         draft = job.get("draft")
+        outline = brief.get("outline") or []
+
+        if status in {"final_pending", "final_approved", "published"} and not job_image_ids:
+            issues.append(f"{job['job_id']}: {status} job is missing selected images")
+
+        for item in outline:
+            if isinstance(item, str) and HEADING_MARKER_RE.match(item):
+                issues.append(f"{job['job_id']}: brief outline contains raw heading marker")
+                break
+
+        if status != "new":
+            if is_placeholder_summary(brief.get("summary")):
+                issues.append(f"{job['job_id']}: non-new job has placeholder brief summary")
+            if len(outline) < 3:
+                issues.append(f"{job['job_id']}: non-new job brief outline is too short")
 
         if status in ACTIVE_BRIEF_STATUSES:
-            if not brief.get("summary") or brief.get("summary") == PLACEHOLDER_SUMMARY:
+            if is_placeholder_summary(brief.get("summary")):
                 issues.append(f"{job['job_id']}: active brief has placeholder summary")
-            if len(brief.get("outline") or []) < 3:
+            if len(outline) < 3:
                 issues.append(f"{job['job_id']}: active brief outline is too short")
 
         if status in {"final_pending", "final_approved", "published"} and not draft:
@@ -122,6 +143,12 @@ def normalize_image_id(image: object) -> str:
         if value:
             return str(value)
     return ""
+
+
+def is_placeholder_summary(value: object) -> bool:
+    if not isinstance(value, str):
+        return True
+    return value.strip() in {"", PLACEHOLDER_SUMMARY}
 
 
 def published_url(job: dict, site: dict | None) -> str:

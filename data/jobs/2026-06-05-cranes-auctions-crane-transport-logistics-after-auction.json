@@ -14,7 +14,7 @@
   "priority": "medium",
   "assigned_reviewer": "seo-expert",
   "created_at": "2026-05-19T18:00:00+04:00",
-  "updated_at": "2026-05-26T16:49:39.098812+00:00",
+  "updated_at": "2026-05-27T12:09:23.637161+00:00",
   "planned_publish_date": "2026-05-26",
   "calendar_month": "2026-05-to-06",
   "seo_strategy": {
@@ -46,7 +46,7 @@
   },
   "publish": {
     "commit_sha": null,
-    "live_url": null
+    "live_url": "https://www.cranesauctions.com/blog/transport-logistics/crane-transport-logistics-after-auction"
   },
   "image_plan": {
     "selected_images": [
@@ -227,5 +227,22 @@
     "published_at": "2026-05-26",
     "branch": "main",
     "path": "src/web/content/blog"
+  },
+  "live_url": "https://www.cranesauctions.com/blog/transport-logistics/crane-transport-logistics-after-auction",
+  "published_at": "2026-05-26",
+  "brief": {
+    "summary": "Learn how crane transport logistics after auction works, what to confirm before pickup, and how to avoid delays when moving a crane after sale. A practical guide for buyers, sellers, and fleet managers.",
+    "outline": [
+      "Crane Transport Logistics After Auction: What Buyers Need to Plan Before Pickup",
+      "Why transport planning should start before the auction ends",
+      "Key details to confirm before you arrange a move",
+      "Common challenges in crane pickup logistics",
+      "How to build a realistic removal timeline",
+      "What buyers should expect from a transport provider",
+      "How sellers and auction teams can support smoother removal",
+      "Practical checklist for auction removal planning",
+      "Frequently asked questions",
+      "Need help planning a crane move after auction?"
+    ]
   }
 }

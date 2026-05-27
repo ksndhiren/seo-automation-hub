@@ -10,11 +10,11 @@
     "sell crane at best price"
   ],
   "target_url": "/blog/market-updates/best-time-to-sell-a-used-crane",
-  "status": "brief_pending",
+  "status": "final_approved",
   "priority": "high",
   "assigned_reviewer": "seo-expert",
   "created_at": "2026-05-19T18:00:00+04:00",
-  "updated_at": "2026-05-27T07:47:22.848656+00:00",
+  "updated_at": "2026-05-27T12:11:04.990Z",
   "planned_publish_date": "2026-05-27",
   "calendar_month": "2026-05-to-06",
   "seo_strategy": {
@@ -50,20 +50,183 @@
     "live_url": null
   },
   "image_plan": {
-    "selected_images": []
+    "selected_images": [
+      {
+        "id": 37666614,
+        "alt": "Low-angle view of massive industrial cranes with a cloudy backdrop, showing engineering and construction.",
+        "photographer": "tis O",
+        "thumb": "https://images.pexels.com/photos/37666614/pexels-photo-37666614.png?auto=compress&cs=tinysrgb&h=350",
+        "large": "https://images.pexels.com/photos/37666614/pexels-photo-37666614.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "original": "https://images.pexels.com/photos/37666614/pexels-photo-37666614.png",
+        "width": 5185,
+        "height": 3472,
+        "pexels_url": "https://www.pexels.com/photo/industrial-crane-structures-against-cloudy-sky-37666614/"
+      },
+      {
+        "id": 29468605,
+        "alt": "Construction workers using a cherry picker for building maintenance in Huaian, Jiangsu, China.",
+        "photographer": "Usman AbdulrasheedGambo",
+        "thumb": "https://images.pexels.com/photos/29468605/pexels-photo-29468605.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "large": "https://images.pexels.com/photos/29468605/pexels-photo-29468605.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "original": "https://images.pexels.com/photos/29468605/pexels-photo-29468605.jpeg",
+        "width": 4032,
+        "height": 3024,
+        "pexels_url": "https://www.pexels.com/photo/construction-workers-on-crane-at-building-site-in-huaian-29468605/"
+      },
+      {
+        "id": 29502203,
+        "alt": "ACE TX 150 crane positioned at an outdoor construction site in Faridabad, Haryana, India.",
+        "photographer": "Action Construction  Equipment Ltd. - ACE",
+        "thumb": "https://images.pexels.com/photos/29502203/pexels-photo-29502203.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "large": "https://images.pexels.com/photos/29502203/pexels-photo-29502203.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "original": "https://images.pexels.com/photos/29502203/pexels-photo-29502203.jpeg",
+        "width": 6240,
+        "height": 4160,
+        "pexels_url": "https://www.pexels.com/photo/ace-tx-150-crane-at-construction-site-in-faridabad-29502203/"
+      }
+    ]
   },
-  "draft": null,
+  "draft": {
+    "slug": "best-time-to-sell-a-used-crane",
+    "title": "Best Time to Sell a Used Crane",
+    "description": "Learn how crane market timing, seasonal demand, equipment condition, and auction strategy affect the best time to sell a used crane. Get practical guidance from Jeff Martin Auctioneers.",
+    "publishedAt": "2026-05-27",
+    "author": "Jeff Martin Auctioneers Editorial Team",
+    "readTime": "6 min read",
+    "category": "Market Updates",
+    "tags": [
+      "used crane sales",
+      "auction timing",
+      "crane market",
+      "equipment resale",
+      "selling heavy equipment"
+    ],
+    "heroImage": "https://images.pexels.com/photos/37666614/pexels-photo-37666614.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "featured": false,
+    "seoTitle": "Best Time to Sell a Used Crane | Crane Market Timing Tips",
+    "seoDescription": "Find the best time to sell a used crane by understanding seasonality, market demand, and auction timing. See how Jeff Martin Auctioneers helps sellers pursue stronger results.",
+    "intro": [
+      "If you are asking when to sell used crane equipment, timing matters almost as much as the machine itself. Market demand, project cycles, machine condition, and auction calendar all affect how much interest a crane can draw.",
+      "The best time to sell a used crane is usually when your equipment is market-ready and the buyer pool is active. Jeff Martin Auctioneers helps sellers read crane market timing with a practical, straightforward approach that supports better decisions and less uncertainty."
+    ],
+    "sections": [
+      {
+        "heading": "What Affects Crane Market Timing?",
+        "paragraphs": [
+          "Crane market timing is shaped by more than one factor. Buyers look at age, lifting capacity, service history, attachments, inspection records, and whether the crane fits current project needs. At the same time, broader construction activity and fleet replacement cycles can change demand quickly.",
+          "For sellers, this means the best time to sell a used crane is not always the same as the best time to buy one. If your equipment is in strong condition and the market is active, you may have more leverage. If demand is soft or the crane needs repairs, waiting can sometimes improve your position."
+        ],
+        "bullets": [
+          "Equipment condition and maintenance history",
+          "Current project demand in your region",
+          "Age, hours, and operating specs",
+          "Fleet replacement or surplus timing",
+          "Auction calendar and buyer activity"
+        ]
+      },
+      {
+        "heading": "Seasonal Demand and Heavy Equipment Resale Season",
+        "paragraphs": [
+          "Heavy equipment resale season often follows the rhythm of the construction and transport industries. In many markets, buyer interest rises when contractors are preparing for active project periods and need equipment in place before work ramps up.",
+          "That said, seasonality is not a guarantee. A well-presented crane can attract attention year-round, especially through auction channels with national reach. The key is to understand when your target buyers are most likely to be looking and to align your listing or sale date with that demand."
+        ],
+        "callout": "Seasonal strength can help, but the best selling window is usually the one that matches both buyer demand and your crane\u2019s readiness."
+      },
+      {
+        "heading": "Signs It\u2019s Time to Sell Used Crane Inventory",
+        "paragraphs": [
+          "For fleet managers, dealers, and contractors, the decision to sell often starts with utilization. If a crane is underused, expensive to store, or nearing a major repair cycle, selling earlier may protect value before costs start to climb.",
+          "Another sign is strategic change. If your business has shifted to different lift requirements, newer models, or a different equipment mix, holding onto an idle crane can tie up capital that could be put to better use elsewhere."
+        ],
+        "bullets": [
+          "The crane is sitting idle more often than it is working",
+          "Repair or inspection costs are trending upward",
+          "Your fleet has changed and the crane no longer fits",
+          "You are managing surplus after a project or contract ends",
+          "You want to convert equipment into working capital"
+        ]
+      },
+      {
+        "heading": "How to Sell a Crane at the Best Price",
+        "paragraphs": [
+          "To sell a crane at the best price, presentation matters. Buyers respond to accurate documentation, clear photos, maintenance records, inspection details, and honest information about condition. The more confidence a buyer has, the more competitive the interest can be.",
+          "Pricing strategy also matters. Overpricing can slow momentum, while a realistic market-based approach can attract qualified buyers faster. Jeff Martin Auctioneers works with sellers to position equipment properly, identify the right audience, and choose the sale method that fits the asset and the market."
+        ],
+        "bullets": [
+          "Gather service, inspection, and ownership records",
+          "Document hours, capacity, and configuration",
+          "Clean the crane and photograph it well",
+          "Disclose known issues early",
+          "Set a pricing strategy based on current market demand"
+        ]
+      },
+      {
+        "heading": "When Auction Timing Can Outperform a Private Sale",
+        "paragraphs": [
+          "Auction timing can outperform a private sale when speed, exposure, and competitive bidding matter most. If you need to reduce holding costs, move surplus inventory, or reach a wider buyer base, an auction can create urgency that a private listing may not match.",
+          "Auction support can also reduce friction. Instead of managing individual negotiations, you can rely on Jeff Martin Auctioneers to help structure the sale, market the equipment, and guide qualified buyers toward action. For many sellers, that combination of reach and process support is the difference between a slow sale and a cleaner exit."
+        ],
+        "callout": "If your goal is to move equipment efficiently while still pursuing strong market value, auction timing deserves serious attention."
+      },
+      {
+        "heading": "What Sellers Should Prepare Before Listing",
+        "paragraphs": [
+          "Preparation helps buyers trust what they are seeing. Before you list a crane, assemble the documents and details a serious buyer will want to review. That includes maintenance logs, service updates, inspection results, titles, and any notes about parts or accessories included with the machine.",
+          "You should also think through logistics. Buyers want to know how the crane can be inspected, where it is located, and what the transfer process will look like. Clear information reduces delays and helps the sale move with fewer surprises."
+        ],
+        "bullets": [
+          "Maintenance and inspection records",
+          "Title and ownership documents",
+          "Model, year, serial number, and capacity details",
+          "Photos from multiple angles",
+          "Location, access, and pickup logistics"
+        ]
+      },
+      {
+        "heading": "Talk to Jeff Martin Auctioneers About Your Crane Sale",
+        "paragraphs": [
+          "If you are trying to decide when to sell used crane equipment, a market conversation can be more useful than guesswork. Jeff Martin Auctioneers brings crane market experience, auction insight, and seller support to help you evaluate timing with more confidence.",
+          "Whether you are selling one crane or clearing out multiple assets, the goal is the same: make the process straightforward and pursue the strongest practical result. If you want help reading the market, reviewing your options, or planning a sale, connect with Jeff Martin Auctioneers today."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "What is the best time to sell a used crane?",
+        "answer": "The best time to sell a used crane is when demand is active, your equipment is market-ready, and your timing aligns with buyer needs. For some sellers, that means selling before a major repair cycle or before the machine becomes underutilized."
+      },
+      {
+        "question": "Should I wait for a better crane market before selling?",
+        "answer": "Waiting can help in some cases, but it can also add storage, repair, and depreciation costs. If the crane is already in strong condition and your business no longer needs it, selling sooner may be the better move."
+      },
+      {
+        "question": "Does auction timing really matter for crane sales?",
+        "answer": "Yes. Auction timing can influence buyer interest, exposure, and urgency. When the market is active and the sale is well promoted, an auction can help generate competitive attention more efficiently than a private sale."
+      },
+      {
+        "question": "How can Jeff Martin Auctioneers help me sell a crane?",
+        "answer": "Jeff Martin Auctioneers helps sellers assess market timing, prepare the asset, and choose a sale approach that fits the equipment and the market. The team supports the process from planning through buyer engagement."
+      }
+    ],
+    "cta": {
+      "title": "Ready to Discuss the Best Time to Sell Your Crane?",
+      "body": "If you are evaluating crane market timing, Jeff Martin Auctioneers can help you review your options and plan a sale with clarity. Connect with our team to discuss your equipment, your timeline, and the best path forward for your crane sale.",
+      "buttonLabel": "Connect with Jeff Martin Auctioneers",
+      "buttonHref": "https://www.cranesauctions.com/#connect"
+    },
+    "heroImageAlt": "Low-angle view of massive industrial cranes with a cloudy backdrop, showing engineering and construction."
+  },
   "brief": {
     "summary": "This article should help crane owners, dealers, contractors, and fleet managers understand the best time to sell a used crane by balancing seasonality, market demand, project cycles, equipment condition, and auction timing. Position Jeff Martin Auctioneers as the trusted advisor behind the process, with clear guidance on when to list, how to evaluate crane market timing, and how auction support can help sellers pursue the strongest result with less uncertainty.",
     "outline": [
-      "H1: Best Time to Sell a Used Crane",
-      "H2: What Affects Crane Market Timing?",
-      "H2: Seasonal Demand and Heavy Equipment Resale Season",
-      "H2: Signs It\u2019s Time to Sell Used Crane Inventory",
-      "H2: How to Sell a Crane at the Best Price",
-      "H2: When Auction Timing Can Outperform a Private Sale",
-      "H2: What Sellers Should Prepare Before Listing",
-      "H2: Talk to Jeff Martin Auctioneers About Your Crane Sale"
+      "Best Time to Sell a Used Crane",
+      "What Affects Crane Market Timing?",
+      "Seasonal Demand and Heavy Equipment Resale Season",
+      "Signs It\u2019s Time to Sell Used Crane Inventory",
+      "How to Sell a Crane at the Best Price",
+      "When Auction Timing Can Outperform a Private Sale",
+      "What Sellers Should Prepare Before Listing",
+      "Talk to Jeff Martin Auctioneers About Your Crane Sale"
     ]
   }
 }

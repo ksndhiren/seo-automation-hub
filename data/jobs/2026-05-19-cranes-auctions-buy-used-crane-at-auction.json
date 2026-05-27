@@ -14,7 +14,7 @@
   "priority": "high",
   "assigned_reviewer": "seo-expert",
   "created_at": "2026-05-19T15:55:00+04:00",
-  "updated_at": "2026-05-26T16:34:34.467954+00:00",
+  "updated_at": "2026-05-27T12:09:23.637161+00:00",
   "seo_strategy": {
     "search_intent": "commercial informational",
     "cluster": "buyer acquisition",
@@ -254,5 +254,21 @@
     "live_url": "https://www.cranesauctions.com/blog/buying-guides/how-to-buy-a-used-crane-at-auction"
   },
   "live_url": "https://www.cranesauctions.com/blog/buying-guides/how-to-buy-a-used-crane-at-auction",
-  "published_at": "2026-05-20"
+  "published_at": "2026-05-20",
+  "brief": {
+    "summary": "Learn how to buy a used crane at auction with a clear inspection, bidding, and logistics plan. Get practical crane bidding tips and a buyer checklist before you place a bid.",
+    "outline": [
+      "How to Buy a Used Crane at Auction: A Practical Guide for First-Time and Experienced Buyers",
+      "Start with the right crane for the job",
+      "Review the auction listing like a buyer, not a spectator",
+      "Inspect the machine before you bid",
+      "Know the auction terms before you place a bid",
+      "Use disciplined crane bidding tips",
+      "Plan transport, loading, and commissioning early",
+      "When buying online, add an extra layer of verification",
+      "Use a simple used crane auction buyer checklist",
+      "Frequently asked questions",
+      "Need help evaluating a used crane before you bid?"
+    ]
+  }
 }
