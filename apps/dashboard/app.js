@@ -873,11 +873,18 @@ function renderBriefTab(job) {
       <article class="card">
         <h3>Outline</h3>
         <ul class="clean-list">
-          ${outline.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
+          ${outline.map((item) => `<li>${escapeHtml(cleanOutlineItem(item))}</li>`).join("")}
         </ul>
       </article>
     </div>
   `;
+}
+
+function cleanOutlineItem(item) {
+  return String(item || "")
+    .replace(/^#{1,6}\s+/, "")
+    .replace(/^H[1-6]:\s*/i, "")
+    .trim();
 }
 
 function renderReviewTab(job) {
