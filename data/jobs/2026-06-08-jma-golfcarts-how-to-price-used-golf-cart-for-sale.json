@@ -10,11 +10,11 @@
     "price golf cart to sell"
   ],
   "target_url": "/blog/selling-guides/how-to-price-a-used-golf-cart-for-sale",
-  "status": "final_approved",
+  "status": "published",
   "priority": "high",
   "assigned_reviewer": "seo-expert",
   "created_at": "2026-05-19T18:00:00+04:00",
-  "updated_at": "2026-05-27T12:15:46.848Z",
+  "updated_at": "2026-05-27T20:03:48.269Z",
   "planned_publish_date": "2026-05-27",
   "calendar_month": "2026-05-to-06",
   "seo_strategy": {
@@ -42,13 +42,13 @@
   "metrics": {
     "target_word_count": 1400,
     "neuronwriter_score": null,
-    "manual_plagiarism_status": "Pending manual review",
+    "manual_plagiarism_status": "Passed",
     "flagged_sections_note": "",
     "last_error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
   },
   "publish": {
     "commit_sha": null,
-    "live_url": null
+    "live_url": "https://www.jmagolfcarts.com/blog/selling-guides/how-to-price-a-used-golf-cart-for-sale"
   },
   "image_plan": {
     "selected_images": [
@@ -241,5 +241,10 @@
       "Common pricing mistakes sellers make",
       "Where to get help listing your cart with Jeff Martin Auctioneers"
     ]
-  }
+  },
+  "live_url": "https://www.jmagolfcarts.com/blog/selling-guides/how-to-price-a-used-golf-cart-for-sale",
+  "publish_result": {
+    "live_url": "https://www.jmagolfcarts.com/blog/selling-guides/how-to-price-a-used-golf-cart-for-sale"
+  },
+  "published_at": "2026-05-27"
 }

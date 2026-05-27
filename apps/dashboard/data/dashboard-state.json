@@ -1,8 +1,8 @@
 {
   "summary": {
-    "generated_at": "2026-05-27T12:30:08.450943+00:00",
+    "generated_at": "2026-05-27T20:07:02.818866+00:00",
     "statuses": [
-      "final_approved",
+      "brief_pending",
       "new",
       "published"
     ],
@@ -21,7 +21,7 @@
       },
       {
         "label": "Needs brief approval",
-        "value": 0
+        "value": 2
       },
       {
         "label": "Needs final review",
@@ -93,550 +93,6 @@
   ],
   "jobs": [
     {
-      "job_id": "2026-06-08-jma-golfcarts-how-to-price-used-golf-cart-for-sale",
-      "site_id": "jma-golfcarts",
-      "site_name": "JMA Golf Carts",
-      "topic": "How to price a used golf cart for sale",
-      "primary_keyword": "how to price a used golf cart for sale",
-      "secondary_keywords": [
-        "used golf cart pricing",
-        "golf cart resale value",
-        "how much is my golf cart worth",
-        "price golf cart to sell"
-      ],
-      "target_url": "/blog/selling-guides/how-to-price-a-used-golf-cart-for-sale",
-      "target_audience": "Golf cart buyers comparing personal, utility, and fleet carts \u2022 Dealers looking to move multiple carts through a marketplace \u2022 Property owners and communities sourcing utility or street-legal carts \u2022 Businesses evaluating fleet and maintenance cart options \u2022 Sellers listing used golf carts online",
-      "status": "final_approved",
-      "priority": "high",
-      "planned_publish_date": "2026-05-27",
-      "calendar_month": "2026-05-to-06",
-      "word_count": "1400 words",
-      "brief": {
-        "summary": "Create a practical, trust-building guide that helps sellers estimate a fair market price for a used golf cart and confidently decide how to price it to sell. The article should explain the main value drivers\u2014brand, battery type, age, condition, tires, upgrades, street-legal features, and local demand\u2014while positioning Jeff Martin Auctioneers as the trusted marketplace behind JMA Golf Carts. Include a simple pricing framework, common mistakes to avoid, and a clear next step to register or connect for selling support and marketplace exposure.",
-        "outline": [
-          "How to Price a Used Golf Cart for Sale",
-          "What determines used golf cart pricing?",
-          "Start with the cart\u2019s basics: brand, model, year, and power type",
-          "Check condition: batteries, tires, body, seat, charger, and maintenance history",
-          "Factor in upgrades and street-legal features that raise resale value",
-          "Compare similar golf carts to estimate fair market value",
-          "How to price a golf cart to sell faster vs. maximize return",
-          "Common pricing mistakes sellers make",
-          "Where to get help listing your cart with Jeff Martin Auctioneers"
-        ]
-      },
-      "seo_strategy": {
-        "search_intent": "Commercial investigation: users want to estimate resale value, compare used golf cart pricing, and set a competitive asking price before selling.",
-        "cluster": "Used golf cart resale and seller guidance",
-        "lead_goal": "seller leads",
-        "opportunity_score": 88,
-        "opportunity_rationale": "Seller-intent topic with strong commercial fit because pricing uncertainty often appears right before a listing inquiry.",
-        "category_slug": "selling-guides",
-        "category_name": "Selling Guides",
-        "suggested_tags": [
-          "used golf cart pricing",
-          "golf cart resale value",
-          "sell a golf cart",
-          "pricing guide",
-          "resale tips"
-        ],
-        "recommended_internal_link_types": [
-          "buyer registration and lead capture sections",
-          "inventory and auction listing pages",
-          "brand and category landing pages that support registration",
-          "sell-with-us or seller inquiry pages"
-        ]
-      },
-      "image_plan": {
-        "status": "planned",
-        "items": [
-          {
-            "placement": "Featured image",
-            "asset_hint": "https://images.pexels.com/photos/6542482/pexels-photo-6542482.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-            "query": "used golf cart for sale listing realistic",
-            "prompt": "Realistic editorial photo of a used golf cart prepared for sale outdoors, clean daylight, trustworthy marketplace mood, no text overlay, visually supports the topic 'How to price a used golf cart for sale'."
-          },
-          {
-            "placement": "After section: Start with the cart\u2019s basics: brand, model, year, and power type",
-            "asset_hint": "Prompt only",
-            "query": "golf cart inspection listing details realistic",
-            "prompt": "Detailed golf cart inspection scene with close-up listing details, service notes, and condition checks, natural light, realistic marketplace photography, no staged AI look, no text."
-          },
-          {
-            "placement": "After section: Check condition: batteries, tires, body, seat, charger, and maintenance history",
-            "asset_hint": "Prompt only",
-            "query": "cleaning golf cart for sale realistic",
-            "prompt": "Seller preparing a golf cart for online sale with cleaning, photo setup, and checklist steps visible, credible commercial style, realistic details, supports keyword 'how to price a used golf cart for sale'."
-          }
-        ],
-        "selected_images": [
-          {
-            "id": 6542482,
-            "alt": "A couple driving a golf cart on a sunny day at a golf course. Perfect for lifestyle and leisure themes.",
-            "photographer": "Kampus Production",
-            "thumb": "https://images.pexels.com/photos/6542482/pexels-photo-6542482.jpeg?auto=compress&cs=tinysrgb&h=350",
-            "large": "https://images.pexels.com/photos/6542482/pexels-photo-6542482.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-            "original": "https://images.pexels.com/photos/6542482/pexels-photo-6542482.jpeg",
-            "width": 6016,
-            "height": 4016,
-            "pexels_url": "https://www.pexels.com/photo/man-and-woman-riding-white-golf-car-6542482/"
-          },
-          {
-            "id": 37721061,
-            "alt": "Multiple golf carts parked outdoors on a sunny day at a golf course, ready for use.",
-            "photographer": "Daniel Agundiz",
-            "thumb": "https://images.pexels.com/photos/37721061/pexels-photo-37721061.jpeg?auto=compress&cs=tinysrgb&h=350",
-            "large": "https://images.pexels.com/photos/37721061/pexels-photo-37721061.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-            "original": "https://images.pexels.com/photos/37721061/pexels-photo-37721061.jpeg",
-            "width": 3600,
-            "height": 2363,
-            "pexels_url": "https://www.pexels.com/photo/row-of-golf-carts-parked-on-sunny-day-37721061/"
-          },
-          {
-            "id": 5926232,
-            "alt": "Red shopping bag with 'Sale' text and a mini cart on a white background.",
-            "photographer": "Sora Shimazaki",
-            "thumb": "https://images.pexels.com/photos/5926232/pexels-photo-5926232.jpeg?auto=compress&cs=tinysrgb&h=350",
-            "large": "https://images.pexels.com/photos/5926232/pexels-photo-5926232.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-            "original": "https://images.pexels.com/photos/5926232/pexels-photo-5926232.jpeg",
-            "width": 6000,
-            "height": 4000,
-            "pexels_url": "https://www.pexels.com/photo/photo-of-mini-push-cart-with-bank-card-beside-red-paper-bag-5926232/"
-          }
-        ]
-      },
-      "draft": {
-        "slug": "how-to-price-a-used-golf-cart-for-sale",
-        "title": "How to Price a Used Golf Cart for Sale",
-        "description": "Learn how to price a used golf cart for sale with a simple framework that considers brand, age, condition, upgrades, and local demand. Use this guide to set a fair asking price and decide whether to sell faster or hold out for more value.",
-        "publishedAt": "2026-05-27",
-        "author": "Jeff Martin Auctioneers Editorial Team",
-        "readTime": "8 min read",
-        "category": "Selling Guides",
-        "tags": [
-          "used golf cart pricing",
-          "golf cart resale value",
-          "sell a golf cart",
-          "pricing guide"
-        ],
-        "heroImage": "https://images.pexels.com/photos/6542482/pexels-photo-6542482.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-        "featured": false,
-        "seoTitle": "How to Price a Used Golf Cart for Sale | Used Golf Cart Pricing Guide",
-        "seoDescription": "Need to know how to price a used golf cart for sale? Learn the main value drivers, common pricing mistakes, and a simple way to estimate golf cart resale value before you list.",
-        "intro": [
-          "If you are trying to figure out how to price a used golf cart for sale, the goal is not to guess. It is to find a fair market number that reflects the cart\u2019s condition, features, and demand in your area.",
-          "The right price can help you sell sooner, attract better buyers, and avoid leaving money on the table. Below is a practical way to estimate used golf cart pricing and decide whether to price for speed or for maximum return."
-        ],
-        "sections": [
-          {
-            "heading": "What determines used golf cart pricing?",
-            "paragraphs": [
-              "Used golf cart pricing depends on more than age alone. Buyers compare brand reputation, power type, condition, and feature set before deciding what a cart is worth to them.",
-              "A clean gas or electric cart from a well-known brand may hold value better than a newer cart with weak batteries, worn tires, or obvious maintenance issues. Local demand also matters. A neighborhood with strong golf cart use may support stronger pricing than an area where carts are less common."
-            ],
-            "bullets": [
-              "Brand and model",
-              "Year and power type",
-              "Battery or engine condition",
-              "Tire, body, seat, and charger condition",
-              "Upgrades and street-legal equipment",
-              "Local demand and seasonality"
-            ]
-          },
-          {
-            "heading": "Start with the cart\u2019s basics: brand, model, year, and power type",
-            "paragraphs": [
-              "The first step in figuring out how much is my golf cart worth is identifying the basics clearly. Brand and model can affect resale value because buyers often recognize certain names, parts availability, and support options.",
-              "Year matters too, but it should be viewed alongside condition. A newer cart is not automatically worth more if it has heavy wear. Power type also changes buyer interest. Electric carts are often attractive for quiet neighborhood use, while gas carts may appeal to buyers who want longer run time and easy refueling."
-            ],
-            "callout": "When you list your cart, be specific about the brand, model, year, and whether it is electric or gas. Clear details help buyers compare your cart fairly and can improve marketplace interest."
-          },
-          {
-            "heading": "Check condition: batteries, tires, body, seat, charger, and maintenance history",
-            "paragraphs": [
-              "Condition is one of the biggest drivers of golf cart resale value. Buyers want to know what they are inheriting, especially when a cart may need repairs soon after purchase.",
-              "For electric carts, battery health is a major pricing factor. Weak or aging batteries can reduce value quickly because replacement can be a significant expense. For gas carts, engine performance, starting reliability, and maintenance history carry more weight. In both cases, visible wear on the body, seat, tires, and charger can change how buyers judge the cart."
-            ],
-            "bullets": [
-              "Batteries should be tested and disclosed honestly",
-              "Tires with good tread usually support stronger pricing",
-              "Cracked body panels or torn seats can lower value",
-              "A working charger adds confidence for electric cart buyers",
-              "Service records can support a higher asking price"
-            ]
-          },
-          {
-            "heading": "Factor in upgrades and street-legal features that raise resale value",
-            "paragraphs": [
-              "Upgrades can help a cart stand out, but not every add-on adds equal value. A lifted cart, custom wheels, upgraded lights, rear seat kit, windshield, enclosure, or better sound system may improve buyer interest if the features are practical and well installed.",
-              "Street-legal features can also increase value in the right market. Turn signals, mirrors, seat belts, headlights, brake lights, and other road-ready equipment may matter to buyers who plan to use the cart in a community or around a property where those features are required or preferred."
-            ],
-            "bullets": [
-              "Rear seat kits",
-              "Lift kits and custom wheels",
-              "Lighting packages",
-              "Windshields and enclosures",
-              "Turn signals, mirrors, and seat belts",
-              "Fleet or utility attachments"
-            ]
-          },
-          {
-            "heading": "Compare similar golf carts to estimate fair market value",
-            "paragraphs": [
-              "A smart way to price golf cart to sell is to compare similar carts in the market. Look for listings that match your brand, power type, age range, condition, and major features as closely as possible.",
-              "Use those comparisons to identify a realistic range instead of a single number. If your cart is cleaner or better equipped than similar listings, you may justify the top of the range. If it needs work, a lower price may help it move faster. This is the most practical way to estimate fair market value without overthinking it."
-            ],
-            "callout": "Do not compare your cart only to the highest asking price you see online. Focus on carts that are actually similar in condition and equipment, then price against the market you are likely to reach."
-          },
-          {
-            "heading": "How to price a golf cart to sell faster vs. maximize return",
-            "paragraphs": [
-              "Your goal should determine your price. If you want a quick sale, price toward the lower end of the fair market range and make the listing easy to understand. Clear photos, honest details, and a reasonable price can draw stronger buyer interest.",
-              "If you want to maximize return, give yourself room for negotiation and support the price with details that add confidence. Mention recent maintenance, upgrades, street-legal equipment, and anything that reduces risk for the buyer. That said, pricing too high can slow the listing and make buyers ignore it."
-            ],
-            "bullets": [
-              "Price low end if speed matters most",
-              "Price mid-range if you want flexibility",
-              "Price high end only when condition and features support it",
-              "Be ready to adjust if the listing sits too long"
-            ]
-          },
-          {
-            "heading": "Common pricing mistakes sellers make",
-            "paragraphs": [
-              "One of the most common mistakes is assuming every upgrade adds full dollar-for-dollar value. In reality, some add-ons help the cart sell faster without increasing the price by the amount they cost to install.",
-              "Another mistake is pricing based on emotion rather than market evidence. Sellers sometimes anchor to what they originally paid or what they spent on repairs. Buyers, however, care about current condition and current alternatives. Overpricing can also hurt trust if the listing lacks clear photos or detailed information."
-            ],
-            "bullets": [
-              "Pricing based on replacement cost instead of resale value",
-              "Ignoring battery or tire wear",
-              "Overvaluing cosmetic upgrades",
-              "Comparing against brand-new carts",
-              "Leaving out important condition details"
-            ]
-          },
-          {
-            "heading": "Where to get help listing your cart with Jeff Martin Auctioneers",
-            "paragraphs": [
-              "If you are still asking how much is my golf cart worth, the fastest path is often to work with a trusted marketplace that understands seller demand and buyer expectations. Jeff Martin Auctioneers helps sellers present carts clearly, reach qualified buyers, and move listings with more confidence.",
-              "At JMA Golf Carts, the goal is to make selling simple and transparent. If you are ready to list, register your cart and connect with Jeff Martin Auctioneers for marketplace exposure and seller support. A strong listing starts with the right price, the right details, and the right audience."
-            ],
-            "callout": "Ready to sell? Register your golf cart and connect with Jeff Martin Auctioneers to get your listing in front of serious buyers."
-          }
-        ],
-        "faq": [
-          {
-            "question": "How do I know if my used golf cart is priced too high?",
-            "answer": "If your cart gets little interest, few inquiries, or no comparable offers, the price may be too high for the market. Check similar listings, review your cart\u2019s condition honestly, and consider adjusting the price if the listing has been sitting without traction."
-          },
-          {
-            "question": "Do electric golf carts usually sell for more than gas carts?",
-            "answer": "Not always. Value depends on condition, battery health, brand, features, and local buyer preference. A well-kept gas cart can outprice a worn electric cart, and a strong electric cart can be very competitive when the batteries and charger are in good shape."
-          },
-          {
-            "question": "What should I include when listing a used golf cart for sale?",
-            "answer": "Include the brand, model, year, power type, battery or engine condition, tire condition, upgrades, street-legal features, maintenance history, and several clear photos. The more complete the listing, the easier it is for buyers to assess value."
-          }
-        ],
-        "cta": {
-          "title": "Get help pricing and listing your golf cart",
-          "body": "If you want a clearer read on used golf cart pricing, register your cart and connect with Jeff Martin Auctioneers. Our marketplace approach helps sellers price with confidence, reach the right buyers, and move forward with a trusted contact brand behind the listing.",
-          "buttonLabel": "Register Your Cart",
-          "buttonHref": "https://www.jmagolfcarts.com/#buyer-register"
-        },
-        "heroImageAlt": "A couple driving a golf cart on a sunny day at a golf course. Perfect for lifestyle and leisure themes."
-      },
-      "final_review": {
-        "checklist": [
-          "Review final article quality and conversion alignment.",
-          "Complete manual plagiarism check before approving publish.",
-          "Confirm metadata and internal links look correct."
-        ],
-        "manual_plagiarism_status": "Pending manual review",
-        "flagged_sections_note": "",
-        "meta_title": "Pending",
-        "meta_description": "Pending"
-      },
-      "activity": [
-        "Job status: final_approved",
-        "Site target: JMA Golf Carts",
-        "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-27T12:15:46.848Z",
-        "Planned publish date: 2026-05-27",
-        "Snapshot generated from automation hub data"
-      ],
-      "publish": {
-        "branch": "main",
-        "path": "src/content/blog/generated"
-      }
-    },
-    {
-      "job_id": "2026-06-08-cranes-auctions-best-time-to-sell-used-crane",
-      "site_id": "cranes-auctions",
-      "site_name": "CranesAuctions",
-      "topic": "Best time to sell a used crane",
-      "primary_keyword": "best time to sell a used crane",
-      "secondary_keywords": [
-        "when to sell used crane",
-        "crane market timing",
-        "heavy equipment resale season",
-        "sell crane at best price"
-      ],
-      "target_url": "/blog/market-updates/best-time-to-sell-a-used-crane",
-      "target_audience": "Crane owners looking to sell underutilized equipment \u2022 Equipment dealers with inventory to move \u2022 Contractors sourcing cranes and heavy equipment \u2022 Fleet managers handling surplus or replacement cycles \u2022 Heavy transport and rigging businesses",
-      "status": "final_approved",
-      "priority": "high",
-      "planned_publish_date": "2026-05-27",
-      "calendar_month": "2026-05-to-06",
-      "word_count": "1100 words",
-      "brief": {
-        "summary": "This article should help crane owners, dealers, contractors, and fleet managers understand the best time to sell a used crane by balancing seasonality, market demand, project cycles, equipment condition, and auction timing. Position Jeff Martin Auctioneers as the trusted advisor behind the process, with clear guidance on when to list, how to evaluate crane market timing, and how auction support can help sellers pursue the strongest result with less uncertainty.",
-        "outline": [
-          "Best Time to Sell a Used Crane",
-          "What Affects Crane Market Timing?",
-          "Seasonal Demand and Heavy Equipment Resale Season",
-          "Signs It\u2019s Time to Sell Used Crane Inventory",
-          "How to Sell a Crane at the Best Price",
-          "When Auction Timing Can Outperform a Private Sale",
-          "What Sellers Should Prepare Before Listing",
-          "Talk to Jeff Martin Auctioneers About Your Crane Sale"
-        ]
-      },
-      "seo_strategy": {
-        "search_intent": "Commercial informational intent with lead-generation intent: users want to know when to sell a used crane for the best return and how auction timing, demand cycles, and market conditions affect sale outcomes.",
-        "cluster": "Used crane selling strategy and auction timing",
-        "lead_goal": "seller leads",
-        "opportunity_score": 84,
-        "opportunity_rationale": "Strong seller-timing topic that can pull valuation and listing inquiries from owners who are already thinking about market readiness.",
-        "category_slug": "market-updates",
-        "category_name": "Market Updates",
-        "suggested_tags": [
-          "used crane sales",
-          "auction timing",
-          "equipment resale",
-          "crane market",
-          "selling heavy equipment"
-        ],
-        "recommended_internal_link_types": [
-          "connect and lead registration sections",
-          "auction-related landing pages that move buyers or sellers toward inquiry",
-          "auction inventory and equipment category pages",
-          "contact or appraisal request pathways"
-        ]
-      },
-      "image_plan": {
-        "status": "planned",
-        "items": [
-          {
-            "placement": "Featured image",
-            "asset_hint": "https://images.pexels.com/photos/37666614/pexels-photo-37666614.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-            "query": "used crane industrial yard equipment auction",
-            "prompt": "Realistic editorial photo of a used crane prepared for auction in an industrial yard, clean daylight, documentary style, no text overlay, trustworthy heavy-equipment marketplace mood, supports the topic 'Best time to sell a used crane'."
-          },
-          {
-            "placement": "After section: Seasonal Demand and Heavy Equipment Resale Season",
-            "asset_hint": "Prompt only",
-            "query": "crane inspection maintenance records industrial equipment",
-            "prompt": "Detailed crane inspection scene with paperwork, serial plate, and maintenance records visible, professional industrial photography, natural light, no staged AI look, no text."
-          },
-          {
-            "placement": "After section: Signs It\u2019s Time to Sell Used Crane Inventory",
-            "asset_hint": "Prompt only",
-            "query": "preparing crane for sale inspection heavy equipment yard",
-            "prompt": "Heavy equipment seller preparing a crane for listing, showing cleaning, inspection, and photo capture steps, credible B2B industrial style, sharp realistic details, visually supports keyword 'best time to sell a used crane'."
-          }
-        ],
-        "selected_images": [
-          {
-            "id": 37666614,
-            "alt": "Low-angle view of massive industrial cranes with a cloudy backdrop, showing engineering and construction.",
-            "photographer": "tis O",
-            "thumb": "https://images.pexels.com/photos/37666614/pexels-photo-37666614.png?auto=compress&cs=tinysrgb&h=350",
-            "large": "https://images.pexels.com/photos/37666614/pexels-photo-37666614.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-            "original": "https://images.pexels.com/photos/37666614/pexels-photo-37666614.png",
-            "width": 5185,
-            "height": 3472,
-            "pexels_url": "https://www.pexels.com/photo/industrial-crane-structures-against-cloudy-sky-37666614/"
-          },
-          {
-            "id": 29468605,
-            "alt": "Construction workers using a cherry picker for building maintenance in Huaian, Jiangsu, China.",
-            "photographer": "Usman AbdulrasheedGambo",
-            "thumb": "https://images.pexels.com/photos/29468605/pexels-photo-29468605.jpeg?auto=compress&cs=tinysrgb&h=350",
-            "large": "https://images.pexels.com/photos/29468605/pexels-photo-29468605.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-            "original": "https://images.pexels.com/photos/29468605/pexels-photo-29468605.jpeg",
-            "width": 4032,
-            "height": 3024,
-            "pexels_url": "https://www.pexels.com/photo/construction-workers-on-crane-at-building-site-in-huaian-29468605/"
-          },
-          {
-            "id": 29502203,
-            "alt": "ACE TX 150 crane positioned at an outdoor construction site in Faridabad, Haryana, India.",
-            "photographer": "Action Construction  Equipment Ltd. - ACE",
-            "thumb": "https://images.pexels.com/photos/29502203/pexels-photo-29502203.jpeg?auto=compress&cs=tinysrgb&h=350",
-            "large": "https://images.pexels.com/photos/29502203/pexels-photo-29502203.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-            "original": "https://images.pexels.com/photos/29502203/pexels-photo-29502203.jpeg",
-            "width": 6240,
-            "height": 4160,
-            "pexels_url": "https://www.pexels.com/photo/ace-tx-150-crane-at-construction-site-in-faridabad-29502203/"
-          }
-        ]
-      },
-      "draft": {
-        "slug": "best-time-to-sell-a-used-crane",
-        "title": "Best Time to Sell a Used Crane",
-        "description": "Learn how crane market timing, seasonal demand, equipment condition, and auction strategy affect the best time to sell a used crane. Get practical guidance from Jeff Martin Auctioneers.",
-        "publishedAt": "2026-05-27",
-        "author": "Jeff Martin Auctioneers Editorial Team",
-        "readTime": "6 min read",
-        "category": "Market Updates",
-        "tags": [
-          "used crane sales",
-          "auction timing",
-          "crane market",
-          "equipment resale",
-          "selling heavy equipment"
-        ],
-        "heroImage": "https://images.pexels.com/photos/37666614/pexels-photo-37666614.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-        "featured": false,
-        "seoTitle": "Best Time to Sell a Used Crane | Crane Market Timing Tips",
-        "seoDescription": "Find the best time to sell a used crane by understanding seasonality, market demand, and auction timing. See how Jeff Martin Auctioneers helps sellers pursue stronger results.",
-        "intro": [
-          "If you are asking when to sell used crane equipment, timing matters almost as much as the machine itself. Market demand, project cycles, machine condition, and auction calendar all affect how much interest a crane can draw.",
-          "The best time to sell a used crane is usually when your equipment is market-ready and the buyer pool is active. Jeff Martin Auctioneers helps sellers read crane market timing with a practical, straightforward approach that supports better decisions and less uncertainty."
-        ],
-        "sections": [
-          {
-            "heading": "What Affects Crane Market Timing?",
-            "paragraphs": [
-              "Crane market timing is shaped by more than one factor. Buyers look at age, lifting capacity, service history, attachments, inspection records, and whether the crane fits current project needs. At the same time, broader construction activity and fleet replacement cycles can change demand quickly.",
-              "For sellers, this means the best time to sell a used crane is not always the same as the best time to buy one. If your equipment is in strong condition and the market is active, you may have more leverage. If demand is soft or the crane needs repairs, waiting can sometimes improve your position."
-            ],
-            "bullets": [
-              "Equipment condition and maintenance history",
-              "Current project demand in your region",
-              "Age, hours, and operating specs",
-              "Fleet replacement or surplus timing",
-              "Auction calendar and buyer activity"
-            ]
-          },
-          {
-            "heading": "Seasonal Demand and Heavy Equipment Resale Season",
-            "paragraphs": [
-              "Heavy equipment resale season often follows the rhythm of the construction and transport industries. In many markets, buyer interest rises when contractors are preparing for active project periods and need equipment in place before work ramps up.",
-              "That said, seasonality is not a guarantee. A well-presented crane can attract attention year-round, especially through auction channels with national reach. The key is to understand when your target buyers are most likely to be looking and to align your listing or sale date with that demand."
-            ],
-            "callout": "Seasonal strength can help, but the best selling window is usually the one that matches both buyer demand and your crane\u2019s readiness."
-          },
-          {
-            "heading": "Signs It\u2019s Time to Sell Used Crane Inventory",
-            "paragraphs": [
-              "For fleet managers, dealers, and contractors, the decision to sell often starts with utilization. If a crane is underused, expensive to store, or nearing a major repair cycle, selling earlier may protect value before costs start to climb.",
-              "Another sign is strategic change. If your business has shifted to different lift requirements, newer models, or a different equipment mix, holding onto an idle crane can tie up capital that could be put to better use elsewhere."
-            ],
-            "bullets": [
-              "The crane is sitting idle more often than it is working",
-              "Repair or inspection costs are trending upward",
-              "Your fleet has changed and the crane no longer fits",
-              "You are managing surplus after a project or contract ends",
-              "You want to convert equipment into working capital"
-            ]
-          },
-          {
-            "heading": "How to Sell a Crane at the Best Price",
-            "paragraphs": [
-              "To sell a crane at the best price, presentation matters. Buyers respond to accurate documentation, clear photos, maintenance records, inspection details, and honest information about condition. The more confidence a buyer has, the more competitive the interest can be.",
-              "Pricing strategy also matters. Overpricing can slow momentum, while a realistic market-based approach can attract qualified buyers faster. Jeff Martin Auctioneers works with sellers to position equipment properly, identify the right audience, and choose the sale method that fits the asset and the market."
-            ],
-            "bullets": [
-              "Gather service, inspection, and ownership records",
-              "Document hours, capacity, and configuration",
-              "Clean the crane and photograph it well",
-              "Disclose known issues early",
-              "Set a pricing strategy based on current market demand"
-            ]
-          },
-          {
-            "heading": "When Auction Timing Can Outperform a Private Sale",
-            "paragraphs": [
-              "Auction timing can outperform a private sale when speed, exposure, and competitive bidding matter most. If you need to reduce holding costs, move surplus inventory, or reach a wider buyer base, an auction can create urgency that a private listing may not match.",
-              "Auction support can also reduce friction. Instead of managing individual negotiations, you can rely on Jeff Martin Auctioneers to help structure the sale, market the equipment, and guide qualified buyers toward action. For many sellers, that combination of reach and process support is the difference between a slow sale and a cleaner exit."
-            ],
-            "callout": "If your goal is to move equipment efficiently while still pursuing strong market value, auction timing deserves serious attention."
-          },
-          {
-            "heading": "What Sellers Should Prepare Before Listing",
-            "paragraphs": [
-              "Preparation helps buyers trust what they are seeing. Before you list a crane, assemble the documents and details a serious buyer will want to review. That includes maintenance logs, service updates, inspection results, titles, and any notes about parts or accessories included with the machine.",
-              "You should also think through logistics. Buyers want to know how the crane can be inspected, where it is located, and what the transfer process will look like. Clear information reduces delays and helps the sale move with fewer surprises."
-            ],
-            "bullets": [
-              "Maintenance and inspection records",
-              "Title and ownership documents",
-              "Model, year, serial number, and capacity details",
-              "Photos from multiple angles",
-              "Location, access, and pickup logistics"
-            ]
-          },
-          {
-            "heading": "Talk to Jeff Martin Auctioneers About Your Crane Sale",
-            "paragraphs": [
-              "If you are trying to decide when to sell used crane equipment, a market conversation can be more useful than guesswork. Jeff Martin Auctioneers brings crane market experience, auction insight, and seller support to help you evaluate timing with more confidence.",
-              "Whether you are selling one crane or clearing out multiple assets, the goal is the same: make the process straightforward and pursue the strongest practical result. If you want help reading the market, reviewing your options, or planning a sale, connect with Jeff Martin Auctioneers today."
-            ]
-          }
-        ],
-        "faq": [
-          {
-            "question": "What is the best time to sell a used crane?",
-            "answer": "The best time to sell a used crane is when demand is active, your equipment is market-ready, and your timing aligns with buyer needs. For some sellers, that means selling before a major repair cycle or before the machine becomes underutilized."
-          },
-          {
-            "question": "Should I wait for a better crane market before selling?",
-            "answer": "Waiting can help in some cases, but it can also add storage, repair, and depreciation costs. If the crane is already in strong condition and your business no longer needs it, selling sooner may be the better move."
-          },
-          {
-            "question": "Does auction timing really matter for crane sales?",
-            "answer": "Yes. Auction timing can influence buyer interest, exposure, and urgency. When the market is active and the sale is well promoted, an auction can help generate competitive attention more efficiently than a private sale."
-          },
-          {
-            "question": "How can Jeff Martin Auctioneers help me sell a crane?",
-            "answer": "Jeff Martin Auctioneers helps sellers assess market timing, prepare the asset, and choose a sale approach that fits the equipment and the market. The team supports the process from planning through buyer engagement."
-          }
-        ],
-        "cta": {
-          "title": "Ready to Discuss the Best Time to Sell Your Crane?",
-          "body": "If you are evaluating crane market timing, Jeff Martin Auctioneers can help you review your options and plan a sale with clarity. Connect with our team to discuss your equipment, your timeline, and the best path forward for your crane sale.",
-          "buttonLabel": "Connect with Jeff Martin Auctioneers",
-          "buttonHref": "https://www.cranesauctions.com/#connect"
-        },
-        "heroImageAlt": "Low-angle view of massive industrial cranes with a cloudy backdrop, showing engineering and construction."
-      },
-      "final_review": {
-        "checklist": [
-          "Review final article quality and conversion alignment.",
-          "Complete manual plagiarism check before approving publish.",
-          "Confirm metadata and internal links look correct."
-        ],
-        "manual_plagiarism_status": "Pending manual review",
-        "flagged_sections_note": "",
-        "meta_title": "Pending",
-        "meta_description": "Pending"
-      },
-      "activity": [
-        "Job status: final_approved",
-        "Site target: CranesAuctions",
-        "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-27T12:11:04.990Z",
-        "Planned publish date: 2026-05-27",
-        "Snapshot generated from automation hub data"
-      ],
-      "publish": {
-        "branch": "main",
-        "path": "src/web/content/blog"
-      }
-    },
-    {
       "job_id": "2026-06-09-cranes-auctions-documents-needed-to-sell-crane-at-auction",
       "site_id": "cranes-auctions",
       "site_name": "CranesAuctions",
@@ -650,7 +106,7 @@
       ],
       "target_url": "/blog/selling-guides/documents-needed-to-sell-a-crane-at-auction",
       "target_audience": "Crane owners looking to sell underutilized equipment \u2022 Equipment dealers with inventory to move \u2022 Contractors sourcing cranes and heavy equipment \u2022 Fleet managers handling surplus or replacement cycles \u2022 Heavy transport and rigging businesses",
-      "status": "new",
+      "status": "brief_pending",
       "priority": "high",
       "planned_publish_date": "2026-05-28",
       "calendar_month": "2026-05-to-06",
@@ -714,16 +170,109 @@
         "meta_description": "Pending"
       },
       "activity": [
-        "Job status: new",
+        "Job status: brief_pending",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-27T12:09:23.637161+00:00",
+        "Last updated: 2026-05-27T20:03:40.381Z",
         "Planned publish date: 2026-05-28",
         "Snapshot generated from automation hub data"
       ],
       "publish": {
         "branch": "main",
         "path": "src/web/content/blog"
+      }
+    },
+    {
+      "job_id": "2026-06-09-jma-golfcarts-best-golf-cart-for-neighborhood-use",
+      "site_id": "jma-golfcarts",
+      "site_name": "JMA Golf Carts",
+      "topic": "Best golf cart for neighborhood use",
+      "primary_keyword": "best golf cart for neighborhood use",
+      "secondary_keywords": [
+        "neighborhood golf cart guide",
+        "best golf cart for personal use",
+        "residential golf cart buying guide",
+        "golf cart for community use"
+      ],
+      "target_url": "/blog/buying-guides/best-golf-cart-for-neighborhood-use",
+      "target_audience": "Golf cart buyers comparing personal, utility, and fleet carts \u2022 Dealers looking to move multiple carts through a marketplace \u2022 Property owners and communities sourcing utility or street-legal carts \u2022 Businesses evaluating fleet and maintenance cart options \u2022 Sellers listing used golf carts online",
+      "status": "brief_pending",
+      "priority": "high",
+      "planned_publish_date": "2026-05-28",
+      "calendar_month": "2026-05-to-06",
+      "word_count": "1400 words",
+      "brief": {
+        "summary": "Create a practical, comparison-focused guide that helps neighborhood buyers choose the best golf cart for residential and community use. The article should explain which cart types fit short trips, HOA-friendly travel, and neighborhood driving needs, with clear coverage of electric vs. gas, seating capacity, speed, street-legal considerations, and ownership costs. Position Jeff Martin Auctioneers as the trusted marketplace behind the site, and include soft conversion points that drive readers to register as buyers and explore available inventory.",
+        "outline": [
+          "Best Golf Cart for Neighborhood Use",
+          "What Makes a Golf Cart a Good Fit for Neighborhood Use?",
+          "Electric vs. Gas for Residential Driving: Which Is Better?",
+          "Best Golf Cart Features for Community and Personal Use",
+          "Street-Legal vs. Neighborhood-Only Carts: What Buyers Should Know",
+          "How to Compare Used Golf Carts for Home, HOA, and Community Needs",
+          "Buying Through Jeff Martin Auctioneers: How to Register and Find the Right Cart",
+          "Final Checklist Before You Choose a Neighborhood Golf Cart"
+        ]
+      },
+      "seo_strategy": {
+        "search_intent": "Commercial investigation: users want to compare golf cart types and features before buying for neighborhood or community use, with some ready to register or browse inventory.",
+        "cluster": "Golf cart buying guides for residential, personal, and community use",
+        "lead_goal": "buyer leads",
+        "opportunity_score": 85,
+        "opportunity_rationale": "High-intent use-case content can convert buyers earlier than broad brand pages because it starts with the real ownership context.",
+        "category_slug": "buying-guides",
+        "category_name": "Buying Guides",
+        "suggested_tags": [
+          "neighborhood golf cart guide",
+          "best golf cart for personal use",
+          "residential golf cart buying guide",
+          "golf cart for community use",
+          "electric golf carts",
+          "used golf carts"
+        ],
+        "recommended_internal_link_types": [
+          "buyer registration and lead capture sections",
+          "inventory and auction listing pages",
+          "brand and category landing pages that support registration",
+          "related buying guide articles",
+          "street-legal cart category pages"
+        ]
+      },
+      "image_plan": {
+        "status": "planned",
+        "items": [
+          {
+            "placement": "Featured image",
+            "asset_hint": "Not assigned yet",
+            "query": "used golf cart buyer guide realistic",
+            "prompt": "Realistic editorial photo of a used golf cart prepared for sale outdoors, clean daylight, trustworthy marketplace mood, no text overlay, visually supports the topic 'Best golf cart for neighborhood use'."
+          }
+        ],
+        "selected_images": []
+      },
+      "draft": null,
+      "final_review": {
+        "checklist": [
+          "Review final article quality and conversion alignment.",
+          "Complete manual plagiarism check before approving publish.",
+          "Confirm metadata and internal links look correct."
+        ],
+        "manual_plagiarism_status": "Pending manual review",
+        "flagged_sections_note": "",
+        "meta_title": "Pending",
+        "meta_description": "Pending"
+      },
+      "activity": [
+        "Job status: brief_pending",
+        "Site target: JMA Golf Carts",
+        "Created: 2026-05-19T18:00:00+04:00",
+        "Last updated: 2026-05-27T20:03:48.269Z",
+        "Planned publish date: 2026-05-28",
+        "Snapshot generated from automation hub data"
+      ],
+      "publish": {
+        "branch": "main",
+        "path": "src/content/blog/generated"
       }
     },
     {
@@ -799,101 +348,8 @@
         "Job status: new",
         "Site target: JMA Golf Carts",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-27T12:09:23.637161+00:00",
+        "Last updated: 2026-05-27T12:30:08.450943+00:00",
         "Planned publish date: 2026-06-01",
-        "Snapshot generated from automation hub data"
-      ],
-      "publish": {
-        "branch": "main",
-        "path": "src/content/blog/generated"
-      }
-    },
-    {
-      "job_id": "2026-06-09-jma-golfcarts-best-golf-cart-for-neighborhood-use",
-      "site_id": "jma-golfcarts",
-      "site_name": "JMA Golf Carts",
-      "topic": "Best golf cart for neighborhood use",
-      "primary_keyword": "best golf cart for neighborhood use",
-      "secondary_keywords": [
-        "neighborhood golf cart guide",
-        "best golf cart for personal use",
-        "residential golf cart buying guide",
-        "golf cart for community use"
-      ],
-      "target_url": "/blog/buying-guides/best-golf-cart-for-neighborhood-use",
-      "target_audience": "Golf cart buyers comparing personal, utility, and fleet carts \u2022 Dealers looking to move multiple carts through a marketplace \u2022 Property owners and communities sourcing utility or street-legal carts \u2022 Businesses evaluating fleet and maintenance cart options \u2022 Sellers listing used golf carts online",
-      "status": "new",
-      "priority": "high",
-      "planned_publish_date": "2026-05-28",
-      "calendar_month": "2026-05-to-06",
-      "word_count": "1400 words",
-      "brief": {
-        "summary": "Create a practical, comparison-focused guide that helps neighborhood buyers choose the best golf cart for residential and community use. The article should explain which cart types fit short trips, HOA-friendly travel, and neighborhood driving needs, with clear coverage of electric vs. gas, seating capacity, speed, street-legal considerations, and ownership costs. Position Jeff Martin Auctioneers as the trusted marketplace behind the site, and include soft conversion points that drive readers to register as buyers and explore available inventory.",
-        "outline": [
-          "Best Golf Cart for Neighborhood Use",
-          "What Makes a Golf Cart a Good Fit for Neighborhood Use?",
-          "Electric vs. Gas for Residential Driving: Which Is Better?",
-          "Best Golf Cart Features for Community and Personal Use",
-          "Street-Legal vs. Neighborhood-Only Carts: What Buyers Should Know",
-          "How to Compare Used Golf Carts for Home, HOA, and Community Needs",
-          "Buying Through Jeff Martin Auctioneers: How to Register and Find the Right Cart",
-          "Final Checklist Before You Choose a Neighborhood Golf Cart"
-        ]
-      },
-      "seo_strategy": {
-        "search_intent": "Commercial investigation: users want to compare golf cart types and features before buying for neighborhood or community use, with some ready to register or browse inventory.",
-        "cluster": "Golf cart buying guides for residential, personal, and community use",
-        "lead_goal": "buyer leads",
-        "opportunity_score": 85,
-        "opportunity_rationale": "High-intent use-case content can convert buyers earlier than broad brand pages because it starts with the real ownership context.",
-        "category_slug": "buying-guides",
-        "category_name": "Buying Guides",
-        "suggested_tags": [
-          "neighborhood golf cart guide",
-          "best golf cart for personal use",
-          "residential golf cart buying guide",
-          "golf cart for community use",
-          "electric golf carts",
-          "used golf carts"
-        ],
-        "recommended_internal_link_types": [
-          "buyer registration and lead capture sections",
-          "inventory and auction listing pages",
-          "brand and category landing pages that support registration",
-          "related buying guide articles",
-          "street-legal cart category pages"
-        ]
-      },
-      "image_plan": {
-        "status": "planned",
-        "items": [
-          {
-            "placement": "Featured image",
-            "asset_hint": "Not assigned yet",
-            "query": "used golf cart buyer guide realistic",
-            "prompt": "Realistic editorial photo of a used golf cart prepared for sale outdoors, clean daylight, trustworthy marketplace mood, no text overlay, visually supports the topic 'Best golf cart for neighborhood use'."
-          }
-        ],
-        "selected_images": []
-      },
-      "draft": null,
-      "final_review": {
-        "checklist": [
-          "Review final article quality and conversion alignment.",
-          "Complete manual plagiarism check before approving publish.",
-          "Confirm metadata and internal links look correct."
-        ],
-        "manual_plagiarism_status": "Pending manual review",
-        "flagged_sections_note": "",
-        "meta_title": "Pending",
-        "meta_description": "Pending"
-      },
-      "activity": [
-        "Job status: new",
-        "Site target: JMA Golf Carts",
-        "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-27T12:09:23.637161+00:00",
-        "Planned publish date: 2026-05-28",
         "Snapshot generated from automation hub data"
       ],
       "publish": {
@@ -974,7 +430,7 @@
         "Job status: new",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-27T12:09:23.637161+00:00",
+        "Last updated: 2026-05-27T12:30:08.450943+00:00",
         "Planned publish date: 2026-06-10",
         "Snapshot generated from automation hub data"
       ],
@@ -1056,7 +512,7 @@
         "Job status: new",
         "Site target: JMA Golf Carts",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-27T12:09:23.637161+00:00",
+        "Last updated: 2026-05-27T12:30:08.450943+00:00",
         "Planned publish date: 2026-06-03",
         "Snapshot generated from automation hub data"
       ],
@@ -1138,7 +594,7 @@
         "Job status: new",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-27T12:09:23.637161+00:00",
+        "Last updated: 2026-05-27T12:30:08.450943+00:00",
         "Planned publish date: 2026-05-29",
         "Snapshot generated from automation hub data"
       ],
@@ -1220,7 +676,7 @@
         "Job status: new",
         "Site target: JMA Golf Carts",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-27T12:09:23.637161+00:00",
+        "Last updated: 2026-05-27T12:30:08.450943+00:00",
         "Planned publish date: 2026-06-17",
         "Snapshot generated from automation hub data"
       ],
@@ -1302,7 +758,7 @@
         "Job status: new",
         "Site target: JMA Golf Carts",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-27T12:09:23.637161+00:00",
+        "Last updated: 2026-05-27T12:30:08.450943+00:00",
         "Planned publish date: 2026-05-29",
         "Snapshot generated from automation hub data"
       ],
@@ -1384,7 +840,7 @@
         "Job status: new",
         "Site target: JMA Golf Carts",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-27T12:09:23.637161+00:00",
+        "Last updated: 2026-05-27T12:30:08.450943+00:00",
         "Planned publish date: 2026-06-05",
         "Snapshot generated from automation hub data"
       ],
@@ -1466,7 +922,7 @@
         "Job status: new",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-27T12:09:23.637161+00:00",
+        "Last updated: 2026-05-27T12:30:08.450943+00:00",
         "Planned publish date: 2026-06-09",
         "Snapshot generated from automation hub data"
       ],
@@ -1548,7 +1004,7 @@
         "Job status: new",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-27T12:09:23.637161+00:00",
+        "Last updated: 2026-05-27T12:30:08.450943+00:00",
         "Planned publish date: 2026-06-01",
         "Snapshot generated from automation hub data"
       ],
@@ -1630,7 +1086,7 @@
         "Job status: new",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-27T12:09:23.637161+00:00",
+        "Last updated: 2026-05-27T12:30:08.450943+00:00",
         "Planned publish date: 2026-06-02",
         "Snapshot generated from automation hub data"
       ],
@@ -1712,7 +1168,7 @@
         "Job status: new",
         "Site target: JMA Golf Carts",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-27T12:09:23.637161+00:00",
+        "Last updated: 2026-05-27T12:30:08.450943+00:00",
         "Planned publish date: 2026-06-08",
         "Snapshot generated from automation hub data"
       ],
@@ -1794,7 +1250,7 @@
         "Job status: new",
         "Site target: JMA Golf Carts",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-27T12:09:23.637161+00:00",
+        "Last updated: 2026-05-27T12:30:08.450943+00:00",
         "Planned publish date: 2026-06-11",
         "Snapshot generated from automation hub data"
       ],
@@ -1876,7 +1332,7 @@
         "Job status: new",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-27T12:09:23.637161+00:00",
+        "Last updated: 2026-05-27T12:30:08.450943+00:00",
         "Planned publish date: 2026-06-15",
         "Snapshot generated from automation hub data"
       ],
@@ -1958,7 +1414,7 @@
         "Job status: new",
         "Site target: JMA Golf Carts",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-27T12:09:23.637161+00:00",
+        "Last updated: 2026-05-27T12:30:08.450943+00:00",
         "Planned publish date: 2026-06-02",
         "Snapshot generated from automation hub data"
       ],
@@ -2040,7 +1496,7 @@
         "Job status: new",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-27T12:09:23.637161+00:00",
+        "Last updated: 2026-05-27T12:30:08.450943+00:00",
         "Planned publish date: 2026-06-03",
         "Snapshot generated from automation hub data"
       ],
@@ -2122,7 +1578,7 @@
         "Job status: new",
         "Site target: JMA Golf Carts",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-27T12:09:23.637161+00:00",
+        "Last updated: 2026-05-27T12:30:08.450943+00:00",
         "Planned publish date: 2026-06-16",
         "Snapshot generated from automation hub data"
       ],
@@ -2204,7 +1660,7 @@
         "Job status: new",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-27T12:09:23.637161+00:00",
+        "Last updated: 2026-05-27T12:30:08.450943+00:00",
         "Planned publish date: 2026-06-04",
         "Snapshot generated from automation hub data"
       ],
@@ -2286,7 +1742,7 @@
         "Job status: new",
         "Site target: JMA Golf Carts",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-27T12:09:23.637161+00:00",
+        "Last updated: 2026-05-27T12:30:08.450943+00:00",
         "Planned publish date: 2026-06-10",
         "Snapshot generated from automation hub data"
       ],
@@ -2368,7 +1824,7 @@
         "Job status: new",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-27T12:09:23.637161+00:00",
+        "Last updated: 2026-05-27T12:30:08.450943+00:00",
         "Planned publish date: 2026-06-12",
         "Snapshot generated from automation hub data"
       ],
@@ -2450,7 +1906,7 @@
         "Job status: new",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-27T12:09:23.637161+00:00",
+        "Last updated: 2026-05-27T12:30:08.450943+00:00",
         "Planned publish date: 2026-06-08",
         "Snapshot generated from automation hub data"
       ],
@@ -2532,7 +1988,7 @@
         "Job status: new",
         "Site target: JMA Golf Carts",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-27T12:09:23.637161+00:00",
+        "Last updated: 2026-05-27T12:30:08.450943+00:00",
         "Planned publish date: 2026-06-09",
         "Snapshot generated from automation hub data"
       ],
@@ -2614,7 +2070,7 @@
         "Job status: new",
         "Site target: JMA Golf Carts",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-27T12:09:23.637161+00:00",
+        "Last updated: 2026-05-27T12:30:08.450943+00:00",
         "Planned publish date: 2026-06-04",
         "Snapshot generated from automation hub data"
       ],
@@ -2696,7 +2152,7 @@
         "Job status: new",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-27T12:09:23.637161+00:00",
+        "Last updated: 2026-05-27T12:30:08.450943+00:00",
         "Planned publish date: 2026-06-05",
         "Snapshot generated from automation hub data"
       ],
@@ -2778,7 +2234,7 @@
         "Job status: new",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-27T12:09:23.637161+00:00",
+        "Last updated: 2026-05-27T12:30:08.450943+00:00",
         "Planned publish date: 2026-06-11",
         "Snapshot generated from automation hub data"
       ],
@@ -2860,7 +2316,7 @@
         "Job status: new",
         "Site target: JMA Golf Carts",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-27T12:09:23.637161+00:00",
+        "Last updated: 2026-05-27T12:30:08.450943+00:00",
         "Planned publish date: 2026-06-12",
         "Snapshot generated from automation hub data"
       ],
@@ -2942,7 +2398,7 @@
         "Job status: new",
         "Site target: JMA Golf Carts",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-27T12:09:23.637161+00:00",
+        "Last updated: 2026-05-27T12:30:08.450943+00:00",
         "Planned publish date: 2026-06-15",
         "Snapshot generated from automation hub data"
       ],
@@ -3024,7 +2480,7 @@
         "Job status: new",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-27T12:09:23.637161+00:00",
+        "Last updated: 2026-05-27T12:30:08.450943+00:00",
         "Planned publish date: 2026-06-16",
         "Snapshot generated from automation hub data"
       ],
@@ -3106,7 +2562,7 @@
         "Job status: new",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-27T12:09:23.637161+00:00",
+        "Last updated: 2026-05-27T12:30:08.450943+00:00",
         "Planned publish date: 2026-06-17",
         "Snapshot generated from automation hub data"
       ],
@@ -3188,7 +2644,7 @@
         "Job status: new",
         "Site target: JMA Golf Carts",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-27T12:09:23.637161+00:00",
+        "Last updated: 2026-05-27T12:30:08.450943+00:00",
         "Planned publish date: 2026-06-18",
         "Snapshot generated from automation hub data"
       ],
@@ -3270,7 +2726,7 @@
         "Job status: new",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-27T12:09:23.637161+00:00",
+        "Last updated: 2026-05-27T12:30:08.450943+00:00",
         "Planned publish date: 2026-06-18",
         "Snapshot generated from automation hub data"
       ],
@@ -3534,7 +2990,7 @@
         "Job status: published",
         "Site target: JMA Golf Carts",
         "Created: 2026-05-19T15:25:00+04:00",
-        "Last updated: 2026-05-27T12:09:23.637161+00:00",
+        "Last updated: 2026-05-27T12:30:08.450943+00:00",
         "Planned publish date: 2026-05-20",
         "Snapshot generated from automation hub data"
       ],
@@ -3813,7 +3269,7 @@
         "Job status: published",
         "Site target: CranesAuctions",
         "Created: 2026-05-18T22:10:00+04:00",
-        "Last updated: 2026-05-27T12:09:23.637161+00:00",
+        "Last updated: 2026-05-27T12:30:08.450943+00:00",
         "Snapshot generated from automation hub data"
       ],
       "publish": {
@@ -4090,7 +3546,7 @@
         "Job status: published",
         "Site target: JMA Golf Carts",
         "Created: 2026-05-19T15:59:00+04:00",
-        "Last updated: 2026-05-27T12:09:23.637161+00:00",
+        "Last updated: 2026-05-27T12:30:08.450943+00:00",
         "Planned publish date: 2026-05-21",
         "Snapshot generated from automation hub data"
       ],
@@ -4372,13 +3828,291 @@
         "Job status: published",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T15:55:00+04:00",
-        "Last updated: 2026-05-27T12:09:23.637161+00:00",
+        "Last updated: 2026-05-27T12:30:08.450943+00:00",
         "Planned publish date: 2026-05-20",
         "Snapshot generated from automation hub data"
       ],
       "publish": {
         "branch": "main",
         "path": "src/web/content/blog"
+      }
+    },
+    {
+      "job_id": "2026-06-08-jma-golfcarts-how-to-price-used-golf-cart-for-sale",
+      "site_id": "jma-golfcarts",
+      "site_name": "JMA Golf Carts",
+      "topic": "How to price a used golf cart for sale",
+      "primary_keyword": "how to price a used golf cart for sale",
+      "secondary_keywords": [
+        "used golf cart pricing",
+        "golf cart resale value",
+        "how much is my golf cart worth",
+        "price golf cart to sell"
+      ],
+      "target_url": "/blog/selling-guides/how-to-price-a-used-golf-cart-for-sale",
+      "target_audience": "Golf cart buyers comparing personal, utility, and fleet carts \u2022 Dealers looking to move multiple carts through a marketplace \u2022 Property owners and communities sourcing utility or street-legal carts \u2022 Businesses evaluating fleet and maintenance cart options \u2022 Sellers listing used golf carts online",
+      "status": "published",
+      "priority": "high",
+      "planned_publish_date": "2026-05-27",
+      "calendar_month": "2026-05-to-06",
+      "word_count": "1400 words",
+      "brief": {
+        "summary": "Create a practical, trust-building guide that helps sellers estimate a fair market price for a used golf cart and confidently decide how to price it to sell. The article should explain the main value drivers\u2014brand, battery type, age, condition, tires, upgrades, street-legal features, and local demand\u2014while positioning Jeff Martin Auctioneers as the trusted marketplace behind JMA Golf Carts. Include a simple pricing framework, common mistakes to avoid, and a clear next step to register or connect for selling support and marketplace exposure.",
+        "outline": [
+          "How to Price a Used Golf Cart for Sale",
+          "What determines used golf cart pricing?",
+          "Start with the cart\u2019s basics: brand, model, year, and power type",
+          "Check condition: batteries, tires, body, seat, charger, and maintenance history",
+          "Factor in upgrades and street-legal features that raise resale value",
+          "Compare similar golf carts to estimate fair market value",
+          "How to price a golf cart to sell faster vs. maximize return",
+          "Common pricing mistakes sellers make",
+          "Where to get help listing your cart with Jeff Martin Auctioneers"
+        ]
+      },
+      "seo_strategy": {
+        "search_intent": "Commercial investigation: users want to estimate resale value, compare used golf cart pricing, and set a competitive asking price before selling.",
+        "cluster": "Used golf cart resale and seller guidance",
+        "lead_goal": "seller leads",
+        "opportunity_score": 88,
+        "opportunity_rationale": "Seller-intent topic with strong commercial fit because pricing uncertainty often appears right before a listing inquiry.",
+        "category_slug": "selling-guides",
+        "category_name": "Selling Guides",
+        "suggested_tags": [
+          "used golf cart pricing",
+          "golf cart resale value",
+          "sell a golf cart",
+          "pricing guide",
+          "resale tips"
+        ],
+        "recommended_internal_link_types": [
+          "buyer registration and lead capture sections",
+          "inventory and auction listing pages",
+          "brand and category landing pages that support registration",
+          "sell-with-us or seller inquiry pages"
+        ]
+      },
+      "image_plan": {
+        "status": "planned",
+        "items": [
+          {
+            "placement": "Featured image",
+            "asset_hint": "https://images.pexels.com/photos/6542482/pexels-photo-6542482.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+            "query": "used golf cart for sale listing realistic",
+            "prompt": "Realistic editorial photo of a used golf cart prepared for sale outdoors, clean daylight, trustworthy marketplace mood, no text overlay, visually supports the topic 'How to price a used golf cart for sale'."
+          },
+          {
+            "placement": "After section: Start with the cart\u2019s basics: brand, model, year, and power type",
+            "asset_hint": "Prompt only",
+            "query": "golf cart inspection listing details realistic",
+            "prompt": "Detailed golf cart inspection scene with close-up listing details, service notes, and condition checks, natural light, realistic marketplace photography, no staged AI look, no text."
+          },
+          {
+            "placement": "After section: Check condition: batteries, tires, body, seat, charger, and maintenance history",
+            "asset_hint": "Prompt only",
+            "query": "cleaning golf cart for sale realistic",
+            "prompt": "Seller preparing a golf cart for online sale with cleaning, photo setup, and checklist steps visible, credible commercial style, realistic details, supports keyword 'how to price a used golf cart for sale'."
+          }
+        ],
+        "selected_images": [
+          {
+            "id": 6542482,
+            "alt": "A couple driving a golf cart on a sunny day at a golf course. Perfect for lifestyle and leisure themes.",
+            "photographer": "Kampus Production",
+            "thumb": "https://images.pexels.com/photos/6542482/pexels-photo-6542482.jpeg?auto=compress&cs=tinysrgb&h=350",
+            "large": "https://images.pexels.com/photos/6542482/pexels-photo-6542482.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+            "original": "https://images.pexels.com/photos/6542482/pexels-photo-6542482.jpeg",
+            "width": 6016,
+            "height": 4016,
+            "pexels_url": "https://www.pexels.com/photo/man-and-woman-riding-white-golf-car-6542482/"
+          },
+          {
+            "id": 37721061,
+            "alt": "Multiple golf carts parked outdoors on a sunny day at a golf course, ready for use.",
+            "photographer": "Daniel Agundiz",
+            "thumb": "https://images.pexels.com/photos/37721061/pexels-photo-37721061.jpeg?auto=compress&cs=tinysrgb&h=350",
+            "large": "https://images.pexels.com/photos/37721061/pexels-photo-37721061.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+            "original": "https://images.pexels.com/photos/37721061/pexels-photo-37721061.jpeg",
+            "width": 3600,
+            "height": 2363,
+            "pexels_url": "https://www.pexels.com/photo/row-of-golf-carts-parked-on-sunny-day-37721061/"
+          },
+          {
+            "id": 5926232,
+            "alt": "Red shopping bag with 'Sale' text and a mini cart on a white background.",
+            "photographer": "Sora Shimazaki",
+            "thumb": "https://images.pexels.com/photos/5926232/pexels-photo-5926232.jpeg?auto=compress&cs=tinysrgb&h=350",
+            "large": "https://images.pexels.com/photos/5926232/pexels-photo-5926232.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+            "original": "https://images.pexels.com/photos/5926232/pexels-photo-5926232.jpeg",
+            "width": 6000,
+            "height": 4000,
+            "pexels_url": "https://www.pexels.com/photo/photo-of-mini-push-cart-with-bank-card-beside-red-paper-bag-5926232/"
+          }
+        ]
+      },
+      "draft": {
+        "slug": "how-to-price-a-used-golf-cart-for-sale",
+        "title": "How to Price a Used Golf Cart for Sale",
+        "description": "Learn how to price a used golf cart for sale with a simple framework that considers brand, age, condition, upgrades, and local demand. Use this guide to set a fair asking price and decide whether to sell faster or hold out for more value.",
+        "publishedAt": "2026-05-27",
+        "author": "Jeff Martin Auctioneers Editorial Team",
+        "readTime": "8 min read",
+        "category": "Selling Guides",
+        "tags": [
+          "used golf cart pricing",
+          "golf cart resale value",
+          "sell a golf cart",
+          "pricing guide"
+        ],
+        "heroImage": "https://images.pexels.com/photos/6542482/pexels-photo-6542482.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "featured": false,
+        "seoTitle": "How to Price a Used Golf Cart for Sale | Used Golf Cart Pricing Guide",
+        "seoDescription": "Need to know how to price a used golf cart for sale? Learn the main value drivers, common pricing mistakes, and a simple way to estimate golf cart resale value before you list.",
+        "intro": [
+          "If you are trying to figure out how to price a used golf cart for sale, the goal is not to guess. It is to find a fair market number that reflects the cart\u2019s condition, features, and demand in your area.",
+          "The right price can help you sell sooner, attract better buyers, and avoid leaving money on the table. Below is a practical way to estimate used golf cart pricing and decide whether to price for speed or for maximum return."
+        ],
+        "sections": [
+          {
+            "heading": "What determines used golf cart pricing?",
+            "paragraphs": [
+              "Used golf cart pricing depends on more than age alone. Buyers compare brand reputation, power type, condition, and feature set before deciding what a cart is worth to them.",
+              "A clean gas or electric cart from a well-known brand may hold value better than a newer cart with weak batteries, worn tires, or obvious maintenance issues. Local demand also matters. A neighborhood with strong golf cart use may support stronger pricing than an area where carts are less common."
+            ],
+            "bullets": [
+              "Brand and model",
+              "Year and power type",
+              "Battery or engine condition",
+              "Tire, body, seat, and charger condition",
+              "Upgrades and street-legal equipment",
+              "Local demand and seasonality"
+            ]
+          },
+          {
+            "heading": "Start with the cart\u2019s basics: brand, model, year, and power type",
+            "paragraphs": [
+              "The first step in figuring out how much is my golf cart worth is identifying the basics clearly. Brand and model can affect resale value because buyers often recognize certain names, parts availability, and support options.",
+              "Year matters too, but it should be viewed alongside condition. A newer cart is not automatically worth more if it has heavy wear. Power type also changes buyer interest. Electric carts are often attractive for quiet neighborhood use, while gas carts may appeal to buyers who want longer run time and easy refueling."
+            ],
+            "callout": "When you list your cart, be specific about the brand, model, year, and whether it is electric or gas. Clear details help buyers compare your cart fairly and can improve marketplace interest."
+          },
+          {
+            "heading": "Check condition: batteries, tires, body, seat, charger, and maintenance history",
+            "paragraphs": [
+              "Condition is one of the biggest drivers of golf cart resale value. Buyers want to know what they are inheriting, especially when a cart may need repairs soon after purchase.",
+              "For electric carts, battery health is a major pricing factor. Weak or aging batteries can reduce value quickly because replacement can be a significant expense. For gas carts, engine performance, starting reliability, and maintenance history carry more weight. In both cases, visible wear on the body, seat, tires, and charger can change how buyers judge the cart."
+            ],
+            "bullets": [
+              "Batteries should be tested and disclosed honestly",
+              "Tires with good tread usually support stronger pricing",
+              "Cracked body panels or torn seats can lower value",
+              "A working charger adds confidence for electric cart buyers",
+              "Service records can support a higher asking price"
+            ]
+          },
+          {
+            "heading": "Factor in upgrades and street-legal features that raise resale value",
+            "paragraphs": [
+              "Upgrades can help a cart stand out, but not every add-on adds equal value. A lifted cart, custom wheels, upgraded lights, rear seat kit, windshield, enclosure, or better sound system may improve buyer interest if the features are practical and well installed.",
+              "Street-legal features can also increase value in the right market. Turn signals, mirrors, seat belts, headlights, brake lights, and other road-ready equipment may matter to buyers who plan to use the cart in a community or around a property where those features are required or preferred."
+            ],
+            "bullets": [
+              "Rear seat kits",
+              "Lift kits and custom wheels",
+              "Lighting packages",
+              "Windshields and enclosures",
+              "Turn signals, mirrors, and seat belts",
+              "Fleet or utility attachments"
+            ]
+          },
+          {
+            "heading": "Compare similar golf carts to estimate fair market value",
+            "paragraphs": [
+              "A smart way to price golf cart to sell is to compare similar carts in the market. Look for listings that match your brand, power type, age range, condition, and major features as closely as possible.",
+              "Use those comparisons to identify a realistic range instead of a single number. If your cart is cleaner or better equipped than similar listings, you may justify the top of the range. If it needs work, a lower price may help it move faster. This is the most practical way to estimate fair market value without overthinking it."
+            ],
+            "callout": "Do not compare your cart only to the highest asking price you see online. Focus on carts that are actually similar in condition and equipment, then price against the market you are likely to reach."
+          },
+          {
+            "heading": "How to price a golf cart to sell faster vs. maximize return",
+            "paragraphs": [
+              "Your goal should determine your price. If you want a quick sale, price toward the lower end of the fair market range and make the listing easy to understand. Clear photos, honest details, and a reasonable price can draw stronger buyer interest.",
+              "If you want to maximize return, give yourself room for negotiation and support the price with details that add confidence. Mention recent maintenance, upgrades, street-legal equipment, and anything that reduces risk for the buyer. That said, pricing too high can slow the listing and make buyers ignore it."
+            ],
+            "bullets": [
+              "Price low end if speed matters most",
+              "Price mid-range if you want flexibility",
+              "Price high end only when condition and features support it",
+              "Be ready to adjust if the listing sits too long"
+            ]
+          },
+          {
+            "heading": "Common pricing mistakes sellers make",
+            "paragraphs": [
+              "One of the most common mistakes is assuming every upgrade adds full dollar-for-dollar value. In reality, some add-ons help the cart sell faster without increasing the price by the amount they cost to install.",
+              "Another mistake is pricing based on emotion rather than market evidence. Sellers sometimes anchor to what they originally paid or what they spent on repairs. Buyers, however, care about current condition and current alternatives. Overpricing can also hurt trust if the listing lacks clear photos or detailed information."
+            ],
+            "bullets": [
+              "Pricing based on replacement cost instead of resale value",
+              "Ignoring battery or tire wear",
+              "Overvaluing cosmetic upgrades",
+              "Comparing against brand-new carts",
+              "Leaving out important condition details"
+            ]
+          },
+          {
+            "heading": "Where to get help listing your cart with Jeff Martin Auctioneers",
+            "paragraphs": [
+              "If you are still asking how much is my golf cart worth, the fastest path is often to work with a trusted marketplace that understands seller demand and buyer expectations. Jeff Martin Auctioneers helps sellers present carts clearly, reach qualified buyers, and move listings with more confidence.",
+              "At JMA Golf Carts, the goal is to make selling simple and transparent. If you are ready to list, register your cart and connect with Jeff Martin Auctioneers for marketplace exposure and seller support. A strong listing starts with the right price, the right details, and the right audience."
+            ],
+            "callout": "Ready to sell? Register your golf cart and connect with Jeff Martin Auctioneers to get your listing in front of serious buyers."
+          }
+        ],
+        "faq": [
+          {
+            "question": "How do I know if my used golf cart is priced too high?",
+            "answer": "If your cart gets little interest, few inquiries, or no comparable offers, the price may be too high for the market. Check similar listings, review your cart\u2019s condition honestly, and consider adjusting the price if the listing has been sitting without traction."
+          },
+          {
+            "question": "Do electric golf carts usually sell for more than gas carts?",
+            "answer": "Not always. Value depends on condition, battery health, brand, features, and local buyer preference. A well-kept gas cart can outprice a worn electric cart, and a strong electric cart can be very competitive when the batteries and charger are in good shape."
+          },
+          {
+            "question": "What should I include when listing a used golf cart for sale?",
+            "answer": "Include the brand, model, year, power type, battery or engine condition, tire condition, upgrades, street-legal features, maintenance history, and several clear photos. The more complete the listing, the easier it is for buyers to assess value."
+          }
+        ],
+        "cta": {
+          "title": "Get help pricing and listing your golf cart",
+          "body": "If you want a clearer read on used golf cart pricing, register your cart and connect with Jeff Martin Auctioneers. Our marketplace approach helps sellers price with confidence, reach the right buyers, and move forward with a trusted contact brand behind the listing.",
+          "buttonLabel": "Register Your Cart",
+          "buttonHref": "https://www.jmagolfcarts.com/#buyer-register"
+        },
+        "heroImageAlt": "A couple driving a golf cart on a sunny day at a golf course. Perfect for lifestyle and leisure themes."
+      },
+      "final_review": {
+        "checklist": [
+          "Review final article quality and conversion alignment.",
+          "Complete manual plagiarism check before approving publish.",
+          "Confirm metadata and internal links look correct."
+        ],
+        "manual_plagiarism_status": "Passed",
+        "flagged_sections_note": "",
+        "meta_title": "Pending",
+        "meta_description": "Pending"
+      },
+      "activity": [
+        "Job status: published",
+        "Site target: JMA Golf Carts",
+        "Created: 2026-05-19T18:00:00+04:00",
+        "Last updated: 2026-05-27T20:03:48.269Z",
+        "Planned publish date: 2026-05-27",
+        "Snapshot generated from automation hub data"
+      ],
+      "publish": {
+        "branch": "main",
+        "path": "src/content/blog/generated"
       }
     },
     {
@@ -4654,8 +4388,274 @@
         "Job status: published",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T15:56:00+04:00",
-        "Last updated: 2026-05-27T12:09:23.637161+00:00",
+        "Last updated: 2026-05-27T12:30:08.450943+00:00",
         "Planned publish date: 2026-05-21",
+        "Snapshot generated from automation hub data"
+      ],
+      "publish": {
+        "branch": "main",
+        "path": "src/web/content/blog"
+      }
+    },
+    {
+      "job_id": "2026-06-08-cranes-auctions-best-time-to-sell-used-crane",
+      "site_id": "cranes-auctions",
+      "site_name": "CranesAuctions",
+      "topic": "Best time to sell a used crane",
+      "primary_keyword": "best time to sell a used crane",
+      "secondary_keywords": [
+        "when to sell used crane",
+        "crane market timing",
+        "heavy equipment resale season",
+        "sell crane at best price"
+      ],
+      "target_url": "/blog/market-updates/best-time-to-sell-a-used-crane",
+      "target_audience": "Crane owners looking to sell underutilized equipment \u2022 Equipment dealers with inventory to move \u2022 Contractors sourcing cranes and heavy equipment \u2022 Fleet managers handling surplus or replacement cycles \u2022 Heavy transport and rigging businesses",
+      "status": "published",
+      "priority": "high",
+      "planned_publish_date": "2026-05-27",
+      "calendar_month": "2026-05-to-06",
+      "word_count": "1100 words",
+      "brief": {
+        "summary": "This article should help crane owners, dealers, contractors, and fleet managers understand the best time to sell a used crane by balancing seasonality, market demand, project cycles, equipment condition, and auction timing. Position Jeff Martin Auctioneers as the trusted advisor behind the process, with clear guidance on when to list, how to evaluate crane market timing, and how auction support can help sellers pursue the strongest result with less uncertainty.",
+        "outline": [
+          "Best Time to Sell a Used Crane",
+          "What Affects Crane Market Timing?",
+          "Seasonal Demand and Heavy Equipment Resale Season",
+          "Signs It\u2019s Time to Sell Used Crane Inventory",
+          "How to Sell a Crane at the Best Price",
+          "When Auction Timing Can Outperform a Private Sale",
+          "What Sellers Should Prepare Before Listing",
+          "Talk to Jeff Martin Auctioneers About Your Crane Sale"
+        ]
+      },
+      "seo_strategy": {
+        "search_intent": "Commercial informational intent with lead-generation intent: users want to know when to sell a used crane for the best return and how auction timing, demand cycles, and market conditions affect sale outcomes.",
+        "cluster": "Used crane selling strategy and auction timing",
+        "lead_goal": "seller leads",
+        "opportunity_score": 84,
+        "opportunity_rationale": "Strong seller-timing topic that can pull valuation and listing inquiries from owners who are already thinking about market readiness.",
+        "category_slug": "market-updates",
+        "category_name": "Market Updates",
+        "suggested_tags": [
+          "used crane sales",
+          "auction timing",
+          "equipment resale",
+          "crane market",
+          "selling heavy equipment"
+        ],
+        "recommended_internal_link_types": [
+          "connect and lead registration sections",
+          "auction-related landing pages that move buyers or sellers toward inquiry",
+          "auction inventory and equipment category pages",
+          "contact or appraisal request pathways"
+        ]
+      },
+      "image_plan": {
+        "status": "planned",
+        "items": [
+          {
+            "placement": "Featured image",
+            "asset_hint": "https://images.pexels.com/photos/37666614/pexels-photo-37666614.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+            "query": "used crane industrial yard equipment auction",
+            "prompt": "Realistic editorial photo of a used crane prepared for auction in an industrial yard, clean daylight, documentary style, no text overlay, trustworthy heavy-equipment marketplace mood, supports the topic 'Best time to sell a used crane'."
+          },
+          {
+            "placement": "After section: Seasonal Demand and Heavy Equipment Resale Season",
+            "asset_hint": "Prompt only",
+            "query": "crane inspection maintenance records industrial equipment",
+            "prompt": "Detailed crane inspection scene with paperwork, serial plate, and maintenance records visible, professional industrial photography, natural light, no staged AI look, no text."
+          },
+          {
+            "placement": "After section: Signs It\u2019s Time to Sell Used Crane Inventory",
+            "asset_hint": "Prompt only",
+            "query": "preparing crane for sale inspection heavy equipment yard",
+            "prompt": "Heavy equipment seller preparing a crane for listing, showing cleaning, inspection, and photo capture steps, credible B2B industrial style, sharp realistic details, visually supports keyword 'best time to sell a used crane'."
+          }
+        ],
+        "selected_images": [
+          {
+            "id": 37666614,
+            "alt": "Low-angle view of massive industrial cranes with a cloudy backdrop, showing engineering and construction.",
+            "photographer": "tis O",
+            "thumb": "https://images.pexels.com/photos/37666614/pexels-photo-37666614.png?auto=compress&cs=tinysrgb&h=350",
+            "large": "https://images.pexels.com/photos/37666614/pexels-photo-37666614.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+            "original": "https://images.pexels.com/photos/37666614/pexels-photo-37666614.png",
+            "width": 5185,
+            "height": 3472,
+            "pexels_url": "https://www.pexels.com/photo/industrial-crane-structures-against-cloudy-sky-37666614/"
+          },
+          {
+            "id": 29468605,
+            "alt": "Construction workers using a cherry picker for building maintenance in Huaian, Jiangsu, China.",
+            "photographer": "Usman AbdulrasheedGambo",
+            "thumb": "https://images.pexels.com/photos/29468605/pexels-photo-29468605.jpeg?auto=compress&cs=tinysrgb&h=350",
+            "large": "https://images.pexels.com/photos/29468605/pexels-photo-29468605.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+            "original": "https://images.pexels.com/photos/29468605/pexels-photo-29468605.jpeg",
+            "width": 4032,
+            "height": 3024,
+            "pexels_url": "https://www.pexels.com/photo/construction-workers-on-crane-at-building-site-in-huaian-29468605/"
+          },
+          {
+            "id": 29502203,
+            "alt": "ACE TX 150 crane positioned at an outdoor construction site in Faridabad, Haryana, India.",
+            "photographer": "Action Construction  Equipment Ltd. - ACE",
+            "thumb": "https://images.pexels.com/photos/29502203/pexels-photo-29502203.jpeg?auto=compress&cs=tinysrgb&h=350",
+            "large": "https://images.pexels.com/photos/29502203/pexels-photo-29502203.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+            "original": "https://images.pexels.com/photos/29502203/pexels-photo-29502203.jpeg",
+            "width": 6240,
+            "height": 4160,
+            "pexels_url": "https://www.pexels.com/photo/ace-tx-150-crane-at-construction-site-in-faridabad-29502203/"
+          }
+        ]
+      },
+      "draft": {
+        "slug": "best-time-to-sell-a-used-crane",
+        "title": "Best Time to Sell a Used Crane",
+        "description": "Learn how crane market timing, seasonal demand, equipment condition, and auction strategy affect the best time to sell a used crane. Get practical guidance from Jeff Martin Auctioneers.",
+        "publishedAt": "2026-05-27",
+        "author": "Jeff Martin Auctioneers Editorial Team",
+        "readTime": "6 min read",
+        "category": "Market Updates",
+        "tags": [
+          "used crane sales",
+          "auction timing",
+          "crane market",
+          "equipment resale",
+          "selling heavy equipment"
+        ],
+        "heroImage": "https://images.pexels.com/photos/37666614/pexels-photo-37666614.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "featured": false,
+        "seoTitle": "Best Time to Sell a Used Crane | Crane Market Timing Tips",
+        "seoDescription": "Find the best time to sell a used crane by understanding seasonality, market demand, and auction timing. See how Jeff Martin Auctioneers helps sellers pursue stronger results.",
+        "intro": [
+          "If you are asking when to sell used crane equipment, timing matters almost as much as the machine itself. Market demand, project cycles, machine condition, and auction calendar all affect how much interest a crane can draw.",
+          "The best time to sell a used crane is usually when your equipment is market-ready and the buyer pool is active. Jeff Martin Auctioneers helps sellers read crane market timing with a practical, straightforward approach that supports better decisions and less uncertainty."
+        ],
+        "sections": [
+          {
+            "heading": "What Affects Crane Market Timing?",
+            "paragraphs": [
+              "Crane market timing is shaped by more than one factor. Buyers look at age, lifting capacity, service history, attachments, inspection records, and whether the crane fits current project needs. At the same time, broader construction activity and fleet replacement cycles can change demand quickly.",
+              "For sellers, this means the best time to sell a used crane is not always the same as the best time to buy one. If your equipment is in strong condition and the market is active, you may have more leverage. If demand is soft or the crane needs repairs, waiting can sometimes improve your position."
+            ],
+            "bullets": [
+              "Equipment condition and maintenance history",
+              "Current project demand in your region",
+              "Age, hours, and operating specs",
+              "Fleet replacement or surplus timing",
+              "Auction calendar and buyer activity"
+            ]
+          },
+          {
+            "heading": "Seasonal Demand and Heavy Equipment Resale Season",
+            "paragraphs": [
+              "Heavy equipment resale season often follows the rhythm of the construction and transport industries. In many markets, buyer interest rises when contractors are preparing for active project periods and need equipment in place before work ramps up.",
+              "That said, seasonality is not a guarantee. A well-presented crane can attract attention year-round, especially through auction channels with national reach. The key is to understand when your target buyers are most likely to be looking and to align your listing or sale date with that demand."
+            ],
+            "callout": "Seasonal strength can help, but the best selling window is usually the one that matches both buyer demand and your crane\u2019s readiness."
+          },
+          {
+            "heading": "Signs It\u2019s Time to Sell Used Crane Inventory",
+            "paragraphs": [
+              "For fleet managers, dealers, and contractors, the decision to sell often starts with utilization. If a crane is underused, expensive to store, or nearing a major repair cycle, selling earlier may protect value before costs start to climb.",
+              "Another sign is strategic change. If your business has shifted to different lift requirements, newer models, or a different equipment mix, holding onto an idle crane can tie up capital that could be put to better use elsewhere."
+            ],
+            "bullets": [
+              "The crane is sitting idle more often than it is working",
+              "Repair or inspection costs are trending upward",
+              "Your fleet has changed and the crane no longer fits",
+              "You are managing surplus after a project or contract ends",
+              "You want to convert equipment into working capital"
+            ]
+          },
+          {
+            "heading": "How to Sell a Crane at the Best Price",
+            "paragraphs": [
+              "To sell a crane at the best price, presentation matters. Buyers respond to accurate documentation, clear photos, maintenance records, inspection details, and honest information about condition. The more confidence a buyer has, the more competitive the interest can be.",
+              "Pricing strategy also matters. Overpricing can slow momentum, while a realistic market-based approach can attract qualified buyers faster. Jeff Martin Auctioneers works with sellers to position equipment properly, identify the right audience, and choose the sale method that fits the asset and the market."
+            ],
+            "bullets": [
+              "Gather service, inspection, and ownership records",
+              "Document hours, capacity, and configuration",
+              "Clean the crane and photograph it well",
+              "Disclose known issues early",
+              "Set a pricing strategy based on current market demand"
+            ]
+          },
+          {
+            "heading": "When Auction Timing Can Outperform a Private Sale",
+            "paragraphs": [
+              "Auction timing can outperform a private sale when speed, exposure, and competitive bidding matter most. If you need to reduce holding costs, move surplus inventory, or reach a wider buyer base, an auction can create urgency that a private listing may not match.",
+              "Auction support can also reduce friction. Instead of managing individual negotiations, you can rely on Jeff Martin Auctioneers to help structure the sale, market the equipment, and guide qualified buyers toward action. For many sellers, that combination of reach and process support is the difference between a slow sale and a cleaner exit."
+            ],
+            "callout": "If your goal is to move equipment efficiently while still pursuing strong market value, auction timing deserves serious attention."
+          },
+          {
+            "heading": "What Sellers Should Prepare Before Listing",
+            "paragraphs": [
+              "Preparation helps buyers trust what they are seeing. Before you list a crane, assemble the documents and details a serious buyer will want to review. That includes maintenance logs, service updates, inspection results, titles, and any notes about parts or accessories included with the machine.",
+              "You should also think through logistics. Buyers want to know how the crane can be inspected, where it is located, and what the transfer process will look like. Clear information reduces delays and helps the sale move with fewer surprises."
+            ],
+            "bullets": [
+              "Maintenance and inspection records",
+              "Title and ownership documents",
+              "Model, year, serial number, and capacity details",
+              "Photos from multiple angles",
+              "Location, access, and pickup logistics"
+            ]
+          },
+          {
+            "heading": "Talk to Jeff Martin Auctioneers About Your Crane Sale",
+            "paragraphs": [
+              "If you are trying to decide when to sell used crane equipment, a market conversation can be more useful than guesswork. Jeff Martin Auctioneers brings crane market experience, auction insight, and seller support to help you evaluate timing with more confidence.",
+              "Whether you are selling one crane or clearing out multiple assets, the goal is the same: make the process straightforward and pursue the strongest practical result. If you want help reading the market, reviewing your options, or planning a sale, connect with Jeff Martin Auctioneers today."
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "question": "What is the best time to sell a used crane?",
+            "answer": "The best time to sell a used crane is when demand is active, your equipment is market-ready, and your timing aligns with buyer needs. For some sellers, that means selling before a major repair cycle or before the machine becomes underutilized."
+          },
+          {
+            "question": "Should I wait for a better crane market before selling?",
+            "answer": "Waiting can help in some cases, but it can also add storage, repair, and depreciation costs. If the crane is already in strong condition and your business no longer needs it, selling sooner may be the better move."
+          },
+          {
+            "question": "Does auction timing really matter for crane sales?",
+            "answer": "Yes. Auction timing can influence buyer interest, exposure, and urgency. When the market is active and the sale is well promoted, an auction can help generate competitive attention more efficiently than a private sale."
+          },
+          {
+            "question": "How can Jeff Martin Auctioneers help me sell a crane?",
+            "answer": "Jeff Martin Auctioneers helps sellers assess market timing, prepare the asset, and choose a sale approach that fits the equipment and the market. The team supports the process from planning through buyer engagement."
+          }
+        ],
+        "cta": {
+          "title": "Ready to Discuss the Best Time to Sell Your Crane?",
+          "body": "If you are evaluating crane market timing, Jeff Martin Auctioneers can help you review your options and plan a sale with clarity. Connect with our team to discuss your equipment, your timeline, and the best path forward for your crane sale.",
+          "buttonLabel": "Connect with Jeff Martin Auctioneers",
+          "buttonHref": "https://www.cranesauctions.com/#connect"
+        },
+        "heroImageAlt": "Low-angle view of massive industrial cranes with a cloudy backdrop, showing engineering and construction."
+      },
+      "final_review": {
+        "checklist": [
+          "Review final article quality and conversion alignment.",
+          "Complete manual plagiarism check before approving publish.",
+          "Confirm metadata and internal links look correct."
+        ],
+        "manual_plagiarism_status": "Passed",
+        "flagged_sections_note": "",
+        "meta_title": "Pending",
+        "meta_description": "Pending"
+      },
+      "activity": [
+        "Job status: published",
+        "Site target: CranesAuctions",
+        "Created: 2026-05-19T18:00:00+04:00",
+        "Last updated: 2026-05-27T20:03:40.381Z",
+        "Planned publish date: 2026-05-27",
         "Snapshot generated from automation hub data"
       ],
       "publish": {
@@ -4910,7 +4910,7 @@
         "Job status: published",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T15:58:00+04:00",
-        "Last updated: 2026-05-27T12:09:23.637161+00:00",
+        "Last updated: 2026-05-27T12:30:08.450943+00:00",
         "Planned publish date: 2026-05-22",
         "Snapshot generated from automation hub data"
       ],
@@ -5154,7 +5154,7 @@
         "Job status: published",
         "Site target: JMA Golf Carts",
         "Created: 2026-05-19T16:02:00+04:00",
-        "Last updated: 2026-05-27T12:09:23.637161+00:00",
+        "Last updated: 2026-05-27T12:30:08.450943+00:00",
         "Planned publish date: 2026-05-22",
         "Snapshot generated from automation hub data"
       ],
@@ -5423,7 +5423,7 @@
         "Job status: published",
         "Site target: JMA Golf Carts",
         "Created: 2026-05-19T16:01:00+04:00",
-        "Last updated: 2026-05-27T12:09:23.637161+00:00",
+        "Last updated: 2026-05-27T12:30:08.450943+00:00",
         "Planned publish date: 2026-05-25",
         "Snapshot generated from automation hub data"
       ],
@@ -5688,7 +5688,7 @@
         "Job status: published",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T15:57:00+04:00",
-        "Last updated: 2026-05-27T12:09:23.637161+00:00",
+        "Last updated: 2026-05-27T12:30:08.450943+00:00",
         "Planned publish date: 2026-05-25",
         "Snapshot generated from automation hub data"
       ],
@@ -5969,7 +5969,7 @@
         "Job status: published",
         "Site target: JMA Golf Carts",
         "Created: 2026-05-19T16:00:00+04:00",
-        "Last updated: 2026-05-27T12:09:23.637161+00:00",
+        "Last updated: 2026-05-27T12:30:08.450943+00:00",
         "Planned publish date: 2026-05-26",
         "Snapshot generated from automation hub data"
       ],
@@ -6242,7 +6242,7 @@
         "Job status: published",
         "Site target: CranesAuctions",
         "Created: 2026-05-19T18:00:00+04:00",
-        "Last updated: 2026-05-27T12:09:23.637161+00:00",
+        "Last updated: 2026-05-27T12:30:08.450943+00:00",
         "Planned publish date: 2026-05-26",
         "Snapshot generated from automation hub data"
       ],
