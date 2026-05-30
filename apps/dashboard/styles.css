@@ -1005,10 +1005,30 @@ select {
   color: #4f7a25;
 }
 
+/* Meta grid: split into two zones so short labels don't get stretched
+   into giant cards just because they share a row with a multi-line value
+   like Audience. */
 .meta-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  display: flex;
+  flex-direction: column;
   gap: 14px;
+}
+
+.meta-grid-quick {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  align-items: start;
+}
+
+.meta-grid-long {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.meta-grid-long .meta-card {
+  width: 100%;
 }
 
 .strategy-grid {

@@ -984,17 +984,28 @@ function renderSelectedJob() {
   el.jobTitle.textContent = job.topic;
   el.jobStatusPill.textContent = labelizeStatus(status);
   el.jobStatusPill.className = `status-pill status-${status}`;
-  el.jobMetaGrid.innerHTML = [
+  // Meta grid is rendered in two zones so a short single-line value (e.g.
+  // Primary Keyword) doesn't get stretched into a huge empty card just
+  // because it shares a row with a multi-line value (e.g. Audience).
+  //   Zone 1: quick facts — small cards in an auto-fit row
+  //   Zone 2: long-form details — full-width cards stacked
+  const quickFacts = [
     metaCard("Site", job.site_name),
     metaCard("Category", getCategoryName(job, dashboardState.sites || [])),
     metaCard("Lead Goal", job.seo_strategy?.lead_goal || "Pending"),
     metaCard("Status", labelizeStatus(status)),
     metaCard("Planned Date", job.planned_publish_date ? formatCalendarDate(job.planned_publish_date) : "Not scheduled"),
-    metaCard("Target URL", job.target_url),
-    metaCard("Primary Keyword", job.primary_keyword),
-    metaCard("Audience", job.target_audience),
     metaCard("Word Count", job.word_count ?? "Pending"),
+    metaCard("Primary Keyword", job.primary_keyword),
   ].join("");
+  const longFacts = [
+    metaCard("Target URL", job.target_url),
+    metaCard("Audience", job.target_audience),
+  ].join("");
+  el.jobMetaGrid.innerHTML = `
+    <div class="meta-grid-quick">${quickFacts}</div>
+    <div class="meta-grid-long">${longFacts}</div>
+  `;
 
   renderCheckpointSummary(status);
   el.reviewComment.disabled = isPublished;
