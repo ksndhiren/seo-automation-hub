@@ -1449,7 +1449,13 @@ async function saveSelectedImages(job, selections, comment) {
   renderSelectedJob();
 }
 
+let reviewActionInFlight = false;
 async function handleReviewAction(action) {
+  // Guard against double-submits: a quick double-click on Approve would
+  // otherwise fire two POSTs in parallel — the second could double-publish to
+  // GitHub or race the D1 status update. We block re-entry until the current
+  // call resolves and we disable the buttons so the UI matches the lock.
+  if (reviewActionInFlight) return;
   const job = dashboardState.jobs.find((item) => item.job_id === selectedJobId);
   if (!job) return;
   const rawComment = el.reviewComment.value.trim();
@@ -1483,6 +1489,23 @@ async function handleReviewAction(action) {
     flaggedSectionsNoteInput?.value.trim() ||
     job.final_review?.flagged_sections_note ||
     "";
+
+  // Lock both top-level buttons + show a working state so the user can see
+  // the click registered. The `finally` block below re-derives the correct
+  // enabled state via renderSelectedJob — don't restore a saved value, because
+  // a successful approve transitions the job to `published` and the buttons
+  // must stay disabled afterwards.
+  reviewActionInFlight = true;
+  el.approveJob.disabled = true;
+  el.requestChanges.disabled = true;
+  if (action === "approve" || action === "request_changes") {
+    el.reviewPreview.innerHTML = `
+      <h3>Working…</h3>
+      <p>${escapeHtml(action === "approve" ? "Submitting approval" : "Sending back for revision")} — please wait.</p>
+    `;
+  }
+
+  try {
 
   if (persistenceMode === "d1") {
     try {
@@ -1566,6 +1589,13 @@ async function handleReviewAction(action) {
     <p><strong>Note:</strong> ${escapeHtml(comment)}</p>
     <p class="muted">Static mode is active. Persist the dashboard state to save this action.</p>
   `;
+
+  } finally {
+    reviewActionInFlight = false;
+    // Re-render so the buttons reflect the new job status (published jobs
+    // stay disabled, others re-enable).
+    renderSelectedJob();
+  }
 }
 
 async function readApiJson(response) {

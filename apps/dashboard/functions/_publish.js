@@ -53,7 +53,7 @@ export async function publishApprovedJob(context, reviewRow) {
     },
     image_plan: {
       ...(assetJob.image_plan || {}),
-      selected_images: JSON.parse(reviewRow.selected_images_json || "[]"),
+      selected_images: parseJson(reviewRow.selected_images_json) || [],
     },
     publish: {
       ...(assetJob.publish || {}),
@@ -62,8 +62,25 @@ export async function publishApprovedJob(context, reviewRow) {
     },
   };
 
+  // Defensive guards: the slug becomes part of the GitHub path, so reject
+  // anything that could traverse out of the content dir or land at
+  // `/undefined.ts`. Also bail if the merged draft somehow ended up null.
+  if (!mergedJob.draft || typeof mergedJob.draft !== "object") {
+    return {
+      ok: false,
+      message: "Merged draft is empty — refusing to publish a blank file.",
+    };
+  }
+  const slug = String(mergedJob.draft.slug || "").trim();
+  if (!/^[a-z0-9][a-z0-9-]{1,120}$/i.test(slug)) {
+    return {
+      ok: false,
+      message: `Refusing to publish: draft.slug "${slug}" is missing or unsafe (allowed: letters, digits, hyphens, 2-121 chars).`,
+    };
+  }
+
   const moduleSource = renderTypescriptModule(mergedJob);
-  const filePath = `${siteConfig.contentPath}/${mergedJob.draft.slug}.ts`;
+  const filePath = `${siteConfig.contentPath}/${slug}.ts`;
   const owner = context.env.GITHUB_OWNER || siteConfig.owner;
   const branch = reviewRow.publish_branch || siteConfig.branch;
 
@@ -109,11 +126,17 @@ export async function publishApprovedJob(context, reviewRow) {
   }
 
   if (!response.ok) {
+    const rawMessage = payload?.message || "";
+    const shaConflict = response.status === 409
+      || /sha/i.test(rawMessage)
+      || /does not match/i.test(rawMessage);
     return {
       ok: false,
-      message: payload?.message
-        ? `GitHub ${response.status}: ${payload.message}`
-        : `GitHub rejected the publish request (HTTP ${response.status}).`,
+      message: shaConflict
+        ? `GitHub ${response.status}: file was changed in the repo since we read it. Refresh the dashboard and retry approve (the asset snapshot is stale).`
+        : rawMessage
+          ? `GitHub ${response.status}: ${rawMessage}`
+          : `GitHub rejected the publish request (HTTP ${response.status}).`,
     };
   }
 

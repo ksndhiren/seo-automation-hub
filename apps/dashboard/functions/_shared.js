@@ -33,3 +33,16 @@ export function getStatusAfterAction(currentStatus, action) {
 export function isSupportedAction(action) {
   return action === "approve" || action === "request_changes";
 }
+
+// Safe JSON.parse for values pulled out of D1. Anything that's null, an empty
+// string, the literal text "null", or syntactically invalid falls back to the
+// provided default instead of letting the Function crash (which would surface
+// to the dashboard as the "HTML page" error).
+export function safeParseJson(value, fallback = null) {
+  if (value == null || value === "" || value === "null") return fallback;
+  try {
+    return JSON.parse(value);
+  } catch {
+    return fallback;
+  }
+}

@@ -1,5 +1,5 @@
 import { buildImagePlanForJob } from "../_images.js";
-import { json } from "../_shared.js";
+import { json, safeParseJson } from "../_shared.js";
 
 function sortJobs(jobs) {
   return [...jobs].sort((left, right) => {
@@ -18,8 +18,15 @@ export async function onRequestGet(context) {
   const d1 = context.env.DASHBOARD_DB;
   const url = new URL(context.request.url);
   const dataUrl = new URL("/data/dashboard-state.json", url.origin);
-  const assetResponse = await context.env.ASSETS.fetch(dataUrl);
-  const assetState = await assetResponse.json();
+  let assetState = { jobs: [], sites: [] };
+  try {
+    const assetResponse = await context.env.ASSETS.fetch(dataUrl);
+    if (assetResponse.ok) {
+      assetState = await assetResponse.json();
+    }
+  } catch {
+    // Asset bundle missing or corrupt — fall back to D1-only data.
+  }
   const performanceState = await loadPerformanceState(context, url);
   const assetJobsById = Object.fromEntries(
     (assetState.jobs || []).map((job) => [job.job_id, job]),
@@ -61,7 +68,7 @@ export async function onRequestGet(context) {
 
     const normalizedJobs = rows.map((row) => {
       const assetJob = assetJobsById[row.job_id] || {};
-      const draft = row.draft_json ? JSON.parse(row.draft_json) : assetJob.draft || null;
+      const draft = safeParseJson(row.draft_json, null) ?? assetJob.draft ?? null;
       const imagePlan = buildImagePlanForJob({
         ...assetJob,
         site_id: row.site_id,
@@ -76,7 +83,7 @@ export async function onRequestGet(context) {
         site_name: row.site_name,
         topic: row.topic,
         primary_keyword: row.primary_keyword,
-        secondary_keywords: JSON.parse(row.secondary_keywords_json || "[]"),
+        secondary_keywords: safeParseJson(row.secondary_keywords_json, []),
         target_url: row.target_url,
         target_audience: row.target_audience,
         status: row.status,
@@ -86,22 +93,22 @@ export async function onRequestGet(context) {
         word_count: row.word_count,
         brief: {
           summary: row.brief_summary,
-          outline: JSON.parse(row.outline_json || "[]"),
+          outline: safeParseJson(row.outline_json, []),
         },
         seo_strategy: assetJob.seo_strategy || {},
         image_plan: {
           ...imagePlan,
-          selected_images: JSON.parse(row.selected_images_json || "[]"),
+          selected_images: safeParseJson(row.selected_images_json, []),
         },
         draft,
         final_review: {
-          checklist: JSON.parse(row.final_checklist_json || "[]"),
+          checklist: safeParseJson(row.final_checklist_json, []),
           manual_plagiarism_status: row.manual_plagiarism_status,
           flagged_sections_note: row.flagged_sections_note || "",
           meta_title: row.meta_title,
           meta_description: row.meta_description,
         },
-        activity: JSON.parse(row.activity_json || "[]"),
+        activity: safeParseJson(row.activity_json, []),
         publish: {
           branch: row.publish_branch,
           path: row.publish_path,

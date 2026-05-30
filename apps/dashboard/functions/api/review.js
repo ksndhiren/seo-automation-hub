@@ -1,4 +1,10 @@
-import { getStatusAfterAction, isSupportedAction, isTerminalStatus, json } from "../_shared.js";
+import {
+  getStatusAfterAction,
+  isSupportedAction,
+  isTerminalStatus,
+  json,
+  safeParseJson,
+} from "../_shared.js";
 import { loadAssetJobForReview, publishApprovedJob } from "../_publish.js";
 import {
   generateBriefForJob,
@@ -135,7 +141,7 @@ export async function onRequestPost(context) {
       : existing.flagged_sections_note || "";
   const nextSelectedImages = selectedImages
     ? selectedImages
-    : JSON.parse(existing.selected_images_json || "[]");
+    : safeParseJson(existing.selected_images_json, []);
   let nextDraftJson = existing.draft_json || null;
   let nextBriefSummary = existing.brief_summary || "";
   let nextOutlineJson = existing.outline_json || "[]";
@@ -198,7 +204,7 @@ export async function onRequestPost(context) {
     const shouldPublishNow = shouldPublishImmediately(assetJob?.planned_publish_date, now);
     if (shouldPublishNow) {
       nextDraftJson = JSON.stringify({
-        ...(JSON.parse(nextDraftJson || "{}")),
+        ...(safeParseJson(nextDraftJson, {}) || {}),
         publishedAt: formatDateForZone(now, "America/Chicago"),
       });
       try {
@@ -304,10 +310,10 @@ export async function onRequestPost(context) {
     manual_plagiarism_status: nextManualPlagiarismStatus,
     flagged_sections_note: nextFlaggedSectionsNote,
     selected_images: draftResult?.selectedImages || nextSelectedImages,
-    draft: draftResult?.draft || (nextDraftJson ? JSON.parse(nextDraftJson) : null),
+    draft: draftResult?.draft || safeParseJson(nextDraftJson, null),
     brief: briefRevisionResult?.brief || {
       summary: nextBriefSummary,
-      outline: JSON.parse(nextOutlineJson || "[]"),
+      outline: safeParseJson(nextOutlineJson, []),
     },
     promoted_next_brief: promotedNextBrief,
     draft_generated: Boolean(draftResult),
@@ -344,14 +350,10 @@ function shouldPublishImmediately(plannedPublishDate, nowIso) {
       hour12: false,
     }).format(new Date(nowIso)),
   );
-  const minute = Number(
-    new Intl.DateTimeFormat("en-US", {
-      timeZone: "America/Chicago",
-      minute: "2-digit",
-    }).format(new Date(nowIso)),
-  );
-
-  return hour > 8 || (hour === 8 && minute >= 0);
+  // Publish window opens at 08:00 America/Chicago. Anything earlier in the day
+  // gets queued for the scheduled publisher. The previous `minute >= 0` check
+  // was a no-op (always true) — collapsed to a clear `hour >= 8`.
+  return hour >= 8;
 }
 
 function formatDateForZone(nowIso, timeZone) {

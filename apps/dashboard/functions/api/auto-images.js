@@ -1,4 +1,4 @@
-import { json } from "../_shared.js";
+import { json, safeParseJson } from "../_shared.js";
 import {
   buildFallbackQueries,
   chooseBestPexelsPhoto,
@@ -68,14 +68,14 @@ export async function onRequestPost(context) {
 
   const usedIds = new Set();
   for (const row of duplicateRows.results || []) {
-    const images = JSON.parse(row.selected_images_json || "[]");
+    const images = safeParseJson(row.selected_images_json, []);
     for (const image of images) {
       const key = normalizePhotoId(image);
       if (key) usedIds.add(key);
     }
   }
 
-  const existingSelections = JSON.parse(reviewRow.selected_images_json || "[]");
+  const existingSelections = safeParseJson(reviewRow.selected_images_json, []);
   const seenSelectionKeys = new Set();
   const selections = [...existingSelections];
   const searchDebug = [];
