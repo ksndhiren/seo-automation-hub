@@ -193,11 +193,39 @@ select {
   margin-bottom: 18px;
 }
 
+/* Two-column planning board: the left column stacks the Category pipeline
+   on top of the URL framework so they together approximate the natural
+   height of the long Cluster map on the right. This eliminates the dead
+   space the old 3-column layout left under the URL framework. */
 .planning-grid {
   display: grid;
-  grid-template-columns: 1.3fr 0.9fr 0.8fr;
+  grid-template-columns: 1.1fr 0.9fr;
   gap: 16px;
-  align-items: start;
+  align-items: stretch;
+}
+
+.planning-column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+}
+
+.planning-column .planning-card {
+  flex: 0 0 auto;
+}
+
+.planning-card-cluster {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.planning-card-cluster .cluster-map {
+  flex: 1 1 auto;
+  max-height: 560px;
+  overflow: auto;
+  padding-right: 4px;
 }
 
 .planning-card {
@@ -641,6 +669,45 @@ select {
 .framework-meta strong {
   font-size: 0.98rem;
   line-height: 1.5;
+}
+
+.framework-site {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+
+.framework-list {
+  display: grid;
+  gap: 6px;
+}
+
+.framework-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 6px 10px;
+  background: var(--surface-muted, #f5f6f8);
+  border-radius: 8px;
+  font-size: 0.85rem;
+}
+
+.framework-row-label {
+  font-weight: 600;
+  color: var(--text, #1f2a44);
+}
+
+.framework-row-path {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.78rem;
+  color: var(--muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 60%;
 }
 
 .content-calendar {
@@ -1338,6 +1405,10 @@ select {
 
   .planning-grid {
     grid-template-columns: 1fr;
+  }
+
+  .planning-card-cluster .cluster-map {
+    max-height: none;
   }
 }
 

@@ -571,16 +571,30 @@ function renderUrlFramework(site) {
     return;
   }
 
-  const prefix = site.blog_categories?.length
-    ? `${site.site_name} → /blog/{category}/{slug}`
-    : `${site.site_name} → /blog/{slug}`;
+  const categories = site.blog_categories || [];
+  const pattern = categories.length
+    ? "/blog/{category}/{blog-name}"
+    : "/blog/{blog-name}";
+
+  // Show concrete examples for each category so reviewers can see the
+  // actual URL shape each new post will get, not just an abstract template.
+  const exampleRows = categories.length
+    ? categories
+        .map(
+          (category) => `
+            <div class="framework-row">
+              <span class="framework-row-label">${escapeHtml(category.name)}</span>
+              <code class="framework-row-path">/blog/${escapeHtml(category.slug)}/&lt;slug&gt;</code>
+            </div>
+          `,
+        )
+        .join("")
+    : `<p class="muted">No categories configured.</p>`;
 
   el.urlFramework.innerHTML = `
-    <div class="framework-pattern">/blog/{category}/{blog-name}</div>
-    <div class="framework-meta">
-      <span>${escapeHtml(site.site_name)}</span>
-      <strong>${escapeHtml(prefix)}</strong>
-    </div>
+    <div class="framework-pattern">${escapeHtml(pattern)}</div>
+    <div class="framework-site">${escapeHtml(site.site_name)}</div>
+    <div class="framework-list">${exampleRows}</div>
   `;
 }
 
