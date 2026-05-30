@@ -37,6 +37,9 @@ const el = {
   performanceSummary: document.getElementById("performance-summary"),
   performancePages: document.getElementById("performance-pages"),
   performanceEvents: document.getElementById("performance-events"),
+  syncStatus: document.getElementById("sync-status"),
+  syncStatusText: document.getElementById("sync-status-text"),
+  performanceStatus: document.getElementById("performance-status"),
 };
 
 const tabs = Array.from(document.querySelectorAll(".tab"));
@@ -51,6 +54,16 @@ let persistenceMode = "static";
 let imageSearchState = {};
 let autoImageFillState = {};
 
+// Live-refresh state. lastSyncedAt is updated on every successful /api/state
+// fetch and drives the sync indicator chip. POLL_INTERVAL_MS controls the
+// background polling cadence; we pause polling when the tab is hidden or a
+// review action is in flight to avoid clobbering an in-progress edit.
+const POLL_INTERVAL_MS = 45000;
+let lastSyncedAt = null;
+let pollTimer = null;
+let syncTickerTimer = null;
+let refreshInFlight = false;
+
 init().catch((error) => {
   console.error(error);
   el.jobList.innerHTML = `
@@ -62,19 +75,162 @@ init().catch((error) => {
 });
 
 async function init() {
-  const response = await fetch(stateUrl);
-  dashboardState = await response.json();
-  persistenceMode = dashboardState.persistence || "static";
-  previewStatus = Object.fromEntries(
-    dashboardState.jobs.map((job) => [job.job_id, job.status]),
-  );
-  selectedSiteId = "all";
-
+  await loadStateFromServer({ initial: true });
   bindEvents();
   renderSummary();
   renderFilters();
   renderPlanningBoard();
   renderJobs();
+  renderPerformanceStatus();
+  startSyncTicker();
+  startPolling();
+}
+
+// Fetch /api/state and merge it into the local dashboardState. Used for both
+// the initial load and every live refresh. Preserves the user's currently
+// selected job / site / tab so a background poll doesn't disrupt navigation.
+async function loadStateFromServer({ initial = false } = {}) {
+  if (refreshInFlight) return false;
+  refreshInFlight = true;
+  setSyncIndicator("syncing");
+  try {
+    const response = await fetch(stateUrl, { cache: "no-store" });
+    if (!response.ok) {
+      throw new Error(`State fetch failed: HTTP ${response.status}`);
+    }
+    const fresh = await response.json();
+    dashboardState = fresh;
+    persistenceMode = fresh.persistence || "static";
+    previewStatus = Object.fromEntries(
+      (fresh.jobs || []).map((job) => [job.job_id, job.status]),
+    );
+    if (initial) {
+      selectedSiteId = "all";
+    } else {
+      // Keep the selected job pointed at the latest version of itself; clear
+      // if it has been removed (e.g. published and rotated off the queue).
+      if (selectedJobId && !fresh.jobs.some((job) => job.job_id === selectedJobId)) {
+        selectedJobId = null;
+      }
+    }
+    lastSyncedAt = Date.now();
+    setSyncIndicator("ok");
+    return true;
+  } catch (error) {
+    console.error("loadStateFromServer", error);
+    setSyncIndicator("error", error.message || "Sync failed");
+    return false;
+  } finally {
+    refreshInFlight = false;
+  }
+}
+
+// Re-render every panel that reads from dashboardState. Called after a live
+// refresh so the UI catches up without a hard page reload.
+function rerenderAllPanels() {
+  renderSummary();
+  renderFilters();
+  renderPlanningBoard();
+  renderJobs();
+  renderSelectedJob();
+  renderPerformanceStatus();
+}
+
+// Live refresh entry point used by the post-action paths and the background
+// poll. Re-fetches state and re-renders if anything changed.
+async function liveRefresh({ silent = false } = {}) {
+  if (reviewActionInFlight) return;
+  const before = serializeJobsForDiff(dashboardState);
+  const fetched = await loadStateFromServer();
+  if (!fetched) return;
+  const after = serializeJobsForDiff(dashboardState);
+  if (silent && before === after) {
+    return; // Nothing changed, no need to repaint and steal focus.
+  }
+  rerenderAllPanels();
+}
+
+function serializeJobsForDiff(state) {
+  if (!state?.jobs) return "";
+  return state.jobs
+    .map((job) => `${job.job_id}:${job.status}:${job.updated_at || ""}`)
+    .join("|");
+}
+
+function startPolling() {
+  stopPolling();
+  pollTimer = setInterval(() => {
+    if (document.visibilityState !== "visible") return;
+    liveRefresh({ silent: true });
+  }, POLL_INTERVAL_MS);
+
+  // Refresh immediately when the tab becomes visible again — keeps the
+  // dashboard fresh after you switch back from another tab.
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "visible") {
+      liveRefresh({ silent: true });
+    }
+  });
+}
+
+function stopPolling() {
+  if (pollTimer) {
+    clearInterval(pollTimer);
+    pollTimer = null;
+  }
+}
+
+function startSyncTicker() {
+  if (syncTickerTimer) clearInterval(syncTickerTimer);
+  syncTickerTimer = setInterval(updateSyncIndicatorText, 5000);
+}
+
+function setSyncIndicator(state, detail = "") {
+  if (!el.syncStatus) return;
+  el.syncStatus.dataset.state = state;
+  if (state === "syncing") {
+    el.syncStatusText.textContent = "Syncing…";
+  } else if (state === "error") {
+    el.syncStatusText.textContent = `Sync failed — ${detail || "retrying"}`;
+  } else {
+    updateSyncIndicatorText();
+  }
+}
+
+function updateSyncIndicatorText() {
+  if (!el.syncStatusText) return;
+  if (!lastSyncedAt) return;
+  const secondsAgo = Math.max(0, Math.round((Date.now() - lastSyncedAt) / 1000));
+  el.syncStatusText.textContent = `Synced ${formatRelativeSeconds(secondsAgo)}`;
+}
+
+function formatRelativeSeconds(seconds) {
+  if (seconds < 5) return "just now";
+  if (seconds < 60) return `${seconds}s ago`;
+  const minutes = Math.floor(seconds / 60);
+  if (minutes < 60) return `${minutes}m ago`;
+  const hours = Math.floor(minutes / 60);
+  if (hours < 24) return `${hours}h ago`;
+  return `${Math.floor(hours / 24)}d ago`;
+}
+
+function renderPerformanceStatus() {
+  if (!el.performanceStatus) return;
+  const generatedAt = dashboardState?.performance?.generated_at;
+  if (!generatedAt) {
+    el.performanceStatus.hidden = true;
+    return;
+  }
+  const ageMs = Date.now() - new Date(generatedAt).getTime();
+  const ageMinutes = Math.max(0, Math.round(ageMs / 60000));
+  const label = ageMinutes < 60
+    ? `${ageMinutes}m ago`
+    : ageMinutes < 60 * 24
+      ? `${Math.floor(ageMinutes / 60)}h ago`
+      : `${Math.floor(ageMinutes / (60 * 24))}d ago`;
+  el.performanceStatus.hidden = false;
+  el.performanceStatus.textContent = `GA4 refreshed ${label}`;
+  el.performanceStatus.title = `GA4 snapshot generated at ${new Date(generatedAt).toLocaleString()}`;
 }
 
 function bindEvents() {
@@ -872,19 +1028,31 @@ function renderBriefTab(job) {
       </article>
       <article class="card">
         <h3>Outline</h3>
-        <ul class="clean-list">
-          ${outline.map((item) => `<li>${escapeHtml(cleanOutlineItem(item))}</li>`).join("")}
-        </ul>
+        <ol class="outline-list">
+          ${renderOutlineItems(outline)}
+        </ol>
       </article>
     </div>
   `;
 }
 
-function cleanOutlineItem(item) {
-  return String(item || "")
-    .replace(/^#{1,6}\s+/, "")
-    .replace(/^H[1-6]:\s*/i, "")
-    .trim();
+// Renders an outline that uses the H1:/H2:/H3: tag convention from the writer.
+// Each item is shown with its heading level as a small badge, and H3 items are
+// indented under their preceding H2 for a clear visual hierarchy.
+function renderOutlineItems(outline) {
+  return outline
+    .map((rawItem) => {
+      const item = String(rawItem || "").trim();
+      const match = item.match(/^(H[1-6]):\s*(.*)$/i);
+      if (!match) {
+        return `<li class="outline-row outline-h2"><span class="outline-tag">H2</span><span class="outline-text">${escapeHtml(item)}</span></li>`;
+      }
+      const level = match[1].toUpperCase();
+      const text = match[2] || "";
+      const cls = `outline-${level.toLowerCase()}`;
+      return `<li class="outline-row ${cls}"><span class="outline-tag">${level}</span><span class="outline-text">${escapeHtml(text)}</span></li>`;
+    })
+    .join("");
 }
 
 function renderReviewTab(job) {
@@ -1529,6 +1697,9 @@ async function handleReviewAction(action) {
         throw new Error(result.message || "Review action failed.");
       }
 
+      // Optimistically reflect the action — the live refetch below will then
+      // pick up any chain reactions the backend did (next brief promoted,
+      // job removed from queue, performance snapshot updated).
       previewStatus[job.job_id] = result.next_status;
       job.final_review = {
         ...(job.final_review || {}),
@@ -1549,13 +1720,24 @@ async function handleReviewAction(action) {
       }
       renderJobs();
       renderSelectedJob();
+      const promotion = result.promoted_next_brief;
+      const promotionLine = promotion?.job_id
+        ? `<p><strong>Next brief promoted:</strong> ${escapeHtml(promotion.topic || promotion.job_id)}</p>`
+        : "";
       el.reviewPreview.innerHTML = `
         <h3>${escapeHtml(actionLabel)}</h3>
         <p><strong>Job:</strong> ${escapeHtml(job.topic)}</p>
         <p><strong>New status:</strong> ${escapeHtml(labelizeStatus(result.next_status))}</p>
         <p><strong>Plagiarism status:</strong> ${escapeHtml(result.manual_plagiarism_status)}</p>
+        ${promotionLine}
         <p><strong>Note:</strong> ${escapeHtml(comment)}</p>
       `;
+      // Pull the freshest server state so promoted-brief, next-job and
+      // updated counters land in the UI without a manual reload. The fetch
+      // is guarded by its own refreshInFlight flag, so background polls
+      // won't double-fire here.
+      await loadStateFromServer();
+      rerenderAllPanels();
       return;
     } catch (error) {
       el.reviewPreview.innerHTML = `

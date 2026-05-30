@@ -226,7 +226,7 @@ SEO strategy: ${JSON.stringify(assetJob.seo_strategy || {})}
 
 Return a JSON object with exactly these keys:
 - brief_summary: string
-- outline: array of 6 to 8 strings
+- outline: array of 6 to 8 strings. Each string MUST begin with a heading-level tag: "H1: <title>" for the article H1 (first entry), "H2: <heading>" for top-level section headings, and "H3: <heading>" for sub-section headings nested under an H2. Exactly one H1, then a logical mix of H2/H3.
 - search_intent: string
 - cluster: string
 - category_slug: string
@@ -311,7 +311,7 @@ Reviewer note: ${reviewerNote}
 
 Return a JSON object with exactly these keys:
 - brief_summary: string
-- outline: array of 6 to 8 strings
+- outline: array of 6 to 8 strings. Each string MUST begin with a heading-level tag: "H1: <title>" for the article H1 (first entry), "H2: <heading>" for top-level section headings, and "H3: <heading>" for sub-section headings nested under an H2. Exactly one H1, then a logical mix of H2/H3.
 - search_intent: string
 - cluster: string
 - category_slug: string
@@ -509,14 +509,23 @@ async function autoSelectDraftImages(context, reviewRow, job, imagePlan) {
 
 function cleanOutlineItems(outline) {
   if (!Array.isArray(outline)) return [];
-  return outline
-    .map((item) =>
-      String(item || "")
-        .replace(/^\s*#{1,6}\s+/, "")
-        .replace(/^\s*H[1-6]:\s*/i, "")
-        .trim(),
-    )
-    .filter(Boolean);
+  // Normalize incoming items: strip stray markdown hashes, but PRESERVE the
+  // `H1:` / `H2:` / `H3:` heading-level prefix that the writer prompt asks
+  // for — the dashboard renderer uses it to show structural hierarchy.
+  // If the model returned a plain string with no prefix, default the first
+  // item to H1 and remaining items to H2 so legacy output still renders.
+  const normalized = outline
+    .map((item) => String(item || "").replace(/^\s*#{1,6}\s+/, "").trim())
+    .filter(Boolean)
+    .map((item, index) => {
+      const tagged = /^H[1-6]:\s*/i.test(item);
+      if (tagged) {
+        // Uppercase the tag for consistent display ("h2:" → "H2:")
+        return item.replace(/^(H[1-6]):\s*/i, (_match, tag) => `${tag.toUpperCase()}: `);
+      }
+      return index === 0 ? `H1: ${item}` : `H2: ${item}`;
+    });
+  return normalized;
 }
 
 function normalizeCta(cta, site) {
