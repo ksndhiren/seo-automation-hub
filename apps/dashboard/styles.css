@@ -473,11 +473,18 @@ select {
   gap: 12px;
 }
 
+/* Compact 3-row job card. Was previously up to 9 stacked lines
+   (site / topic / category / date / keyword / lead-goal / score / plagiarism
+   / status). Reorganized into:
+     - .job-card-head:      status pill + topic (the unique identifier)
+     - .job-card-context:   site · category · date (where + when)
+     - .job-card-targeting: score · lead-goal · keyword (what we're after) */
 .job-card {
-  display: grid;
-  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
   width: 100%;
-  padding: 16px;
+  padding: 14px 16px;
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   background: var(--surface-muted);
@@ -493,32 +500,47 @@ select {
   background: white;
 }
 
+.job-card-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.job-card-head .status-pill {
+  flex: 0 0 auto;
+  margin-top: 2px;
+}
+
 .job-card h3 {
   margin: 0;
-  font-size: 1rem;
+  font-size: 0.98rem;
   line-height: 1.35;
 }
 
-.job-card-meta,
-.job-card-site,
-.job-card-category,
-.job-card-date {
+.job-card-context,
+.job-card-targeting {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
   color: var(--muted);
-  font-size: 0.82rem;
+  font-size: 0.8rem;
+  line-height: 1.4;
 }
 
-.job-card-category {
+.job-card-context > span:first-child {
   font-weight: 700;
   color: var(--brand);
 }
 
-.job-card-date {
-  font-weight: 700;
+.job-card-sep {
+  color: var(--border);
 }
 
 .job-card-review {
   display: grid;
   gap: 8px;
+  margin-top: 2px;
 }
 
 .review-chip {

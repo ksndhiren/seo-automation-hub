@@ -560,7 +560,6 @@ function renderClusterMap(jobs) {
                 (job) => `
                   <div class="cluster-item">
                     <span>${escapeHtml(job.topic)}</span>
-                    <small>${escapeHtml(job.primary_keyword)}</small>
                   </div>
                 `,
               )
@@ -748,17 +747,24 @@ function renderMonthBoard(monthKey, jobs) {
 
 function renderCalendarEvent(job) {
   const category = getCategoryName(job, dashboardState.sites || []);
-  const siteShort = selectedSiteId === "all" ? job.site_name : category;
+  // When a single site is selected, the site name on every event is just
+  // repetition. Show the category instead (the actually-varying info).
+  // When viewing All sites, show the site so reviewers can tell them apart.
+  const topLabel = selectedSiteId === "all" ? job.site_name : category;
   const leadGoal = job.seo_strategy?.lead_goal || "lead generation";
   const score = job.seo_strategy?.opportunity_score ?? "—";
   return `
     <button class="calendar-day-card calendar-day-card-inline" data-job-id="${escapeHtml(job.job_id)}">
       <div class="calendar-day-top">
-        <span class="calendar-date">${escapeHtml(siteShort)}</span>
+        <span class="calendar-date">${escapeHtml(topLabel)}</span>
         <span class="calendar-score">${escapeHtml(String(score))}</span>
       </div>
       <strong>${escapeHtml(job.topic)}</strong>
-      <div class="calendar-meta">${escapeHtml(category)} · ${escapeHtml(leadGoal)}</div>
+      <div class="calendar-meta">${
+        selectedSiteId === "all"
+          ? `${escapeHtml(category)} · ${escapeHtml(leadGoal)}`
+          : escapeHtml(leadGoal)
+      }</div>
     </button>
   `;
 }
@@ -857,6 +863,12 @@ function renderJobs() {
     return;
   }
 
+  // Compact job card: 3 logical rows + (optional) plagiarism warning line.
+  //   Row 1: status pill + the topic (the only thing that uniquely names a job).
+  //   Row 2: site · category · planned date — the contextual metadata.
+  //   Row 3: opportunity score · lead goal · primary keyword — the targeting.
+  // The old card had each of these on its own line which was visually heavy
+  // and made the queue feel tall and sparse.
   el.jobList.innerHTML = jobs
     .map((job) => {
       const isActive = job.job_id === selectedJobId;
@@ -864,19 +876,35 @@ function renderJobs() {
       const category = getCategoryName(job, dashboardState.sites || []);
       const plagiarismStatus = job.final_review?.manual_plagiarism_status || "";
       const flaggedNote = job.final_review?.flagged_sections_note || "";
+      const score = job.seo_strategy?.opportunity_score;
+      const leadGoal = job.seo_strategy?.lead_goal || "lead generation";
+
+      const contextRow = [
+        job.site_name,
+        category,
+        job.planned_publish_date ? formatCalendarDate(job.planned_publish_date) : null,
+      ]
+        .filter(Boolean)
+        .map((part) => `<span>${escapeHtml(part)}</span>`)
+        .join(`<span class="job-card-sep">·</span>`);
+
+      const targetingRow = [
+        score != null ? `Score ${score}` : null,
+        leadGoal,
+        job.primary_keyword,
+      ]
+        .filter(Boolean)
+        .map((part) => `<span>${escapeHtml(part)}</span>`)
+        .join(`<span class="job-card-sep">·</span>`);
+
       return `
         <button class="job-card ${isActive ? "active" : ""}" data-job-id="${escapeHtml(job.job_id)}">
-          <div class="job-card-site">${escapeHtml(job.site_name)}</div>
-          <h3>${escapeHtml(job.topic)}</h3>
-          <div class="job-card-category">${escapeHtml(category)}</div>
-          ${
-            job.planned_publish_date
-              ? `<div class="job-card-date">${escapeHtml(formatCalendarDate(job.planned_publish_date))}</div>`
-              : ""
-          }
-          <div class="job-card-meta">${escapeHtml(job.primary_keyword)}</div>
-          <div class="job-card-meta">${escapeHtml(job.seo_strategy?.lead_goal || "lead generation")}</div>
-          <div class="job-card-score">Opportunity score: ${escapeHtml(String(job.seo_strategy?.opportunity_score ?? "—"))}</div>
+          <div class="job-card-head">
+            <span class="status-pill status-${escapeHtml(status)}">${escapeHtml(labelizeStatus(status))}</span>
+            <h3>${escapeHtml(job.topic)}</h3>
+          </div>
+          <div class="job-card-context">${contextRow}</div>
+          <div class="job-card-targeting">${targetingRow}</div>
           ${
             plagiarismStatus
               ? `<div class="job-card-review">
@@ -889,7 +917,6 @@ function renderJobs() {
                 </div>`
               : ""
           }
-          <span class="status-pill status-${escapeHtml(status)}">${escapeHtml(labelizeStatus(status))}</span>
         </button>
       `;
     })

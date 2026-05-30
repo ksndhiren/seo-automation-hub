@@ -127,16 +127,11 @@ export async function onRequestGet(context) {
       summary: {
         generated_at: new Date().toISOString(),
         statuses: [...statusSet].sort(),
+        // Keep summary cards to the four actionable counts. The old strip
+        // also surfaced "Active sites" (almost always = 2, not useful) and
+        // a raw "Open jobs" total (sum of the others, ambiguous) — dropped.
+        // "Working-day plan slots" → renamed to "Scheduled" for plain English.
         cards: [
-          {
-            label: "Active sites",
-            value: new Set(sortedJobs.map((job) => job.site_id)).size,
-          },
-          { label: "Open jobs", value: sortedJobs.length },
-          {
-            label: "Working-day plan slots",
-            value: sortedJobs.filter((job) => job.planned_publish_date).length,
-          },
           {
             label: "Needs brief approval",
             value: statusCounts.brief_pending || 0,
@@ -144,6 +139,14 @@ export async function onRequestGet(context) {
           {
             label: "Needs final review",
             value: statusCounts.final_pending || 0,
+          },
+          {
+            label: "Scheduled",
+            value: sortedJobs.filter((job) => job.planned_publish_date).length,
+          },
+          {
+            label: "Published",
+            value: statusCounts.published || 0,
           },
         ],
       },
