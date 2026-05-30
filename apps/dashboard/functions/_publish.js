@@ -67,34 +67,53 @@ export async function publishApprovedJob(context, reviewRow) {
   const owner = context.env.GITHUB_OWNER || siteConfig.owner;
   const branch = reviewRow.publish_branch || siteConfig.branch;
 
-  const existing = await getExistingContent({
-    owner,
-    repo: siteConfig.repo,
-    path: filePath,
-    branch,
-    token,
-  });
+  let existing;
+  try {
+    existing = await getExistingContent({
+      owner,
+      repo: siteConfig.repo,
+      path: filePath,
+      branch,
+      token,
+    });
+  } catch (error) {
+    return {
+      ok: false,
+      message: `GitHub lookup failed: ${error?.message || String(error)}`,
+    };
+  }
 
-  const response = await fetch(
-    `https://api.github.com/repos/${owner}/${siteConfig.repo}/contents/${encodePath(filePath)}`,
-    {
-      method: "PUT",
-      headers: githubHeaders(token),
-      body: JSON.stringify({
-        message: `Publish blog post: ${mergedJob.draft.title}`,
-        content: utf8ToBase64(moduleSource),
-        branch,
-        sha: existing?.sha,
-        committer: buildCommitAuthor(context),
-      }),
-    },
-  );
+  let response;
+  let payload;
+  try {
+    response = await fetch(
+      `https://api.github.com/repos/${owner}/${siteConfig.repo}/contents/${encodePath(filePath)}`,
+      {
+        method: "PUT",
+        headers: githubHeaders(token),
+        body: JSON.stringify({
+          message: `Publish blog post: ${mergedJob.draft.title}`,
+          content: utf8ToBase64(moduleSource),
+          branch,
+          sha: existing?.sha,
+          committer: buildCommitAuthor(context),
+        }),
+      },
+    );
+    payload = await response.json().catch(() => ({}));
+  } catch (error) {
+    return {
+      ok: false,
+      message: `GitHub publish request failed: ${error?.message || String(error)}`,
+    };
+  }
 
-  const payload = await response.json();
   if (!response.ok) {
     return {
       ok: false,
-      message: payload?.message || "GitHub rejected the publish request.",
+      message: payload?.message
+        ? `GitHub ${response.status}: ${payload.message}`
+        : `GitHub rejected the publish request (HTTP ${response.status}).`,
     };
   }
 

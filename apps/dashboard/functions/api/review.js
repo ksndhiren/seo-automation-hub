@@ -201,13 +201,24 @@ export async function onRequestPost(context) {
         ...(JSON.parse(nextDraftJson || "{}")),
         publishedAt: formatDateForZone(now, "America/Chicago"),
       });
-      publishResult = await publishApprovedJob(context, {
-        ...existing,
-        draft_json: nextDraftJson,
-        manual_plagiarism_status: nextManualPlagiarismStatus,
-        flagged_sections_note: nextFlaggedSectionsNote,
-        selected_images_json: JSON.stringify(draftResult?.selectedImages || nextSelectedImages),
-      });
+      try {
+        publishResult = await publishApprovedJob(context, {
+          ...existing,
+          draft_json: nextDraftJson,
+          manual_plagiarism_status: nextManualPlagiarismStatus,
+          flagged_sections_note: nextFlaggedSectionsNote,
+          selected_images_json: JSON.stringify(draftResult?.selectedImages || nextSelectedImages),
+        });
+      } catch (error) {
+        return json(
+          {
+            ok: false,
+            message: `Publish step crashed: ${error?.message || String(error)}`,
+            previous_status: existing.status,
+          },
+          { status: 502 },
+        );
+      }
       if (!publishResult.ok) {
         return json(
           {
