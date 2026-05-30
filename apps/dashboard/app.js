@@ -1906,12 +1906,14 @@ function renderSiteTaxonomy(siteId) {
     return;
   }
 
+  // Just the human-readable category name. The slug duplicated the same
+  // string in kebab-case for no reader benefit (URL framework already
+  // shows the path each category lands at).
   el.siteTaxonomy.innerHTML = site.blog_categories
     .map(
       (category) => `
         <div class="taxonomy-item">
           <strong>${escapeHtml(category.name)}</strong>
-          <span>${escapeHtml(category.slug)}</span>
         </div>
       `,
     )

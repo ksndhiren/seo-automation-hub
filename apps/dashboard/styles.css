@@ -500,15 +500,22 @@ select {
   background: white;
 }
 
+/* Stack the status pill above the topic. Originally pill and topic shared
+   a row, but on narrower widths (queue panel ~280px content) the pill's
+   uppercase letter-spacing made it ~150px wide and the topic collapsed to
+   1 word per line. Stacking keeps the topic full-width at any breakpoint. */
 .job-card-head {
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
-  gap: 10px;
+  gap: 6px;
 }
 
 .job-card-head .status-pill {
   flex: 0 0 auto;
-  margin-top: 2px;
+  padding: 4px 10px;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
 }
 
 .job-card h3 {
@@ -936,25 +943,15 @@ select {
 }
 
 .taxonomy-item {
-  padding: 12px 14px;
-  border-radius: 14px;
+  padding: 8px 12px;
+  border-radius: 10px;
   background: var(--surface-muted);
   border: 1px solid var(--border);
 }
 
-.taxonomy-item strong,
-.taxonomy-item span {
-  display: block;
-}
-
 .taxonomy-item strong {
-  font-size: 0.92rem;
-}
-
-.taxonomy-item span {
-  margin-top: 4px;
-  color: var(--muted);
-  font-size: 0.8rem;
+  display: block;
+  font-size: 0.88rem;
 }
 
 .detail-head {
@@ -1466,6 +1463,15 @@ select {
   color: var(--muted);
 }
 
+/* ─── Responsive breakpoints ──────────────────────────────────────────
+   Three tiers:
+     ≤1180px  desktop → tablet landscape: stack workspace + planning
+     ≤960px   tablet  → tablet portrait : single-column summary, 7-col
+                                          calendar still fits but tightened
+     ≤640px   tablet  → phone           : everything goes single column,
+                                          horizontal scroll for tabs/calendar
+                                          to avoid awkward wrapping
+─────────────────────────────────────────────────────────────────────── */
 @media (max-width: 1180px) {
   .workspace {
     grid-template-columns: 1fr;
@@ -1484,13 +1490,14 @@ select {
   }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 960px) {
   .app-shell {
-    padding: 16px;
+    padding: 20px;
   }
 
   .topbar {
     flex-direction: column;
+    align-items: stretch;
   }
 
   .topbar-meta {
@@ -1502,10 +1509,133 @@ select {
     justify-content: space-between;
   }
 
+  .panel {
+    border-radius: var(--radius-lg);
+  }
+
+  .queue-panel,
+  .detail-panel,
+  .approval-panel,
+  .planning-panel {
+    padding: 16px;
+  }
+
+  /* Planning view toggle (Overview / Calendar / Performance) needs to
+     stay on one row but smaller on tablet. */
+  .planning-switch-btn {
+    padding: 8px 12px;
+    font-size: 0.82rem;
+  }
+
+  /* Job detail tabs scroll horizontally on tablet so they don't wrap
+     into a messy 2-row stack. */
+  .tabs {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    flex-wrap: nowrap;
+    padding-bottom: 6px;
+  }
+
+  .tab {
+    flex: 0 0 auto;
+  }
+
+  /* Calendar: 7-day grid stays but cells get even tighter. */
+  .calendar-grid-cell {
+    min-height: 76px;
+    padding: 6px;
+  }
+
+  .calendar-grid-day {
+    font-size: 0.72rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .app-shell {
+    padding: 14px;
+  }
+
+  .topbar h1 {
+    font-size: 1.6rem;
+  }
+
   .summary-strip,
   .meta-grid,
   .strategy-grid,
   .action-buttons {
     grid-template-columns: 1fr;
+  }
+
+  .summary-card {
+    padding: 14px 16px;
+  }
+
+  /* Planning panel: switch and dropdown stack instead of crowding the
+     header row on phones. */
+  .panel-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .planning-toolbar {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .planning-switch {
+    width: 100%;
+  }
+
+  .planning-switch-btn {
+    flex: 1 1 0;
+    padding: 8px 6px;
+    font-size: 0.75rem;
+  }
+
+  /* Calendar wide grid is unreadable on a phone — turn it into a vertical
+     list of "Day → event" rows that's actually scannable. */
+  .calendar-weekdays {
+    display: none;
+  }
+
+  .calendar-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .calendar-grid-cell {
+    min-height: 0;
+    display: grid;
+    grid-template-columns: 36px 1fr;
+    gap: 8px;
+    align-items: start;
+  }
+
+  .calendar-grid-cell-empty {
+    display: none;
+  }
+
+  .calendar-grid-day {
+    margin: 0;
+    font-size: 0.86rem;
+  }
+
+  /* Action buttons need to be wide and tappable on phones. */
+  .action-buttons button,
+  .approval-panel button {
+    min-height: 44px;
+    width: 100%;
+  }
+
+  .review-comment,
+  textarea {
+    font-size: 1rem; /* avoid iOS auto-zoom on focus */
+  }
+
+  .tab {
+    padding: 8px 12px;
+    font-size: 0.78rem;
   }
 }
