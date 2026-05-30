@@ -63,6 +63,9 @@ let lastSyncedAt = null;
 let pollTimer = null;
 let syncTickerTimer = null;
 let refreshInFlight = false;
+// Calendar month state — `null` means "use the current month if it has
+// scheduled posts, otherwise fall back to the nearest month with data".
+let selectedCalendarMonth = null;
 
 init().catch((error) => {
   console.error(error);
@@ -326,7 +329,9 @@ function bindEvents() {
 
 function renderSummary() {
   const summary = dashboardState.summary;
-  el.lastUpdated.textContent = formatDateTime(summary.generated_at);
+  if (el.lastUpdated) {
+    el.lastUpdated.textContent = formatDateTime(summary.generated_at);
+  }
 
   el.summaryGrid.innerHTML = summary.cards
     .map(
@@ -488,12 +493,15 @@ function renderCategoryPipeline(site, jobs) {
   const scopedJobs = jobs.filter(
     (job) => selectedSiteId === "all" || job.site_id === selectedSiteId,
   );
+  // Per-category we now track exact counts per status, not just a Set of
+  // status names, so the card can say "9 published · 2 new" instead of the
+  // ambiguous "Published · New" pill the previous design used.
   const jobCountsByCategory = scopedJobs.reduce((acc, job) => {
     const slug = job.seo_strategy?.category_slug || getCategorySlug(job.target_url);
     if (!slug) return acc;
-    acc[slug] = acc[slug] || { total: 0, statuses: new Set() };
+    acc[slug] = acc[slug] || { total: 0, statusCounts: {} };
     acc[slug].total += 1;
-    acc[slug].statuses.add(job.status);
+    acc[slug].statusCounts[job.status] = (acc[slug].statusCounts[job.status] || 0) + 1;
     return acc;
   }, {});
 
@@ -501,19 +509,18 @@ function renderCategoryPipeline(site, jobs) {
     .map((category) => {
       const bucket = jobCountsByCategory[category.slug];
       const total = bucket?.total || 0;
-      const statuses = bucket
-        ? [...bucket.statuses].map(labelizeStatus).join(" · ")
-        : "No jobs yet";
+      const breakdown = bucket
+        ? Object.entries(bucket.statusCounts)
+            .sort((left, right) => right[1] - left[1])
+            .map(([status, count]) => `${count} ${labelizeStatus(status).toLowerCase()}`)
+            .join(" · ")
+        : "";
+      const totalLabel = `${total} ${total === 1 ? "blog" : "blogs"}`;
       return `
         <div class="pipeline-lane">
-          <div class="pipeline-head">
-            <strong>${escapeHtml(category.name)}</strong>
-            <span>${escapeHtml(category.slug)}</span>
-          </div>
-          <div class="pipeline-metric-row">
-            <div class="pipeline-metric">${escapeHtml(String(total))}</div>
-            <p>${escapeHtml(total ? statuses : "No jobs yet")}</p>
-          </div>
+          <strong class="pipeline-name">${escapeHtml(category.name)}</strong>
+          <div class="pipeline-metric">${escapeHtml(totalLabel)}</div>
+          <p class="pipeline-breakdown">${escapeHtml(breakdown || "No blogs yet")}</p>
         </div>
       `;
     })
@@ -608,16 +615,59 @@ function renderContentCalendar(jobs) {
     return;
   }
 
-  const monthKeys = [...new Set(scopedJobs.map((job) => String(job.planned_publish_date).slice(0, 7)))].sort();
-  const monthBoards = monthKeys
-    .map((monthKey) => renderMonthBoard(monthKey, scopedJobs))
+  const monthKeys = [...new Set(
+    scopedJobs.map((job) => String(job.planned_publish_date).slice(0, 7)),
+  )].sort();
+
+  // Choose which month to display: previously-selected (if still has data),
+  // else the current calendar month if scheduled, else the nearest upcoming
+  // month, else the latest available. Shows only ONE month at a time so
+  // the calendar stays compact.
+  const today = new Date();
+  const todayKey = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, "0")}`;
+  let activeMonthKey = selectedCalendarMonth;
+  if (!activeMonthKey || !monthKeys.includes(activeMonthKey)) {
+    activeMonthKey =
+      (monthKeys.includes(todayKey) && todayKey) ||
+      monthKeys.find((key) => key >= todayKey) ||
+      monthKeys[monthKeys.length - 1];
+  }
+  selectedCalendarMonth = activeMonthKey;
+
+  const monthOptions = monthKeys
+    .map((monthKey) => {
+      const [year, month] = monthKey.split("-").map(Number);
+      const label = new Intl.DateTimeFormat("en", {
+        month: "long",
+        year: "numeric",
+      }).format(new Date(year, month - 1, 1));
+      const monthJobCount = scopedJobs.filter((job) =>
+        String(job.planned_publish_date).startsWith(monthKey),
+      ).length;
+      const selected = monthKey === activeMonthKey ? " selected" : "";
+      return `<option value="${escapeHtml(monthKey)}"${selected}>${escapeHtml(label)} (${monthJobCount})</option>`;
+    })
     .join("");
 
   el.contentCalendar.innerHTML = `
+    <div class="calendar-toolbar">
+      <label class="calendar-month-picker">
+        <span>Month</span>
+        <select id="calendar-month-select">${monthOptions}</select>
+      </label>
+    </div>
     <div class="calendar-month-stack">
-      ${monthBoards}
+      ${renderMonthBoard(activeMonthKey, scopedJobs)}
     </div>
   `;
+
+  const monthSelect = document.getElementById("calendar-month-select");
+  if (monthSelect) {
+    monthSelect.addEventListener("change", () => {
+      selectedCalendarMonth = monthSelect.value;
+      renderContentCalendar(jobs);
+    });
+  }
 
   Array.from(document.querySelectorAll(".calendar-day-card")).forEach((button) => {
     button.addEventListener("click", () => {

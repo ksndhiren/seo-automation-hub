@@ -215,6 +215,11 @@ select {
   flex: 0 0 auto;
 }
 
+/* Right column: the cluster card stretches to match the height of the
+   left column (Category pipeline + URL framework). Inside, the list grows
+   into the available space — no fixed 560px cap — so there's never empty
+   white area next to the URL framework. Scroll only kicks in if a single
+   site somehow generates more clusters than fit in the row. */
 .planning-card-cluster {
   display: flex;
   flex-direction: column;
@@ -223,7 +228,7 @@ select {
 
 .planning-card-cluster .cluster-map {
   flex: 1 1 auto;
-  max-height: 560px;
+  min-height: 0;
   overflow: auto;
   padding-right: 4px;
 }
@@ -581,10 +586,17 @@ select {
 }
 
 .pipeline-lane {
-  min-height: 132px;
+  min-height: 108px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
-.pipeline-head,
+.pipeline-name {
+  font-size: 0.98rem;
+  line-height: 1.3;
+}
+
 .cluster-title {
   display: flex;
   align-items: baseline;
@@ -592,7 +604,6 @@ select {
   gap: 12px;
 }
 
-.pipeline-head span,
 .cluster-title span,
 .cluster-item small {
   color: var(--muted);
@@ -600,10 +611,17 @@ select {
 }
 
 .pipeline-metric {
-  margin-top: 10px;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   font-weight: 800;
   color: var(--brand);
+  line-height: 1.1;
+}
+
+.pipeline-breakdown {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.8rem;
+  line-height: 1.4;
 }
 
 .pipeline-metric-row {
@@ -715,6 +733,34 @@ select {
   gap: 16px;
 }
 
+/* Calendar toolbar holds the month dropdown that lets reviewers pick which
+   month to view. Previously every month with scheduled posts was rendered
+   stacked — too much visual weight. Now we render one month at a time. */
+.calendar-toolbar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 12px;
+}
+
+.calendar-month-picker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.calendar-month-picker select {
+  padding: 6px 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: white;
+  font-weight: 600;
+  color: var(--text, #1f2a44);
+  cursor: pointer;
+}
+
 .calendar-month-stack {
   display: grid;
   gap: 16px;
@@ -722,9 +768,9 @@ select {
 
 .calendar-month-board {
   display: grid;
-  gap: 12px;
-  padding: 16px;
-  border-radius: 16px;
+  gap: 10px;
+  padding: 14px;
+  border-radius: 14px;
   border: 1px solid var(--border);
   background: white;
 }
@@ -763,13 +809,16 @@ select {
 .calendar-grid {
   display: grid;
   grid-template-columns: repeat(7, minmax(0, 1fr));
-  gap: 8px;
+  gap: 6px;
 }
 
+/* Tighter cells: previously every cell reserved 150px of height which
+   made empty months look enormous. 96px keeps room for one event and
+   collapses cleanly for empty days. */
 .calendar-grid-cell {
-  min-height: 150px;
-  padding: 10px;
-  border-radius: 14px;
+  min-height: 96px;
+  padding: 8px;
+  border-radius: 10px;
   border: 1px solid var(--border);
   background: var(--surface-muted);
 }
@@ -785,8 +834,8 @@ select {
 }
 
 .calendar-grid-day {
-  margin-bottom: 10px;
-  font-size: 0.86rem;
+  margin-bottom: 6px;
+  font-size: 0.78rem;
   font-weight: 800;
   color: var(--brand);
 }
@@ -816,9 +865,10 @@ select {
 }
 
 .calendar-day-card-inline {
-  padding: 10px;
-  gap: 6px;
-  border-radius: 12px;
+  padding: 6px 8px;
+  gap: 4px;
+  border-radius: 8px;
+  font-size: 0.78rem;
 }
 
 .calendar-day-top {
