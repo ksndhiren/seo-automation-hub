@@ -78,13 +78,27 @@ export function buildImagePlanForJob(job) {
     return { status: "planned", items: plans, selected_images: selectedImages };
   }
 
+  // Jeff Martin's auction inventory is overwhelmingly wheeled / mobile
+  // cranes (~89% mobile: truck, all-terrain, rough-terrain, carry deck,
+  // boom truck) — tower cranes are <2%, crawler ~6%. So unless the article
+  // is specifically about a tower/crawler, image picks should reflect a
+  // hydraulic mobile crane on outriggers, not a tall lattice tower.
+  const persona = detectCranePersona({
+    topic,
+    primaryKeyword,
+    category: job?.seo_strategy?.category_name || "",
+    categorySlug,
+  });
+
+  const featuredQuery = cranesFeaturedQuery(persona, primaryKeyword, topic);
+  const featuredPrompt = cranesFeaturedPrompt(persona, topic);
+
   const plans = [
     {
       placement: "Featured image",
       asset_hint: draft.heroImage || "Not assigned yet",
-      query: "used crane industrial yard equipment auction",
-      prompt:
-        `Realistic editorial photo of a used crane prepared for auction in an industrial yard, clean daylight, documentary style, no text overlay, trustworthy heavy-equipment marketplace mood, supports the topic '${topic}'.`,
+      query: featuredQuery,
+      prompt: featuredPrompt,
     },
   ];
 
@@ -92,7 +106,7 @@ export function buildImagePlanForJob(job) {
     plans.push({
       placement: `After section: ${sections[1]?.heading || "Buyer information"}`,
       asset_hint: "Prompt only",
-      query: "crane inspection maintenance records industrial equipment",
+      query: cranesInspectionQuery(persona),
       prompt:
         "Detailed crane inspection scene with paperwork, serial plate, and maintenance records visible, professional industrial photography, natural light, no staged AI look, no text.",
     });
@@ -102,13 +116,73 @@ export function buildImagePlanForJob(job) {
     plans.push({
       placement: `After section: ${sections[2]?.heading || "Preparation checklist"}`,
       asset_hint: "Prompt only",
-      query: "preparing crane for sale inspection heavy equipment yard",
+      query: cranesPrepQuery(persona, primaryKeyword),
       prompt:
         `Heavy equipment seller preparing a crane for listing, showing cleaning, inspection, and photo capture steps, credible B2B industrial style, sharp realistic details, visually supports keyword '${primaryKeyword}'.`,
     });
   }
 
   return { status: "planned", items: plans, selected_images: selectedImages };
+}
+
+// Persona detection — looks at the topic/keyword/category strings for an
+// explicit crane type. Defaults to "mobile" since that matches the bulk of
+// the auction inventory. Order matters: check the most specific terms first.
+function detectCranePersona({ topic, primaryKeyword, category, categorySlug }) {
+  const haystack = `${topic || ""} ${primaryKeyword || ""} ${category || ""} ${categorySlug || ""}`.toLowerCase();
+  if (/(tower\s*crane|self[-\s]*erecting|luffing jib)/.test(haystack)) return "tower";
+  if (/(crawler\s*crane|lattice\s*boom|tracked\s*crane)/.test(haystack)) return "crawler";
+  if (/(rough\s*terrain|rt\s*crane|rough-terrain)/.test(haystack)) return "rough-terrain";
+  if (/(all[-\s]*terrain|at\s*crane)/.test(haystack)) return "all-terrain";
+  if (/(truck\s*crane|boom\s*truck|carrier\s*mounted)/.test(haystack)) return "truck";
+  if (/(carry\s*deck|industrial\s*pick|pick\s*and\s*carry)/.test(haystack)) return "carry-deck";
+  return "mobile"; // default: hydraulic wheeled mobile crane
+}
+
+function cranesFeaturedQuery(persona, primaryKeyword, topic) {
+  const base = {
+    "tower": "tower crane construction site skyline",
+    "crawler": "crawler crane lattice boom construction site",
+    "rough-terrain": "rough terrain crane yard outriggers",
+    "all-terrain": "all terrain mobile crane truck outriggers",
+    "truck": "truck mounted hydraulic crane outriggers",
+    "carry-deck": "industrial carry deck crane warehouse",
+    "mobile": "mobile hydraulic crane outriggers construction site",
+  }[persona] || "mobile hydraulic crane outriggers construction site";
+  return primaryKeyword
+    ? `${primaryKeyword} ${base}`.trim()
+    : `${topic || "used crane"} ${base}`.trim();
+}
+
+function cranesFeaturedPrompt(persona, topic) {
+  const description = {
+    "tower": "a tall stationary tower crane silhouetted against the skyline of an active construction site",
+    "crawler": "a tracked crawler crane with a lattice boom lifting on a heavy construction site",
+    "rough-terrain": "a four-wheel rough-terrain mobile crane set up on outriggers on a dirt construction site",
+    "all-terrain": "a multi-axle all-terrain mobile crane with telescoping boom and outriggers extended at a job site",
+    "truck": "a truck-mounted hydraulic boom crane with outriggers extended at a job site",
+    "carry-deck": "a compact industrial carry-deck pick-and-carry crane inside a warehouse",
+    "mobile": "a wheeled hydraulic mobile crane with telescoping boom and outriggers extended at a job site",
+  }[persona] || "a wheeled hydraulic mobile crane with telescoping boom and outriggers extended at a job site";
+  return `Realistic editorial photo of ${description}, clean daylight, documentary style, no text overlay, trustworthy heavy-equipment marketplace mood, visually supports the topic '${topic}'.`;
+}
+
+function cranesInspectionQuery(persona) {
+  const noun = persona === "tower"
+    ? "tower crane"
+    : persona === "crawler"
+      ? "crawler crane"
+      : "mobile crane truck";
+  return `${noun} inspection maintenance records industrial equipment`;
+}
+
+function cranesPrepQuery(persona, primaryKeyword) {
+  const noun = persona === "tower"
+    ? "tower crane"
+    : persona === "crawler"
+      ? "crawler crane lattice"
+      : "mobile crane truck";
+  return `${primaryKeyword || "used crane"} ${noun} preparation yard`.trim();
 }
 
 export function buildFallbackQueries(job, item) {
@@ -133,14 +207,37 @@ export function buildFallbackQueries(job, item) {
     ]);
   }
 
+  // Default to mobile crane fallback queries — same rationale as the
+  // image plan above. Only switch to tower / crawler when the article
+  // is specifically about that type. Even when the article topic is
+  // generic ("How to value a used crane"), Pexels has far more good
+  // mobile-crane stock than tower-crane stock.
+  const persona = detectCranePersona({
+    topic,
+    primaryKeyword: primary,
+    category,
+    categorySlug,
+  });
+  const personaNoun = {
+    "tower": "tower crane",
+    "crawler": "crawler crane lattice",
+    "rough-terrain": "rough terrain crane outriggers",
+    "all-terrain": "all terrain crane outriggers",
+    "truck": "truck mounted crane",
+    "carry-deck": "carry deck crane",
+    "mobile": "mobile hydraulic crane",
+  }[persona] || "mobile hydraulic crane";
+
   return uniqueStrings([
     item?.query,
     primary,
-    `${primary} crane`,
-    `${category} crane`,
+    `${primary} ${personaNoun}`,
+    `${category} ${personaNoun}`,
+    personaNoun,
+    "mobile crane truck",
+    "hydraulic crane outriggers",
     "used crane",
-    "construction crane",
-    placement.includes("Featured") ? "industrial crane yard" : "crane inspection",
+    placement.includes("Featured") ? `${personaNoun} yard` : `${personaNoun} inspection`,
   ]);
 }
 
@@ -148,6 +245,14 @@ export function chooseBestPexelsPhoto(job, item, photos, usedIds = new Set()) {
   if (!photos?.length) return null;
 
   const siteId = job.site_id || "";
+  const persona = siteId === "cranes-auctions"
+    ? detectCranePersona({
+        topic: job.topic,
+        primaryKeyword: job.primary_keyword,
+        category: job.seo_strategy?.category_name || "",
+        categorySlug: job.seo_strategy?.category_slug || "",
+      })
+    : null;
   const terms = uniqueStrings(
     [
       job.primary_keyword,
@@ -166,7 +271,7 @@ export function chooseBestPexelsPhoto(job, item, photos, usedIds = new Set()) {
   const ranked = [...photos]
     .map((photo) => ({
       photo,
-      score: scorePexelsPhoto(photo, terms, siteId, usedIds),
+      score: scorePexelsPhoto(photo, terms, siteId, usedIds, persona),
     }))
     .sort((a, b) => b.score - a.score);
 
@@ -174,7 +279,7 @@ export function chooseBestPexelsPhoto(job, item, photos, usedIds = new Set()) {
   return uniqueChoice?.photo || null;
 }
 
-function scorePexelsPhoto(photo, keywordTerms, siteId, usedIds) {
+function scorePexelsPhoto(photo, keywordTerms, siteId, usedIds, persona) {
   const text = `${photo.alt || ""} ${photo.photographer || ""}`.toLowerCase();
   let score = 0;
 
@@ -191,6 +296,55 @@ function scorePexelsPhoto(photo, keywordTerms, siteId, usedIds) {
     if (text.includes("construction")) score += 2;
     if (text.includes("industrial")) score += 2;
     if (text.includes("equipment")) score += 1;
+
+    // Mobile-crane bias for cranesauctions: the auction inventory is ~89%
+    // wheeled cranes (truck, all-terrain, rough-terrain, carry deck, boom
+    // truck). Reward shots that look like that and penalize tower / lattice
+    // / construction-skyline shots — UNLESS the article is specifically
+    // about that crane type, in which case we *want* those.
+    const mobileTerms = [
+      "truck",
+      "wheel",
+      "tire",
+      "tyres",
+      "outrigger",
+      "hydraulic",
+      "boom truck",
+      "mobile crane",
+      "rough terrain",
+      "all terrain",
+      "carry deck",
+    ];
+    const towerLikeTerms = [
+      "tower crane",
+      "tower-crane",
+      "lattice",
+      "skyline",
+      "skyscraper",
+      "high rise",
+      "high-rise",
+      "rooftop",
+    ];
+    const crawlerTerms = ["crawler", "tracked", "tracks", "lattice boom"];
+
+    for (const term of mobileTerms) {
+      if (text.includes(term)) {
+        // Big reward when persona is mobile-ish, mild reward otherwise.
+        score += persona && persona !== "tower" && persona !== "crawler" ? 4 : 2;
+      }
+    }
+    for (const term of towerLikeTerms) {
+      if (text.includes(term)) {
+        // Reward only when the article is actually about tower cranes,
+        // otherwise penalize so generic crane articles avoid them.
+        score += persona === "tower" ? 5 : -6;
+      }
+    }
+    for (const term of crawlerTerms) {
+      if (text.includes(term)) {
+        score += persona === "crawler" ? 5 : -3;
+      }
+    }
   }
 
   if (photo.width && photo.height && photo.width > photo.height) score += 1;
